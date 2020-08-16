@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		131E6350FF3E6CC691B44D285FD955C2 /* Pods-Food Delivery Service-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F273C650011F769B3BE32B725F1F1374 /* Pods-Food Delivery Service-dummy.m */; };
+		24D8F2D9A5FB20C6D5D7E4B34BDD33B0 /* Pods-Food Delivery ServiceTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 03AE7EE05139AEDDCC38A661E2E8930A /* Pods-Food Delivery ServiceTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		277E3C81A2BB79F3C31F9019987A01EF /* Pods-Food Delivery Service-Food Delivery ServiceUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 67A014CC83A651F06993C26C09525F31 /* Pods-Food Delivery Service-Food Delivery ServiceUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1DD88C5A8E760C1C19472760400BCB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		A9E1D683FBD278B8B1AC822F37D2A7ED /* Pods-Food Delivery Service-Food Delivery ServiceUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1931F7F20F1B81D5B8D976F359CFF6 /* Pods-Food Delivery Service-Food Delivery ServiceUITests-dummy.m */; };
+		C6F10C77273856A2DF56497A642C2870 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		D9172FA5ED01C8C43809CD31E00C0729 /* Pods-Food Delivery Service-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9DD520EC72C4496B465240229F457D /* Pods-Food Delivery Service-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6E3785578BBF2726E9C5B9908269212 /* Pods-Food Delivery ServiceTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50835A2D0C9480EE41CE90A89D460DDE /* Pods-Food Delivery ServiceTests-dummy.m */; };
+		EF0A621CA68A9C4B2FD04ABF23035C3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B254C9E86B5BAE2F046046D06ECF436B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9138755E253971BE9BF193717E82E51;
+			remoteInfo = "Pods-Food Delivery Service";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03AE7EE05139AEDDCC38A661E2E8930A /* Pods-Food Delivery ServiceTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Food Delivery ServiceTests-umbrella.h"; sourceTree = "<group>"; };
+		0CA2E4C90C226B1B580CA7F68050D42D /* Pods-Food Delivery Service.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Food Delivery Service.modulemap"; sourceTree = "<group>"; };
+		249BC0E245B2DBE59E00AD3C2B4DD3BC /* Pods-Food Delivery Service-Food Delivery ServiceUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Food Delivery Service-Food Delivery ServiceUITests.modulemap"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		32E3E466B89AD903C4DAF8913C25B823 /* Pods-Food Delivery ServiceTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Food Delivery ServiceTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		32F054D9EA710215685DC7B375B59D75 /* Pods_Food_Delivery_Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Food_Delivery_Service.framework; path = "Pods-Food Delivery Service.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33685DE26CBE7F1935DE6DCB6E800181 /* Pods-Food Delivery Service.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Food Delivery Service.debug.xcconfig"; sourceTree = "<group>"; };
+		349D3DFD6C7353CC1C9A4253C7F4D48D /* Pods-Food Delivery Service-Food Delivery ServiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Food Delivery Service-Food Delivery ServiceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3DFA948676CCF3992F07D748C59C6EF4 /* Pods-Food Delivery ServiceTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Food Delivery ServiceTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		501F62CDBAE71745FB5ADCCB6E32C9C5 /* Pods-Food Delivery ServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Food Delivery ServiceTests.release.xcconfig"; sourceTree = "<group>"; };
+		50835A2D0C9480EE41CE90A89D460DDE /* Pods-Food Delivery ServiceTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Food Delivery ServiceTests-dummy.m"; sourceTree = "<group>"; };
+		5F5A2F7B4CF8D8A6D7C3E33CECF4628E /* Pods-Food Delivery ServiceTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Food Delivery ServiceTests-Info.plist"; sourceTree = "<group>"; };
+		5F9DD520EC72C4496B465240229F457D /* Pods-Food Delivery Service-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Food Delivery Service-umbrella.h"; sourceTree = "<group>"; };
+		60918834047C24889B7ADFB537EFEC88 /* Pods-Food Delivery Service.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Food Delivery Service.release.xcconfig"; sourceTree = "<group>"; };
+		67A014CC83A651F06993C26C09525F31 /* Pods-Food Delivery Service-Food Delivery ServiceUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Food Delivery Service-Food Delivery ServiceUITests-umbrella.h"; sourceTree = "<group>"; };
+		6A1931F7F20F1B81D5B8D976F359CFF6 /* Pods-Food Delivery Service-Food Delivery ServiceUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Food Delivery Service-Food Delivery ServiceUITests-dummy.m"; sourceTree = "<group>"; };
+		79100935558E9DBBFF7BFD99838E6923 /* Pods-Food Delivery Service-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Food Delivery Service-Info.plist"; sourceTree = "<group>"; };
+		93649F7E59086DD02CFF1FD3D6051B9C /* Pods-Food Delivery Service-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Food Delivery Service-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93D1E418D46E1E5814EB5637507E2539 /* Pods_Food_Delivery_ServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Food_Delivery_ServiceTests.framework; path = "Pods-Food Delivery ServiceTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B79937E2CE28B876BF1DC6D16B740151 /* Pods-Food Delivery Service-Food Delivery ServiceUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Food Delivery Service-Food Delivery ServiceUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BEB56AEA16A793FB1B9A5E6B3B806D4C /* Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework; path = "Pods-Food Delivery Service-Food Delivery ServiceUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C62EE0201FDEE509D55D91791A12FA46 /* Pods-Food Delivery ServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Food Delivery ServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC947A2C08A7DCF45E97441D35AF5759 /* Pods-Food Delivery Service-Food Delivery ServiceUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Food Delivery Service-Food Delivery ServiceUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CFADCC1CAC16B08620FDBB22876C1635 /* Pods-Food Delivery Service-Food Delivery ServiceUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Food Delivery Service-Food Delivery ServiceUITests-Info.plist"; sourceTree = "<group>"; };
+		D2962D189A434FD1881A2DF4EA4F3D54 /* Pods-Food Delivery Service-Food Delivery ServiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Food Delivery Service-Food Delivery ServiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E844644BADF55E10DE7295699F56CA6D /* Pods-Food Delivery Service-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Food Delivery Service-acknowledgements.plist"; sourceTree = "<group>"; };
+		EA40EDF2320D10940A1DD4AD00CF583E /* Pods-Food Delivery ServiceTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Food Delivery ServiceTests.modulemap"; sourceTree = "<group>"; };
+		F273C650011F769B3BE32B725F1F1374 /* Pods-Food Delivery Service-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Food Delivery Service-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		223B8921E7CE12FB27096AE0D8443EBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1DD88C5A8E760C1C19472760400BCB8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67028A557AC2204C4786E1894F0C173A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF0A621CA68A9C4B2FD04ABF23035C3F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2DF8D4B1CEB452A397E47C999C84998 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6F10C77273856A2DF56497A642C2870 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		451E5F151DE4B7BB02D34E098F7A0C6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32F054D9EA710215685DC7B375B59D75 /* Pods_Food_Delivery_Service.framework */,
+				BEB56AEA16A793FB1B9A5E6B3B806D4C /* Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework */,
+				93D1E418D46E1E5814EB5637507E2539 /* Pods_Food_Delivery_ServiceTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D16DE9B2D977AB015B15BB2CE78EBC6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				921FDB9DEAD5001B9E228F7D40DA3206 /* Pods-Food Delivery Service */,
+				63DC72BA8D2BE8874C0A7AFA3B4B8A7D /* Pods-Food Delivery Service-Food Delivery ServiceUITests */,
+				8817A2953554CA1C5998DA1E5AA1EB35 /* Pods-Food Delivery ServiceTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		63DC72BA8D2BE8874C0A7AFA3B4B8A7D /* Pods-Food Delivery Service-Food Delivery ServiceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				249BC0E245B2DBE59E00AD3C2B4DD3BC /* Pods-Food Delivery Service-Food Delivery ServiceUITests.modulemap */,
+				B79937E2CE28B876BF1DC6D16B740151 /* Pods-Food Delivery Service-Food Delivery ServiceUITests-acknowledgements.markdown */,
+				CC947A2C08A7DCF45E97441D35AF5759 /* Pods-Food Delivery Service-Food Delivery ServiceUITests-acknowledgements.plist */,
+				6A1931F7F20F1B81D5B8D976F359CFF6 /* Pods-Food Delivery Service-Food Delivery ServiceUITests-dummy.m */,
+				CFADCC1CAC16B08620FDBB22876C1635 /* Pods-Food Delivery Service-Food Delivery ServiceUITests-Info.plist */,
+				67A014CC83A651F06993C26C09525F31 /* Pods-Food Delivery Service-Food Delivery ServiceUITests-umbrella.h */,
+				D2962D189A434FD1881A2DF4EA4F3D54 /* Pods-Food Delivery Service-Food Delivery ServiceUITests.debug.xcconfig */,
+				349D3DFD6C7353CC1C9A4253C7F4D48D /* Pods-Food Delivery Service-Food Delivery ServiceUITests.release.xcconfig */,
+			);
+			name = "Pods-Food Delivery Service-Food Delivery ServiceUITests";
+			path = "Target Support Files/Pods-Food Delivery Service-Food Delivery ServiceUITests";
+			sourceTree = "<group>";
+		};
+		8817A2953554CA1C5998DA1E5AA1EB35 /* Pods-Food Delivery ServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA40EDF2320D10940A1DD4AD00CF583E /* Pods-Food Delivery ServiceTests.modulemap */,
+				3DFA948676CCF3992F07D748C59C6EF4 /* Pods-Food Delivery ServiceTests-acknowledgements.markdown */,
+				32E3E466B89AD903C4DAF8913C25B823 /* Pods-Food Delivery ServiceTests-acknowledgements.plist */,
+				50835A2D0C9480EE41CE90A89D460DDE /* Pods-Food Delivery ServiceTests-dummy.m */,
+				5F5A2F7B4CF8D8A6D7C3E33CECF4628E /* Pods-Food Delivery ServiceTests-Info.plist */,
+				03AE7EE05139AEDDCC38A661E2E8930A /* Pods-Food Delivery ServiceTests-umbrella.h */,
+				C62EE0201FDEE509D55D91791A12FA46 /* Pods-Food Delivery ServiceTests.debug.xcconfig */,
+				501F62CDBAE71745FB5ADCCB6E32C9C5 /* Pods-Food Delivery ServiceTests.release.xcconfig */,
+			);
+			name = "Pods-Food Delivery ServiceTests";
+			path = "Target Support Files/Pods-Food Delivery ServiceTests";
+			sourceTree = "<group>";
+		};
+		921FDB9DEAD5001B9E228F7D40DA3206 /* Pods-Food Delivery Service */ = {
+			isa = PBXGroup;
+			children = (
+				0CA2E4C90C226B1B580CA7F68050D42D /* Pods-Food Delivery Service.modulemap */,
+				93649F7E59086DD02CFF1FD3D6051B9C /* Pods-Food Delivery Service-acknowledgements.markdown */,
+				E844644BADF55E10DE7295699F56CA6D /* Pods-Food Delivery Service-acknowledgements.plist */,
+				F273C650011F769B3BE32B725F1F1374 /* Pods-Food Delivery Service-dummy.m */,
+				79100935558E9DBBFF7BFD99838E6923 /* Pods-Food Delivery Service-Info.plist */,
+				5F9DD520EC72C4496B465240229F457D /* Pods-Food Delivery Service-umbrella.h */,
+				33685DE26CBE7F1935DE6DCB6E800181 /* Pods-Food Delivery Service.debug.xcconfig */,
+				60918834047C24889B7ADFB537EFEC88 /* Pods-Food Delivery Service.release.xcconfig */,
+			);
+			name = "Pods-Food Delivery Service";
+			path = "Target Support Files/Pods-Food Delivery Service";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				451E5F151DE4B7BB02D34E098F7A0C6C /* Products */,
+				4D16DE9B2D977AB015B15BB2CE78EBC6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		55A36B65B38E909AB320E1ECCB5431B6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				277E3C81A2BB79F3C31F9019987A01EF /* Pods-Food Delivery Service-Food Delivery ServiceUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD8A80B0F003C3DB241BF6BE22346E11 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D8F2D9A5FB20C6D5D7E4B34BDD33B0 /* Pods-Food Delivery ServiceTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE033F536D52A8AC0B4BC46CC31F7138 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9172FA5ED01C8C43809CD31E00C0729 /* Pods-Food Delivery Service-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		16B5F554ACC6ECD01E68E17F98C3591E /* Pods-Food Delivery Service-Food Delivery ServiceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C0A09E06245AA93D0E50584345C0816 /* Build configuration list for PBXNativeTarget "Pods-Food Delivery Service-Food Delivery ServiceUITests" */;
+			buildPhases = (
+				55A36B65B38E909AB320E1ECCB5431B6 /* Headers */,
+				8FF95563EFEA9B76C6725721CD04D065 /* Sources */,
+				67028A557AC2204C4786E1894F0C173A /* Frameworks */,
+				9F2681268B73C0492F99D1011A034E84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Food Delivery Service-Food Delivery ServiceUITests";
+			productName = "Pods-Food Delivery Service-Food Delivery ServiceUITests";
+			productReference = BEB56AEA16A793FB1B9A5E6B3B806D4C /* Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1878B7C44FA3EE76B7D908446868B089 /* Pods-Food Delivery ServiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1952D3336C4DF54C27849F074067F36F /* Build configuration list for PBXNativeTarget "Pods-Food Delivery ServiceTests" */;
+			buildPhases = (
+				AD8A80B0F003C3DB241BF6BE22346E11 /* Headers */,
+				2BB5E5D95DCEB6179D39C037C20F676E /* Sources */,
+				A2DF8D4B1CEB452A397E47C999C84998 /* Frameworks */,
+				162881494186F662208863EAB8941680 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D28788E12CA1A0C22506C92791D59BEB /* PBXTargetDependency */,
+			);
+			name = "Pods-Food Delivery ServiceTests";
+			productName = "Pods-Food Delivery ServiceTests";
+			productReference = 93D1E418D46E1E5814EB5637507E2539 /* Pods_Food_Delivery_ServiceTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C9138755E253971BE9BF193717E82E51 /* Pods-Food Delivery Service */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62BFC45BA09A8A9F64A2F9D17CCABE20 /* Build configuration list for PBXNativeTarget "Pods-Food Delivery Service" */;
+			buildPhases = (
+				CE033F536D52A8AC0B4BC46CC31F7138 /* Headers */,
+				13B50D792EE0D2E3D49F95B54FCB2D3C /* Sources */,
+				223B8921E7CE12FB27096AE0D8443EBD /* Frameworks */,
+				5C09408D9296625F8FF17A42BDC438DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Food Delivery Service";
+			productName = "Pods-Food Delivery Service";
+			productReference = 32F054D9EA710215685DC7B375B59D75 /* Pods_Food_Delivery_Service.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 451E5F151DE4B7BB02D34E098F7A0C6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9138755E253971BE9BF193717E82E51 /* Pods-Food Delivery Service */,
+				16B5F554ACC6ECD01E68E17F98C3591E /* Pods-Food Delivery Service-Food Delivery ServiceUITests */,
+				1878B7C44FA3EE76B7D908446868B089 /* Pods-Food Delivery ServiceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		162881494186F662208863EAB8941680 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C09408D9296625F8FF17A42BDC438DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F2681268B73C0492F99D1011A034E84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13B50D792EE0D2E3D49F95B54FCB2D3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131E6350FF3E6CC691B44D285FD955C2 /* Pods-Food Delivery Service-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB5E5D95DCEB6179D39C037C20F676E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6E3785578BBF2726E9C5B9908269212 /* Pods-Food Delivery ServiceTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FF95563EFEA9B76C6725721CD04D065 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9E1D683FBD278B8B1AC822F37D2A7ED /* Pods-Food Delivery Service-Food Delivery ServiceUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D28788E12CA1A0C22506C92791D59BEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Food Delivery Service";
+			target = C9138755E253971BE9BF193717E82E51 /* Pods-Food Delivery Service */;
+			targetProxy = B254C9E86B5BAE2F046046D06ECF436B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0727367934E74DA7E2C0702359A08358 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2962D189A434FD1881A2DF4EA4F3D54 /* Pods-Food Delivery Service-Food Delivery ServiceUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Food Delivery Service-Food Delivery ServiceUITests/Pods-Food Delivery Service-Food Delivery ServiceUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Food Delivery Service-Food Delivery ServiceUITests/Pods-Food Delivery Service-Food Delivery ServiceUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0A18737B6DFAC8E4CE4D7A816E173C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C62EE0201FDEE509D55D91791A12FA46 /* Pods-Food Delivery ServiceTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Food Delivery ServiceTests/Pods-Food Delivery ServiceTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Food Delivery ServiceTests/Pods-Food Delivery ServiceTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		10D6493850DE0020B4C63631C0108259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 349D3DFD6C7353CC1C9A4253C7F4D48D /* Pods-Food Delivery Service-Food Delivery ServiceUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Food Delivery Service-Food Delivery ServiceUITests/Pods-Food Delivery Service-Food Delivery ServiceUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Food Delivery Service-Food Delivery ServiceUITests/Pods-Food Delivery Service-Food Delivery ServiceUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3C95D948BE152F1E90CF8A9F70BDDC1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33685DE26CBE7F1935DE6DCB6E800181 /* Pods-Food Delivery Service.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Food Delivery Service/Pods-Food Delivery Service-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Food Delivery Service/Pods-Food Delivery Service.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		426AC775F14B058C15CB60860E9716B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60918834047C24889B7ADFB537EFEC88 /* Pods-Food Delivery Service.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Food Delivery Service/Pods-Food Delivery Service-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Food Delivery Service/Pods-Food Delivery Service.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DC2DD6E2B5D40E2D0157A321BD5DB1C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 501F62CDBAE71745FB5ADCCB6E32C9C5 /* Pods-Food Delivery ServiceTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Food Delivery ServiceTests/Pods-Food Delivery ServiceTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Food Delivery ServiceTests/Pods-Food Delivery ServiceTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DFD9D19FEEBF98DE271D7FBABCB845B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F5F04600F5626DC980F02790D1ED2C19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1952D3336C4DF54C27849F074067F36F /* Build configuration list for PBXNativeTarget "Pods-Food Delivery ServiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A18737B6DFAC8E4CE4D7A816E173C61 /* Debug */,
+				DC2DD6E2B5D40E2D0157A321BD5DB1C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFD9D19FEEBF98DE271D7FBABCB845B5 /* Debug */,
+				F5F04600F5626DC980F02790D1ED2C19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C0A09E06245AA93D0E50584345C0816 /* Build configuration list for PBXNativeTarget "Pods-Food Delivery Service-Food Delivery ServiceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0727367934E74DA7E2C0702359A08358 /* Debug */,
+				10D6493850DE0020B4C63631C0108259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62BFC45BA09A8A9F64A2F9D17CCABE20 /* Build configuration list for PBXNativeTarget "Pods-Food Delivery Service" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C95D948BE152F1E90CF8A9F70BDDC1B /* Debug */,
+				426AC775F14B058C15CB60860E9716B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

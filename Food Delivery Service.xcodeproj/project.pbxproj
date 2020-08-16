@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DA754F5B991D29737382A6E /* Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9328759E54A6B88C8499A2 /* Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework */; };
+		2DDEE8CA1894CEE67757684F /* Pods_Food_Delivery_ServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28E1A6702AD6EE540C2F227 /* Pods_Food_Delivery_ServiceTests.framework */; };
+		65E77938414660F19E8D2DDC /* Pods_Food_Delivery_Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89AE6C20672E69012B5696D6 /* Pods_Food_Delivery_Service.framework */; };
 		83C4CAB324E8AEAC000841D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C4CAB224E8AEAC000841D2 /* AppDelegate.swift */; };
 		83C4CAB524E8AEAC000841D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C4CAB424E8AEAC000841D2 /* SceneDelegate.swift */; };
 		83C4CAB724E8AEAC000841D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C4CAB624E8AEAC000841D2 /* ViewController.swift */; };
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5059F7465F2E945D9FB01AF4 /* Pods-Food Delivery ServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Delivery ServiceTests.release.xcconfig"; path = "Target Support Files/Pods-Food Delivery ServiceTests/Pods-Food Delivery ServiceTests.release.xcconfig"; sourceTree = "<group>"; };
 		83C4CAAF24E8AEAC000841D2 /* Food Delivery Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Delivery Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C4CAB224E8AEAC000841D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83C4CAB424E8AEAC000841D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 		83C4CAD024E8AEB1000841D2 /* Food Delivery ServiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food Delivery ServiceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C4CAD424E8AEB1000841D2 /* Food_Delivery_ServiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food_Delivery_ServiceUITests.swift; sourceTree = "<group>"; };
 		83C4CAD624E8AEB1000841D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89AE6C20672E69012B5696D6 /* Pods_Food_Delivery_Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Delivery_Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EF5FDD6F2B6637F8F71DC62 /* Pods-Food Delivery Service.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Delivery Service.release.xcconfig"; path = "Target Support Files/Pods-Food Delivery Service/Pods-Food Delivery Service.release.xcconfig"; sourceTree = "<group>"; };
+		9263C880981CB844CDB96DEC /* Pods-Food Delivery ServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Delivery ServiceTests.debug.xcconfig"; path = "Target Support Files/Pods-Food Delivery ServiceTests/Pods-Food Delivery ServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A65C34D2BC6BD5D389180685 /* Pods-Food Delivery Service-Food Delivery ServiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Delivery Service-Food Delivery ServiceUITests.debug.xcconfig"; path = "Target Support Files/Pods-Food Delivery Service-Food Delivery ServiceUITests/Pods-Food Delivery Service-Food Delivery ServiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE975FA1DDD613272B8561F3 /* Pods-Food Delivery Service-Food Delivery ServiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Delivery Service-Food Delivery ServiceUITests.release.xcconfig"; path = "Target Support Files/Pods-Food Delivery Service-Food Delivery ServiceUITests/Pods-Food Delivery Service-Food Delivery ServiceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C28E1A6702AD6EE540C2F227 /* Pods_Food_Delivery_ServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Delivery_ServiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA9328759E54A6B88C8499A2 /* Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECF5A630B250E993A075F29E /* Pods-Food Delivery Service.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Delivery Service.debug.xcconfig"; path = "Target Support Files/Pods-Food Delivery Service/Pods-Food Delivery Service.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E77938414660F19E8D2DDC /* Pods_Food_Delivery_Service.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DDEE8CA1894CEE67757684F /* Pods_Food_Delivery_ServiceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DA754F5B991D29737382A6E /* Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		753064873470445E56BED516 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECF5A630B250E993A075F29E /* Pods-Food Delivery Service.debug.xcconfig */,
+				8EF5FDD6F2B6637F8F71DC62 /* Pods-Food Delivery Service.release.xcconfig */,
+				A65C34D2BC6BD5D389180685 /* Pods-Food Delivery Service-Food Delivery ServiceUITests.debug.xcconfig */,
+				AE975FA1DDD613272B8561F3 /* Pods-Food Delivery Service-Food Delivery ServiceUITests.release.xcconfig */,
+				9263C880981CB844CDB96DEC /* Pods-Food Delivery ServiceTests.debug.xcconfig */,
+				5059F7465F2E945D9FB01AF4 /* Pods-Food Delivery ServiceTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		83C4CAA624E8AEAC000841D2 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +112,8 @@
 				83C4CAC824E8AEB1000841D2 /* Food Delivery ServiceTests */,
 				83C4CAD324E8AEB1000841D2 /* Food Delivery ServiceUITests */,
 				83C4CAB024E8AEAC000841D2 /* Products */,
+				753064873470445E56BED516 /* Pods */,
+				C9E01E04F2357CDDB9FFE697 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +159,16 @@
 			path = "Food Delivery ServiceUITests";
 			sourceTree = "<group>";
 		};
+		C9E01E04F2357CDDB9FFE697 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89AE6C20672E69012B5696D6 /* Pods_Food_Delivery_Service.framework */,
+				CA9328759E54A6B88C8499A2 /* Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework */,
+				C28E1A6702AD6EE540C2F227 /* Pods_Food_Delivery_ServiceTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +176,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83C4CAD924E8AEB1000841D2 /* Build configuration list for PBXNativeTarget "Food Delivery Service" */;
 			buildPhases = (
+				D25E646528C4BA8E888079E5 /* [CP] Check Pods Manifest.lock */,
 				83C4CAAB24E8AEAC000841D2 /* Sources */,
 				83C4CAAC24E8AEAC000841D2 /* Frameworks */,
 				83C4CAAD24E8AEAC000841D2 /* Resources */,
@@ -152,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83C4CADC24E8AEB1000841D2 /* Build configuration list for PBXNativeTarget "Food Delivery ServiceTests" */;
 			buildPhases = (
+				DC2921AA8301740138BD4245 /* [CP] Check Pods Manifest.lock */,
 				83C4CAC124E8AEB1000841D2 /* Sources */,
 				83C4CAC224E8AEB1000841D2 /* Frameworks */,
 				83C4CAC324E8AEB1000841D2 /* Resources */,
@@ -170,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83C4CADF24E8AEB1000841D2 /* Build configuration list for PBXNativeTarget "Food Delivery ServiceUITests" */;
 			buildPhases = (
+				A50A07E36DB3F95D237AC900 /* [CP] Check Pods Manifest.lock */,
 				83C4CACC24E8AEB1000841D2 /* Sources */,
 				83C4CACD24E8AEB1000841D2 /* Frameworks */,
 				83C4CACE24E8AEB1000841D2 /* Resources */,
@@ -253,6 +297,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A50A07E36DB3F95D237AC900 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Food Delivery Service-Food Delivery ServiceUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D25E646528C4BA8E888079E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Food Delivery Service-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC2921AA8301740138BD4245 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Food Delivery ServiceTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		83C4CAAB24E8AEAC000841D2 /* Sources */ = {
@@ -432,6 +545,7 @@
 		};
 		83C4CADA24E8AEB1000841D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECF5A630B250E993A075F29E /* Pods-Food Delivery Service.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,6 +565,7 @@
 		};
 		83C4CADB24E8AEB1000841D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EF5FDD6F2B6637F8F71DC62 /* Pods-Food Delivery Service.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +585,7 @@
 		};
 		83C4CADD24E8AEB1000841D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9263C880981CB844CDB96DEC /* Pods-Food Delivery ServiceTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +608,7 @@
 		};
 		83C4CADE24E8AEB1000841D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5059F7465F2E945D9FB01AF4 /* Pods-Food Delivery ServiceTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +631,7 @@
 		};
 		83C4CAE024E8AEB1000841D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A65C34D2BC6BD5D389180685 /* Pods-Food Delivery Service-Food Delivery ServiceUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +652,7 @@
 		};
 		83C4CAE124E8AEB1000841D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE975FA1DDD613272B8561F3 /* Pods-Food Delivery Service-Food Delivery ServiceUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

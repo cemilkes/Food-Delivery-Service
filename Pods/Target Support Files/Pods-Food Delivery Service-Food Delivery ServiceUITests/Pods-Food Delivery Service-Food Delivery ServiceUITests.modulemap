@@ -1,0 +1,6 @@
+framework module Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests {
+  umbrella header "Pods-Food Delivery Service-Food Delivery ServiceUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
