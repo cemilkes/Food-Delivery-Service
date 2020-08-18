@@ -6,7 +6,7 @@ target 'Food Delivery Service' do
   use_frameworks!
 
   # Pods for Food Delivery Service
-
+  pod 'Firebase/Analytics'
   target 'Food Delivery ServiceTests' do
     inherit! :search_paths
     # Pods for testing
