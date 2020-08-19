@@ -15,6 +15,9 @@
 		8379BAE824EB5F3E00EE8EB9 /* Favourite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8379BAE724EB5F3E00EE8EB9 /* Favourite.storyboard */; };
 		8379BAEA24EB5F5700EE8EB9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8379BAE924EB5F5700EE8EB9 /* Profile.storyboard */; };
 		8379BAEC24EB76A000EE8EB9 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8379BAEB24EB76A000EE8EB9 /* Authentication.storyboard */; };
+		8379BAEE24EB7E8400EE8EB9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8379BAED24EB7E8400EE8EB9 /* Color.swift */; };
+		8379BAF024EB7E9000EE8EB9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8379BAEF24EB7E9000EE8EB9 /* Font.swift */; };
+		8379BAF224EB7EA100EE8EB9 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8379BAF124EB7EA100EE8EB9 /* String.swift */; };
 		83C4CAB324E8AEAC000841D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C4CAB224E8AEAC000841D2 /* AppDelegate.swift */; };
 		83C4CAB524E8AEAC000841D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C4CAB424E8AEAC000841D2 /* SceneDelegate.swift */; };
 		83C4CAB724E8AEAC000841D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C4CAB624E8AEAC000841D2 /* ViewController.swift */; };
@@ -50,6 +53,9 @@
 		8379BAE724EB5F3E00EE8EB9 /* Favourite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourite.storyboard; sourceTree = "<group>"; };
 		8379BAE924EB5F5700EE8EB9 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		8379BAEB24EB76A000EE8EB9 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		8379BAED24EB7E8400EE8EB9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8379BAEF24EB7E9000EE8EB9 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		8379BAF124EB7EA100EE8EB9 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		83C4CAAF24E8AEAC000841D2 /* Food Delivery Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Delivery Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C4CAB224E8AEAC000841D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83C4CAB424E8AEAC000841D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,12 +126,12 @@
 			isa = PBXGroup;
 			children = (
 				83C4CABD24E8AEB1000841D2 /* LaunchScreen.storyboard */,
+				8379BAEB24EB76A000EE8EB9 /* Authentication.storyboard */,
 				83C4CAB824E8AEAC000841D2 /* Main.storyboard */,
 				8379BAE324EB5F1700EE8EB9 /* Menu.storyboard */,
 				8379BAE524EB5F2D00EE8EB9 /* MyOrder.storyboard */,
 				8379BAE724EB5F3E00EE8EB9 /* Favourite.storyboard */,
 				8379BAE924EB5F5700EE8EB9 /* Profile.storyboard */,
-				8379BAEB24EB76A000EE8EB9 /* Authentication.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -162,6 +168,9 @@
 				83C4CABB24E8AEB1000841D2 /* Assets.xcassets */,
 				83C4CAC024E8AEB1000841D2 /* Info.plist */,
 				83C4CAE224E8B129000841D2 /* GoogleService-Info.plist */,
+				8379BAED24EB7E8400EE8EB9 /* Color.swift */,
+				8379BAEF24EB7E9000EE8EB9 /* Font.swift */,
+				8379BAF124EB7EA100EE8EB9 /* String.swift */,
 			);
 			path = "Food Delivery Service";
 			sourceTree = "<group>";
@@ -439,7 +448,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8379BAF224EB7EA100EE8EB9 /* String.swift in Sources */,
 				83C4CAB724E8AEAC000841D2 /* ViewController.swift in Sources */,
+				8379BAEE24EB7E8400EE8EB9 /* Color.swift in Sources */,
+				8379BAF024EB7E9000EE8EB9 /* Font.swift in Sources */,
 				83C4CAB324E8AEAC000841D2 /* AppDelegate.swift in Sources */,
 				83C4CAB524E8AEAC000841D2 /* SceneDelegate.swift in Sources */,
 			);

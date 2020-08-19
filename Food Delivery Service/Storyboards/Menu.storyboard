@@ -14,7 +14,26 @@
                     <view key="view" contentMode="scaleToFill" id="QEz-7I-UnS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeScreen" translatesAutoresizingMaskIntoConstraints="NO" id="cj8-ZK-qhp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaJ-SD-QeF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cj8-ZK-qhp" firstAttribute="leading" secondItem="ceQ-7n-qiZ" secondAttribute="leading" id="0Qt-86-xyJ"/>
+                            <constraint firstItem="cj8-ZK-qhp" firstAttribute="centerX" secondItem="QEz-7I-UnS" secondAttribute="centerX" id="BkX-7M-mrx"/>
+                            <constraint firstItem="cj8-ZK-qhp" firstAttribute="bottom" secondItem="ceQ-7n-qiZ" secondAttribute="bottom" id="Dhn-xw-6Jn"/>
+                            <constraint firstItem="BaJ-SD-QeF" firstAttribute="leading" secondItem="cj8-ZK-qhp" secondAttribute="leading" id="M2E-i1-Vut"/>
+                            <constraint firstItem="BaJ-SD-QeF" firstAttribute="top" secondItem="cj8-ZK-qhp" secondAttribute="top" id="Xf5-UR-p6q"/>
+                            <constraint firstItem="cj8-ZK-qhp" firstAttribute="top" secondItem="QEz-7I-UnS" secondAttribute="topMargin" constant="-44" id="jD6-9j-kDZ"/>
+                            <constraint firstItem="BaJ-SD-QeF" firstAttribute="bottom" secondItem="ceQ-7n-qiZ" secondAttribute="bottom" id="mzx-wP-8Tc"/>
+                            <constraint firstItem="BaJ-SD-QeF" firstAttribute="trailing" secondItem="cj8-ZK-qhp" secondAttribute="trailing" id="rWn-xD-wHA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ceQ-7n-qiZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tabBarExplore" landscapeImage="tabBarExplore" id="Nlh-0e-7Zr">
@@ -24,10 +43,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qzq-ss-TCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-72" y="206"/>
+            <point key="canvasLocation" x="-72.463768115942031" y="205.58035714285714"/>
         </scene>
     </scenes>
     <resources>
         <image name="tabBarExplore" width="75" height="49"/>
+        <image name="welcomeScreen" width="375" height="812"/>
     </resources>
 </document>
