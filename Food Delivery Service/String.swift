@@ -10,3 +10,4 @@ import Foundation
 
 
 public let kTest = "Test"
+public let kTest - "New machine test"
