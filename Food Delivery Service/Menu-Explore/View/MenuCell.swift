@@ -1,14 +1,13 @@
 //
-//  Color.swift
+//  MenuCell.swift
 //  Food Delivery Service
 //
-//  Created by Cemil Keş on 8/17/20.
+//  Created by Mr Kes on 8/19/20.
 //  Copyright © 2020 CemilKes. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-extension UIColor {
-
+class MenuCell: UICollectionViewCell {
+    
 }

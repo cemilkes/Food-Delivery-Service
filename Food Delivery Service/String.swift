@@ -9,6 +9,3 @@
 import Foundation
 
 
-public let kTest = "Test"
-public let kTest2 = "New machine test"
-
