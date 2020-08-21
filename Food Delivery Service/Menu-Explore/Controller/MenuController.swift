@@ -8,7 +8,17 @@
 
 import UIKit
 
-class MenuController: UIViewController {
+private let reuseIdentifier = "MenuCell"
+
+class MenuController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

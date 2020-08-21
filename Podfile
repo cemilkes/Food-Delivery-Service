@@ -7,6 +7,11 @@ target 'Food Delivery Service' do
 
   # Pods for Food Delivery Service
   pod 'Firebase/Analytics'
+
+  # Firebase Authentication and Cloud Firestore
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  
   target 'Food Delivery ServiceTests' do
     inherit! :search_paths
     # Pods for testing

@@ -9,5 +9,6 @@
 import UIKit
 
 class MenuCell: UICollectionViewCell {
+
     
 }

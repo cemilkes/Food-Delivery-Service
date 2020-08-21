@@ -11,6 +11,8 @@
 		25A806D924EE0A80004E99C2 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A806D824EE0A80004E99C2 /* MenuController.swift */; };
 		25A806DE24EE1F1A004E99C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A806DD24EE1F1A004E99C2 /* Constants.swift */; };
 		25A806E024EE1F32004E99C2 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A806DF24EE1F32004E99C2 /* MenuCell.swift */; };
+		25A806EF24EF6D6E004E99C2 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A806EE24EF6D6E004E99C2 /* NSObject+ClassName.swift */; };
+		25A806F224EF758E004E99C2 /* FirebaseCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A806F124EF758E004E99C2 /* FirebaseCollectionReference.swift */; };
 		2DDEE8CA1894CEE67757684F /* Pods_Food_Delivery_ServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28E1A6702AD6EE540C2F227 /* Pods_Food_Delivery_ServiceTests.framework */; };
 		65E77938414660F19E8D2DDC /* Pods_Food_Delivery_Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89AE6C20672E69012B5696D6 /* Pods_Food_Delivery_Service.framework */; };
 		8379BAE424EB5F1700EE8EB9 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8379BAE324EB5F1700EE8EB9 /* Menu.storyboard */; };
@@ -52,6 +54,8 @@
 		25A806D824EE0A80004E99C2 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		25A806DD24EE1F1A004E99C2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		25A806DF24EE1F32004E99C2 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		25A806EE24EF6D6E004E99C2 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
+		25A806F124EF758E004E99C2 /* FirebaseCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollectionReference.swift; sourceTree = "<group>"; };
 		5059F7465F2E945D9FB01AF4 /* Pods-Food Delivery ServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Delivery ServiceTests.release.xcconfig"; path = "Target Support Files/Pods-Food Delivery ServiceTests/Pods-Food Delivery ServiceTests.release.xcconfig"; sourceTree = "<group>"; };
 		8379BAE324EB5F1700EE8EB9 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		8379BAE524EB5F2D00EE8EB9 /* MyOrder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyOrder.storyboard; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 			children = (
 				25A806DB24EE0A9A004E99C2 /* Controller */,
 				25A806E124EE1F66004E99C2 /* View */,
+				8379BAE324EB5F1700EE8EB9 /* Menu.storyboard */,
 			);
 			path = "Menu-Explore";
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				25A806D824EE0A80004E99C2 /* MenuController.swift */,
+				25A806F024EF6FFD004E99C2 /* Extensions */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -147,6 +153,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		25A806F024EF6FFD004E99C2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		753064873470445E56BED516 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +179,6 @@
 				83C4CABD24E8AEB1000841D2 /* LaunchScreen.storyboard */,
 				8379BAEB24EB76A000EE8EB9 /* Authentication.storyboard */,
 				83C4CAB824E8AEAC000841D2 /* Main.storyboard */,
-				8379BAE324EB5F1700EE8EB9 /* Menu.storyboard */,
 				8379BAE524EB5F2D00EE8EB9 /* MyOrder.storyboard */,
 				8379BAE724EB5F3E00EE8EB9 /* Favourite.storyboard */,
 				8379BAE924EB5F5700EE8EB9 /* Profile.storyboard */,
@@ -209,6 +221,8 @@
 				8379BAEF24EB7E9000EE8EB9 /* Font.swift */,
 				8379BAF124EB7EA100EE8EB9 /* String.swift */,
 				25A806DD24EE1F1A004E99C2 /* Constants.swift */,
+				25A806EE24EF6D6E004E99C2 /* NSObject+ClassName.swift */,
+				25A806F124EF758E004E99C2 /* FirebaseCollectionReference.swift */,
 			);
 			path = "Food Delivery Service";
 			sourceTree = "<group>";
@@ -488,11 +502,13 @@
 			files = (
 				8379BAF224EB7EA100EE8EB9 /* String.swift in Sources */,
 				25A806D924EE0A80004E99C2 /* MenuController.swift in Sources */,
+				25A806F224EF758E004E99C2 /* FirebaseCollectionReference.swift in Sources */,
 				8379BAEE24EB7E8400EE8EB9 /* Color.swift in Sources */,
 				8379BAF024EB7E9000EE8EB9 /* Font.swift in Sources */,
 				25A806DE24EE1F1A004E99C2 /* Constants.swift in Sources */,
 				83C4CAB324E8AEAC000841D2 /* AppDelegate.swift in Sources */,
 				25A806E024EE1F32004E99C2 /* MenuCell.swift in Sources */,
+				25A806EF24EF6D6E004E99C2 /* NSObject+ClassName.swift in Sources */,
 				83C4CAB524E8AEAC000841D2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
