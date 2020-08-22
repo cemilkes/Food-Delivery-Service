@@ -44,28 +44,48 @@ extension Color {
         var instanceColor = UIColor.clear
         
         switch self {
+
+        //Border Colour: Hair line separators in between views.
         case .border:
-            instanceColor = UIColor(hexString: "#333333")
+            instanceColor = UIColor(hexString: "#ff8c00")
+
+        //Theme Colour. Colours on Navigation Bar, Button Titles, Progress Indicator etc.
         case .theme:
-            instanceColor = UIColor(hexString: "#ffcc00")
+            instanceColor = UIColor(hexString: "#ff8c00")
+        
+        // Shadow Colour: Shadow colours for card like design.
         case .shadow:
-            instanceColor = UIColor(hexString: "#ccccc")
+            instanceColor = UIColor(hexString: "#d2d3d7")
+        
+        // Dark Background Colour: Dark background colour to group UI components with light colour.
         case .darkBackground:
-            instanceColor = UIColor(hexString: "#999966")
+            instanceColor = UIColor(hexString: "#")
+        
+        //Light Background Colour: Light background colour to group UI components with dark colour.
         case .lightBackground:
-            instanceColor = UIColor(hexString: "#cccc66")
+            instanceColor = UIColor(hexString: "#ffffff")
+        
+        //Intermediate Background Colour: Used for grouping UI elements with some other colour scheme.
         case .intermidiateBackground:
-            instanceColor = UIColor(hexString: "#cccc99")
+            instanceColor = UIColor(hexString: "#1e2432").withAlphaComponent(0.5)
+        
         case .darkText:
-            instanceColor = UIColor(hexString: "#333333")
+            instanceColor = UIColor(hexString: "#0a1f44")
+        
         case .intermidiateText:
-            instanceColor = UIColor(hexString: "#999999")
+            instanceColor = UIColor(hexString: "#000000")
+        
         case .lightText:
-            instanceColor = UIColor(hexString: "#cccccc")
+            instanceColor = UIColor(hexString: "#cccccc").withAlphaComponent(0.4)
+        
+        // Affirmation: Colour to show success, something right for user.
         case .affirmation:
             instanceColor = UIColor(hexString: "#00ff66")
+        
+        // Negation: Colour to show error, some danger zones for user.
         case .negation:
             instanceColor = UIColor(hexString: "#ff3300")
+        
         case .custom(let hexValue, let opacity):
             instanceColor = UIColor(hexString: hexValue).withAlphaComponent(CGFloat(opacity))
         }
@@ -106,17 +126,3 @@ extension UIColor {
     }
 }
 
-/*
- All applications maintains a colour scheme though out every screens. This ensures the consistency over the entire application. Broadly, we can classify them under the following categories.
- Theme Colour. Colours on Navigation Bar, Button Titles, Progress Indicator etc.
- Border Colour: Hair line separators in between views.
- Shadow Colour: Shadow colours for card like design.
- Dark Background Colour: Dark background colour to group UI components with light colour.
- Light Background Colour: Light background colour to group UI components with dark colour.
- Intermediate Background Colour: Used for grouping UI elements with some other colour scheme.
- Dark Text Colour:
- Light Text Colour:
- Intermediate Text Colour:
- Affirmation: Colour to show success, something right for user.
- Negation: Colour to show error, some danger zones for user.
- */
