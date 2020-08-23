@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		1DA754F5B991D29737382A6E /* Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9328759E54A6B88C8499A2 /* Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework */; };
 		2592815224F201B800D96B2D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592815124F201B800D96B2D /* Category.swift */; };
+		2592815624F2224C00D96B2D /* BTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592815524F2224C00D96B2D /* BTButton.swift */; };
+		2592815924F2283100D96B2D /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592815824F2283100D96B2D /* WelcomeController.swift */; };
+		2592815B24F2286100D96B2D /* BTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592815A24F2286100D96B2D /* BTLabel.swift */; };
 		25A806D924EE0A80004E99C2 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A806D824EE0A80004E99C2 /* MenuController.swift */; };
 		25A806DE24EE1F1A004E99C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A806DD24EE1F1A004E99C2 /* Constants.swift */; };
 		25A806E024EE1F32004E99C2 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A806DF24EE1F32004E99C2 /* MenuCell.swift */; };
-		25A806EF24EF6D6E004E99C2 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A806EE24EF6D6E004E99C2 /* NSObject+ClassName.swift */; };
 		25A806F224EF758E004E99C2 /* FirebaseCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A806F124EF758E004E99C2 /* FirebaseCollectionReference.swift */; };
 		25A806F524EF8BDC004E99C2 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A806F424EF8BDC004E99C2 /* ReachabilityManager.swift */; };
 		2DDEE8CA1894CEE67757684F /* Pods_Food_Delivery_ServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28E1A6702AD6EE540C2F227 /* Pods_Food_Delivery_ServiceTests.framework */; };
@@ -54,10 +56,12 @@
 
 /* Begin PBXFileReference section */
 		2592815124F201B800D96B2D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2592815524F2224C00D96B2D /* BTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTButton.swift; sourceTree = "<group>"; };
+		2592815824F2283100D96B2D /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
+		2592815A24F2286100D96B2D /* BTLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTLabel.swift; sourceTree = "<group>"; };
 		25A806D824EE0A80004E99C2 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		25A806DD24EE1F1A004E99C2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		25A806DF24EE1F32004E99C2 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
-		25A806EE24EF6D6E004E99C2 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
 		25A806F124EF758E004E99C2 /* FirebaseCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollectionReference.swift; sourceTree = "<group>"; };
 		25A806F424EF8BDC004E99C2 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		5059F7465F2E945D9FB01AF4 /* Pods-Food Delivery ServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Delivery ServiceTests.release.xcconfig"; path = "Target Support Files/Pods-Food Delivery ServiceTests/Pods-Food Delivery ServiceTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +141,15 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		2592815724F227F700D96B2D /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				8379BAEB24EB76A000EE8EB9 /* Authentication.storyboard */,
+				2592815824F2283100D96B2D /* WelcomeController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		25A806DA24EE0A87004E99C2 /* Menu-Explore */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,8 +202,9 @@
 				8379BAF124EB7EA100EE8EB9 /* String.swift */,
 				25A806DD24EE1F1A004E99C2 /* Constants.swift */,
 				25A806F424EF8BDC004E99C2 /* ReachabilityManager.swift */,
-				25A806EE24EF6D6E004E99C2 /* NSObject+ClassName.swift */,
 				25A806F124EF758E004E99C2 /* FirebaseCollectionReference.swift */,
+				2592815524F2224C00D96B2D /* BTButton.swift */,
+				2592815A24F2286100D96B2D /* BTLabel.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -212,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				83C4CABD24E8AEB1000841D2 /* LaunchScreen.storyboard */,
-				8379BAEB24EB76A000EE8EB9 /* Authentication.storyboard */,
 				83C4CAB824E8AEAC000841D2 /* Main.storyboard */,
 				8379BAE524EB5F2D00EE8EB9 /* MyOrder.storyboard */,
 				8379BAE724EB5F3E00EE8EB9 /* Favourite.storyboard */,
@@ -247,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				25A806DC24EE0AA6004E99C2 /* Delegates */,
+				2592815724F227F700D96B2D /* Auth */,
 				25A806DA24EE0A87004E99C2 /* Menu-Explore */,
 				8379BAE224EB5EF500EE8EB9 /* Storyboards */,
 				83C4CABB24E8AEB1000841D2 /* Assets.xcassets */,
@@ -530,6 +544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2592815624F2224C00D96B2D /* BTButton.swift in Sources */,
 				8379BAF224EB7EA100EE8EB9 /* String.swift in Sources */,
 				25A806F524EF8BDC004E99C2 /* ReachabilityManager.swift in Sources */,
 				25A806D924EE0A80004E99C2 /* MenuController.swift in Sources */,
@@ -537,9 +552,10 @@
 				8379BAEE24EB7E8400EE8EB9 /* Color.swift in Sources */,
 				8379BAF024EB7E9000EE8EB9 /* Font.swift in Sources */,
 				25A806DE24EE1F1A004E99C2 /* Constants.swift in Sources */,
+				2592815924F2283100D96B2D /* WelcomeController.swift in Sources */,
 				83C4CAB324E8AEAC000841D2 /* AppDelegate.swift in Sources */,
 				25A806E024EE1F32004E99C2 /* MenuCell.swift in Sources */,
-				25A806EF24EF6D6E004E99C2 /* NSObject+ClassName.swift in Sources */,
+				2592815B24F2286100D96B2D /* BTLabel.swift in Sources */,
 				83C4CAB524E8AEAC000841D2 /* SceneDelegate.swift in Sources */,
 				2592815224F201B800D96B2D /* Category.swift in Sources */,
 			);

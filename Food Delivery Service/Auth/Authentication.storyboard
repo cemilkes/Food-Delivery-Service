@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aag-s4-Lzc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome Controller-->
+        <scene sceneID="RJk-kw-8FO">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeController" id="Aag-s4-Lzc" customClass="WelcomeController" customModule="Food_Delivery_Service" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kzh-sg-eTH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeScreen" translatesAutoresizingMaskIntoConstraints="NO" id="P6w-bZ-rhi">
+                                <rect key="frame" x="0.0" y="0.0" width="418" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DELIVERED FAST FOOD TO YOUR DOOR" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCS-6G-iIl" customClass="WelcomeLabel" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                <rect key="frame" x="30" y="240" width="278" height="263"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="44"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set exact location to find the right restaurants near you." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DY-Mm-x4o">
+                                <rect key="frame" x="30" y="511" width="316" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgn-Yf-cpS" customClass="BTButton" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                <rect key="frame" x="30" y="617" width="315" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="P6w-bZ-rhi" firstAttribute="top" secondItem="kzh-sg-eTH" secondAttribute="topMargin" constant="-44" id="GuG-IG-32m"/>
+                            <constraint firstItem="Jb6-c6-bTU" firstAttribute="bottom" secondItem="P6w-bZ-rhi" secondAttribute="bottom" constant="-34" id="M0K-VT-a4H"/>
+                            <constraint firstItem="P6w-bZ-rhi" firstAttribute="leading" secondItem="Jb6-c6-bTU" secondAttribute="leading" id="nqL-Sc-F0D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P6w-bZ-rhi" secondAttribute="trailing" constant="-24" id="pTf-cH-r60"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jb6-c6-bTU"/>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeTopLabel" destination="yCS-6G-iIl" id="eWa-ki-9u6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efo-VN-Otb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215.94202898550725" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="welcomeScreen" width="375" height="812"/>
+    </resources>
+</document>

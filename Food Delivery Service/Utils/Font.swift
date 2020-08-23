@@ -16,11 +16,25 @@ struct Font {
         case custom(String)
     }
     
+    enum FontSize {
+          case standart(StandardSize)
+          case custom(Double)
+          var value: Double{
+              switch self {
+              case .standart(let size):
+                  return size.rawValue
+              case .custom(let customSize):
+                  return customSize
+              }
+          }
+      }
+    
     enum FontName: String {
         
         case AvenirBook      = "Avenir-Book"
         case AvenirHeavy     = "Avenir-Heavy"
         case AvenirMedium    = "Avenir-Medium"
+        case AvenirBlack     = "Avenir-Black"
     }
     
     enum StandardSize: Double {
@@ -35,18 +49,7 @@ struct Font {
         case h9     = 11.0
     }
     
-    enum FontSize {
-        case standart(StandardSize)
-        case custom(Double)
-        var value: Double{
-            switch self {
-            case .standart(let size):
-                return size.rawValue
-            case .custom(let customSize):
-                return customSize
-            }
-        }
-    }
+  
     var type: FontType
     var size: FontSize
     init(_ type: FontType, size: FontSize) {
@@ -66,8 +69,11 @@ extension Font{
                 fatalError("\(fontName) font is not installed, make sure it added in Info.plist and logged with Utility.logAllAvailableFonts()")
             }
             instanceFont = font
-        case .system:
-            instanceFont = UIFont.systemFont(ofSize: CGFloat(size.value))
+        case .system(let fontName):
+            guard let font =  UIFont(name: fontName.rawValue, size: CGFloat(size.value)) else {
+                fatalError("\(fontName.rawValue) font is not installed, make sure it added in Info.plist and logged with Utility.logAllAvailableFonts()")
+            }
+            instanceFont = font
         }
         return instanceFont
     }
