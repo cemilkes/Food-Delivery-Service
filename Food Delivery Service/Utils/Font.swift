@@ -27,7 +27,7 @@ struct Font {
                   return customSize
               }
           }
-      }
+    }
     
     enum FontName: String {
         
@@ -38,6 +38,7 @@ struct Font {
     }
     
     enum StandardSize: Double {
+        case h0     = 44.0
         case h1     = 40.0
         case h2     = 34.0
         case h3     = 28.0
@@ -49,7 +50,6 @@ struct Font {
         case h9     = 11.0
     }
     
-  
     var type: FontType
     var size: FontSize
     init(_ type: FontType, size: FontSize) {
@@ -77,5 +77,4 @@ extension Font{
         }
         return instanceFont
     }
-
 }

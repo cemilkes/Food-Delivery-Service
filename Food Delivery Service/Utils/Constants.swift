@@ -20,3 +20,16 @@ public let kBASKET_PATH = "Basket"
 public let kNAME = "name"
 public let kIMAGE_NAME = "imageName"
 public let kCID = "categoryId"
+
+
+//StoryBoards
+
+struct Storyboard {
+    static let main = "Main"
+    static let authentication = "Authentication"
+}
+
+struct ViewController {
+    static let welcomeController = "WelcomeController"
+    static let loginController   = "LoginController"
+}

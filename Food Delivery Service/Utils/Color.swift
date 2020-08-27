@@ -17,6 +17,7 @@ let customColorWithAlpha = Color.custom(hexString: "#123edd", alpha: 0.25).value
 
 //https://medium.com/ios-os-x-development/a-smart-way-to-manage-colours-schemes-for-ios-applications-development-923ef976be55
 enum Color {
+    
     case theme
     case border
     case shadow
@@ -61,7 +62,7 @@ extension Color {
         
         // Dark Background Colour: Dark background colour to group UI components with light colour.
         case .darkBackground:
-            instanceColor = UIColor(hexString: "#")
+            instanceColor = UIColor(hexString: "#1E2432").withAlphaComponent(0.5)
         
         //Light Background Colour: Light background colour to group UI components with dark colour.
         case .lightBackground:

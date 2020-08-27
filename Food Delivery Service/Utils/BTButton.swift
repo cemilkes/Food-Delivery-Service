@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+
 class BTButton: UIButton {
   
     // We use override button because we want to use our custom button features instead of using UIButton
@@ -24,16 +25,15 @@ class BTButton: UIButton {
     }
      
     func setupButton(){
-        //setShadow()
         styleButton()
     }
-    
     
     func styleButton(){
         
         setTitleColor(Color.whiteDarkText.value, for: .normal)
         backgroundColor     = Color.theme.value
         layer.cornerRadius  = 22
+        titleLabel?.font    = Font(.system(.AvenirHeavy), size: .standart(.h6)).instance
     }
 
 }
