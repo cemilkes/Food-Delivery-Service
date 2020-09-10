@@ -11,7 +11,21 @@ import UIKit
 
 class BTTextfield: UITextField {
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setupTextField()
+        
+    }
     
+    // For storyboard purpose
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        setupTextField()
+    }
+     
+    func setupTextField(){}
     
     
 }

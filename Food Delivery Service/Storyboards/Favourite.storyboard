@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5e3-es-Wza">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5e3-es-Wza">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -14,7 +14,18 @@
                     <view key="view" contentMode="scaleToFill" id="Oof-qT-0hI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favourite" translatesAutoresizingMaskIntoConstraints="NO" id="eRG-tb-6dd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eRG-tb-6dd" firstAttribute="leading" secondItem="1Qc-OK-Z4S" secondAttribute="leading" id="3fr-BA-pVf"/>
+                            <constraint firstItem="eRG-tb-6dd" firstAttribute="top" secondItem="Oof-qT-0hI" secondAttribute="topMargin" constant="-44" id="exK-wx-VD6"/>
+                            <constraint firstItem="eRG-tb-6dd" firstAttribute="centerX" secondItem="Oof-qT-0hI" secondAttribute="centerX" id="fKa-d8-pQ5"/>
+                            <constraint firstItem="eRG-tb-6dd" firstAttribute="bottom" secondItem="1Qc-OK-Z4S" secondAttribute="bottom" id="vUt-Hu-gAn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1Qc-OK-Z4S"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tabBarFavourite" id="mpf-vi-7Ak"/>
@@ -22,10 +33,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ug1-c9-Cse" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="71"/>
+            <point key="canvasLocation" x="113.04347826086958" y="70.982142857142847"/>
         </scene>
     </scenes>
     <resources>
+        <image name="favourite" width="822" height="1608"/>
         <image name="tabBarFavourite" width="75" height="49"/>
     </resources>
 </document>

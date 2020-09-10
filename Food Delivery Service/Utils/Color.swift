@@ -31,6 +31,7 @@ enum Color {
     case darkText
     case lightText
     case intermidiateText
+    case textFieldColor
     
     case affirmation
     case negation
@@ -86,6 +87,9 @@ extension Color {
         
         case .lightText:
             instanceColor = UIColor(hexString: "#cccccc").withAlphaComponent(0.4)
+            
+        case .textFieldColor:
+            instanceColor = UIColor(hexString: "#8e8e93").withAlphaComponent(0.12)
         
         // Affirmation: Colour to show success, something right for user.
         case .affirmation:

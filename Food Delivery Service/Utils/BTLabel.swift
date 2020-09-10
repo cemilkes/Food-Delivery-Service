@@ -39,9 +39,7 @@ class BTLabel: UILabel {
         lineBreakMode   = NSLineBreakMode.byWordWrapping
 
      }
-    
-    
-    
+
 }
 
 class DarkTitleLabel: BTLabel {
