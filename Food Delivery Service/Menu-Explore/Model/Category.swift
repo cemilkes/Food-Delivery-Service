@@ -32,6 +32,32 @@ class Category {
 
     }
 
+    func createCategorySet(){
+        
+        let softDrink            = Category(_name: "Soft Drink", _imageName: "")
+        let appetizers           = Category(_name: "Appetizers", _imageName: "")
+        let vegetarianAppetizers = Category(_name: "Vegetarian Appetizers", _imageName: "")
+        let soup                 = Category(_name: "Soup", _imageName: "")
+        let vegetarianSoup       = Category(_name: "Vegetarian Soup", _imageName: "")
+        let salad                = Category(_name: "Salad", _imageName: "")
+        let vegetarianEntree     = Category(_name: "Vegetarian Entree", _imageName: "")
+        let vegetarianRiceAndNoodles = Category(_name: "Vegetarian Rice and Noodles", _imageName: "")
+        let poultryBeefAndPork   = Category(_name: "Poultry, Beef and Pork", _imageName: "")
+        let houseSpecials        = Category(_name: "House Specials", _imageName: "")
+        let seaFood              = Category(_name: "SeaFood", _imageName: "")
+        let noodlesAndFriedRice  = Category(_name: "Noodles and Fried Rice", _imageName: "")
+        let curry                = Category(_name: "Curry", _imageName: "")
+        let sides                = Category(_name: "Sides", _imageName: "")
+        let dessert              = Category(_name: "Dessert", _imageName: "")
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     /*
         let dict = NSMutableDictionary()
          
