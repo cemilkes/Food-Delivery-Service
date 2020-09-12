@@ -1,19 +1,19 @@
 {
   "images" : [
     {
-      "filename" : "menuCollectionFirst.png",
       "scale" : "1x",
+      "filename" : "curry.png",
       "idiom" : "universal"
     },
     {
+      "filename" : "curry@2x.png",
       "idiom" : "universal",
-      "filename" : "menuCollectionFirst@2x.png",
       "scale" : "2x"
     },
     {
-      "filename" : "menuCollectionFirst@3x.png",
+      "idiom" : "universal",
       "scale" : "3x",
-      "idiom" : "universal"
+      "filename" : "curry@3x.png"
     }
   ],
   "info" : {

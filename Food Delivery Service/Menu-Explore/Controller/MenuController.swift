@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 private let reuseIdentifier = "MenuCell"
 
@@ -17,6 +18,12 @@ class MenuController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        downloadCategoriesFromFirebase { (allCategories) in
+            
+            print("Called")
+            
+        }
+        //createCategorySet()
         // Do any additional setup after loading the view.
     }
     
