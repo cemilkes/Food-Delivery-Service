@@ -33,7 +33,6 @@ class Category {
 
     }
 
-    
 }
 
 func downloadCategoriesFromFirebase(completion: @escaping (_ categoryArray: [Category]) -> Void){
@@ -55,7 +54,6 @@ func downloadCategoriesFromFirebase(completion: @escaping (_ categoryArray: [Cat
     }
     
 }
-
 
 
 func saveCategoryToFirebase(_ category: Category){

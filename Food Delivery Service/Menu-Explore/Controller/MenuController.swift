@@ -11,8 +11,11 @@ import Firebase
 
 private let reuseIdentifier = "MenuCell"
 
-
 class MenuController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
+    // MARK: - Variables
+    
     
     
     override func viewDidLoad() {
