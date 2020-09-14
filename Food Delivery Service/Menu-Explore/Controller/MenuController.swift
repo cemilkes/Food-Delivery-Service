@@ -11,11 +11,12 @@ import Firebase
 
 private let reuseIdentifier = "MenuCell"
 
-class MenuController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MenuController: UIViewController {
     
     
     // MARK: - Variables
     
+    @IBOutlet weak var collectionView: UICollectionView!
     
     
     override func viewDidLoad() {
@@ -23,25 +24,12 @@ class MenuController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         downloadCategoriesFromFirebase { (allCategories) in
             
+            
             print("Called")
             
         }
         //createCategorySet()
         // Do any additional setup after loading the view.
-    }
-    
-    
-    
-    // MARK: - Collection View Data Source
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: re, for: <#T##IndexPath#>)
-        return UICollectionViewCell()
     }
 
 }
