@@ -83,7 +83,7 @@ func saveCategoryToFirebase(_ category: Category){
      let noodlesAndFriedRice  = Category(_name: "Noodles and Fried Rice", _imageName: "soup")
      let curry                = Category(_name: "Curry", _imageName: "curry")
      let sides                = Category(_name: "Sides", _imageName: "softDrink")
-     let dessert              = Category(_name: "Dessert", _imageName: "dessert")
+     let dessert              = Category(_name: "Dessert", _imageName: "soup")
      
      let arrayOfCategories    = [softDrink, appetizers, vegetarianAppetizers, soup, vegetarianSoup, salad, vegetarianEntree, vegetarianRiceAndNoodles, poultryBeefAndPork, houseSpecials, seaFood, noodlesAndFriedRice, curry, sides, dessert]
      

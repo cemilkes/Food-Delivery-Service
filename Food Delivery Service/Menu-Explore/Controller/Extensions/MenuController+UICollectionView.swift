@@ -11,11 +11,13 @@ import UIKit
 
 private let reuseIdentifier = "MenuCell"
 
-// MARK: -
+private let sectionInsets   = UIEdgeInsets(top: 14.0, left: 15.0, bottom: 18.0, right: 15)
 
-extension MenuController: UICollectionViewDataSource, UICollectionViewDelegate {
+private let itemsPerRow     = 2
+
+extension MenuController: UICollectionViewDataSource, UICollectionViewDelegate{
     
-    // MARK: - Collection View Data Source
+    // MARK: - Collection View Data Source & Delegate
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryArray.count
@@ -30,4 +32,26 @@ extension MenuController: UICollectionViewDataSource, UICollectionViewDelegate {
         return cell
     }
 
+}
+
+// MARK: - CollectionView Delegate Flow Layout
+
+extension MenuController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            
+        let paddingSpace = sectionInsets.left * CGFloat(itemsPerRow + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let withPerItem = availableWidth / CGFloat(itemsPerRow)
+        return CGSize(width: withPerItem, height: 191.0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
+    
+    
 }
