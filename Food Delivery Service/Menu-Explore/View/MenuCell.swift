@@ -10,7 +10,17 @@ import UIKit
 
 class MenuCell: UICollectionViewCell {
 
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
+    func generateCell(_ category: Category){
+        
+        nameLabel.text   = category.name
+        imageView.image = category.image
+        
+    }
+    
+    
     
 }

@@ -9,27 +9,41 @@
 import UIKit
 import Firebase
 
-private let reuseIdentifier = "MenuCell"
-
 class MenuController: UIViewController {
     
     
     // MARK: - Variables
+    var categoryArray: [Category] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+  
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadCategories()
+    }
+    
+    // MARK: - Load Categories
+    func loadCategories(){
         
         downloadCategoriesFromFirebase { (allCategories) in
             
-            
+            self.categoryArray = allCategories
+            self.collectionView.reloadData()
             print("Called")
             
         }
-        //createCategorySet()
-        // Do any additional setup after loading the view.
     }
-
+    
+    
+    
 }
