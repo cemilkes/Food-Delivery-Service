@@ -29,7 +29,11 @@ struct Storyboard {
     static let authentication = "Authentication"
 }
 
+// Controllers
+
 struct ViewController {
     static let welcomeController = "WelcomeController"
     static let loginController   = "LoginController"
+    static let menuController   = "MenuController"
+    static let itemController   = "ItemsController"
 }
