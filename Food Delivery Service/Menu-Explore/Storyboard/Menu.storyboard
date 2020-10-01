@@ -64,7 +64,6 @@
                                         <connections>
                                             <outlet property="imageView" destination="rz8-UJ-dDs" id="DQq-ff-18f"/>
                                             <outlet property="nameLabel" destination="kgo-jG-fCe" id="eNc-Jq-O0w"/>
-                                            <segue destination="cH9-ta-Ixg" kind="show" id="p6X-fJ-I8J"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -83,6 +82,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="0cC-RT-ZQ1" id="pCZ-Gi-0iH"/>
+                        <segue destination="cH9-ta-Ixg" kind="show" identifier="menuIdentifier" id="9uS-KA-1wK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qzq-ss-TCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -148,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpK-Vc-6n7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1316" y="204.67980295566502"/>
+            <point key="canvasLocation" x="1375" y="205"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8fZ-Nf-aAS">

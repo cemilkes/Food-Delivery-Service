@@ -37,3 +37,7 @@ struct ViewController {
     static let menuController   = "MenuController"
     static let itemController   = "ItemsController"
 }
+
+struct PerformSegue {
+    static let menuIdentifier = "menuIdentifier"
+}

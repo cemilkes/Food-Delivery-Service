@@ -7,3 +7,26 @@
 //
 
 import Foundation
+import UIKit
+import Firebase
+
+class Item{
+    
+    var id: String!
+    var categoryId: String!
+    var name:String!
+    var description: String!
+    var price: Double!
+    var imageLinks: [String]!
+    //var specialInstructions: String = ""
+    //var quantity: Int
+    
+    
+    init() {}
+    
+    init(_dictionary: NSDictionary) {
+        
+    }
+    
+    
+}

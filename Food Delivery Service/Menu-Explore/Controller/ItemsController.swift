@@ -10,9 +10,14 @@ import UIKit
 
 class ItemsController: UIViewController {
 
+    // MARK: - Variables
+    var category: Category?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("We have selected\(category?.name)")
         // Do any additional setup after loading the view.
     }
     

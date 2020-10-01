@@ -46,15 +46,12 @@ func downloadCategoriesFromFirebase(completion: @escaping (_ categoryArray: [Cat
         }
         if !snapshot.isEmpty {
             for categoryDict in snapshot.documents{
-                print("Created new category")
                 categoryArray.append(Category(_dictionary: categoryDict.data() as NSDictionary))
             }
         }
         completion(categoryArray)
     }
-    
 }
-
 
 func saveCategoryToFirebase(_ category: Category){
      let id = UUID().uuidString

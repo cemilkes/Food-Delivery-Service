@@ -15,9 +15,9 @@ private let sectionInsets   = UIEdgeInsets(top: 14.0, left: 15.0, bottom: 18.0, 
 
 private let itemsPerRow     = 2
 
-extension MenuController: UICollectionViewDataSource, UICollectionViewDelegate{
-    
-    // MARK: - Collection View Data Source & Delegate
+// MARK: - Collection View Data Source
+
+extension MenuController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryArray.count
@@ -31,7 +31,14 @@ extension MenuController: UICollectionViewDataSource, UICollectionViewDelegate{
         
         return cell
     }
+}
 
+// MARK: - CollectionView Delegate
+extension MenuController: UICollectionViewDelegate{
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: PerformSegue.menuIdentifier, sender: categoryArray[indexPath.row])
+    }
 }
 
 // MARK: - CollectionView Delegate Flow Layout

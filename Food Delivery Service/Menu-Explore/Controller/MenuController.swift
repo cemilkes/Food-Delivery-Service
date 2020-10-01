@@ -20,11 +20,10 @@ class MenuController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  
+        
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        
+                
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -39,10 +38,23 @@ class MenuController: UIViewController {
             
             self.categoryArray = allCategories
             self.collectionView.reloadData()
-            print("Called")
             
         }
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //Make sure you are connecting to right segue in case of there are more than one segue from the viewcontroller to other one
+        if segue.identifier == PerformSegue.menuIdentifier {
+            let vc = segue.destination as! ItemsController
+            vc.category = sender as? Category
+            
+        }
+        
+    }
+    
+    
     
     
     
