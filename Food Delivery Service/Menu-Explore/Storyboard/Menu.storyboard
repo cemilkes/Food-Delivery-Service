@@ -144,7 +144,9 @@
                             <constraint firstItem="buv-fa-Pzy" firstAttribute="trailing" secondItem="bh7-cC-IVA" secondAttribute="trailing" id="MMd-jW-Phq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bPU-A0-CEb"/>
+                    <navigationItem key="navigationItem" id="bPU-A0-CEb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wBV-o5-n0R"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpK-Vc-6n7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
