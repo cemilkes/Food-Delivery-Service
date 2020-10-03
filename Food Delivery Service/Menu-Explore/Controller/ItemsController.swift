@@ -16,20 +16,28 @@ class ItemsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         print("We have selected\(category?.name)")
         // Do any additional setup after loading the view.
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == PerformSegue.itemToAddItem {
+        
+            // Get the new view controller using segue.destination.
+            let vc = segue.destination as! AddItemController
+        
+            // Pass the selected object to the new view controller.
+            vc.category = category
+        }
+        
     }
-    */
+    
 
 }

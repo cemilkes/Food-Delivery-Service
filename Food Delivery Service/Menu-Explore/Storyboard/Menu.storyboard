@@ -147,7 +147,7 @@
                     <navigationItem key="navigationItem" id="bPU-A0-CEb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wBV-o5-n0R">
                             <connections>
-                                <segue destination="TT3-FY-IVT" kind="show" id="z3g-kD-0yk"/>
+                                <segue destination="TT3-FY-IVT" kind="show" identifier="ItemToAddItemSegue" id="z3g-kD-0yk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

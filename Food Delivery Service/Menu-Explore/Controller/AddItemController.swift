@@ -18,12 +18,12 @@ class AddItemController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     
     var category: Category!
-    
+    var itemImages: [UIImage?] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(category.id)
         // Do any additional setup after loading the view.
     }
     
@@ -39,14 +39,47 @@ class AddItemController: UIViewController {
     */
     @IBAction func DoneButtonPressed(_ sender: UIBarButtonItem) {
     
+        dismissKeyboard()
+        if fieldAreCompleted() {
+            saveItemToFirebase()
+        }else{
+            //TODO: - Description
+        }
+        
     }
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         dismissKeyboard()
     }
     
+    private func fieldAreCompleted() -> Bool {
+        return (addItemTextField.text != nil && priceTextField.text != nil)
+    }
+    
     private func dismissKeyboard(){
         self.view.endEditing(false)
+    }
+    
+    private func popTheView(){
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    //MARK: - Save Item
+    private func saveItemToFirebase(){
+        let item         = Item()
+        item.id          = UUID().uuidString
+        item.name        = addItemTextField.text!
+        item.categoryId  = category.id
+        item.description = descriptionTextView.text
+        item.price       = Double(priceTextField.text!)
+    
+        if itemImages.count > 0 {
+            
+        }else{
+            Food_Delivery_Service.saveItemToFirebase(item)
+            popTheView()
+        }
+   
     }
     
     
