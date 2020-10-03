@@ -30,9 +30,7 @@ class Category {
         id      = _dictionary[kCID] as! String
         name    = _dictionary[kNAME] as! String
         image   = UIImage(named: _dictionary[kIMAGE_NAME] as? String ?? "")
-
     }
-
 }
 
 func downloadCategoriesFromFirebase(completion: @escaping (_ categoryArray: [Category]) -> Void){

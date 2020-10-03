@@ -1,15 +1,25 @@
 //
-//  SignUpController.swift
+//  AddItemController.swift
 //  Food Delivery Service
 //
-//  Created by Mr Kes on 9/7/20.
+//  Created by Mr Kes on 10/3/20.
 //  Copyright © 2020 CemilKes. All rights reserved.
 //
 
 import UIKit
 
-class SignUpController: UIViewController {
+class AddItemController: UIViewController {
 
+    
+    @IBOutlet weak var addItemTextField: UITextField!
+    
+    @IBOutlet weak var priceTextField: UITextField!
+    
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
+    var category: Category!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +37,17 @@ class SignUpController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-    @IBAction func goToMain(_ sender: Any) {
-        performSegue(withIdentifier: "main", sender: self)
+    @IBAction func DoneButtonPressed(_ sender: UIBarButtonItem) {
+    
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            if segue.identifier == "goToAlternateStoryboard" {
-//                guard let vc = segue.destination as? AlternateViewController else { return }
-//                vc.segueText = segueTextField.text
-//            }
-        }
+    
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        dismissKeyboard()
+    }
+    
+    private func dismissKeyboard(){
+        self.view.endEditing(false)
+    }
+    
     
 }

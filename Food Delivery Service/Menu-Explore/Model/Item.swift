@@ -34,7 +34,6 @@ class Item {
     }
 }
 
-
 func saveItemToFirebase(_ item: Item){
     
     FirebaseReference(.Items).document(item.id).setData(itemDictionaryFrom(item) as! [String : Any] )

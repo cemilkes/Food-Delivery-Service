@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cartEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="onZ-wh-hEf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myOrder" translatesAutoresizingMaskIntoConstraints="NO" id="onZ-wh-hEf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gnE-hC-ybE"/>
@@ -26,7 +26,7 @@
                         <constraints>
                             <constraint firstItem="onZ-wh-hEf" firstAttribute="bottom" secondItem="gnE-hC-ybE" secondAttribute="bottom" id="H0g-rx-vsg"/>
                             <constraint firstItem="onZ-wh-hEf" firstAttribute="centerX" secondItem="2KA-BS-fJC" secondAttribute="centerX" id="fTi-53-aOo"/>
-                            <constraint firstItem="onZ-wh-hEf" firstAttribute="top" secondItem="2KA-BS-fJC" secondAttribute="topMargin" constant="-44" id="nUP-W9-nWr"/>
+                            <constraint firstItem="onZ-wh-hEf" firstAttribute="top" secondItem="2KA-BS-fJC" secondAttribute="topMargin" id="nUP-W9-nWr"/>
                             <constraint firstItem="onZ-wh-hEf" firstAttribute="leading" secondItem="gnE-hC-ybE" secondAttribute="leading" id="ocj-GE-ooL"/>
                         </constraints>
                     </view>
@@ -39,7 +39,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cartEmpty" width="848" height="1666"/>
+        <image name="myOrder" width="752" height="1390"/>
         <image name="tabBarOrder" width="75" height="49"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
