@@ -131,6 +131,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ItemPriceLabel" destination="lnf-rc-9rz" id="Ktl-7U-gLa"/>
+                                            <outlet property="itemDescLabel" destination="Bs6-GH-ZuW" id="f3h-VN-bFz"/>
+                                            <outlet property="itemNameLabel" destination="N8E-XC-ds0" id="9L0-ZD-MX1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -151,6 +156,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="buv-fa-Pzy" id="0uG-k7-9Po"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpK-Vc-6n7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

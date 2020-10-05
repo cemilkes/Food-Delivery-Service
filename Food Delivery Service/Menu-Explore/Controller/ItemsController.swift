@@ -12,15 +12,42 @@ class ItemsController: UIViewController {
 
     // MARK: - Variables
     var category: Category?
+    var itemArray : [Item] = []
+    @IBOutlet weak var tableView: UITableView!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("We have selected\(category?.name)")
+        
+        self.title = category?.name
+        
+        //print("We have selected\(category?.name)")
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if category != nil {
+            loadItems()
+        }
+        
+    }
+    
+    //MARK: - Load Items
+    private func loadItems(){
+        
+        downloadItemsFromFirebase(category!.id, completion: { (allItems) in
+            
+            print("We have \(allItems.count) items for this category.")
+            self.itemArray = allItems
+            self.tableView.reloadData()
+        })
+        
+        
+    }
 
     
     // MARK: - Navigation

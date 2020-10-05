@@ -43,3 +43,25 @@ func saveItemToFirebase(_ item: Item){
 func itemDictionaryFrom(_ item: Item) -> NSDictionary {
     return NSDictionary(objects: [item.id, item.categoryId, item.name, item.description, item.price, item.imageLinks], forKeys: [kOBJECTID as NSCopying, kCID as NSCopying, kNAME as NSCopying, kDESCRIPTION as NSCopying, kPRICE as NSCopying, kIMAGELINKS as NSCopying])
 }
+
+//MARK: - Download Items
+func downloadItemsFromFirebase(_ withCategoryId: String, completion: @escaping (_ itemArray: [Item]) -> Void){
+    
+    var itemArray: [Item] = []
+    FirebaseReference(.Items).whereField(kCID, isEqualTo: withCategoryId).getDocuments(completion: { (snaphot, error) in
+        
+        guard let snaphot = snaphot else {
+            completion(itemArray)
+            return
+        }
+        if !snaphot.isEmpty{
+            for itemDict in snaphot.documents {
+                itemArray.append(Item(_dictionary: itemDict.data() as NSDictionary))
+            }
+        }
+        completion(itemArray)
+    })
+    
+    
+    
+}

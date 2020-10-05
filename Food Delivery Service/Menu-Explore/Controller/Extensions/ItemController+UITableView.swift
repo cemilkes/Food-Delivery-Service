@@ -7,3 +7,23 @@
 //
 
 import Foundation
+import UIKit
+private let reuseIdentifier = "ItemCell"
+
+
+extension ItemsController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        itemArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ItemCell
+        cell.generateCell(itemArray[indexPath.row])
+        
+        return cell
+    }
+    
+
+}

@@ -10,6 +10,12 @@ import UIKit
 
 class ItemCell: UITableViewCell {
 
+    
+    
+    @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var itemDescLabel: UILabel!
+    @IBOutlet weak var ItemPriceLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +27,13 @@ class ItemCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func generateCell(_ item: Item) {
+        itemNameLabel.text  = item.name
+        itemDescLabel.text  = item.description
+        ItemPriceLabel.text = "\(item.price!)"
+        
+    }
+    
+    
+    
 }
