@@ -13,30 +13,36 @@ class AddItemController: UIViewController {
     
     @IBOutlet weak var addItemTextField: UITextField!
     
-    @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet weak var priceTextField: CurrencyTextField!
     
     @IBOutlet weak var descriptionTextView: UITextView!
     
     var category: Category!
     var itemImages: [UIImage?] = []
     
+    var selectedCurrency: Currency? {
+           didSet {
+            priceTextField.text?.removeAll()
+            priceTextField.currency = selectedCurrency
+            //priceTextField.becomeFirstResponder()
+           }
+       }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(category.id)
         // Do any additional setup after loading the view.
+        setCurrencyOnStart()
+        priceTextField.currency = selectedCurrency
+                //Pass amount from CurrencyTextField class
+//        priceTextField.passTextFieldText = { [weak self] enteredStringAmount, amountAsDouble in
+//                    self?.cleanAmtLbl.text = String(amountAsDouble ?? 0.0)
+//                }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func DoneButtonPressed(_ sender: UIBarButtonItem) {
     
         dismissKeyboard()
@@ -44,8 +50,8 @@ class AddItemController: UIViewController {
             saveItemToFirebase()
         }else{
             //TODO: - Description
+            print("Item not added")
         }
-        
     }
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
@@ -71,7 +77,7 @@ class AddItemController: UIViewController {
         item.name        = addItemTextField.text!
         item.categoryId  = category.id
         item.description = descriptionTextView.text
-        item.price       = Double(priceTextField.text!)
+        item.price       = priceTextField.text!
     
         if itemImages.count > 0 {
             
@@ -82,5 +88,8 @@ class AddItemController: UIViewController {
    
     }
     
+    private func setCurrencyOnStart() {
+            selectedCurrency = Currency(locale: "en_US", amount: 0.0)
+        }
     
 }

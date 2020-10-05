@@ -8,8 +8,8 @@
 
 import Foundation
 import UIKit
-private let reuseIdentifier = "ItemCell"
 
+private let reuseIdentifier = "ItemCell"
 
 extension ItemsController: UITableViewDataSource {
     
@@ -24,6 +24,9 @@ extension ItemsController: UITableViewDataSource {
         
         return cell
     }
-    
+}
 
+extension ItemsController: UITableViewDelegate {
+    
+    
 }

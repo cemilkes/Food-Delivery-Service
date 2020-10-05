@@ -21,6 +21,10 @@ class ItemsController: UIViewController {
         super.viewDidLoad()
         
         
+        tableView.tableFooterView = UIView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         self.title = category?.name
         
         //print("We have selected\(category?.name)")
