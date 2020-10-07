@@ -10,7 +10,6 @@ import UIKit
 
 class AddItemController: UIViewController {
 
-    
     @IBOutlet weak var addItemTextField: UITextField!
     
     @IBOutlet weak var priceTextField: CurrencyTextField!
@@ -27,8 +26,6 @@ class AddItemController: UIViewController {
             //priceTextField.becomeFirstResponder()
            }
        }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +84,8 @@ class AddItemController: UIViewController {
         }
    
     }
+    
+    //MARK: - Set Local Currency
     
     private func setCurrencyOnStart() {
             selectedCurrency = Currency(locale: "en_US", amount: 0.0)

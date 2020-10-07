@@ -178,6 +178,21 @@
             </objects>
             <point key="canvasLocation" x="1375" y="205"/>
         </scene>
+        <!--Item Detail Controller-->
+        <scene sceneID="ooG-Zs-e00">
+            <objects>
+                <viewController storyboardIdentifier="ItemDetailController" id="iBP-hf-uXy" customClass="ItemDetailController" customModule="Food_Delivery_Service" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="center" id="HJX-mf-PbB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RfE-5x-1d0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uw3-CU-9J5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2102" y="205"/>
+        </scene>
         <!--Add Item Controller-->
         <scene sceneID="jEk-7V-3ls">
             <objects>
@@ -243,7 +258,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2104.8000000000002" y="204.67980295566502"/>
+            <point key="canvasLocation" x="1374" y="901"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8fZ-Nf-aAS">
