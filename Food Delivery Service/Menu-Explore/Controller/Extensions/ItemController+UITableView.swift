@@ -27,6 +27,9 @@ extension ItemsController: UITableViewDataSource {
 }
 
 extension ItemsController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        showItem(itemArray[indexPath.row])
+    }
     
 }

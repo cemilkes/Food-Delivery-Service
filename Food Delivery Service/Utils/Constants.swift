@@ -33,15 +33,17 @@ public let kIMAGELINKS = "imageLinks"
 struct Storyboard {
     static let main = "Main"
     static let authentication = "Authentication"
+    static let menu = "Menu"
 }
 
 // Controllers
 
 struct ViewController {
-    static let welcomeController = "WelcomeController"
-    static let loginController   = "LoginController"
-    static let menuController   = "MenuController"
-    static let itemController   = "ItemsController"
+    static let welcomeController    = "WelcomeController"
+    static let loginController      = "LoginController"
+    static let menuController       = "MenuController"
+    static let itemController       = "ItemsController"
+    static let itemDetailController = "ItemDetailController"
 }
 
 struct PerformSegue {

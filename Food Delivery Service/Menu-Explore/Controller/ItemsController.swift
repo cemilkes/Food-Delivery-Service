@@ -15,11 +15,8 @@ class ItemsController: UIViewController {
     var itemArray : [Item] = []
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         tableView.tableFooterView = UIView()
         tableView.delegate = self
@@ -37,7 +34,6 @@ class ItemsController: UIViewController {
         if category != nil {
             loadItems()
         }
-        
     }
     
     //MARK: - Load Items
@@ -53,6 +49,15 @@ class ItemsController: UIViewController {
         
     }
 
+    func showItem(_ item: Item){
+        let itemVC = UIStoryboard.init(name: Storyboard.menu, bundle: nil).instantiateViewController(identifier: ViewController.itemDetailController) as! ItemDetailController
+        itemVC.item = item
+        present(itemVC, animated: true, completion: nil)
+        itemVC.modalPresentationStyle = .fullScreen
+        
+    }
+    
+    
     
     // MARK: - Navigation
 
@@ -69,6 +74,8 @@ class ItemsController: UIViewController {
         }
         
     }
+    
+    
     
 
 }
