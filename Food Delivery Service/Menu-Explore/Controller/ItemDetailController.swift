@@ -8,15 +8,18 @@
 
 import Foundation
 import UIKit
+import JGProgressHUD
 
 class ItemDetailController: UIViewController {
     
     
     var item:Item!
-
+    var hud: JGProgressHUD!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
     }
     
     private func setupUI(){
@@ -51,22 +54,36 @@ class ItemDetailController: UIViewController {
         saveBasketToFirestore(newBasket)
         
         // Add Hud
-    
+        self.hud.textLabel.text = "Added to basket!"
+        self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+        self.hud.show(in: self.view)
+        self.hud.dismiss(afterDelay: 2.0)
     }
     
     func updateBasket(basket: Basket, withValues: [String:Any]){
         
         updateBasketInFirestore(basket, withValues: withValues) { (error) in
+            if error != nil {
                 
+                self.hud.textLabel.text = "Error: \(error!.localizedDescription)"
+                self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+                
+                print("Error updating basket", error!.localizedDescription)
+                
+            }else{
+                
+                self.hud.textLabel.text = "Added to basket!"
+                self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+                
+            }
             
         }
-        
-        
-        
-        
-        
-        
-        
     }
+    
+    func hudSuccessMessage(){}
     
 }

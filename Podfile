@@ -12,6 +12,8 @@ target 'Food Delivery Service' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   
+  pod 'JGProgressHUD'
+  
   target 'Food Delivery ServiceTests' do
     inherit! :search_paths
     # Pods for testing
