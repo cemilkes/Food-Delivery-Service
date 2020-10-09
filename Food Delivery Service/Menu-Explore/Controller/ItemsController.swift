@@ -35,7 +35,7 @@ class ItemsController: UIViewController {
             loadItems()
         }
     }
-    
+
     //MARK: - Load Items
     private func loadItems(){
         

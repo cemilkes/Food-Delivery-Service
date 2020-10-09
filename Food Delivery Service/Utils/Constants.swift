@@ -26,7 +26,8 @@ public let kOBJECTID = "objectId"
 public let kDESCRIPTION = "description"
 public let kPRICE = "price"
 public let kIMAGELINKS = "imageLinks"
-
+public let kOWNERID = "ownerId"
+public let kITEMIDS = "itemIds"
 
 //StoryBoards
 

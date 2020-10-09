@@ -15,6 +15,7 @@
 		2560AB2D24F710A000844F29 /* BTTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560AB2C24F710A000844F29 /* BTTextfield.swift */; };
 		2560AB2F24F7114C00844F29 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560AB2E24F7114C00844F29 /* LoginController.swift */; };
 		257AE0EC252CCDC6007318B1 /* ItemDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE0EB252CCDC6007318B1 /* ItemDetailController.swift */; };
+		257AE10D2530C315007318B1 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE10C2530C315007318B1 /* Basket.swift */; };
 		2592815224F201B800D96B2D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592815124F201B800D96B2D /* Category.swift */; };
 		2592815624F2224C00D96B2D /* BTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592815524F2224C00D96B2D /* BTButton.swift */; };
 		2592815924F2283100D96B2D /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592815824F2283100D96B2D /* WelcomeController.swift */; };
@@ -75,6 +76,7 @@
 		2560AB2C24F710A000844F29 /* BTTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTTextfield.swift; sourceTree = "<group>"; };
 		2560AB2E24F7114C00844F29 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		257AE0EB252CCDC6007318B1 /* ItemDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailController.swift; sourceTree = "<group>"; };
+		257AE10C2530C315007318B1 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		2592815124F201B800D96B2D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		2592815524F2224C00D96B2D /* BTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTButton.swift; sourceTree = "<group>"; };
 		2592815824F2283100D96B2D /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			children = (
 				25A806DF24EE1F32004E99C2 /* MenuCell.swift */,
 				253C4B87251EB0CA00135ADC /* ItemCell.swift */,
+				257AE10C2530C315007318B1 /* Basket.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				253C4B98251EB10300135ADC /* Item.swift in Sources */,
 				25A806D924EE0A80004E99C2 /* MenuController.swift in Sources */,
 				25D9B851252B791400B13C22 /* Currency.swift in Sources */,
+				257AE10D2530C315007318B1 /* Basket.swift in Sources */,
 				25A806F224EF758E004E99C2 /* FirebaseCollectionReference.swift in Sources */,
 				8379BAEE24EB7E8400EE8EB9 /* Color.swift in Sources */,
 				8379BAF024EB7E9000EE8EB9 /* Font.swift in Sources */,

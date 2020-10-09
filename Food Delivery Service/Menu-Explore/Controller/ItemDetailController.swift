@@ -18,7 +18,15 @@ class ItemDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUI()
+    }
+    
+    private func setupUI(){
+        if item != nil{
+            self.title = item.name
+            print(item.name)
+            
+        }
     }
     
 }
