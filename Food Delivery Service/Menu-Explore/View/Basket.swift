@@ -54,8 +54,19 @@ func saveBasketToFirestore(_ basket: Basket){
     FirebaseReference(.Basket).document(basket.id).setData(basketDictionaryFrom(basket) as! [String : Any])
 }
 
-//MARK: - Create Dictionary from Item 
+//MARK: - Create Dictionary from Item
 
 func basketDictionaryFrom(_ basket: Basket) -> NSDictionary {
     return NSDictionary(objects: [basket.id, basket.ownerId, basket.itemIds], forKeys: [kOBJECTID as NSCopying, kOWNERID as NSCopying, kITEMIDS as NSCopying])
+}
+
+//MARK: - Update
+
+func updateBasketInFirestore(_ basket: Basket, withValues: [String:Any], completion: @escaping (_ error: Error?) -> Void){
+    
+    FirebaseReference(.Basket).document(basket.id).updateData(withValues) { (error) in
+        completion(error)
+    }
+    
+    
 }
