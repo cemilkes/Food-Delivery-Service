@@ -159,13 +159,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		257AE12B253104C5007318B1 /* Order */ = {
+		252B73E92532162D005E51E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				257AE10C2530C315007318B1 /* Basket.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		252B73F0253217AA005E51E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				257AE12F25310651007318B1 /* OrderController.swift */,
+				257AE134253167DF007318B1 /* Extensions */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		252B73F1253217B3005E51E0 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				8379BAE524EB5F2D00EE8EB9 /* MyOrder.storyboard */,
-				257AE12F25310651007318B1 /* OrderController.swift */,
-				257AE134253167DF007318B1 /* Extensions */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		252B73F2253217D2005E51E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				257AE1772531729B007318B1 /* OrderCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		257AE12B253104C5007318B1 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				252B73E92532162D005E51E0 /* Model */,
+				252B73F2253217D2005E51E0 /* View */,
+				252B73F0253217AA005E51E0 /* Controller */,
+				252B73F1253217B3005E51E0 /* Storyboard */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -183,7 +216,6 @@
 			children = (
 				2592815124F201B800D96B2D /* Category.swift */,
 				253C4B97251EB10300135ADC /* Item.swift */,
-				257AE10C2530C315007318B1 /* Basket.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

@@ -19,6 +19,9 @@ class OrderController: UIViewController {
     
     let hud = JGProgressHUD(style: .dark)
     
+    @IBOutlet weak var subTotalLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,18 +51,29 @@ class OrderController: UIViewController {
         if basket != nil {
             downloadItems(basket!.itemIds){ (allItems) in
                 self.allItems = allItems
+                self.updateTotalLabels(false)
                 self.tableView.reloadData()
             }
         }
     }
     
-    private func getItemsCount(_ isEmpty: Bool) {
+    private func updateTotalLabels(_ isEmpty: Bool) {
         if isEmpty {
             
+            subTotalLabel.text = returnBasketTotalPrice()
+        }else{
+            subTotalLabel.text = returnBasketTotalPrice()
         }
     }
     
-    private func returnBasketTotalPrice() {
+    private func returnBasketTotalPrice() -> String {
+        
+        var totalPrice = 0.0
+        for item in allItems {
+            //totalPrice += Double(item.price)!
+        }
+        
+        return convertToCurrency(totalPrice)
         
     }
     

@@ -157,6 +157,7 @@
                     <navigationItem key="navigationItem" title="My Order" id="Tjd-OD-0Ud"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="subTotalLabel" destination="Qoo-sh-GoF" id="tNU-4d-Myn"/>
                         <outlet property="tableView" destination="qJS-nJ-CAi" id="Soi-tP-8hJ"/>
                     </connections>
                 </viewController>
