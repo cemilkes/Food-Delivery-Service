@@ -32,11 +32,7 @@ class AddItemController: UIViewController {
         print(category.id)
         // Do any additional setup after loading the view.
         setCurrencyOnStart()
-        priceTextField.currency = selectedCurrency
-                //Pass amount from CurrencyTextField class
-//        priceTextField.passTextFieldText = { [weak self] enteredStringAmount, amountAsDouble in
-//                    self?.cleanAmtLbl.text = String(amountAsDouble ?? 0.0)
-//                }
+       
         
     }
     
@@ -45,6 +41,7 @@ class AddItemController: UIViewController {
         dismissKeyboard()
         if fieldAreCompleted() {
             saveItemToFirebase()
+            
         }else{
             //TODO: - Description
             print("Item not added")
@@ -75,7 +72,7 @@ class AddItemController: UIViewController {
         item.categoryId  = category.id
         item.description = descriptionTextView.text
         item.price       = priceTextField.text!
-    
+        
         if itemImages.count > 0 {
             
         }else{

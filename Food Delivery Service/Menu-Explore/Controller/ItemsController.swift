@@ -41,7 +41,7 @@ class ItemsController: UIViewController {
         
         downloadItemsFromFirebase(category!.id, completion: { (allItems) in
             
-            print("We have \(allItems.count) items for this category.")
+            //print("We have \(allItems.count) items for this category.")
             self.itemArray = allItems
             self.tableView.reloadData()
         })

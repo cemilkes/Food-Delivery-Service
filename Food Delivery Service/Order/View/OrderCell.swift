@@ -32,7 +32,7 @@ class OrderCell: UITableViewCell {
     func generateCell(_ item: Item) {
         itemNameLabel.text  = item.name
         itemDescriptionLabel.text  = item.description
-        itemPriceLabel.text = item.price   ////"\(item.price!)"
+        itemPriceLabel.text = "\(item.price!)" // item.price   ////"\(item.price!)"
         itemPriceLabel.adjustsFontSizeToFitWidth = true
     }
     

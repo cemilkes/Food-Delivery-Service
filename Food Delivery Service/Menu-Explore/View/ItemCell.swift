@@ -30,7 +30,7 @@ class ItemCell: UITableViewCell {
     func generateCell(_ item: Item) {
         itemNameLabel.text  = item.name
         itemDescLabel.text  = item.description
-        ItemPriceLabel.text = item.price   ////"\(item.price!)"
+        ItemPriceLabel.text = item.price!
         ItemPriceLabel.adjustsFontSizeToFitWidth = true
     }
     

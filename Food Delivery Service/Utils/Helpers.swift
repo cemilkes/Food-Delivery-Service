@@ -19,3 +19,10 @@ func convertToCurrency(_ number: Double) -> String {
     
     return priceString
 }
+
+func convertCurrencyToDouble(input: String) -> Double? {
+     let numberFormatter = NumberFormatter()
+     numberFormatter.numberStyle = .currency
+     numberFormatter.locale = Locale.current
+     return numberFormatter.number(from: input)?.doubleValue
+}

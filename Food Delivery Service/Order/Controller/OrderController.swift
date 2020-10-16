@@ -27,13 +27,15 @@ class OrderController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-
+        
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         loadBasketFromFirestore()
+        returnBasketTotalPrice()
         // Check if the user is logged in
         
     }
@@ -48,6 +50,7 @@ class OrderController: UIViewController {
     }
     
     func getBasketItems(){
+        
         if basket != nil {
             downloadItems(basket!.itemIds){ (allItems) in
                 self.allItems = allItems
@@ -69,8 +72,10 @@ class OrderController: UIViewController {
     private func returnBasketTotalPrice() -> String {
         
         var totalPrice = 0.0
+        
         for item in allItems {
-            //totalPrice += Double(item.price)!
+            totalPrice = totalPrice + convertCurrencyToDouble(input: item.price!)!
+            print(totalPrice)
         }
         
         return convertToCurrency(totalPrice)
