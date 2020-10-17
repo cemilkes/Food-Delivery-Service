@@ -17,6 +17,7 @@ class OrderController: UIViewController {
     var allItems: [Item] = []
     var purchasedItemIds : [String] = []
     
+    @IBOutlet weak var continueButtonOutlet: UIButton!
     let hud = JGProgressHUD(style: .dark)
     
     @IBOutlet weak var subTotalLabel: UILabel!
@@ -35,7 +36,7 @@ class OrderController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         loadBasketFromFirestore()
-        returnBasketTotalPrice()
+        
         // Check if the user is logged in
         
     }
@@ -75,22 +76,47 @@ class OrderController: UIViewController {
         
         for item in allItems {
             totalPrice = totalPrice + convertCurrencyToDouble(input: item.price!)!
-            print(totalPrice)
         }
+        
+        print(totalPrice)
         
         return convertToCurrency(totalPrice)
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+ 
+    private func checkoutButtonStatusUpdate(){
+        
+        continueButtonOutlet.isEnabled = allItems.count > 0
+        
+        if continueButtonOutlet.isEnabled {
+            continueButtonOutlet.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        }else{
+            disableContinueButton()
+        }
     }
-    */
+    
+    private func disableContinueButton(){
+        continueButtonOutlet.isEnabled = false
+        continueButtonOutlet.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+    }
+    
+    func removeItemFromBasket(itemId: String){
+        
+        for i in 0..<basket!.itemIds.count {
+            if itemId == basket!.itemIds[i] {
+                basket?.itemIds.remove(at: i)
+                return 
+            }
+        }
+    }
 
+    func showItemView(withItem: Item) {
+        let itemVC = UIStoryboard.init(name: Storyboard.menu, bundle: nil).instantiateViewController(identifier: ViewController.itemDetailController) as! ItemDetailController
+        itemVC.item = withItem
+        present(itemVC, animated: true, completion: nil)
+        itemVC.modalPresentationStyle = .formSheet
+        
+    }
+    
+    
 }

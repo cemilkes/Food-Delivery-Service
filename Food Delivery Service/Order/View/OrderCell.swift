@@ -28,7 +28,6 @@ class OrderCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    
     func generateCell(_ item: Item) {
         itemNameLabel.text  = item.name
         itemDescriptionLabel.text  = item.description

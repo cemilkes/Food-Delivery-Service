@@ -12,14 +12,19 @@ import JGProgressHUD
 
 class ItemDetailController: UIViewController {
     
-    
     var item:Item!
     var hud: JGProgressHUD!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        AddToBasketButtonPressed()
+        addToBasketButtonPressed()
     }
     
     private func setupUI(){
@@ -29,7 +34,7 @@ class ItemDetailController: UIViewController {
         }
     }
     
-    @objc func AddToBasketButtonPressed(){
+    @objc func addToBasketButtonPressed(){
         
         //TODO: - check if the user is logged in, or show login view
         

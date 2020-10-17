@@ -28,5 +28,36 @@ extension OrderController: UITableViewDataSource {
 
 extension OrderController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            let itemToDelete = allItems[indexPath.row]
+            allItems.remove(at: indexPath.row)
+            
+            tableView.reloadData()
+            
+            removeItemFromBasket(itemId: itemToDelete.id)
+            
+            updateBasketInFirestore(basket!, withValues: [kITEMIDS: basket!.itemIds]) { (error) in
+                if error != nil {
+                    print("error updating the basket", error?.localizedDescription)
+                }
+                self.getBasketItems()
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        showItemView(withItem: allItems[indexPath.row])
+        
+        
+    }
     
 }
