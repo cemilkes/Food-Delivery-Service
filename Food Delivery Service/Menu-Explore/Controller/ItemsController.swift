@@ -52,9 +52,8 @@ class ItemsController: UIViewController {
     func showItem(_ item: Item){
         let itemVC = UIStoryboard.init(name: Storyboard.menu, bundle: nil).instantiateViewController(identifier: ViewController.itemDetailController) as! ItemDetailController
         itemVC.item = item
-        present(itemVC, animated: true, completion: nil)
         itemVC.modalPresentationStyle = .fullScreen
-        
+        present(itemVC, animated: true, completion: nil)
     }
     
     

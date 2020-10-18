@@ -16,6 +16,10 @@ class AddItemController: UIViewController {
     
     @IBOutlet weak var descriptionTextView: UITextView!
     
+  
+    
+    
+    
     var category: Category!
     var itemImages: [UIImage?] = []
     
