@@ -32,6 +32,7 @@ enum Color {
     case lightText
     case intermidiateText
     case textFieldColor
+    //case placeHolderColor
     
     case affirmation
     case negation

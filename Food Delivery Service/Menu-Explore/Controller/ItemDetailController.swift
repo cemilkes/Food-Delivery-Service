@@ -34,17 +34,17 @@ class ItemDetailController: UIViewController {
     }
     
     private func setupUI(){
-        if item != nil{
-            self.title = item.name
-            print(item.name)
-        }
-        
+//        if item != nil{
+//            self.title = item.name
+//            print(item.name)
+//        }
         
     }
     
     @objc func addToBasketButtonPressed(){
         
         //TODO: - check if the user is logged in, or show login view
+        showLoginView()
         
         downloadBasketFromFirestore("1234") { (basket) in
             if basket == nil{
@@ -54,6 +54,10 @@ class ItemDetailController: UIViewController {
                 self.updateBasket(basket: basket!, withValues: [kITEMIDS:basket!.itemIds])
             }
         }
+    }
+    
+    func showLoginView(){
+        
     }
     
     //MARK: - Add to Basket

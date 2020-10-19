@@ -25,7 +25,12 @@ class BTTextfield: UITextField {
         setupTextField()
     }
      
-    func setupTextField(){}
+    func setupTextField(){
+        layer.masksToBounds    = true
+        layer.cornerRadius     = 22
+        layer.borderColor      = UIColor.clear.cgColor
+        backgroundColor  = Color.textFieldColor.value
+    }
     
     
 }
