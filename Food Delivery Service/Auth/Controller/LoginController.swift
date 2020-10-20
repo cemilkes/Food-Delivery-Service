@@ -10,6 +10,18 @@ import UIKit
 
 class LoginController: UIViewController {
 
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var emailTextField: BTTextfield!
+    @IBOutlet weak var passwordTextField: BTTextfield!
+    
+    @IBOutlet weak var loginButtonOutlet: BTButton!
+    
+    @IBOutlet weak var forgotPasswordOutlet: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +45,23 @@ class LoginController: UIViewController {
     }
    
     
+    func setupUI(){
+        
+    }
+    
+    
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
+                let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.loginController) as! LoginController
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func forgotPasswordButtonPressed(_ sender: UIButton) {
+        
+        
+    }
     
     
     

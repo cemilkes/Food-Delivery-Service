@@ -21,6 +21,7 @@
 		257AE1782531729B007318B1 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE1772531729B007318B1 /* OrderCell.swift */; };
 		2581801B253BAA3C007AAE14 /* ItemDetail+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581801A253BAA3C007AAE14 /* ItemDetail+UITableView.swift */; };
 		25818023253DEE88007AAE14 /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25818022253DEE88007AAE14 /* MUser.swift */; };
+		25818028253F34A9007AAE14 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25818027253F34A9007AAE14 /* ForgotPasswordController.swift */; };
 		2592815224F201B800D96B2D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592815124F201B800D96B2D /* Category.swift */; };
 		2592815624F2224C00D96B2D /* BTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592815524F2224C00D96B2D /* BTButton.swift */; };
 		2592815924F2283100D96B2D /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592815824F2283100D96B2D /* WelcomeController.swift */; };
@@ -87,6 +88,7 @@
 		257AE1772531729B007318B1 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		2581801A253BAA3C007AAE14 /* ItemDetail+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemDetail+UITableView.swift"; sourceTree = "<group>"; };
 		25818022253DEE88007AAE14 /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
+		25818027253F34A9007AAE14 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		2592815124F201B800D96B2D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		2592815524F2224C00D96B2D /* BTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTButton.swift; sourceTree = "<group>"; };
 		2592815824F2283100D96B2D /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
@@ -215,6 +217,25 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2581802C253F34B2007AAE14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25818022253DEE88007AAE14 /* MUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2581802D253F34BF007AAE14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2592815824F2283100D96B2D /* WelcomeController.swift */,
+				2560AB2E24F7114C00844F29 /* LoginController.swift */,
+				25EA529725073B7800A877EB /* SignUpController.swift */,
+				25818027253F34A9007AAE14 /* ForgotPasswordController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		2592815324F201BC00D96B2D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,11 +256,9 @@
 		2592815724F227F700D96B2D /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				2581802D253F34BF007AAE14 /* Controller */,
+				2581802C253F34B2007AAE14 /* Model */,
 				8379BAEB24EB76A000EE8EB9 /* Authentication.storyboard */,
-				2592815824F2283100D96B2D /* WelcomeController.swift */,
-				2560AB2E24F7114C00844F29 /* LoginController.swift */,
-				25EA529725073B7800A877EB /* SignUpController.swift */,
-				25818022253DEE88007AAE14 /* MUser.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -674,6 +693,7 @@
 				25818023253DEE88007AAE14 /* MUser.swift in Sources */,
 				25A806E024EE1F32004E99C2 /* MenuCell.swift in Sources */,
 				2592815B24F2286100D96B2D /* BTLabel.swift in Sources */,
+				25818028253F34A9007AAE14 /* ForgotPasswordController.swift in Sources */,
 				25D9B845252B6EF700B13C22 /* Helpers.swift in Sources */,
 				2560AB2F24F7114C00844F29 /* LoginController.swift in Sources */,
 				253C4B90251EB0E900135ADC /* ItemController+UITableView.swift in Sources */,

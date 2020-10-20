@@ -53,6 +53,8 @@ struct Storyboard {
 struct ViewController {
     static let welcomeController    = "WelcomeController"
     static let loginController      = "LoginController"
+    static let signUpController     = "SignUpController"
+    static let forgotPasswordController = "ForgotPasswordController"
     static let menuController       = "MenuController"
     static let itemController       = "ItemsController"
     static let itemDetailController = "ItemDetailController"

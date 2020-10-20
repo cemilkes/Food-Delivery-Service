@@ -14,26 +14,28 @@ class BTButton: UIButton {
     // We use override button because we want to use our custom button features instead of using UIButton
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupButton()
+        configure()
         
     }
     
     // For storyboard purpose
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupButton()
-    }
-     
-    func setupButton(){
-        styleButton()
-    }
-    
-    func styleButton(){
         
+    }
+
+//    convenience init(backgroundColor: UIColor, title: String) {
+//        self.init(frame: .zero)
+//        self.backgroundColor = backgroundColor
+//        self.setTitle(title, for: .normal)
+//    }
+    
+    private func configure(){
         setTitleColor(Color.whiteDarkText.value, for: .normal)
         backgroundColor     = Color.theme.value
         layer.cornerRadius  = 22
         titleLabel?.font    = Font(.system(.AvenirHeavy), size: .standart(.h6)).instance
+        
     }
 
 }
