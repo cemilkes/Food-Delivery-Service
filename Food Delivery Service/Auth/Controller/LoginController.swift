@@ -21,10 +21,12 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var forgotPasswordOutlet: UIButton!
     
+    @IBOutlet weak var signUpLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupSignUpLabel()
         setupNavigationUI()
     }
     
@@ -51,19 +53,53 @@ class LoginController: UIViewController {
     
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
-                let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.loginController) as! LoginController
-                vc.modalPresentationStyle = .fullScreen
+                let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.signUpController) as! SignUpController
+                //vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
     }
     
     
     @IBAction func forgotPasswordButtonPressed(_ sender: UIButton) {
-        
+        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
+                let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.forgotPasswordController) as! ForgotPasswordController
+                //vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
         
     }
     
-    
+    func setupSignUpLabel(){
+        let signUpLabelText =  "Don't have an account? "
+       
+        let signUpLabelTextAttributes: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.foregroundColor: UIColor.green,
+            NSAttributedString.Key.font: UIFont(name: "Avenir-Book", size: 17.0)!
+        ]
+        
+        let signUpAttributedString = NSAttributedString(string: signUpLabelText, attributes: signUpLabelTextAttributes)
+        
+        let signUpLabelSelectableText = "Sign In"
+        let signUpLabelSelectableTextAttributes: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.foregroundColor: UIColor.orange,
+            NSAttributedString.Key.font: UIFont(name: "Avenir-Book", size: 17.0)!
+        ]
+        
+        let signUpAttributedString2 = NSAttributedString(string: signUpLabelSelectableText, attributes: signUpLabelSelectableTextAttributes)
+        
+        let concate = NSMutableAttributedString(attributedString: signUpAttributedString)
+        concate.append(signUpAttributedString2)
+        
+        signUpLabel.attributedText = concate
+        
+//        let signUpLabelSelectableText = NSMutableAttributedString(string: "Don\'t have an account? Sign up", attributes: [
+//          .font: UIFont(name: "Avenir-Book", size: 17.0)!,
+//          .foregroundColor: UIColor(red: 184.0 / 255.0, green: 187.0 / 255.0, blue: 198.0 / 255.0, alpha: 1.0),
+//          .kern: -0.41
+//        ])
+//        attributedString.addAttribute(.foregroundColor, value: UIColor.themeColor, range: NSRange(location: 23, length: 7))
+        
+    }
     
     
     

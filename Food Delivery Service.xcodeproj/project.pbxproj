@@ -232,6 +232,7 @@
 				2560AB2E24F7114C00844F29 /* LoginController.swift */,
 				25EA529725073B7800A877EB /* SignUpController.swift */,
 				25818027253F34A9007AAE14 /* ForgotPasswordController.swift */,
+				25D044B7253F47A9007F6232 /* Extensions */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -331,6 +332,13 @@
 				25D9B850252B791400B13C22 /* Currency.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		25D044B7253F47A9007F6232 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		753064873470445E56BED516 /* Pods */ = {

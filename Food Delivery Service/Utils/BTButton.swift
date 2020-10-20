@@ -21,7 +21,7 @@ class BTButton: UIButton {
     // For storyboard purpose
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+        configure()
     }
 
 //    convenience init(backgroundColor: UIColor, title: String) {
