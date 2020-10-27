@@ -47,6 +47,8 @@
 		8379BAEE24EB7E8400EE8EB9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8379BAED24EB7E8400EE8EB9 /* Color.swift */; };
 		8379BAF024EB7E9000EE8EB9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8379BAEF24EB7E9000EE8EB9 /* Font.swift */; };
 		8379BAF224EB7EA100EE8EB9 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8379BAF124EB7EA100EE8EB9 /* String.swift */; };
+		83B22EB12548D146005806DC /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B22EB02548D146005806DC /* ProfileController.swift */; };
+		83B22EBB2548D3CB005806DC /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B22EBA2548D3CB005806DC /* CellModel.swift */; };
 		83C4CAB324E8AEAC000841D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C4CAB224E8AEAC000841D2 /* AppDelegate.swift */; };
 		83C4CAB524E8AEAC000841D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C4CAB424E8AEAC000841D2 /* SceneDelegate.swift */; };
 		83C4CABA24E8AEAC000841D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C4CAB824E8AEAC000841D2 /* Main.storyboard */; };
@@ -113,6 +115,8 @@
 		8379BAED24EB7E8400EE8EB9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8379BAEF24EB7E9000EE8EB9 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		8379BAF124EB7EA100EE8EB9 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		83B22EB02548D146005806DC /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		83B22EBA2548D3CB005806DC /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 		83C4CAAF24E8AEAC000841D2 /* Food Delivery Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Delivery Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C4CAB224E8AEAC000841D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83C4CAB424E8AEAC000841D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -367,9 +371,51 @@
 		83B22EAC2548CA99005806DC /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				8379BAE924EB5F5700EE8EB9 /* Profile.storyboard */,
+				83B22EB82548D16E005806DC /* Model */,
+				83B22EB72548D167005806DC /* View */,
+				83B22EB52548D14B005806DC /* Controller */,
+				83B22EB62548D152005806DC /* Storyboard */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		83B22EB52548D14B005806DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83B22EB02548D146005806DC /* ProfileController.swift */,
+				83B22EB92548D173005806DC /* Extensions */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		83B22EB62548D152005806DC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8379BAE924EB5F5700EE8EB9 /* Profile.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		83B22EB72548D167005806DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		83B22EB82548D16E005806DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83B22EBA2548D3CB005806DC /* CellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83B22EB92548D173005806DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		83C4CAA624E8AEAC000841D2 = {
@@ -684,6 +730,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B22EB12548D146005806DC /* ProfileController.swift in Sources */,
 				2592815624F2224C00D96B2D /* BTButton.swift in Sources */,
 				8379BAF224EB7EA100EE8EB9 /* String.swift in Sources */,
 				25A806F524EF8BDC004E99C2 /* ReachabilityManager.swift in Sources */,
@@ -706,6 +753,7 @@
 				25EA529825073B7800A877EB /* SignUpController.swift in Sources */,
 				2592815924F2283100D96B2D /* WelcomeController.swift in Sources */,
 				83C4CAB324E8AEAC000841D2 /* AppDelegate.swift in Sources */,
+				83B22EBB2548D3CB005806DC /* CellModel.swift in Sources */,
 				25818023253DEE88007AAE14 /* MUser.swift in Sources */,
 				25A806E024EE1F32004E99C2 /* MenuCell.swift in Sources */,
 				2592815B24F2286100D96B2D /* BTLabel.swift in Sources */,
