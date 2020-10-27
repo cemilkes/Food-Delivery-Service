@@ -30,6 +30,7 @@ enum Color {
     case whiteLightText
     case darkText
     case lightText
+    case lightGrayText
     case intermidiateText
     case textFieldColor
     //case placeHolderColor
@@ -55,6 +56,7 @@ extension Color {
             instanceColor = UIColor(hexString: "#ff8c00")
 
         //Theme Colour. Colours on Navigation Bar, Button Titles, Progress Indicator etc.
+        // 255 140 0
         case .theme:
             instanceColor = UIColor(hexString: "#ff8c00")
         
@@ -88,6 +90,9 @@ extension Color {
         
         case .lightText:
             instanceColor = UIColor(hexString: "#cccccc").withAlphaComponent(0.4)
+        
+        case .lightGrayText:
+            instanceColor = UIColor(hexString: "#B8BBC6")
             
         case .textFieldColor:
             instanceColor = UIColor(hexString: "#8e8e93").withAlphaComponent(0.12)

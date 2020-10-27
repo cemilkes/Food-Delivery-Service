@@ -232,7 +232,7 @@
 				2560AB2E24F7114C00844F29 /* LoginController.swift */,
 				25EA529725073B7800A877EB /* SignUpController.swift */,
 				25818027253F34A9007AAE14 /* ForgotPasswordController.swift */,
-				25D044B7253F47A9007F6232 /* Extensions */,
+				83B22EA82548AF85005806DC /* Extensions */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -334,13 +334,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		25D044B7253F47A9007F6232 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		753064873470445E56BED516 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +356,13 @@
 				8379BAE924EB5F5700EE8EB9 /* Profile.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		83B22EA82548AF85005806DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		83C4CAA624E8AEAC000841D2 = {

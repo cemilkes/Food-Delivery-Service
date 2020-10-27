@@ -73,16 +73,16 @@ class LoginController: UIViewController {
         let signUpLabelText =  "Don't have an account? "
        
         let signUpLabelTextAttributes: [NSAttributedString.Key : Any] = [
-            NSAttributedString.Key.foregroundColor: UIColor.green,
-            NSAttributedString.Key.font: UIFont(name: "Avenir-Book", size: 17.0)!
+            NSAttributedString.Key.foregroundColor: Color.lightGrayText.value,
+            NSAttributedString.Key.font: Font(.system(.AvenirBook), size: .standart(.h6)).instance
         ]
         
         let signUpAttributedString = NSAttributedString(string: signUpLabelText, attributes: signUpLabelTextAttributes)
         
         let signUpLabelSelectableText = "Sign In"
         let signUpLabelSelectableTextAttributes: [NSAttributedString.Key : Any] = [
-            NSAttributedString.Key.foregroundColor: UIColor.orange,
-            NSAttributedString.Key.font: UIFont(name: "Avenir-Book", size: 17.0)!
+            NSAttributedString.Key.foregroundColor: Color.theme.value,
+            NSAttributedString.Key.font: Font(.system(.AvenirBook), size: .standart(.h6)).instance
         ]
         
         let signUpAttributedString2 = NSAttributedString(string: signUpLabelSelectableText, attributes: signUpLabelSelectableTextAttributes)
@@ -92,6 +92,9 @@ class LoginController: UIViewController {
         
         signUpLabel.attributedText = concate
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(LoginController.signInLabelTapped))
+        signUpLabel.addGestureRecognizer(tap)
+        signUpLabel.isUserInteractionEnabled = true
 //        let signUpLabelSelectableText = NSMutableAttributedString(string: "Don\'t have an account? Sign up", attributes: [
 //          .font: UIFont(name: "Avenir-Book", size: 17.0)!,
 //          .foregroundColor: UIColor(red: 184.0 / 255.0, green: 187.0 / 255.0, blue: 198.0 / 255.0, alpha: 1.0),
@@ -99,6 +102,13 @@ class LoginController: UIViewController {
 //        ])
 //        attributedString.addAttribute(.foregroundColor, value: UIColor.themeColor, range: NSRange(location: 23, length: 7))
         
+    }
+    
+    @objc func signInLabelTapped(sender:UITapGestureRecognizer) {
+           
+        let signUpVC = UIStoryboard.init(name: Storyboard.authentication, bundle: nil).instantiateViewController(identifier: ViewController.signUpController) as! SignUpController
+        
+        present(signUpVC, animated: true, completion: nil)
     }
     
     
