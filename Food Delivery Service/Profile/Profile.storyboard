@@ -21,9 +21,6 @@
                                 <rect key="frame" x="147" y="93" width="194" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="VpO-5L-Ak0">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLg-EY-HyG">
                                 <rect key="frame" x="136" y="55" width="175" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -34,12 +31,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6kw-U7-oRT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="VpO-5L-Ak0" firstAttribute="top" secondItem="6kw-U7-oRT" secondAttribute="top" id="QTF-ua-iTX"/>
-                            <constraint firstItem="VpO-5L-Ak0" firstAttribute="trailing" secondItem="6kw-U7-oRT" secondAttribute="trailing" id="RTx-A6-G1j"/>
-                            <constraint firstItem="VpO-5L-Ak0" firstAttribute="leading" secondItem="6kw-U7-oRT" secondAttribute="leading" id="nES-Ai-P7C"/>
-                            <constraint firstItem="VpO-5L-Ak0" firstAttribute="bottom" secondItem="6kw-U7-oRT" secondAttribute="bottom" id="uSP-V6-Wyf"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="csC-LN-3e0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -55,19 +46,8 @@
                     <view key="view" contentMode="scaleToFill" id="GUM-63-Ue0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editProfile" translatesAutoresizingMaskIntoConstraints="NO" id="Bos-9L-Ntc">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
-                            </imageView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eJU-fC-X0J"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Bos-9L-Ntc" firstAttribute="trailing" secondItem="eJU-fC-X0J" secondAttribute="trailing" id="Ibh-GV-7wd"/>
-                            <constraint firstItem="Bos-9L-Ntc" firstAttribute="leading" secondItem="eJU-fC-X0J" secondAttribute="leading" id="VRJ-C4-n7C"/>
-                            <constraint firstItem="Bos-9L-Ntc" firstAttribute="bottom" secondItem="eJU-fC-X0J" secondAttribute="bottom" id="je3-ct-sZ8"/>
-                            <constraint firstItem="Bos-9L-Ntc" firstAttribute="top" secondItem="eJU-fC-X0J" secondAttribute="top" id="q3B-DU-8DH"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ctI-dX-UoK"/>
                 </viewController>
@@ -96,8 +76,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="editProfile" width="762" height="1528"/>
-        <image name="settings" width="768" height="1420"/>
         <image name="tabBarProfile" width="75" height="49"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -10,6 +10,17 @@ import UIKit
 
 class ForgotPasswordController: UIViewController {
 
+    
+    @IBOutlet weak var pageTitle: UILabel!
+    
+    @IBOutlet weak var pageDescription: UILabel!
+    
+    @IBOutlet weak var emailtextField: BTTextfield!
+    
+    @IBOutlet weak var sendButton: BTButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +28,9 @@ class ForgotPasswordController: UIViewController {
     }
     
 
+    @IBAction func sendButtonPressed(_ sender: UIButton) {
+        
+    }
     /*
     // MARK: - Navigation
 

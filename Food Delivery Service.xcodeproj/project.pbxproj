@@ -353,7 +353,6 @@
 				83C4CABD24E8AEB1000841D2 /* LaunchScreen.storyboard */,
 				83C4CAB824E8AEAC000841D2 /* Main.storyboard */,
 				8379BAE724EB5F3E00EE8EB9 /* Favourite.storyboard */,
-				8379BAE924EB5F5700EE8EB9 /* Profile.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -363,6 +362,14 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		83B22EAC2548CA99005806DC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8379BAE924EB5F5700EE8EB9 /* Profile.storyboard */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		83C4CAA624E8AEAC000841D2 = {
@@ -395,6 +402,7 @@
 				25A806DA24EE0A87004E99C2 /* Menu-Explore */,
 				8379BAE224EB5EF500EE8EB9 /* Storyboards */,
 				257AE12B253104C5007318B1 /* Order */,
+				83B22EAC2548CA99005806DC /* Profile */,
 				83C4CABB24E8AEB1000841D2 /* Assets.xcassets */,
 				83C4CAC024E8AEB1000841D2 /* Info.plist */,
 				83C4CAE224E8B129000841D2 /* GoogleService-Info.plist */,

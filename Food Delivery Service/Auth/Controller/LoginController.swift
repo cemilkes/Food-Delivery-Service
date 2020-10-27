@@ -79,7 +79,7 @@ class LoginController: UIViewController {
         
         let signUpAttributedString = NSAttributedString(string: signUpLabelText, attributes: signUpLabelTextAttributes)
         
-        let signUpLabelSelectableText = "Sign In"
+        let signUpLabelSelectableText = "Sign Up"
         let signUpLabelSelectableTextAttributes: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.foregroundColor: Color.theme.value,
             NSAttributedString.Key.font: Font(.system(.AvenirBook), size: .standart(.h6)).instance
@@ -106,9 +106,11 @@ class LoginController: UIViewController {
     
     @objc func signInLabelTapped(sender:UITapGestureRecognizer) {
            
-        let signUpVC = UIStoryboard.init(name: Storyboard.authentication, bundle: nil).instantiateViewController(identifier: ViewController.signUpController) as! SignUpController
         
-        present(signUpVC, animated: true, completion: nil)
+        print("Tapped")
+//        let signUpVC = UIStoryboard.init(name: Storyboard.authentication, bundle: nil).instantiateViewController(identifier: ViewController.signUpController) as! SignUpController
+//
+//        present(signUpVC, animated: true, completion: nil)
     }
     
     

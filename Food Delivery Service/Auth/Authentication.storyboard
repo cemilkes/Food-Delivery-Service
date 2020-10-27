@@ -249,23 +249,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7w-SO-gUk">
-                                <rect key="frame" x="36" y="532" width="303" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7w-SO-gUk" customClass="BTButton" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                <rect key="frame" x="30" y="527" width="315" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="c66-FN-wah"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.039215686270000001" green="0.1215686275" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="goToMain:" destination="UpA-UW-BWk" eventType="touchUpInside" id="UmD-Wv-ydO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpA-9f-Jnj">
+                                <rect key="frame" x="37" y="130" width="301" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YNO-ig-Rp8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="34"/>
+                                <color key="textColor" red="0.039215686270000001" green="0.1215686275" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vPl-C8-Nhb">
+                                <rect key="frame" x="30" y="227" width="315" height="260"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dw4-6L-yvU" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.54901960780000003" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0qo-b2-71t" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="54" width="315" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.54901960780000003" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bie-V0-0zU" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="108" width="315" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.54901960780000003" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Confirm Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rp5-EQ-yCP" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="162" width="315" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.54901960780000003" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SsB-co-FLs" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="216" width="315" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.54901960780000003" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="rar-2V-qWT"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking Sign up you agree to the following Terms and Conditions without reservation " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUQ-CQ-iYw">
+                                <rect key="frame" x="53" y="612" width="272" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qvg-6d-9eD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NpA-9f-Jnj" firstAttribute="leading" secondItem="Qvg-6d-9eD" secondAttribute="leading" constant="37" id="1cU-LD-cEv"/>
+                            <constraint firstItem="Qvg-6d-9eD" firstAttribute="trailing" secondItem="z7w-SO-gUk" secondAttribute="trailing" constant="30" id="2oP-ZH-wfB"/>
+                            <constraint firstItem="z7w-SO-gUk" firstAttribute="top" secondItem="vPl-C8-Nhb" secondAttribute="bottom" constant="40" id="6DJ-4M-9El"/>
+                            <constraint firstItem="vPl-C8-Nhb" firstAttribute="top" secondItem="NpA-9f-Jnj" secondAttribute="bottom" constant="57" id="EQW-0i-uQ4"/>
+                            <constraint firstItem="lUQ-CQ-iYw" firstAttribute="leading" secondItem="Qvg-6d-9eD" secondAttribute="leading" constant="53" id="M88-WT-smg"/>
+                            <constraint firstItem="Qvg-6d-9eD" firstAttribute="trailing" secondItem="vPl-C8-Nhb" secondAttribute="trailing" constant="30" id="NQU-Vn-XMG"/>
+                            <constraint firstItem="NpA-9f-Jnj" firstAttribute="top" secondItem="Qvg-6d-9eD" secondAttribute="top" constant="86" id="Rub-7Z-PaH"/>
+                            <constraint firstItem="NpA-9f-Jnj" firstAttribute="centerX" secondItem="vPl-C8-Nhb" secondAttribute="centerX" id="TMP-kN-Iao"/>
+                            <constraint firstItem="Qvg-6d-9eD" firstAttribute="bottom" secondItem="lUQ-CQ-iYw" secondAttribute="bottom" constant="130" id="VdA-8q-BuS"/>
+                            <constraint firstItem="Qvg-6d-9eD" firstAttribute="trailing" secondItem="lUQ-CQ-iYw" secondAttribute="trailing" constant="50" id="d8M-sZ-w7P"/>
+                            <constraint firstItem="vPl-C8-Nhb" firstAttribute="leading" secondItem="Qvg-6d-9eD" secondAttribute="leading" constant="30" id="lmI-PV-w3K"/>
+                            <constraint firstItem="lUQ-CQ-iYw" firstAttribute="top" secondItem="z7w-SO-gUk" secondAttribute="bottom" constant="41" id="msT-pq-6Qw"/>
+                            <constraint firstItem="z7w-SO-gUk" firstAttribute="leading" secondItem="Qvg-6d-9eD" secondAttribute="leading" constant="30" id="sCe-uQ-yX2"/>
+                            <constraint firstItem="NpA-9f-Jnj" firstAttribute="centerX" secondItem="z7w-SO-gUk" secondAttribute="centerX" id="xri-iL-wBO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Huv-cS-bsh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFO-BA-c15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="UpA-UW-BWk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3420" y="-167"/>
+            <point key="canvasLocation" x="3420" y="-167.73399014778326"/>
         </scene>
         <!--Main-->
         <scene sceneID="19J-UP-LTd">
@@ -282,14 +356,72 @@
                     <view key="view" contentMode="scaleToFill" id="kwl-Xy-btK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email address. You will receive a link to create a new password via email." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQU-no-NZa">
+                                <rect key="frame" x="49" y="185" width="277" height="77"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jWf-KI-jke" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                <rect key="frame" x="30" y="306" width="315" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="H6o-4z-E2O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0C-mQ-BW2" customClass="BTButton" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                <rect key="frame" x="30" y="390" width="315" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kG7-UQ-Voz"/>
+                                </constraints>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.039215686270000001" green="0.1215686275" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="piD-l1-4x1" eventType="touchUpInside" id="jtp-aM-ZOk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBm-fK-nB6">
+                                <rect key="frame" x="30" y="137" width="315" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZZc-bR-0ls"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="34"/>
+                                <color key="textColor" red="0.039215686274509803" green="0.12156862745098039" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8Q0-Nk-Z5X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rBm-fK-nB6" firstAttribute="leading" secondItem="8Q0-Nk-Z5X" secondAttribute="leading" constant="30" id="2Vw-kW-gOj"/>
+                            <constraint firstItem="jWf-KI-jke" firstAttribute="leading" secondItem="y0C-mQ-BW2" secondAttribute="leading" id="2eT-ae-zXK"/>
+                            <constraint firstItem="jWf-KI-jke" firstAttribute="trailing" secondItem="y0C-mQ-BW2" secondAttribute="trailing" id="CiW-jj-2lf"/>
+                            <constraint firstItem="xQU-no-NZa" firstAttribute="leading" secondItem="jWf-KI-jke" secondAttribute="leading" constant="19" id="IWd-iP-krh"/>
+                            <constraint firstItem="xQU-no-NZa" firstAttribute="trailing" secondItem="jWf-KI-jke" secondAttribute="trailing" constant="-19" id="NP9-LS-uDO"/>
+                            <constraint firstItem="rBm-fK-nB6" firstAttribute="centerX" secondItem="xQU-no-NZa" secondAttribute="centerX" id="RBd-d6-vY4"/>
+                            <constraint firstItem="jWf-KI-jke" firstAttribute="top" secondItem="xQU-no-NZa" secondAttribute="bottom" constant="44" id="bcf-t3-5o7"/>
+                            <constraint firstItem="rBm-fK-nB6" firstAttribute="centerX" secondItem="kwl-Xy-btK" secondAttribute="centerX" id="e69-Rl-7Dh"/>
+                            <constraint firstItem="rBm-fK-nB6" firstAttribute="top" secondItem="8Q0-Nk-Z5X" secondAttribute="top" constant="93" id="fNp-o3-tEW"/>
+                            <constraint firstItem="xQU-no-NZa" firstAttribute="leading" secondItem="8Q0-Nk-Z5X" secondAttribute="leading" constant="49" id="lzE-s2-aaa"/>
+                            <constraint firstItem="xQU-no-NZa" firstAttribute="top" secondItem="rBm-fK-nB6" secondAttribute="bottom" constant="8" id="qVN-Jy-8Ia"/>
+                            <constraint firstItem="8Q0-Nk-Z5X" firstAttribute="bottom" secondItem="y0C-mQ-BW2" secondAttribute="bottom" constant="344" id="uv3-e1-gp6"/>
+                            <constraint firstItem="y0C-mQ-BW2" firstAttribute="top" secondItem="jWf-KI-jke" secondAttribute="bottom" constant="40" id="wV1-10-uD4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WbG-WC-G09"/>
+                    <connections>
+                        <outlet property="emailtextField" destination="jWf-KI-jke" id="18l-Qt-amL"/>
+                        <outlet property="pageDescription" destination="xQU-no-NZa" id="VzS-NL-evw"/>
+                        <outlet property="pageTitle" destination="rBm-fK-nB6" id="8ap-Eb-rK1"/>
+                        <outlet property="sendButton" destination="y0C-mQ-BW2" id="d4h-ag-lr0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4V-EG-Pzs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3420" y="495"/>
+            <point key="canvasLocation" x="3420" y="494.33497536945816"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cO2-rd-ici">
