@@ -8,29 +8,30 @@
 
 import UIKit
 
-
-struct CellModel {
-    
-    var imageName: String!
-    var description: String!
-    
-}
 class ProfileController: UIViewController {
 
-
+    @IBOutlet weak var tableView: UITableView!
+    var profileArray = [ProfileModel]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        let cellArray = [
-            CellModel(imageName: "", description: ""),
-            CellModel(imageName: "", description: ""),
-                        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        
+        profileArray = [
+            ProfileModel(imageName: "iconNotification", title: "Notification"),
+            ProfileModel(imageName: "iconPaymentMethod", title: "Payment Method"),
+            ProfileModel(imageName: "iconRewardCredits", title: "Reward Credits"),
+            ProfileModel(imageName: "iconPromoCode", title: "Promo Code"),
+            ProfileModel(imageName: "iconSettings", title: "Settings"),
+            ProfileModel(imageName: "iconInviteFriends", title: "Invite Friends"),
+            ProfileModel(imageName: "iconHelpCenter", title: "Help Center"),
+            ProfileModel(imageName: "iconAboutUs", title: "About Us")
         ]
-        
-        
-        
-        
         // Do any additional setup after loading the view.
     }
     

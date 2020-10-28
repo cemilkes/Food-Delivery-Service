@@ -54,9 +54,9 @@ class LoginController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
-                let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.signUpController) as! SignUpController
-                //vc.modalPresentationStyle = .fullScreen
+        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.main, bundle: nil)
+                let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.tabbarController) as! TabbarController
+                vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
     }
     
@@ -106,11 +106,10 @@ class LoginController: UIViewController {
     
     @objc func signInLabelTapped(sender:UITapGestureRecognizer) {
            
-        
         print("Tapped")
-//        let signUpVC = UIStoryboard.init(name: Storyboard.authentication, bundle: nil).instantiateViewController(identifier: ViewController.signUpController) as! SignUpController
-//
-//        present(signUpVC, animated: true, completion: nil)
+        let signUpVC = UIStoryboard.init(name: Storyboard.authentication, bundle: nil).instantiateViewController(identifier: ViewController.menuController) as! SignUpController
+
+        present(signUpVC, animated: true, completion: nil)
     }
     
     
