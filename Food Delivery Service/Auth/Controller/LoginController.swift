@@ -107,7 +107,7 @@ class LoginController: UIViewController {
     @objc func signInLabelTapped(sender:UITapGestureRecognizer) {
            
         print("Tapped")
-        let signUpVC = UIStoryboard.init(name: Storyboard.authentication, bundle: nil).instantiateViewController(identifier: ViewController.menuController) as! SignUpController
+        let signUpVC = UIStoryboard.init(name: Storyboard.authentication, bundle: nil).instantiateViewController(identifier: ViewController.signUpController) as! SignUpController
 
         present(signUpVC, animated: true, completion: nil)
     }
