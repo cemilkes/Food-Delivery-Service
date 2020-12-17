@@ -51,6 +51,7 @@ struct Storyboard {
 // Controllers
 
 struct ViewController {
+    static let tabbarController     = "TabbarController"
     static let welcomeController    = "WelcomeController"
     static let loginController      = "LoginController"
     static let signUpController     = "SignUpController"

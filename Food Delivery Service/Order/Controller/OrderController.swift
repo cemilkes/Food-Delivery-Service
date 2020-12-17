@@ -75,7 +75,7 @@ class OrderController: UIViewController {
         var totalPrice = 0.0
         
         for item in allItems {
-            totalPrice = totalPrice + convertCurrencyToDouble(input: item.price!)!
+            //totalPrice = totalPrice + convertCurrencyToDouble(input: item.price!)
         }
         
         print(totalPrice)

@@ -1,26 +1,15 @@
 //
-//  ForgotPasswordController.swift
+//  TabbarController.swift
 //  Food Delivery Service
 //
-//  Created by Mr Kes on 10/20/20.
+//  Created by Cemil Keş on 10/27/20.
 //  Copyright © 2020 CemilKes. All rights reserved.
 //
 
 import UIKit
 
-class ForgotPasswordController: UIViewController {
+class TabbarController: UITabBarController {
 
-    
-    @IBOutlet weak var pageTitle: UILabel!
-    
-    @IBOutlet weak var pageDescription: UILabel!
-    
-    @IBOutlet weak var emailtextField: BTTextfield!
-    
-    @IBOutlet weak var sendButton: BTButton!
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,9 +17,6 @@ class ForgotPasswordController: UIViewController {
     }
     
 
-    @IBAction func sendButtonPressed(_ sender: UIButton) {
-        
-    }
     /*
     // MARK: - Navigation
 

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "iconPaymentMethod.png",
+      "scale" : "1x",
+      "idiom" : "universal"
+    },
+    {
+      "scale" : "2x",
+      "idiom" : "universal",
+      "filename" : "iconPaymentMethod@2x.png"
+    },
+    {
+      "filename" : "iconPaymentMethod@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
