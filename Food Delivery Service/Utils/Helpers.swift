@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 func convertToCurrency(_ number: Double) -> String {
     
@@ -25,4 +26,13 @@ func convertCurrencyToDouble(input: String) -> Double? {
      numberFormatter.numberStyle = .currency
      numberFormatter.locale = Locale.current
      return numberFormatter.number(from: input)?.doubleValue
+}
+
+private let dateFormat = "yyyyMMddHHmmss"
+func dateFormatter() -> DateFormatter{
+    
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = dateFormat
+    return dateFormatter
+    
 }

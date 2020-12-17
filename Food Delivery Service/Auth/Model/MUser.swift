@@ -18,15 +18,17 @@ class MUser {
     let lastName: String
     let fullName: String
     let purchasedItemIds: [String]
+    let createdAt: Date
     
     let fullAddress: String?
     let onBoard: Bool
     
-    init(_objectId: String, _email: String, _firstName: String, _lastName: String) {
+    init(_objectId: String, _email: String, _firstName: String, _lastName: String, _createdAt:Date) {
         objectId = _objectId
         email = _email
         firstName = _firstName
         lastName = _lastName
+        createdAt = _createdAt
         fullName = _firstName + " " + _lastName
         fullAddress = ""
         onBoard = false
@@ -73,6 +75,8 @@ class MUser {
         }else{
             purchasedItemIds = []
         }
+        
+        createdAt  =  dateFormatter().date(from: _dictionary[kCREATEDAT] as! String)!
     }
 
     

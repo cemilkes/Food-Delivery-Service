@@ -29,6 +29,7 @@ enum Color {
     case whiteDarkText
     case whiteLightText
     case darkText
+    case mediumGreyText
     case lightText
     case intermidiateText
     case textFieldColor
@@ -78,13 +79,16 @@ extension Color {
             instanceColor = UIColor(hexString: "ffffff")
             
         case .whiteLightText:
-            instanceColor = UIColor(hexString: "eaecef")
+            instanceColor = UIColor(hexString: "#eaecef")
             
         case .darkText:
             instanceColor = UIColor(hexString: "#0a1f44")
         
         case .intermidiateText:
             instanceColor = UIColor(hexString: "#000000")
+            
+        case .mediumGreyText:
+            instanceColor = UIColor(hexString: "#B8BBC6")
         
         case .lightText:
             instanceColor = UIColor(hexString: "#cccccc").withAlphaComponent(0.4)

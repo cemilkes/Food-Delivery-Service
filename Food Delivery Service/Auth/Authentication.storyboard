@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rdv-VM-LzK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rdv-VM-LzK">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -139,7 +139,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="z6H-Ft-haW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2uj-8u-fNv" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="54" width="317" height="44"/>
@@ -148,7 +148,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="I3m-WZ-wvY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -162,8 +162,8 @@
                                             <constraint firstItem="GZf-z0-jlK" firstAttribute="top" secondItem="zAT-Vu-K07" secondAttribute="top" id="z0v-fs-rlC"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't you have an account? Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57N-qK-9iC">
-                                        <rect key="frame" x="71.666666666666671" y="403" width="228.66666666666663" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't you have an account? Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57N-qK-9iC">
+                                        <rect key="frame" x="30" y="403" width="312" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="Tf0-OQ-Kbb"/>
                                         </constraints>
@@ -194,13 +194,14 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="57N-qK-9iC" secondAttribute="trailing" constant="33" id="0Hj-2l-QO5"/>
                                     <constraint firstItem="Knb-VK-Mdq" firstAttribute="leading" secondItem="aYy-b0-3SU" secondAttribute="leading" constant="30" id="2yy-f0-obd"/>
                                     <constraint firstAttribute="width" secondItem="aYy-b0-3SU" secondAttribute="height" multiplier="375:481" id="5yj-0g-SeJ"/>
                                     <constraint firstAttribute="bottom" secondItem="57N-qK-9iC" secondAttribute="bottom" constant="56" id="6ij-Ts-ya5"/>
                                     <constraint firstItem="RYj-5v-YtD" firstAttribute="top" secondItem="aYy-b0-3SU" secondAttribute="top" constant="36" id="Azx-US-Yev"/>
                                     <constraint firstItem="RYj-5v-YtD" firstAttribute="leading" secondItem="aYy-b0-3SU" secondAttribute="leading" constant="65.666666666666686" id="IQP-P1-Ihq"/>
                                     <constraint firstItem="zAT-Vu-K07" firstAttribute="top" secondItem="RYj-5v-YtD" secondAttribute="bottom" constant="37" id="KCm-UY-ecI"/>
-                                    <constraint firstItem="57N-qK-9iC" firstAttribute="leading" secondItem="aYy-b0-3SU" secondAttribute="leading" constant="71.666666666666686" id="Kyl-Vg-XpU"/>
+                                    <constraint firstItem="57N-qK-9iC" firstAttribute="leading" secondItem="aYy-b0-3SU" secondAttribute="leading" constant="30" id="Kyl-Vg-XpU"/>
                                     <constraint firstItem="Knb-VK-Mdq" firstAttribute="centerX" secondItem="57N-qK-9iC" secondAttribute="centerX" id="RsG-Ja-un8"/>
                                     <constraint firstItem="zAT-Vu-K07" firstAttribute="leading" secondItem="aYy-b0-3SU" secondAttribute="leading" constant="29" id="TOp-fO-CM3"/>
                                     <constraint firstItem="zAT-Vu-K07" firstAttribute="centerX" secondItem="aYy-b0-3SU" secondAttribute="centerX" id="UfB-89-Ech"/>
@@ -249,23 +250,128 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7w-SO-gUk">
-                                <rect key="frame" x="36" y="532" width="303" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7w-SO-gUk" customClass="BTButton" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                <rect key="frame" x="36" y="506" width="303" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Fab-Zf-ufL"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="goToMain:" destination="UpA-UW-BWk" eventType="touchUpInside" id="UmD-Wv-ydO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create An Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCT-iR-G8f">
+                                <rect key="frame" x="36" y="130" width="303" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rYL-KB-hAc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JN2-io-OK7">
+                                <rect key="frame" x="36" y="208" width="303" height="260"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="43T-8T-dTl" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="44"/>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="giJ-Zd-xgA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fe-A5-EZh" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="54" width="303" height="44"/>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="iZU-GF-h1B"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Date Of Birth (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="krO-aB-gqB" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="108" width="303" height="44"/>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="hPM-HV-TX6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26Z-rD-av6" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="162" width="303" height="44"/>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="7WR-fw-wdE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Re-Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="etu-IM-XLm" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="218" width="303" height="44"/>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="gJa-5R-ziV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="26Z-rD-av6" firstAttribute="leading" secondItem="etu-IM-XLm" secondAttribute="leading" id="1qv-Qi-eJA"/>
+                                    <constraint firstItem="5fe-A5-EZh" firstAttribute="trailing" secondItem="krO-aB-gqB" secondAttribute="trailing" id="2G0-Ae-syA"/>
+                                    <constraint firstItem="krO-aB-gqB" firstAttribute="centerY" secondItem="JN2-io-OK7" secondAttribute="centerY" id="4Xx-rr-p9f"/>
+                                    <constraint firstItem="43T-8T-dTl" firstAttribute="trailing" secondItem="5fe-A5-EZh" secondAttribute="trailing" id="7f9-AQ-tjY"/>
+                                    <constraint firstItem="krO-aB-gqB" firstAttribute="top" secondItem="5fe-A5-EZh" secondAttribute="bottom" constant="10" id="8vq-Yf-dpI"/>
+                                    <constraint firstAttribute="height" constant="260" id="CSF-kW-DbS"/>
+                                    <constraint firstItem="26Z-rD-av6" firstAttribute="trailing" secondItem="etu-IM-XLm" secondAttribute="trailing" id="FSI-u1-W7f"/>
+                                    <constraint firstItem="5fe-A5-EZh" firstAttribute="leading" secondItem="krO-aB-gqB" secondAttribute="leading" id="GEF-26-Uja"/>
+                                    <constraint firstItem="43T-8T-dTl" firstAttribute="centerX" secondItem="JN2-io-OK7" secondAttribute="centerX" id="GOA-jC-Vug"/>
+                                    <constraint firstItem="krO-aB-gqB" firstAttribute="leading" secondItem="26Z-rD-av6" secondAttribute="leading" id="Olx-2P-NyS"/>
+                                    <constraint firstItem="43T-8T-dTl" firstAttribute="leading" secondItem="JN2-io-OK7" secondAttribute="leading" id="QuW-kI-24V"/>
+                                    <constraint firstItem="krO-aB-gqB" firstAttribute="trailing" secondItem="26Z-rD-av6" secondAttribute="trailing" id="Ynx-1R-oqr"/>
+                                    <constraint firstItem="43T-8T-dTl" firstAttribute="leading" secondItem="5fe-A5-EZh" secondAttribute="leading" id="cV7-pC-Lce"/>
+                                    <constraint firstItem="5fe-A5-EZh" firstAttribute="top" secondItem="43T-8T-dTl" secondAttribute="bottom" constant="10" id="tGf-AT-AQu"/>
+                                    <constraint firstItem="26Z-rD-av6" firstAttribute="top" secondItem="krO-aB-gqB" secondAttribute="bottom" constant="10" id="tjs-C9-Cbg"/>
+                                    <constraint firstItem="etu-IM-XLm" firstAttribute="top" secondItem="26Z-rD-av6" secondAttribute="bottom" constant="12" id="uNO-cj-ErH"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking Sign up you agree to the following Terms and Conditions without reservation " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQ7-Fg-AuH">
+                                <rect key="frame" x="36" y="592" width="303" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PQ7-Fg-AuH" secondAttribute="height" multiplier="303:64" id="VXh-A8-5yX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qvg-6d-9eD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qvg-6d-9eD" firstAttribute="trailing" secondItem="JN2-io-OK7" secondAttribute="trailing" constant="36" id="09g-8M-Cuq"/>
+                            <constraint firstItem="CCT-iR-G8f" firstAttribute="top" secondItem="Qvg-6d-9eD" secondAttribute="top" constant="86" id="1iJ-Oz-Dsh"/>
+                            <constraint firstItem="JN2-io-OK7" firstAttribute="leading" secondItem="Qvg-6d-9eD" secondAttribute="leading" constant="36" id="9yH-r9-Tgq"/>
+                            <constraint firstItem="z7w-SO-gUk" firstAttribute="leading" secondItem="Qvg-6d-9eD" secondAttribute="leading" constant="36" id="ENf-lT-LkW"/>
+                            <constraint firstItem="Qvg-6d-9eD" firstAttribute="trailing" secondItem="z7w-SO-gUk" secondAttribute="trailing" constant="36" id="Gxr-GR-heB"/>
+                            <constraint firstItem="z7w-SO-gUk" firstAttribute="top" secondItem="JN2-io-OK7" secondAttribute="bottom" constant="38" id="Kf1-YH-xXJ"/>
+                            <constraint firstItem="PQ7-Fg-AuH" firstAttribute="top" secondItem="z7w-SO-gUk" secondAttribute="bottom" constant="42" id="KqZ-ws-W05"/>
+                            <constraint firstItem="PQ7-Fg-AuH" firstAttribute="leading" secondItem="Qvg-6d-9eD" secondAttribute="leading" constant="36" id="LFa-s2-Lgb"/>
+                            <constraint firstItem="Qvg-6d-9eD" firstAttribute="trailing" secondItem="PQ7-Fg-AuH" secondAttribute="trailing" constant="36" id="Ryk-3N-mow"/>
+                            <constraint firstItem="CCT-iR-G8f" firstAttribute="centerX" secondItem="JN2-io-OK7" secondAttribute="centerX" id="ba5-Mr-LTL"/>
+                            <constraint firstItem="CCT-iR-G8f" firstAttribute="trailing" secondItem="JN2-io-OK7" secondAttribute="trailing" id="uAg-Io-GT3"/>
+                            <constraint firstItem="JN2-io-OK7" firstAttribute="top" secondItem="CCT-iR-G8f" secondAttribute="bottom" constant="38" id="woZ-Gn-Wgx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Huv-cS-bsh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFO-BA-c15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="UpA-UW-BWk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3420" y="-167"/>
+            <point key="canvasLocation" x="3420" y="-167.73399014778326"/>
         </scene>
         <!--Main-->
         <scene sceneID="19J-UP-LTd">
@@ -316,6 +422,9 @@
         <image name="welcomeScreen" width="375" height="812"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

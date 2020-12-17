@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginController: UIViewController {
+class LoginController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -28,7 +28,47 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         setupSignUpLabel()
         setupNavigationUI()
+        setupUI()
+        
+        
+        // Register Notification Center for Keyboard controller (Listen for keyboard's events)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    deinit {
+        // Stop listening for keyboard hide/show event
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: self)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: self)
+    }
+    
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        //print("Keyboard will show \(notification.name.rawValue)")
+        guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        view.frame.origin.y = -keyboardRect.height
+    }
+    
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        //print("Keyboard will show \(notification.name.rawValue)")
+
+        view.frame.origin.y = 0
+    }
+    
+    
+    func hideKeyboard(){
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        hideKeyboard()
+        return true
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -48,6 +88,9 @@ class LoginController: UIViewController {
    
     
     func setupUI(){
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         
     }
     
@@ -73,15 +116,15 @@ class LoginController: UIViewController {
         let signUpLabelText =  "Don't have an account? "
        
         let signUpLabelTextAttributes: [NSAttributedString.Key : Any] = [
-            NSAttributedString.Key.foregroundColor: UIColor.green,
+            NSAttributedString.Key.foregroundColor: Color.mediumGreyText.value,
             NSAttributedString.Key.font: UIFont(name: "Avenir-Book", size: 17.0)!
         ]
         
         let signUpAttributedString = NSAttributedString(string: signUpLabelText, attributes: signUpLabelTextAttributes)
         
-        let signUpLabelSelectableText = "Sign In"
+        let signUpLabelSelectableText = "Sign Up"
         let signUpLabelSelectableTextAttributes: [NSAttributedString.Key : Any] = [
-            NSAttributedString.Key.foregroundColor: UIColor.orange,
+            NSAttributedString.Key.foregroundColor: Color.theme.value,
             NSAttributedString.Key.font: UIFont(name: "Avenir-Book", size: 17.0)!
         ]
         
