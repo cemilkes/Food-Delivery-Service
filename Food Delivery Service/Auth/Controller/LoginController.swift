@@ -19,6 +19,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loginButtonOutlet: BTButton!
     
+    @IBOutlet weak var loginSubView: UIView!
     @IBOutlet weak var forgotPasswordOutlet: UIButton!
     
     @IBOutlet weak var signUpLabel: UILabel!
@@ -29,11 +30,22 @@ class LoginController: UIViewController, UITextFieldDelegate {
         setupSignUpLabel()
         setupNavigationUI()
         setupUI()
-        
+        setupLoginSubView()
         
         // Register Notification Center for Keyboard controller (Listen for keyboard's events)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func setupLoginSubView(){
+        let rectShape = CAShapeLayer()
+        rectShape.bounds = self.loginSubView.frame
+        rectShape.position = self.loginSubView.center
+        rectShape.path = UIBezierPath(roundedRect: self.loginSubView.bounds, byRoundingCorners: [.topRight , .topLeft], cornerRadii: CGSize(width: 16, height: 16)).cgPath
+
+        //self.loginSubView.layer.backgroundColor = UIColor.green.cgColor
+        //Here I'm masking the textView's layer with rectShape layer
+        self.loginSubView.layer.mask = rectShape
     }
     
     deinit {

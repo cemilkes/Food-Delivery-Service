@@ -233,6 +233,7 @@
                         <outlet property="emailTextField" destination="GZf-z0-jlK" id="Fvk-pA-3BR"/>
                         <outlet property="forgotPasswordOutlet" destination="hNp-6Y-ghK" id="dDY-tP-4T2"/>
                         <outlet property="loginButtonOutlet" destination="Knb-VK-Mdq" id="FHW-MN-FNt"/>
+                        <outlet property="loginSubView" destination="aYy-b0-3SU" id="if4-jG-d5C"/>
                         <outlet property="passwordTextField" destination="2uj-8u-fNv" id="uB9-t6-yOp"/>
                         <outlet property="signUpLabel" destination="57N-qK-9iC" id="CDd-v1-4Bs"/>
                         <outlet property="titleLabel" destination="Jmm-pU-Kgh" id="OT8-1O-gVz"/>
