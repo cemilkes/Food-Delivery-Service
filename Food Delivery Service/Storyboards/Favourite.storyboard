@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5e3-es-Wza">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5e3-es-Wza">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,19 +16,8 @@
                     <view key="view" contentMode="scaleToFill" id="Oof-qT-0hI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favourite" translatesAutoresizingMaskIntoConstraints="NO" id="eRG-tb-6dd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                            </imageView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1Qc-OK-Z4S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="eRG-tb-6dd" firstAttribute="leading" secondItem="1Qc-OK-Z4S" secondAttribute="leading" id="3fr-BA-pVf"/>
-                            <constraint firstItem="eRG-tb-6dd" firstAttribute="top" secondItem="Oof-qT-0hI" secondAttribute="topMargin" id="exK-wx-VD6"/>
-                            <constraint firstItem="eRG-tb-6dd" firstAttribute="centerX" secondItem="Oof-qT-0hI" secondAttribute="centerX" id="fKa-d8-pQ5"/>
-                            <constraint firstItem="eRG-tb-6dd" firstAttribute="bottom" secondItem="1Qc-OK-Z4S" secondAttribute="bottom" id="vUt-Hu-gAn"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tabBarFavourite" id="mpf-vi-7Ak"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -39,7 +28,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="favourite" width="784" height="1460"/>
         <image name="tabBarFavourite" width="75" height="49"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

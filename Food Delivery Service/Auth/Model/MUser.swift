@@ -14,22 +14,18 @@ class MUser {
     
     let objectId: String
     let email: String
-    let firstName: String
-    let lastName: String
-    let fullName: String
+    let username: String
     let purchasedItemIds: [String]
     let createdAt: Date
     
     let fullAddress: String?
     let onBoard: Bool
     
-    init(_objectId: String, _email: String, _firstName: String, _lastName: String, _createdAt:Date) {
+    init(_objectId: String, _email: String, _username: String, _createdAt:Date) {
         objectId = _objectId
         email = _email
-        firstName = _firstName
-        lastName = _lastName
+        username = _username
         createdAt = _createdAt
-        fullName = _firstName + " " + _lastName
         fullAddress = ""
         onBoard = false
         purchasedItemIds = []
@@ -44,19 +40,11 @@ class MUser {
             email = ""
         }
         
-        if let fName = _dictionary[kFIRSTNAME] {
-            firstName = fName as! String
+        if let usName = _dictionary[kFIRSTNAME] {
+            username = usName as! String
         }else{
-            firstName = ""
+            username = ""
         }
-        
-        if let lName = _dictionary[kFIRSTNAME] {
-            lastName = lName as! String
-        }else{
-            lastName = ""
-        }
-        
-        fullName = firstName +  " " + lastName
         
         if let fAddress = _dictionary[kFULLADDRESS] {
             fullAddress = fAddress as! String
@@ -79,7 +67,6 @@ class MUser {
         createdAt  =  dateFormatter().date(from: _dictionary[kCREATEDAT] as! String)!
     }
 
-    
     //MARK: - Return Current User
 
     class func currentId() -> String{
