@@ -33,7 +33,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         setupLoginSubView()
     
         
-        let signUpLabelGesture = UITapGestureRecognizer(target: self, action: #selector(signUpLabelClicked(_:)))
+        let signUpLabelGesture = UITapGestureRecognizer(target: self, action: #selector(signUpLabelClicked(_ :)))
         signUpLabel.addGestureRecognizer(signUpLabelGesture)
     
         // Register Notification Center for Keyboard controller (Listen for keyboard's events)
@@ -41,8 +41,11 @@ class LoginController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    func signUpLabelClicked(){
-        print("Clicked")
+    @objc func signUpLabelClicked(_ sender: UITapGestureRecognizer){
+        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
+                let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.signUpController) as! SignUpController
+                //vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
     }
     
     func setupLoginSubView(){
@@ -116,10 +119,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
-                let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.signUpController) as! SignUpController
-                //vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion: nil)
+       print("Login button pressed")
     }
     
     
