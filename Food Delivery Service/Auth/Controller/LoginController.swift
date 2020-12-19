@@ -31,10 +31,18 @@ class LoginController: UIViewController, UITextFieldDelegate {
         setupNavigationUI()
         setupUI()
         setupLoginSubView()
+    
         
+        let signUpLabelGesture = UITapGestureRecognizer(target: self, action: #selector(signUpLabelClicked(_:)))
+        signUpLabel.addGestureRecognizer(signUpLabelGesture)
+    
         // Register Notification Center for Keyboard controller (Listen for keyboard's events)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func signUpLabelClicked(){
+        print("Clicked")
     }
     
     func setupLoginSubView(){
@@ -43,7 +51,6 @@ class LoginController: UIViewController, UITextFieldDelegate {
         rectShape.position = self.loginSubView.center
         rectShape.path = UIBezierPath(roundedRect: self.loginSubView.bounds, byRoundingCorners: [.topRight , .topLeft], cornerRadii: CGSize(width: 16, height: 16)).cgPath
 
-        //self.loginSubView.layer.backgroundColor = UIColor.green.cgColor
         //Here I'm masking the textView's layer with rectShape layer
         self.loginSubView.layer.mask = rectShape
     }
