@@ -23,6 +23,7 @@ class ItemDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
         
         //addToBasketButtonPressed()
@@ -56,7 +57,7 @@ class ItemDetailController: UIViewController {
         }
     }
     
-    func showLoginView(){
+    private func showLoginView(){
         
     }
     
