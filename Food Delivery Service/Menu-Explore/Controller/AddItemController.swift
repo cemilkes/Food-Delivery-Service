@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class AddItemController: UIViewController {
 
     @IBOutlet weak var addItemTextField: UITextField!
@@ -15,10 +16,6 @@ class AddItemController: UIViewController {
     @IBOutlet weak var priceTextField: CurrencyTextField!
     
     @IBOutlet weak var descriptionTextView: UITextView!
-    
-  
-    
-    
     
     var category: Category!
     var itemImages: [UIImage?] = []
