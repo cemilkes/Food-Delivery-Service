@@ -13,6 +13,7 @@ target 'Food Delivery Service' do
   # Firebase Authentication and Cloud Firestore
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
   
   pod 'JGProgressHUD'
   

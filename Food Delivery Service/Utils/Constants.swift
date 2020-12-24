@@ -8,7 +8,8 @@
 
 import Foundation
 
-
+//IDs and Keys
+public let kFILEREFERENCE = "gs://banh-thai.appspot.com/"
 
 //Firebase
 public let kUSER_PATH = "User"
