@@ -7,18 +7,26 @@
 //
 
 import UIKit
+import Gallery
+import NVActivityIndicatorView
 
 
 class AddItemController: UIViewController {
 
+    //MARK: - IBOutlets
     @IBOutlet weak var addItemTextField: UITextField!
     
     @IBOutlet weak var priceTextField: CurrencyTextField!
     
     @IBOutlet weak var descriptionTextView: UITextView!
     
+    //MARK: - Variables
     var category: Category!
+    
+    //create an array for item images and initialize it as empty.
     var itemImages: [UIImage?] = []
+    var gallery: GalleryController!
+    var activityIndicator: NVActivityIndicatorView?
     
     var selectedCurrency: Currency? {
            didSet {
@@ -34,7 +42,6 @@ class AddItemController: UIViewController {
         // Do any additional setup after loading the view.
         setCurrencyOnStart()
        
-        
     }
     
     @IBAction func DoneButtonPressed(_ sender: UIBarButtonItem) {
@@ -47,6 +54,12 @@ class AddItemController: UIViewController {
             //TODO: - Description
             print("Item not added")
         }
+    }
+    
+    
+    @IBAction func cameraButtonPressed(_ sender: Any) {
+        itemImages = []
+        showImageGallery()
     }
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
@@ -72,7 +85,7 @@ class AddItemController: UIViewController {
         item.name        = addItemTextField.text!
         item.categoryId  = category.id
         item.description = descriptionTextView.text
-        item.price       = priceTextField.text!
+        item.price       = priceTextField.text!  // Double(priceTextField.text)!
         
         if itemImages.count > 0 {
             
@@ -88,5 +101,48 @@ class AddItemController: UIViewController {
     private func setCurrencyOnStart() {
             selectedCurrency = Currency(locale: "en_US", amount: 0.0)
         }
+    
+    //MARK: - Show Image Gallery
+    private func showImageGallery(){
+        
+        self.gallery = GalleryController()
+        self.gallery.delegate = self
+        
+        Config.tabsToShow = [.imageTab, .cameraTab]
+        Config.Camera.imageLimit = 2
+        
+        self.present(self.gallery, animated: true, completion: nil)
+    }
+    
+    
+}
+
+extension AddItemController: GalleryControllerDelegate{
+    func galleryController(_ controller: GalleryController, didSelectImages images: [Image]) {
+        
+        if images.count > 0 {
+            Image.resolve(images: images, completion: { (resolvedImages) in
+                self.itemImages = resolvedImages
+            })
+        }
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    func galleryController(_ controller: GalleryController, didSelectVideo video: Video) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    func galleryController(_ controller: GalleryController, requestLightbox images: [Image]) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    func galleryControllerDidCancel(_ controller: GalleryController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+        
+    
+    
+    
     
 }
