@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DA754F5B991D29737382A6E /* Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9328759E54A6B88C8499A2 /* Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework */; };
 		25361BA425955934003EF914 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25361BA325955934003EF914 /* Reachability.swift */; };
+		25361BC625955A3B003EF914 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25361BC525955A3B003EF914 /* Downloader.swift */; };
 		253C4B83251EB0AA00135ADC /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253C4B82251EB0AA00135ADC /* ItemsController.swift */; };
 		253C4B88251EB0CA00135ADC /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253C4B87251EB0CA00135ADC /* ItemCell.swift */; };
 		253C4B90251EB0E900135ADC /* ItemController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253C4B8F251EB0E900135ADC /* ItemController+UITableView.swift */; };
@@ -82,6 +83,7 @@
 
 /* Begin PBXFileReference section */
 		25361BA325955934003EF914 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		25361BC525955A3B003EF914 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		253C4B82251EB0AA00135ADC /* ItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsController.swift; sourceTree = "<group>"; };
 		253C4B87251EB0CA00135ADC /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		253C4B8F251EB0E900135ADC /* ItemController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemController+UITableView.swift"; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				25D9B849252B778400B13C22 /* CurrencyTextField.swift */,
 				25D9B850252B791400B13C22 /* Currency.swift */,
 				25361BA325955934003EF914 /* Reachability.swift */,
+				25361BC525955A3B003EF914 /* Downloader.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -761,6 +764,7 @@
 				83FDDD1D2548EAEC00E134C2 /* TabbarController.swift in Sources */,
 				8379BAF024EB7E9000EE8EB9 /* Font.swift in Sources */,
 				2560AB2D24F710A000844F29 /* BTTextfield.swift in Sources */,
+				25361BC625955A3B003EF914 /* Downloader.swift in Sources */,
 				25A806DE24EE1F1A004E99C2 /* Constants.swift in Sources */,
 				25D9B84A252B778400B13C22 /* CurrencyTextField.swift in Sources */,
 				257AE0EC252CCDC6007318B1 /* ItemDetailController.swift in Sources */,

@@ -36,12 +36,21 @@ class AddItemController: UIViewController {
            }
        }
     
+    //MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(category.id)
         // Do any additional setup after loading the view.
         setCurrencyOnStart()
        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        activityIndicator = NVActivityIndicatorView(frame: CGRect(x: self.view.frame.width / 2 - 30, y: self.view.frame.height / 2 - 30, width: 60, height: 60), type: .ballClipRotate, color: .black, padding: nil)
+        
     }
     
     @IBAction func DoneButtonPressed(_ sender: UIBarButtonItem) {
@@ -66,20 +75,24 @@ class AddItemController: UIViewController {
         dismissKeyboard()
     }
     
+    
     private func fieldAreCompleted() -> Bool {
         return (addItemTextField.text != nil && priceTextField.text != nil)
     }
     
+    //MARK: - Dismiss Keyboard
     private func dismissKeyboard(){
         self.view.endEditing(false)
     }
     
+    //MARK: - Pop the View
     private func popTheView(){
         self.navigationController?.popViewController(animated: true)
     }
     
     //MARK: - Save Item
     private func saveItemToFirebase(){
+        showLoadingIndicator()
         let item         = Item()
         item.id          = UUID().uuidString
         item.name        = addItemTextField.text!
@@ -89,13 +102,32 @@ class AddItemController: UIViewController {
         
         if itemImages.count > 0 {
             
+            uploadImages(images: itemImages, itemId: item.id) { (imageLinkArray) in
+                item.imageLinks = imageLinkArray
+                Food_Delivery_Service.saveItemToFirebase(item)
+                self.hideLoadingIndicator()
+                self.popTheView()
+            }
         }else{
             Food_Delivery_Service.saveItemToFirebase(item)
             popTheView()
         }
-   
     }
     
+    //MARK: - Activity Indicator
+    private func showLoadingIndicator(){
+        if activityIndicator != nil{
+            self.view.addSubview(activityIndicator!)
+            activityIndicator!.startAnimating()
+        }
+    }
+    
+    private func hideLoadingIndicator(){
+        if activityIndicator != nil {
+            activityIndicator!.removeFromSuperview()
+            activityIndicator?.stopAnimating()
+        }
+    }
     //MARK: - Set Local Currency
     
     private func setCurrencyOnStart() {
