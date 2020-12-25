@@ -16,7 +16,7 @@ class Item {
     var categoryId: String!
     var name:String!
     var description: String!
-    var price: String!
+    var price: Double!
     var imageLinks: [String]!
     //var specialInstructions: String = ""
     //var quantity: Int
@@ -29,7 +29,7 @@ class Item {
         categoryId = _dictionary[kCID] as? String
         name = _dictionary[kNAME] as? String
         description = _dictionary[kDESCRIPTION] as? String
-        price = _dictionary[kPRICE] as? String
+        price = _dictionary[kPRICE] as? Double
         imageLinks = _dictionary[kIMAGELINKS] as? [String]
     }
 }

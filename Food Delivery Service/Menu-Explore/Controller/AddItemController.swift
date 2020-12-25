@@ -98,7 +98,7 @@ class AddItemController: UIViewController {
         item.name        = addItemTextField.text!
         item.categoryId  = category.id
         item.description = descriptionTextView.text
-        item.price       = priceTextField.text!  // Double(priceTextField.text)!
+        item.price       = Double(priceTextField.text!)  // Double(priceTextField.text)!
         
         if itemImages.count > 0 {
             

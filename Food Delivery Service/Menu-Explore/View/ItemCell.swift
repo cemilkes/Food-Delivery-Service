@@ -14,7 +14,9 @@ class ItemCell: UITableViewCell {
     
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var itemDescLabel: UILabel!
-    @IBOutlet weak var ItemPriceLabel: UILabel!
+    @IBOutlet weak var itemPriceLabel: UILabel!
+    @IBOutlet weak var itemImageView: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,10 +30,19 @@ class ItemCell: UITableViewCell {
     }
 
     func generateCell(_ item: Item) {
+       
         itemNameLabel.text  = item.name
         itemDescLabel.text  = item.description
-        ItemPriceLabel.text = item.price!
-        ItemPriceLabel.adjustsFontSizeToFitWidth = true
+        itemPriceLabel.text = convertToCurrency(item.price)   // "$\(item.price!)"
+        itemPriceLabel.adjustsFontSizeToFitWidth = true
+        
+        if item.imageLinks != nil && item.imageLinks.count > 0 {
+                    
+                    downloadImages(imageUrls: [item.imageLinks.first!]) { (images) in
+                        self.itemImageView.image = images.first as? UIImage
+                    }
+                }
+        
     }
     
     

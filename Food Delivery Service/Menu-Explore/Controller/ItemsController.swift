@@ -10,15 +10,18 @@ import UIKit
 
 class ItemsController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     // MARK: - Variables
     var category: Category?
     var itemArray : [Item] = []
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Remove empty cells from tableView
         tableView.tableFooterView = UIView()
+        
         tableView.delegate = self
         tableView.dataSource = self
         

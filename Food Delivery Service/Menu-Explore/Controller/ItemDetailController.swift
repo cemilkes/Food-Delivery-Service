@@ -17,7 +17,7 @@ class ItemDetailController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+   
     
     @IBOutlet weak var addToBasketButtonOutlet: UIButton!
     
@@ -30,7 +30,7 @@ class ItemDetailController: UIViewController {
         
         nameLabel.text = item.name
         descriptionLabel.text = item.description
-        priceLabel.text = item.price
+        priceLabel.text = "\(item.price!)"
         
     }
     

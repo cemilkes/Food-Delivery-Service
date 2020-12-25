@@ -21,7 +21,7 @@
 		257AE13025310651007318B1 /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE12F25310651007318B1 /* OrderController.swift */; };
 		257AE13625316843007318B1 /* OrderController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE13525316843007318B1 /* OrderController+TableView.swift */; };
 		257AE1782531729B007318B1 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE1772531729B007318B1 /* OrderCell.swift */; };
-		2581801B253BAA3C007AAE14 /* ItemDetail+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581801A253BAA3C007AAE14 /* ItemDetail+UITableView.swift */; };
+		2581801B253BAA3C007AAE14 /* ItemDetail+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581801A253BAA3C007AAE14 /* ItemDetail+UICollectionView.swift */; };
 		25818023253DEE88007AAE14 /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25818022253DEE88007AAE14 /* MUser.swift */; };
 		25818028253F34A9007AAE14 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25818027253F34A9007AAE14 /* ForgotPasswordController.swift */; };
 		2592815224F201B800D96B2D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592815124F201B800D96B2D /* Category.swift */; };
@@ -95,7 +95,7 @@
 		257AE12F25310651007318B1 /* OrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
 		257AE13525316843007318B1 /* OrderController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderController+TableView.swift"; sourceTree = "<group>"; };
 		257AE1772531729B007318B1 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
-		2581801A253BAA3C007AAE14 /* ItemDetail+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemDetail+UITableView.swift"; sourceTree = "<group>"; };
+		2581801A253BAA3C007AAE14 /* ItemDetail+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemDetail+UICollectionView.swift"; sourceTree = "<group>"; };
 		25818022253DEE88007AAE14 /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
 		25818027253F34A9007AAE14 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		2592815124F201B800D96B2D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -324,7 +324,7 @@
 			children = (
 				25CB61B1250F15CC00752646 /* MenuController+UICollectionView.swift */,
 				253C4B8F251EB0E900135ADC /* ItemController+UITableView.swift */,
-				2581801A253BAA3C007AAE14 /* ItemDetail+UITableView.swift */,
+				2581801A253BAA3C007AAE14 /* ItemDetail+UICollectionView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -751,7 +751,7 @@
 				25A806F524EF8BDC004E99C2 /* ReachabilityManager.swift in Sources */,
 				253C4B83251EB0AA00135ADC /* ItemsController.swift in Sources */,
 				253C4B88251EB0CA00135ADC /* ItemCell.swift in Sources */,
-				2581801B253BAA3C007AAE14 /* ItemDetail+UITableView.swift in Sources */,
+				2581801B253BAA3C007AAE14 /* ItemDetail+UICollectionView.swift in Sources */,
 				25CB61B2250F15CC00752646 /* MenuController+UICollectionView.swift in Sources */,
 				253C4B98251EB10300135ADC /* Item.swift in Sources */,
 				83B22F112548E21C005806DC /* ProfileController+TableView.swift in Sources */,
