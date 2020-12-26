@@ -16,7 +16,7 @@ class AddItemController: UIViewController {
     //MARK: - IBOutlets
     @IBOutlet weak var addItemTextField: UITextField!
     
-    @IBOutlet weak var priceTextField: CurrencyTextField!
+    @IBOutlet weak var priceTextField: UITextField!
     
     @IBOutlet weak var descriptionTextView: UITextView!
     
@@ -28,13 +28,13 @@ class AddItemController: UIViewController {
     var gallery: GalleryController!
     var activityIndicator: NVActivityIndicatorView?
     
-    var selectedCurrency: Currency? {
-           didSet {
-            priceTextField.text?.removeAll()
-            priceTextField.currency = selectedCurrency
-            //priceTextField.becomeFirstResponder()
-           }
-       }
+//    var selectedCurrency: Currency? {
+//           didSet {
+//            priceTextField.text?.removeAll()
+//            priceTextField.currency = selectedCurrency
+//            //priceTextField.becomeFirstResponder()
+//           }
+//       }
     
     //MARK: - LifeCycle
     
@@ -42,15 +42,13 @@ class AddItemController: UIViewController {
         super.viewDidLoad()
         print(category.id)
         // Do any additional setup after loading the view.
-        setCurrencyOnStart()
-       
+        //setCurrencyOnStart()s
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         activityIndicator = NVActivityIndicatorView(frame: CGRect(x: self.view.frame.width / 2 - 30, y: self.view.frame.height / 2 - 30, width: 60, height: 60), type: .ballClipRotate, color: .black, padding: nil)
-        
     }
     
     @IBAction func DoneButtonPressed(_ sender: UIBarButtonItem) {
@@ -130,9 +128,9 @@ class AddItemController: UIViewController {
     }
     //MARK: - Set Local Currency
     
-    private func setCurrencyOnStart() {
-            selectedCurrency = Currency(locale: "en_US", amount: 0.0)
-        }
+//    private func setCurrencyOnStart() {
+//            selectedCurrency = Currency(locale: "en_US", amount: 0.0)
+//        }
     
     //MARK: - Show Image Gallery
     private func showImageGallery(){
@@ -149,32 +147,3 @@ class AddItemController: UIViewController {
     
 }
 
-extension AddItemController: GalleryControllerDelegate{
-    func galleryController(_ controller: GalleryController, didSelectImages images: [Image]) {
-        
-        if images.count > 0 {
-            Image.resolve(images: images, completion: { (resolvedImages) in
-                self.itemImages = resolvedImages
-            })
-        }
-        controller.dismiss(animated: true, completion: nil)
-    }
-    
-    func galleryController(_ controller: GalleryController, didSelectVideo video: Video) {
-        controller.dismiss(animated: true, completion: nil)
-    }
-    
-    func galleryController(_ controller: GalleryController, requestLightbox images: [Image]) {
-        controller.dismiss(animated: true, completion: nil)
-    }
-    
-    func galleryControllerDidCancel(_ controller: GalleryController) {
-        controller.dismiss(animated: true, completion: nil)
-    }
-    
-        
-    
-    
-    
-    
-}

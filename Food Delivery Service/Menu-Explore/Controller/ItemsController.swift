@@ -21,7 +21,6 @@ class ItemsController: UIViewController {
         
         //Remove empty cells from tableView
         tableView.tableFooterView = UIView()
-        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -49,17 +48,14 @@ class ItemsController: UIViewController {
             self.tableView.reloadData()
         })
         
-        
     }
 
     func showItem(_ item: Item){
         let itemVC = UIStoryboard.init(name: Storyboard.menu, bundle: nil).instantiateViewController(identifier: ViewController.itemDetailController) as! ItemDetailController
         itemVC.item = item
-        itemVC.modalPresentationStyle = .fullScreen
+        //itemVC.modalPresentationStyle = .fullScreen
         present(itemVC, animated: true, completion: nil)
     }
-    
-    
     
     // MARK: - Navigation
 

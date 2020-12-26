@@ -12,26 +12,26 @@ import JGProgressHUD
 
 class ItemDetailController: UIViewController {
     
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var addToOrderView: UIView!
+    @IBOutlet weak var addToOrderLabel: UILabel!
+    
     var item:Item!
     var hud: JGProgressHUD!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-   
-    
-    @IBOutlet weak var addToBasketButtonOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
-        
-        //addToBasketButtonPressed()
-        
-        nameLabel.text = item.name
-        descriptionLabel.text = item.description
-        priceLabel.text = "\(item.price!)"
-        
+        config()
+       // print("item is: ", item.name)
+    }
+    
+    private func config(){
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        let addToOrderLabelGesture = UITapGestureRecognizer(target: self, action: #selector(addToOrderLabelPressed(_ :)))
+        addToOrderLabel.addGestureRecognizer(addToOrderLabelGesture)
     }
     
     private func setupUI(){
@@ -39,8 +39,18 @@ class ItemDetailController: UIViewController {
 //            self.title = item.name
 //            print(item.name)
 //        }
-        
+        addToOrderView.clipsToBounds = true
+        addToOrderView.layer.cornerRadius = 22
+        addToOrderLabel.clipsToBounds = true
+        addToOrderLabel.layer.cornerRadius = 22
+        addToOrderLabel.isUserInteractionEnabled = true
     }
+    
+    @objc func addToOrderLabelPressed(_ sender: UITapGestureRecognizer){
+        print("add to ORder", item.name)
+    }
+    
+
     
     @objc func addToBasketButtonPressed(){
         
