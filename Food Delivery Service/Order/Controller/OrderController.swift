@@ -53,7 +53,7 @@ class OrderController: UIViewController {
     func getBasketItems(){
         
         if basket != nil {
-            downloadItems(basket!.itemIds){ (allItems) in
+            downloadItems(basket!.orderItemIds){ (allItems) in
                 self.allItems = allItems
                 self.updateTotalLabels(false)
                 self.tableView.reloadData()
@@ -102,9 +102,9 @@ class OrderController: UIViewController {
     
     func removeItemFromBasket(itemId: String){
         
-        for i in 0..<basket!.itemIds.count {
-            if itemId == basket!.itemIds[i] {
-                basket?.itemIds.remove(at: i)
+        for i in 0..<basket!.orderItemIds.count {
+            if itemId == basket!.orderItemIds[i] {
+                basket?.orderItemIds.remove(at: i)
                 return 
             }
         }

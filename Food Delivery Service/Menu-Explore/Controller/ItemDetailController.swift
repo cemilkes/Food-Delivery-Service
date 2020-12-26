@@ -18,6 +18,7 @@ class ItemDetailController: UIViewController {
     @IBOutlet weak var addToOrderLabel: UILabel!
     
     var item:Item!
+    ///var orderItem: OrderItem!
     var hud: JGProgressHUD!
     
     override func viewDidLoad() {
@@ -46,46 +47,45 @@ class ItemDetailController: UIViewController {
         addToOrderLabel.isUserInteractionEnabled = true
     }
     
+//    @objc func addToOrderLabelPressed(_ sender: UITapGestureRecognizer){
+//        print("add to ORder", item.name)
+//    }
+//
     @objc func addToOrderLabelPressed(_ sender: UITapGestureRecognizer){
-        print("add to ORder", item.name)
-    }
-    
-
-    
-    @objc func addToBasketButtonPressed(){
-        
+        print("Pressed")
         //TODO: - check if the user is logged in, or show login view
         showLoginView()
-        
-        downloadBasketFromFirestore("1234") { (basket) in
-            if basket == nil{
-                self.createNewBasket()
-            }else{
-                basket!.itemIds.append(self.item.id)
-                self.updateBasket(basket: basket!, withValues: [kITEMIDS:basket!.itemIds])
-            }
-        }
+        createOrderItem()
+        //createNewBasket()
+//        downloadBasketFromFirestore("1234") { (basket) in
+//            if basket == nil{
+//                self.createNewBasket()
+//            }else{
+//                basket!.orderItemIds.append(self.orderItem.id)
+//                self.updateBasket(basket: basket!, withValues: [kORDERITEMIDs:basket!.orderItemIds])
+//            }
+//        }
     }
     
     private func showLoginView(){
         
     }
     
-    //MARK: - Add to Basket
-    
-    func createNewBasket(){
+    func createOrderItem(){
+        
+        var orderItem = OrderItem()
+        orderItem.id = UUID().uuidString
+        orderItem.itemId = item.id
+        orderItem.ownerId = "1234"
+        orderItem.quantity = 2
+        orderItem.specialInstruction = "Special Instructions"
+        saveItemToFirebase(orderItem)
         
         let newBasket = Basket()
         newBasket.id  = UUID().uuidString
         newBasket.ownerId = "1234"
-        newBasket.itemIds = [self.item.id]
+        newBasket.orderItemIds = [orderItem.id]
         saveBasketToFirestore(newBasket)
-        
-        // Add Hud
-//        self.hud.textLabel.text = "Added to basket!"
-//        self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
-//        self.hud.show(in: self.view)
-//        self.hud.dismiss(afterDelay: 2.0)
     }
     
     func updateBasket(basket: Basket, withValues: [String:Any]){
@@ -93,19 +93,9 @@ class ItemDetailController: UIViewController {
         updateBasketInFirestore(basket, withValues: withValues) { (error) in
             if error != nil {
                 
-//                self.hud.textLabel.text = "Error: \(error!.localizedDescription)"
-//                self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
-//                self.hud.show(in: self.view)
-//                self.hud.dismiss(afterDelay: 2.0)
-                
                 print("Error updating basket", error!.localizedDescription)
                 
             }else{
-                
-//                self.hud.textLabel.text = "Added to basket!"
-//                self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
-//                self.hud.show(in: self.view)
-//                self.hud.dismiss(afterDelay: 2.0)
                 
             }
             

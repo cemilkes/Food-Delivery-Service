@@ -42,7 +42,7 @@ extension OrderController: UITableViewDelegate {
             
             removeItemFromBasket(itemId: itemToDelete.id)
             
-            updateBasketInFirestore(basket!, withValues: [kITEMIDS: basket!.itemIds]) { (error) in
+            updateBasketInFirestore(basket!, withValues: [kORDERITEMIDs: basket!.orderItemIds]) { (error) in
                 if error != nil {
                     print("error updating the basket", error?.localizedDescription)
                 }

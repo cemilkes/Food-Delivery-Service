@@ -18,9 +18,6 @@ class Item {
     var description: String!
     var price: Double!
     var imageLinks: [String]!
-    //var specialInstructions: String = ""
-    //var quantity: Int
-    
     
     init() {}
     

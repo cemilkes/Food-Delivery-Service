@@ -13,7 +13,7 @@ class Basket{
     
     var id: String!
     var ownerId: String!
-    var itemIds: [String]!
+    var orderItemIds: [String]!
     
     init() {
     }
@@ -21,9 +21,8 @@ class Basket{
     init(_dictionary: NSDictionary) {
         id = _dictionary[kOBJECTID] as? String
         ownerId = _dictionary[kOWNERID] as? String
-        itemIds = _dictionary[kITEMIDS] as? [String]
+        orderItemIds = _dictionary[kORDERITEMIDs] as? [String]
     }
-
 }
 
 //MARK: - Download
@@ -43,8 +42,6 @@ func downloadBasketFromFirestore(_ ownerId: String, completion: @escaping (_ bas
         }else{
             completion(nil)
         }
-        
-        
     }
 }
 
@@ -57,7 +54,7 @@ func saveBasketToFirestore(_ basket: Basket){
 //MARK: - Create Dictionary from Item
 
 func basketDictionaryFrom(_ basket: Basket) -> NSDictionary {
-    return NSDictionary(objects: [basket.id, basket.ownerId, basket.itemIds], forKeys: [kOBJECTID as NSCopying, kOWNERID as NSCopying, kITEMIDS as NSCopying])
+    return NSDictionary(objects: [basket.id, basket.ownerId, basket.orderItemIds], forKeys: [kOBJECTID as NSCopying, kOWNERID as NSCopying, kORDERITEMIDs as NSCopying])
 }
 
 //MARK: - Update
