@@ -32,6 +32,7 @@ public let kITEMID = "itemId"
 public let kQUANTITY = "quantity"
 public let kSPECIALINSTRUCTIONS = "special_instruction"
 public let kORDERITEMIDs = "Order_Item_Ids"
+public let kITEM = "item"
 
 public let kEMAIL = "email"
 public let kFIRSTNAME = "firstName"

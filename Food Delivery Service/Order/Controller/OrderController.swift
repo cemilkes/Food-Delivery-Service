@@ -13,15 +13,13 @@ class OrderController: UIViewController {
 
     
     @IBOutlet weak var tableView: UITableView!
-    var basket: Basket?
-    var allItems: [Item] = []
-    var purchasedItemIds : [String] = []
-    
     @IBOutlet weak var continueButtonOutlet: UIButton!
-    let hud = JGProgressHUD(style: .dark)
-    
     @IBOutlet weak var subTotalLabel: UILabel!
     
+    let hud = JGProgressHUD(style: .dark)
+    var basket: Basket?
+    var allItems: [OrderItem] = []
+    var purchasedItemIds : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +27,11 @@ class OrderController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         loadBasketFromFirestore()
         
         // Check if the user is logged in
@@ -53,17 +50,16 @@ class OrderController: UIViewController {
     func getBasketItems(){
         
         if basket != nil {
-            downloadItems(basket!.orderItemIds){ (allItems) in
+            downloadOrderItems(basket!.orderItemIds){ (allItems) in
                 self.allItems = allItems
                 self.updateTotalLabels(false)
-                self.tableView.reloadData()
             }
         }
+        self.tableView.reloadData()
     }
     
     private func updateTotalLabels(_ isEmpty: Bool) {
         if isEmpty {
-            
             subTotalLabel.text = returnBasketTotalPrice()
         }else{
             subTotalLabel.text = returnBasketTotalPrice()
@@ -78,7 +74,7 @@ class OrderController: UIViewController {
             //totalPrice = totalPrice + convertCurrencyToDouble(input: item.price!)
         }
         
-        print(totalPrice)
+        //print(totalPrice)
         
         return convertToCurrency(totalPrice)
         

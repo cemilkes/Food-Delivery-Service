@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import JGProgressHUD
 
 func convertToCurrency(_ number: Double) -> String {
     
@@ -36,3 +37,5 @@ func dateFormatter() -> DateFormatter{
     return dateFormatter
     
 }
+
+

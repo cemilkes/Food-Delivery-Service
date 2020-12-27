@@ -34,3 +34,35 @@ func saveItemToFirebase(_ orderItem: OrderItem){
 func orderItemDictionaryFrom(_ orderItem: OrderItem) -> NSDictionary {
     return NSDictionary(objects: [orderItem.id, orderItem.itemId, orderItem.ownerId,orderItem.quantity, orderItem.specialInstruction], forKeys: [kOBJECTID as NSCopying, kITEMID as NSCopying, kOWNERID as NSCopying,  kQUANTITY as NSCopying, kSPECIALINSTRUCTIONS as NSCopying])
 }
+
+func downloadOrderItems(_ withIds: [String], completion: @escaping(_ orderItemArray: [OrderItem]) -> Void){
+    var count = 0
+    var orderItemArray: [OrderItem] = []
+    if withIds.count > 0 {
+        for orderItemId in withIds {
+            FirebaseReference(.OrderItem).document(orderItemId).getDocument { (snapshot, error) in
+                guard let snapshot = snapshot else {
+                    completion(orderItemArray)
+                    return
+                }
+                if snapshot.exists {
+                    orderItemArray.append(OrderItem(_dictionary: snapshot.data()! as NSDictionary))
+                    count = count + 1
+                }else {
+                    completion(orderItemArray)
+                }
+                
+                if count  == withIds.count {
+                    completion(orderItemArray)
+                }
+            }
+        }
+    }else{
+        completion(orderItemArray)
+    }
+}
+func downloadOrderItemByIDs(_ withIds: [String], completion: @escaping(_ orderItemArray: [OrderItem]) -> Void){
+    
+    
+    
+}

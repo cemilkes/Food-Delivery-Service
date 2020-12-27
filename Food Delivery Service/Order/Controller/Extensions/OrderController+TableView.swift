@@ -14,6 +14,7 @@ private let reuseIdentifier = "OrderCell"
 extension OrderController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //print("allItem counts: ",allItems.count)
         return allItems.count
     }
     
@@ -55,7 +56,7 @@ extension OrderController: UITableViewDelegate {
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        showItemView(withItem: allItems[indexPath.row])
+        //showItemView(withItem: allItems[indexPath.row])
         
         
     }
