@@ -29,7 +29,6 @@ class ProfileCell: UITableViewCell {
     
     func generateCell(_ profileModel: ProfileModel){
         
-        
         titleImage.image = UIImage(named: profileModel.imageName)
         titleLabel.text = profileModel.title
 

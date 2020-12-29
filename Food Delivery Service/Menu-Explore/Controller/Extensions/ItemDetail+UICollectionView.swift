@@ -14,7 +14,7 @@ private let reuseIdentifier = "ItemDetailCell"
 extension ItemDetailController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -35,6 +35,8 @@ extension ItemDetailController: UICollectionViewDelegate {
         }
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
+        header.initializeHeaderCollectionResuableView()
+        header.increaseItemQuantityLabelPressed(item)
         header.configure(item)
         
         return header

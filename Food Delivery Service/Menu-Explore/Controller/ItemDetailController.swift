@@ -12,18 +12,17 @@ import JGProgressHUD
 
 class ItemDetailController: UIViewController {
     
-    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addToOrderView: UIView!
     @IBOutlet weak var addToOrderLabel: UILabel!
     
     var item:Item!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         config()
+        
        // print("item is: ", item.name)
     }
     

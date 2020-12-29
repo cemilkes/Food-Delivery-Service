@@ -13,7 +13,7 @@ struct ProfileModel {
     
     var imageName: String!
     var title: String!
-    
+
 }
 
 
