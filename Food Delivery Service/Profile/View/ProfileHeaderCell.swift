@@ -32,7 +32,7 @@ class ProfileHeaderCell: UITableViewCell {
         profileImage.clipsToBounds = true
         profileImage.layer.cornerRadius = 46.5
         userNameLabel.text = "Joseph"
-        
+                        	
     }
     
 }
