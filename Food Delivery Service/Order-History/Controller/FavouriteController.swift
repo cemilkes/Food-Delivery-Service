@@ -10,10 +10,18 @@ import UIKit
 
 class FavouriteController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        //view.backgroundColor = .red
         // Do any additional setup after loading the view.
+        setupUI()
+    }
+    
+    private func setupUI(){
+//        tableView.delegate = self
+//        tableView.dataSource = self
     }
     
     /*

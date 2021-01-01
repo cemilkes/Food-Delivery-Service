@@ -10,45 +10,90 @@ import UIKit
 
 class ContainerController: UIViewController {
 
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    private lazy var orderHistoryController: OrderHistoryController = {
+        // Load Storyboard
+        let storyboard = UIStoryboard(name: "Favourite", bundle: Bundle.main)
 
-    let orderHistoryController = OrderHistoryController()
-    let favouriteController = FavouriteController()
+        // Instantiate View Controller
+        var viewController = storyboard.instantiateViewController(withIdentifier: "OrderHistoryController") as! OrderHistoryController
+
+        // Add View Controller as Child View Controller
+        self.add(asChildViewController: viewController)
+
+        return viewController
+    }()
+    
+    private lazy var favouriteController: FavouriteController = {
+        // Load Storyboard
+        let storyboard = UIStoryboard(name: "Favourite", bundle: Bundle.main)
+
+        // Instantiate View Controller
+        var viewController = storyboard.instantiateViewController(withIdentifier: "FavouriteController") as! FavouriteController
+
+        // Add View Controller as Child View Controller
+        self.add(asChildViewController: viewController)
+
+        return viewController
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSegmentedController()
+        setupView()
         // Do any additional setup after loading the view.
     }
     
-    private func setupSegmentedController(){
-        
-        
-        
-        addChild(orderHistoryController)
-        addChild(favouriteController)
-        
-        self.view.addSubview(orderHistoryController.view)
-        self.view.addSubview(favouriteController.view)
-        
-        orderHistoryController.didMove(toParent: self)
-        favouriteController.didMove(toParent: self)
-        favouriteController.view.isHidden = true
-
+    private func setupView() {
+        setupSegmentedControl()
+        updateView()
     }
     
-    @IBAction func didTapSegment(segment: UISegmentedControl){
-        orderHistoryController.view.isHidden = true
-        favouriteController.view.isHidden = true
-        
-        if segment.selectedSegmentIndex  == 0{
-            orderHistoryController.view.isHidden = false
-        }else{
-            favouriteController.view.isHidden = false
+    private func setupSegmentedControl() {
+        // Configure Segmented Control
+        segmentedControl.removeAllSegments()
+        segmentedControl.insertSegment(withTitle: "Order History", at: 0, animated: false)
+        segmentedControl.insertSegment(withTitle: "Favourites", at: 1, animated: false)
+        segmentedControl.addTarget(self, action: #selector(selectionDidChange(_:)), for: .valueChanged)
+
+        // Select First Segment
+        segmentedControl.selectedSegmentIndex = 0
+    }
+    
+    @objc func selectionDidChange(_ sender: UISegmentedControl) {
+        updateView()
+    }
+    
+    fileprivate func add(asChildViewController viewController: UIViewController) {
+        // Add Child View as Subview
+            view.addSubview(viewController.view)
+
+            // Configure Child View
+            viewController.view.frame = view.bounds
+            viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    }
+    
+    private func remove(asChildViewController viewController: UIViewController) {
+        // Notify Child View Controller
+        viewController.willMove(toParent: nil)
+
+        // Remove Child View From Superview
+        viewController.view.removeFromSuperview()
+
+        // Notify Child View Controller
+        viewController.removeFromParent()
+    }
+
+    private func updateView() {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            remove(asChildViewController: favouriteController)
+            add(asChildViewController: orderHistoryController)
+        } else {
+            remove(asChildViewController: orderHistoryController)
+            add(asChildViewController: favouriteController)
         }
     }
     
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -56,6 +101,6 @@ class ContainerController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

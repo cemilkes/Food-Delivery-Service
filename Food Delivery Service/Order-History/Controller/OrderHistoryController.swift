@@ -10,13 +10,22 @@ import UIKit
 
 class OrderHistoryController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    var profileArray = [ProfileModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        //view.backgroundColor = .blue
+        setupUI()
         // Do any additional setup after loading the view.
     }
-    
 
+    private func setupUI(){
+//        tableView.delegate = self
+//        tableView.dataSource = self
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
