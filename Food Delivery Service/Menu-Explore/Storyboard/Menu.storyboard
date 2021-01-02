@@ -101,65 +101,53 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="100" id="Tfn-UH-tOw" customClass="ItemCell" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="100" id="Tfn-UH-tOw" customClass="ItemCell" customModule="Food_Delivery_Service" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tfn-UH-tOw" id="KrF-GA-BXL">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item DescriptionItem DescriptionItem DescriptionItem Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bs6-GH-ZuW">
-                                                    <rect key="frame" x="20" y="36" width="286" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="Nnj-5L-0Ol"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item DescriptionItem DescriptionItem DescriptionItem Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bs6-GH-ZuW">
+                                                    <rect key="frame" x="20" y="37" width="374" height="52"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
                                                     <color key="textColor" red="0.72156862745098038" green="0.73333333333333328" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DOG-a9-nhx">
-                                                    <rect key="frame" x="314" y="0.0" width="100" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="JDk-h0-bLm"/>
-                                                        <constraint firstAttribute="height" constant="100" id="oip-Vq-NXB"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 1799.99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnf-rc-9rz">
-                                                    <rect key="frame" x="20" y="61" width="62" height="18"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="18" id="3An-Sg-RIj"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8E-XC-ds0">
-                                                    <rect key="frame" x="20" y="11" width="84.666666666666671" height="19"/>
+                                                    <rect key="frame" x="20" y="11" width="84.666666666666671" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="19" id="mQP-ue-mY5"/>
+                                                        <constraint firstAttribute="height" constant="20" id="FYL-Kv-TLy"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                                     <color key="textColor" red="0.20000000000000001" green="0.22745098039215686" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 1799.99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnf-rc-9rz">
+                                                    <rect key="frame" x="316" y="10" width="78" height="20"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="78" id="WOo-wQ-t7X"/>
+                                                        <constraint firstAttribute="height" constant="20" id="kNI-pv-2YK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Bs6-GH-ZuW" firstAttribute="top" secondItem="N8E-XC-ds0" secondAttribute="bottom" constant="6" id="BLh-2k-5aM"/>
-                                                <constraint firstItem="lnf-rc-9rz" firstAttribute="top" secondItem="Bs6-GH-ZuW" secondAttribute="bottom" constant="5" id="M2R-2I-VL5"/>
-                                                <constraint firstItem="N8E-XC-ds0" firstAttribute="top" secondItem="KrF-GA-BXL" secondAttribute="topMargin" id="Sk8-5Y-j4c"/>
-                                                <constraint firstAttribute="bottom" secondItem="DOG-a9-nhx" secondAttribute="bottom" id="ZSq-1y-dFG"/>
-                                                <constraint firstItem="Bs6-GH-ZuW" firstAttribute="leading" secondItem="KrF-GA-BXL" secondAttribute="leadingMargin" id="cZz-F4-1U1"/>
-                                                <constraint firstItem="DOG-a9-nhx" firstAttribute="leading" secondItem="Bs6-GH-ZuW" secondAttribute="trailing" constant="8" symbolic="YES" id="d1d-lI-sNz"/>
-                                                <constraint firstItem="lnf-rc-9rz" firstAttribute="leading" secondItem="KrF-GA-BXL" secondAttribute="leadingMargin" id="f7l-ga-htN"/>
-                                                <constraint firstItem="DOG-a9-nhx" firstAttribute="top" secondItem="KrF-GA-BXL" secondAttribute="top" id="faO-3V-MTh"/>
-                                                <constraint firstItem="N8E-XC-ds0" firstAttribute="leading" secondItem="KrF-GA-BXL" secondAttribute="leadingMargin" id="gGS-2a-K2r"/>
-                                                <constraint firstAttribute="trailing" secondItem="DOG-a9-nhx" secondAttribute="trailing" id="nbO-fz-LpH"/>
+                                                <constraint firstItem="lnf-rc-9rz" firstAttribute="top" secondItem="KrF-GA-BXL" secondAttribute="top" constant="10" id="3za-eC-ftI"/>
+                                                <constraint firstItem="N8E-XC-ds0" firstAttribute="top" secondItem="KrF-GA-BXL" secondAttribute="topMargin" id="6Yu-ke-wdm"/>
+                                                <constraint firstItem="Bs6-GH-ZuW" firstAttribute="trailing" secondItem="KrF-GA-BXL" secondAttribute="trailingMargin" id="Bk7-mQ-k8d"/>
+                                                <constraint firstItem="Bs6-GH-ZuW" firstAttribute="leading" secondItem="KrF-GA-BXL" secondAttribute="leadingMargin" id="SHr-pc-24k"/>
+                                                <constraint firstAttribute="trailing" secondItem="lnf-rc-9rz" secondAttribute="trailing" constant="20" symbolic="YES" id="hXR-ud-gRy"/>
+                                                <constraint firstItem="Bs6-GH-ZuW" firstAttribute="top" secondItem="N8E-XC-ds0" secondAttribute="bottom" constant="6" id="iHy-g9-taV"/>
+                                                <constraint firstItem="N8E-XC-ds0" firstAttribute="leading" secondItem="KrF-GA-BXL" secondAttribute="leadingMargin" id="oXr-GB-X96"/>
+                                                <constraint firstAttribute="bottom" secondItem="Bs6-GH-ZuW" secondAttribute="bottom" constant="11" id="xZW-LJ-ujs"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="itemDescLabel" destination="Bs6-GH-ZuW" id="f3h-VN-bFz"/>
-                                            <outlet property="itemImageView" destination="DOG-a9-nhx" id="CFt-Wt-5WO"/>
                                             <outlet property="itemNameLabel" destination="N8E-XC-ds0" id="9L0-ZD-MX1"/>
                                             <outlet property="itemPriceLabel" destination="lnf-rc-9rz" id="Ktl-7U-gLa"/>
                                         </connections>
@@ -328,7 +316,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 1799.99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1L-cZ-Kld">
-                                                            <rect key="frame" x="344.33333333333326" y="13" width="61.666666666666686" height="18"/>
+                                                            <rect key="frame" x="344.33333333333331" y="13" width="61.666666666666686" height="18"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="13"/>
                                                             <nil key="textColor"/>

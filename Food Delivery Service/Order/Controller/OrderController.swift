@@ -15,6 +15,9 @@ class OrderController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var continueButtonOutlet: UIButton!
     @IBOutlet weak var subTotalLabel: UILabel!
+    @IBOutlet weak var continueView: UIView!
+    @IBOutlet weak var taxAndFeesTotalLabel: UILabel!
+    @IBOutlet weak var deliveryFee: UILabel!
     
     let hud = JGProgressHUD(style: .dark)
     var basket: Basket?
@@ -24,8 +27,17 @@ class OrderController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //loadBasketFromFirestore()
+        setupUI()
+    }
+    
+    
+    
+    private func setupUI(){
         tableView.delegate = self
         tableView.dataSource = self
+
+        continueView.layer.cornerRadius = 8
         
     }
     
@@ -106,6 +118,7 @@ class OrderController: UIViewController {
         }
     }
 
+    
     func showItemView(withItem: Item) {
         let itemVC = UIStoryboard.init(name: Storyboard.menu, bundle: nil).instantiateViewController(identifier: ViewController.itemDetailController) as! ItemDetailController
         itemVC.item = withItem
