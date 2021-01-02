@@ -14,9 +14,19 @@ class FavouriteController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.backgroundColor = .red
-        // Do any additional setup after loading the view.
+        print("Favourite Controller Loaded")
         setupUI()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        print("Favourite View Controller Will Appear")
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        print("Favourite View Controller Will Disappear")
     }
     
     private func setupUI(){

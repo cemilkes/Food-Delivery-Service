@@ -14,11 +14,23 @@ class OrderHistoryController: UIViewController {
     var profileArray = [ProfileModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.backgroundColor = .blue
+        print("Order Controller Loaded")
         setupUI()
-        // Do any additional setup after loading the view.
+        
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        print("Order View Controller Will Appear")
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        print("Order View Controller Will Disappear")
+    }
+    
     private func setupUI(){
 //        tableView.delegate = self
 //        tableView.dataSource = self

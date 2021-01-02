@@ -11,6 +11,10 @@ import UIKit
 class ContainerController: UIViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    
+    // Instantiate the child view controller
+    
     private lazy var orderHistoryController: OrderHistoryController = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "Favourite", bundle: Bundle.main)
@@ -64,15 +68,36 @@ class ContainerController: UIViewController {
         updateView()
     }
     
+    
+    /*
+        Add the child view controller to contain view controller
+     */
     fileprivate func add(asChildViewController viewController: UIViewController) {
+        // Another way to call childView controller
+        //        Add Child View Controller
+        //        addChild(viewController)
+        //
+        //        // Add Child View as Subview
+        //        view.addSubview(viewController.view)
+        //
+        //        // Configure Child View
+        //        viewController.view.frame = view.bounds
+        //        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        //
+        //        // Notify Child View Controller
+        //        viewController.didMove(toParent: self)
+        
         // Add Child View as Subview
-            view.addSubview(viewController.view)
-
-            // Configure Child View
-            viewController.view.frame = view.bounds
-            viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(viewController.view)
+        
+        // Configure Child View
+        viewController.view.frame = view.bounds
+        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
+    /*
+        Remove the child view controller from contain view controller
+     */
     private func remove(asChildViewController viewController: UIViewController) {
         // Notify Child View Controller
         viewController.willMove(toParent: nil)
@@ -84,6 +109,7 @@ class ContainerController: UIViewController {
         viewController.removeFromParent()
     }
 
+    
     private func updateView() {
         if segmentedControl.selectedSegmentIndex == 0 {
             remove(asChildViewController: favouriteController)
