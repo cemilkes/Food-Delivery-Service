@@ -231,7 +231,7 @@
                     <connections>
                         <outlet property="continueButtonOutlet" destination="uJv-cb-MFu" id="pZ1-X5-DG7"/>
                         <outlet property="continueView" destination="el3-JO-rSd" id="VU3-O3-4dr"/>
-                        <outlet property="deliveryFee" destination="eWL-hp-pNc" id="hIM-7c-HTs"/>
+                        <outlet property="deliveryFeeLabel" destination="eWL-hp-pNc" id="hIM-7c-HTs"/>
                         <outlet property="subTotalLabel" destination="Qoo-sh-GoF" id="tNU-4d-Myn"/>
                         <outlet property="tableView" destination="qJS-nJ-CAi" id="Soi-tP-8hJ"/>
                         <outlet property="taxAndFeesTotalLabel" destination="Sbb-p7-man" id="gWc-qn-zhY"/>

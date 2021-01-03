@@ -33,6 +33,7 @@ public let kQUANTITY = "quantity"
 public let kSPECIALINSTRUCTIONS = "special_instruction"
 public let kORDERITEMIDs = "Order_Item_Ids"
 public let kITEM = "item"
+public let kORDERITEMTOTALAMOUNT = "order_Item_total"
 
 public let kEMAIL = "email"
 public let kFIRSTNAME = "firstName"

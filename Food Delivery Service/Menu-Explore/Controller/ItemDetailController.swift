@@ -21,9 +21,12 @@ class ItemDetailController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var item:Item!
-    var orderItem: OrderItem!
+    //var orderItem: OrderItem!
     var quantity: Int = 1
-    
+    let orderItem = OrderItem()
+    let newBasket = Basket()
+    var orderItemTotalAmount: Double = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -103,12 +106,13 @@ class ItemDetailController: UIViewController {
         }
 
     @objc func addToOrderLabelPressed(_ sender: UITapGestureRecognizer){
-        print("Pressed")
+        
         //TODO: - check if the user is logged in, or show login view
-        print(quantity)
         //showLoginView()
+        
         createOrderItem()
         //self.dismiss(animated: true, completion: nil)
+        print("Order item total Amount", orderItemTotalAmount)
     }
     
     private func showLoginView(){
@@ -117,11 +121,13 @@ class ItemDetailController: UIViewController {
     
     func createOrderItem(){
         
-        let orderItem = OrderItem()
+        
         orderItem.id = UUID().uuidString
         orderItem.itemId = item.id
         orderItem.ownerId = "1234"
         orderItem.quantity = quantity
+        orderItem.totalAmount = item.price * Double(quantity)
+        orderItemTotalAmount = orderItem.totalAmount
         if additionalRequestTextView.text == "No spicy, sauce in side..."  {
             orderItem.specialInstruction = " "
         }else{
@@ -129,7 +135,6 @@ class ItemDetailController: UIViewController {
         }
         saveItemToFirebase(orderItem)
         
-        let newBasket = Basket()
         newBasket.id  = UUID().uuidString
         newBasket.ownerId = "1234"
         newBasket.orderItemIds = [orderItem.id]
@@ -137,9 +142,9 @@ class ItemDetailController: UIViewController {
         
         downloadBasketFromFirestore("1234") { (basket) in
             if basket == nil{
-                saveBasketToFirestore(newBasket)
+                saveBasketToFirestore(self.newBasket)
             }else{
-                basket!.orderItemIds.append(orderItem.id)
+                basket!.orderItemIds.append(self.orderItem.id)
                 self.updateBasket(basket: basket!, withValues: [kORDERITEMIDs:basket!.orderItemIds!])
             }
         }

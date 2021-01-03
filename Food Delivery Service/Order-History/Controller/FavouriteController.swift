@@ -14,19 +14,19 @@ class FavouriteController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Favourite Controller Loaded")
+        //print("Favourite Controller Loaded")
         setupUI()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        print("Favourite View Controller Will Appear")
+        //print("Favourite View Controller Will Appear")
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        print("Favourite View Controller Will Disappear")
+        //print("Favourite View Controller Will Disappear")
     }
     
     private func setupUI(){

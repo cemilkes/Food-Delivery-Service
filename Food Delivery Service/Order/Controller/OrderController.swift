@@ -11,28 +11,26 @@ import JGProgressHUD
 
 class OrderController: UIViewController {
 
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var continueButtonOutlet: UIButton!
     @IBOutlet weak var subTotalLabel: UILabel!
     @IBOutlet weak var continueView: UIView!
     @IBOutlet weak var taxAndFeesTotalLabel: UILabel!
-    @IBOutlet weak var deliveryFee: UILabel!
+    @IBOutlet weak var deliveryFeeLabel: UILabel!
     
     let hud = JGProgressHUD(style: .dark)
     var basket: Basket?
     var allItems: [OrderItem] = []
     var purchasedItemIds : [String] = []
+    var tax: Double = 0
+    var deliveryFee: Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //loadBasketFromFirestore()
         setupUI()
     }
-    
-    
-    
+
     private func setupUI(){
         tableView.delegate = self
         tableView.dataSource = self
@@ -45,7 +43,7 @@ class OrderController: UIViewController {
         super.viewDidAppear(animated)
         
         loadBasketFromFirestore()
-        
+        checkoutButtonStatusUpdate()
         // Check if the user is logged in
         
     }
@@ -82,12 +80,11 @@ class OrderController: UIViewController {
         
         var totalPrice = 0.0
         
-        for item in allItems {
-            //totalPrice = totalPrice + convertCurrencyToDouble(input: item.price!)
+        for orderItem in allItems {
+            totalPrice = totalPrice + orderItem.totalAmount
+            
         }
-        
-        //print(totalPrice)
-        
+        print(totalPrice)
         return convertToCurrency(totalPrice)
         
     }
@@ -117,7 +114,6 @@ class OrderController: UIViewController {
             }
         }
     }
-
     
     func showItemView(withItem: Item) {
         let itemVC = UIStoryboard.init(name: Storyboard.menu, bundle: nil).instantiateViewController(identifier: ViewController.itemDetailController) as! ItemDetailController

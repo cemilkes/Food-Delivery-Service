@@ -35,24 +35,16 @@ class OrderCell: UITableViewCell {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    //print(document.data())
                     arr = document.data()
-                    self.itemNameLabel.text = arr["name"] as? String
+                    self.itemNameLabel.text = "\(orderItem.quantity!) x \((arr["name"] as? String)!)"
                     self.itemDescriptionLabel.text = arr["description"] as? String
                     self.itemPriceLabel.text = convertToCurrency((arr["price"] as? Double)!)
                 }
             }
         }
-        print("Quantity", orderItem.quantity)
-        print("Special Instruction", orderItem.specialInstruction)
+        //print("Quantity", orderItem.quantity)
+        //print("Special Instruction", orderItem.specialInstruction)
         
     }
-    
-//    func generateCell(_ item: Item) {
-//        itemNameLabel.text  = item.name
-//        itemDescriptionLabel.text  = item.description
-//        itemPriceLabel.text = "\(item.price!)" // item.price   ////"\(item.price!)"
-//        itemPriceLabel.adjustsFontSizeToFitWidth = true
-//    }
     
 }

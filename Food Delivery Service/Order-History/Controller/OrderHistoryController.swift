@@ -14,7 +14,7 @@ class OrderHistoryController: UIViewController {
     var profileArray = [ProfileModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Order Controller Loaded")
+        //print("Order History Controller Loaded")
         setupUI()
         
     }
@@ -22,13 +22,13 @@ class OrderHistoryController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        print("Order View Controller Will Appear")
+       // print("Order View Controller Will Appear")
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        print("Order View Controller Will Disappear")
+       // print("Order View Controller Will Disappear")
     }
     
     private func setupUI(){

@@ -13,6 +13,7 @@ class OrderItem{
     var itemId: String!
     var ownerId: String!
     var quantity: Int!
+    var totalAmount: Double!
     var specialInstruction: String!
     
     init() {}
@@ -22,6 +23,7 @@ class OrderItem{
         itemId = _dictionary[kITEMID] as? String
         ownerId = _dictionary[kOWNERID] as? String
         quantity = _dictionary[kQUANTITY] as? Int
+        totalAmount = _dictionary[kORDERITEMTOTALAMOUNT] as? Double
         specialInstruction = _dictionary[kSPECIALINSTRUCTIONS] as? String
     }
 }
@@ -32,7 +34,7 @@ func saveItemToFirebase(_ orderItem: OrderItem){
 }
 
 func orderItemDictionaryFrom(_ orderItem: OrderItem) -> NSDictionary {
-    return NSDictionary(objects: [orderItem.id, orderItem.itemId, orderItem.ownerId,orderItem.quantity, orderItem.specialInstruction], forKeys: [kOBJECTID as NSCopying, kITEMID as NSCopying, kOWNERID as NSCopying,  kQUANTITY as NSCopying, kSPECIALINSTRUCTIONS as NSCopying])
+    return NSDictionary(objects: [orderItem.id, orderItem.itemId, orderItem.ownerId,orderItem.quantity, orderItem.totalAmount, orderItem.specialInstruction], forKeys: [kOBJECTID as NSCopying, kITEMID as NSCopying, kOWNERID as NSCopying,  kQUANTITY as NSCopying, kORDERITEMTOTALAMOUNT as NSCopying, kSPECIALINSTRUCTIONS as NSCopying])
 }
 
 func downloadOrderItems(_ withIds: [String], completion: @escaping(_ orderItemArray: [OrderItem]) -> Void){
@@ -61,8 +63,4 @@ func downloadOrderItems(_ withIds: [String], completion: @escaping(_ orderItemAr
         completion(orderItemArray)
     }
 }
-func downloadOrderItemByIDs(_ withIds: [String], completion: @escaping(_ orderItemArray: [OrderItem]) -> Void){
-    
-    
-    
-}
+
