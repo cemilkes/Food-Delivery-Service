@@ -324,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				2581802D253F34BF007AAE14 /* Controller */,
-				8379BAEB24EB76A000EE8EB9 /* Authentication.storyboard */,
+				25F91E3E25A28AA60096141F /* Storyboard */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -401,6 +401,14 @@
 				25361BC525955A3B003EF914 /* Downloader.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		25F91E3E25A28AA60096141F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8379BAEB24EB76A000EE8EB9 /* Authentication.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		753064873470445E56BED516 /* Pods */ = {

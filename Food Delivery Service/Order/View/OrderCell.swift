@@ -12,7 +12,7 @@ class OrderCell: UITableViewCell {
 
     
     @IBOutlet weak var itemNameLabel: UILabel!
-    @IBOutlet weak var itemDescriptionLabel: UILabel!
+    //@IBOutlet weak var itemDescriptionLabel: UILabel!
     @IBOutlet weak var itemPriceLabel: UILabel!
     var item:Item!
     
@@ -37,8 +37,11 @@ class OrderCell: UITableViewCell {
                 for document in querySnapshot!.documents {
                     arr = document.data()
                     self.itemNameLabel.text = "\(orderItem.quantity!) x \((arr["name"] as? String)!)"
-                    self.itemDescriptionLabel.text = arr["description"] as? String
-                    self.itemPriceLabel.text = convertToCurrency((arr["price"] as? Double)!)
+                    //self.itemDescriptionLabel.text = orderItem.specialInstruction
+                        //arr["description"] as? String
+                    
+                    self.itemPriceLabel.text = convertToCurrency(orderItem.totalAmount)
+                        //convertToCurrency((arr["price"] as? Double)!)
                 }
             }
         }
