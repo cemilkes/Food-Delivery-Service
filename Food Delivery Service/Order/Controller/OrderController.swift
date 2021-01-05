@@ -27,7 +27,7 @@ class OrderController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //loadBasketFromFirestore()
+        loadBasketFromFirestore()
         setupUI()
     }
 
@@ -36,7 +36,7 @@ class OrderController: UIViewController {
         tableView.dataSource = self
 
         continueView.layer.cornerRadius = 8
-        
+        continueButtonOutlet.layer.cornerRadius = 8
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,8 +71,10 @@ class OrderController: UIViewController {
     private func updateTotalLabels(_ isEmpty: Bool) {
         if isEmpty {
             subTotalLabel.text = returnBasketTotalPrice()
+            
         }else{
             subTotalLabel.text = returnBasketTotalPrice()
+            taxAndFeesTotalLabel.text = "\(tax)"
         }
     }
     
@@ -82,13 +84,23 @@ class OrderController: UIViewController {
         
         for orderItem in allItems {
             totalPrice = totalPrice + orderItem.totalAmount
-            
         }
+        tax = Double(totalPrice * 9.25 / 100).rounded(toPlaces: 2)
         print(totalPrice)
         return convertToCurrency(totalPrice)
         
     }
- 
+    
+    /*
+     private func updateTotalItemLabel(_ isEmpty: Bool){
+     if isEmpty{
+     // totalItemLabel.text = "0"
+     }else{
+     //totalItemLabel.text = "\(allItems.count)"
+     }
+     }
+     */
+    
     private func checkoutButtonStatusUpdate(){
         
         continueButtonOutlet.isEnabled = allItems.count > 0
@@ -105,10 +117,10 @@ class OrderController: UIViewController {
         continueButtonOutlet.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
     }
     
-    func removeItemFromBasket(itemId: String){
+    func removeItemFromBasket(orderItemId: String){
         
         for i in 0..<basket!.orderItemIds.count {
-            if itemId == basket!.orderItemIds[i] {
+            if orderItemId == basket!.orderItemIds[i] {
                 basket?.orderItemIds.remove(at: i)
                 return 
             }

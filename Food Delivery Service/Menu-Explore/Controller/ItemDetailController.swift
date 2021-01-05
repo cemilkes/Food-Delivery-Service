@@ -82,7 +82,8 @@ class ItemDetailController: UIViewController {
         addToOrderLabel.clipsToBounds = true
         addToOrderLabel.layer.cornerRadius = 22
         addToOrderLabel.isUserInteractionEnabled = true
-        addToOrderLabel.text = "Add to Order - \(item.price * Double(quantity))"
+        addToOrderLabel.text = "Add to Order - "
+        //\(Double(item.price * Double(quantity)).rounded(toPlaces: 2))
     }
 
     deinit {
@@ -111,22 +112,22 @@ class ItemDetailController: UIViewController {
         //showLoginView()
         
         createOrderItem()
-        //self.dismiss(animated: true, completion: nil)
-        print("Order item total Amount", orderItemTotalAmount)
+        self.dismiss(animated: true, completion: nil)
+        //print("Order item total Amount", orderItemTotalAmount)
     }
     
     private func showLoginView(){
-        
+        let loginVew = UIStoryboard.init(name: Storyboard.authentication, bundle: .main).instantiateViewController(identifier: "LoginController")
+        self.present(loginVew, animated: true, completion: nil)
     }
     
     func createOrderItem(){
-        
         
         orderItem.id = UUID().uuidString
         orderItem.itemId = item.id
         orderItem.ownerId = "1234"
         orderItem.quantity = quantity
-        orderItem.totalAmount = item.price * Double(quantity)
+        orderItem.totalAmount = Double(item.price * Double(quantity)).rounded(toPlaces: 2)
         orderItemTotalAmount = orderItem.totalAmount
         if additionalRequestTextView.text == "No spicy, sauce in side..."  {
             orderItem.specialInstruction = " "

@@ -33,19 +33,21 @@ extension OrderController: UITableViewDelegate {
         return true
     }
     
+    
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
-            let itemToDelete = allItems[indexPath.row]
+            let orderItemToDelete = allItems[indexPath.row]
             allItems.remove(at: indexPath.row)
             
             tableView.reloadData()
             
-            removeItemFromBasket(itemId: itemToDelete.id)
+            removeItemFromBasket(orderItemId: orderItemToDelete.id)
             
-            updateBasketInFirestore(basket!, withValues: [kORDERITEMIDs: basket!.orderItemIds]) { (error) in
+            updateBasketInFirestore(basket!, withValues: [kORDERITEMIDs: basket!.orderItemIds!]) { (error) in
                 if error != nil {
-                    print("error updating the basket", error?.localizedDescription)
+                    print("error updating the basket", error?.localizedDescription as Any)
                 }
                 self.getBasketItems()
             }
