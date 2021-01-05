@@ -33,12 +33,12 @@ extension ItemDetailController: UITableViewDataSource {
             if self!.quantity == 1 {
                 print("Quantity is equal to 1")
                 self!.addToOrderLabel.text = "Add to Order - $\(Double(self!.item.price * Double(self!.quantity)).rounded(toPlaces: 2))"
-                //self!.orderItem.quantity = self!.quantity
+                
             }else{
                 self!.quantity = self!.quantity - 1
                 cell.itemQuantityLabel.text = "\(self!.quantity)"
                 self!.addToOrderLabel.text = "Add to Order - $\(Double(self!.item.price * Double(self!.quantity)).rounded(toPlaces: 2))"
-                //self!.orderItem.quantity = self!.quantity
+                
             }
         }
         return cell

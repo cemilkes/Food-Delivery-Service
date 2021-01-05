@@ -9,6 +9,7 @@ target 'Food Delivery Service' do
   pod 'Firebase/Analytics'
   pod 'NVActivityIndicatorView'
   pod 'Gallery'
+  pod 'BulletinBoard'
 
   # Firebase Authentication and Cloud Firestore
   pod 'Firebase/Auth'
