@@ -127,11 +127,11 @@ class OrderController: UIViewController {
         }
     }
     
-    func showItemView(withItem: Item) {
-        let itemVC = UIStoryboard.init(name: Storyboard.menu, bundle: nil).instantiateViewController(identifier: ViewController.itemDetailController) as! ItemDetailController
-        itemVC.item = withItem
-        present(itemVC, animated: true, completion: nil)
-        itemVC.modalPresentationStyle = .formSheet
+    func showItemView(withItem: OrderItem) {
+//        let itemVC = UIStoryboard.init(name: Storyboard.menu, bundle: nil).instantiateViewController(identifier: ViewController.itemDetailController) as! ItemDetailController
+//        itemVC.quantity = withItem.quantity
+//        present(itemVC, animated: true, completion: nil)
+//        itemVC.modalPresentationStyle = .formSheet
         
     }
     
