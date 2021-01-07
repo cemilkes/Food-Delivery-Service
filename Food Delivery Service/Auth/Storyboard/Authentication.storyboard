@@ -378,7 +378,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFO-BA-c15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="UpA-UW-BWk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3420" y="-167.73399014778326"/>
         </scene>
@@ -435,7 +434,7 @@
                                 </constraints>
                                 <state key="normal" title="Send"/>
                                 <connections>
-                                    <action selector="goToMain:" destination="UpA-UW-BWk" eventType="touchUpInside" id="tnf-97-VmG"/>
+                                    <action selector="sendButtonPressed:" destination="piD-l1-4x1" eventType="touchUpInside" id="FS9-AE-a7a"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -457,6 +456,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WbG-WC-G09"/>
+                    <connections>
+                        <outlet property="emailtextField" destination="K9t-mb-rI0" id="I1Q-AN-e7j"/>
+                        <outlet property="pageDescription" destination="8fk-wN-lay" id="gAG-wr-m1R"/>
+                        <outlet property="pageTitle" destination="oQV-Rc-54u" id="3EW-LW-gJb"/>
+                        <outlet property="sendButton" destination="twQ-vl-hAd" id="3pY-Pl-OUm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4V-EG-Pzs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

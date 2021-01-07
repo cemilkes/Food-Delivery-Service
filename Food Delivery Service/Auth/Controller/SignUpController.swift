@@ -10,7 +10,7 @@ import UIKit
 import JGProgressHUD
 import NVActivityIndicatorView
 
-class SignUpController: UIViewController {
+class SignUpController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userNameTextField: BTTextfield!
     @IBOutlet weak var emailTextField: BTTextfield!
@@ -24,24 +24,58 @@ class SignUpController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+    
+    
+    
+    private func setupUI(){
         let width = self.view.frame.width
         let heigth = self.view.frame.height
         activityIndicator = NVActivityIndicatorView(frame: CGRect(x: width/2 - 30, y: heigth/2 - 30, width: 60.0, height: 60.0), type: .ballPulse, color: .brown, padding: nil)
         // Do any additional setup after loading the view.
+        // Register Notification Center for Keyboard controller (Listen for keyboard's events)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        passwordTextField.delegate = self
+        rePasswordTextField.delegate = self
+        
+    }
+
+    deinit {
+        // Stop listening for keyboard hide/show event
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: self)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: self)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     
+    @objc func keyboardWillShow(notification: NSNotification) {
+        //print("Keyboard will show \(notification.name.rawValue)")
+        guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        view.frame.origin.y = -keyboardRect.height
+    }
+    
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        //print("Keyboard will show \(notification.name.rawValue)")
+
+        view.frame.origin.y = 0
+    }
+    
+    
+    func hideKeyboard(){
+        passwordTextField.resignFirstResponder()
+        rePasswordTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        hideKeyboard()
+        return true
+    }
+
     @IBAction func signUpButtonPressed(_ sender: BTButton) {
         
         print("Pressed")
@@ -53,8 +87,6 @@ class SignUpController: UIViewController {
             hud.show(in: self.view)
             hud.dismiss(afterDelay: 2.0)
         }
-        
-        
     }
     
     
@@ -76,10 +108,18 @@ class SignUpController: UIViewController {
                 self.hud.dismiss(afterDelay: 3.0)
             }
             self.hideLoadingIndicator()
-            
         }
-        
     }
+    
+    private func resendEmailVerification(){
+        
+        MUser.resendVerificationEmail(email: emailTextField.text!){ (error) in
+            print("error \(error?.localizedDescription)") as! Error
+        }
+    }
+    
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //            if segue.identifier == "goToAlternateStoryboard" {
@@ -89,10 +129,7 @@ class SignUpController: UIViewController {
         }
     
     private func checkPasswordsIdentical() -> Bool{
-        
         return (passwordTextField.text != rePasswordTextField.text)
-            
-        
     }
     
     private func textFieldHaveText() -> Bool{

@@ -28,10 +28,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     let hud = JGProgressHUD(style: .dark)
     var activityIndicator: NVActivityIndicatorView?
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSignUpLabel()
@@ -51,9 +48,6 @@ class LoginController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
-    
-    
     
     @objc func signUpLabelClicked(_ sender: UITapGestureRecognizer){
         let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)

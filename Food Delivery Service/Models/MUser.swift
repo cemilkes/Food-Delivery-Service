@@ -21,11 +21,11 @@ class MUser {
     let address: String?
     let onBoard: Bool
     
-    init(_objectId: String, _email: String, _username: String, _createdAt:Date) {
+    init(_objectId: String, _email: String, _username: String) {
         objectId = _objectId
         email = _email
         username = _username
-        createdAt = _createdAt
+        createdAt = Date()
         address = ""
         onBoard = false
         purchasedItemIds = []
@@ -90,7 +90,7 @@ class MUser {
         Auth.auth().signIn(withEmail: email, password: password) { (authDataResult, error) in
             if error == nil{
                 if authDataResult!.user.isEmailVerified {
-                    
+                    downloadUserFromFirestore(userId: (authDataResult?.user.uid)!, email: email)
                     completion(error,true)
                 }else{
                     print("Email is not verified")
@@ -115,6 +115,42 @@ class MUser {
         
         
     }
+
+    class func resetPassword(email:String, completion: @escaping (_ error: Error?) -> Void){
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            completion(error)
+        }
+    }
+    class func resendVerificationEmail(email:String, completion: @escaping (_ error: Error?)->Error?){
+        Auth.auth().currentUser?.reload(completion: { (error) in
+            Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
+                print("Error, \(error?.localizedDescription)")
+                completion(error)
+            })
+        })
+        
+    }
+}
+
+
+
+
+
+func downloadUserFromFirestore(userId: String, email: String){
+    
+    FirebaseReference(.User).document(userId).getDocument { (snaphot, error) in
+        guard let snaphot = snaphot else {return}
+        
+        if snaphot.exists{
+            saveUserLocally(mUserDicdionary: snaphot.data()! as NSDictionary)
+        }else{
+            let user = MUser(_objectId: userId, _email: email, _username: "")
+            saveUserLocally(mUserDicdionary: userDictionaryFrom(user: user))
+            saveUserToFirebase(mUser: user)
+        }
+    }
+    
+    
     
 }
 
