@@ -11,7 +11,8 @@ import UIKit
 class OrderHistoryController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var profileArray = [ProfileModel]()
+    //var profileArray = [ProfileModel]()
+    var orderArray = [Any]()
     override func viewDidLoad() {
         super.viewDidLoad()
         //print("Order History Controller Loaded")

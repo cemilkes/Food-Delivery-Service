@@ -11,7 +11,7 @@ import UIKit
 class FavouriteController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+    var favouritesArray = [Any]()
     override func viewDidLoad() {
         super.viewDidLoad()
         //print("Favourite Controller Loaded")
@@ -30,8 +30,8 @@ class FavouriteController: UIViewController {
     }
     
     private func setupUI(){
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     /*

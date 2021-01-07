@@ -13,7 +13,15 @@ private let reuseIdentifier = "OrderHistoryCell"
 
 extension OrderHistoryController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1;
+        if orderArray.count == 0 {
+            
+            tableView.setEmptyView(title: "You don't have any purchased item yet.", message: "Your order-history will be in here.")
+
+        }else{
+            tableView.restore()
+
+        }
+        return orderArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

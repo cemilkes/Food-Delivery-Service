@@ -13,7 +13,12 @@ private let reuseIdentifier = "FavouriteCell"
 
 extension FavouriteController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1;
+        if favouritesArray.count == 0 {
+            tableView.setEmptyView(title: "You don't have any favourite item yet.", message: "Your favourite items will be in here.")
+        }else{
+            tableView.restore()
+        }
+        return favouritesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
