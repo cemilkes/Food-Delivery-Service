@@ -18,7 +18,7 @@ class MUser {
     let purchasedItemIds: [String]
     let createdAt: Date
     
-    let fullAddress: String?
+    let address: String?
     let onBoard: Bool
     
     init(_objectId: String, _email: String, _username: String, _createdAt:Date) {
@@ -26,7 +26,7 @@ class MUser {
         email = _email
         username = _username
         createdAt = _createdAt
-        fullAddress = ""
+        address = ""
         onBoard = false
         purchasedItemIds = []
     }
@@ -40,16 +40,16 @@ class MUser {
             email = ""
         }
         
-        if let usName = _dictionary[kFIRSTNAME] {
+        if let usName = _dictionary[kUSERNAME] {
             username = usName as! String
         }else{
             username = ""
         }
         
-        if let fAddress = _dictionary[kFULLADDRESS] {
-            fullAddress = fAddress as! String
+        if let fAddress = _dictionary[kADDRESS] {
+            address = fAddress as! String
         }else{
-            fullAddress = " "
+            address = " "
         }
         
         if let onB  = _dictionary[kONBOARD] {
@@ -78,11 +78,89 @@ class MUser {
     class func currentUser() -> MUser? {
         if Auth.auth().currentUser != nil {
             if let dictionary = UserDefaults.standard.object(forKey: kCURRENTUSER){
+                
                 return MUser.init(_dictionary: dictionary as! NSDictionary)
             }
         }
         return nil
     }
     
+    class func loginWithUser(email: String, password: String, completion: @escaping (_ error: Error?, _ isEmailVerified: Bool) -> Void){
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (authDataResult, error) in
+            if error == nil{
+                if authDataResult!.user.isEmailVerified {
+                    
+                    completion(error,true)
+                }else{
+                    print("Email is not verified")
+                    completion(error, false)
+                }
+            }else{
+                completion(error,false)
+            }
+        }
+    }
+    class func registerUserWith(email:String, password:String, completion: @escaping (_ error: Error?) -> Void){
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (authDataResult, error) in
+            completion(error)
+            
+            if error == nil{
+                authDataResult?.user.sendEmailVerification { (error) in
+                    print("email verification error: ", error?.localizedDescription)
+                }
+            }
+        }
+        
+        
+    }
+    
 }
 
+func saveUserToFirebase(mUser: MUser){
+    FirebaseReference(.User).document(mUser.objectId).setData(userDictionaryFrom(user: mUser) as! [String:Any]) { (error) in
+        if error != nil{
+            print("error saving user \(error?.localizedDescription)")
+        }
+    }
+}
+func saveUserLocally(mUserDicdionary: NSDictionary){
+    UserDefaults.standard.set(mUserDicdionary, forKey: kCURRENTUSER)
+    UserDefaults.standard.synchronize()
+    
+}
+
+
+func userDictionaryFrom(user: MUser) -> NSDictionary {
+    return NSDictionary(objects:
+                            [user.objectId,
+                             user.email,
+                             user.username,
+                             user.purchasedItemIds,
+                             user.createdAt,
+                             user.address ?? "",
+                             user.onBoard
+                            ],
+                        forKeys:
+                            [kOBJECTID as NSCopying,
+                             kEMAIL as NSCopying,
+                             kUSERNAME as NSCopying,
+                             kPURCHASEDITEMIDS as NSCopying,
+                             kCREATEDAT as NSCopying,
+                             kADDRESS as NSCopying,
+                             kONBOARD as NSCopying
+                            ])
+}
+
+
+/*
+ let objectId: String
+ let email: String
+ let username: String
+ let purchasedItemIds: [String]
+ let createdAt: Date
+ 
+ let fullAddress: String?
+ let onBoard: Bool
+ */

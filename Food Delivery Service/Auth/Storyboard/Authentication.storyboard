@@ -259,7 +259,7 @@
                                 </constraints>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="goToMain:" destination="UpA-UW-BWk" eventType="touchUpInside" id="UmD-Wv-ydO"/>
+                                    <action selector="signUpButtonPressed:" destination="AfL-eI-bdB" eventType="touchUpInside" id="4Aw-Lu-9pG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create An Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCT-iR-G8f" customClass="DarkTitleLabel" customModule="Food_Delivery_Service" customModuleProvider="target">
@@ -368,6 +368,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Huv-cS-bsh"/>
+                    <connections>
+                        <outlet property="dateOfBirthTextfield" destination="krO-aB-gqB" id="SYf-ev-Xzg"/>
+                        <outlet property="emailTextField" destination="5fe-A5-EZh" id="087-i6-MMf"/>
+                        <outlet property="passwordTextField" destination="26Z-rD-av6" id="hTk-Cx-eo1"/>
+                        <outlet property="rePasswordTextField" destination="etu-IM-XLm" id="hqh-ZA-d0B"/>
+                        <outlet property="termsLabel" destination="PQ7-Fg-AuH" id="4xr-zG-IY5"/>
+                        <outlet property="userNameTextField" destination="43T-8T-dTl" id="maS-jl-kwM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFO-BA-c15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="UpA-UW-BWk" userLabel="Exit" sceneMemberID="exit"/>

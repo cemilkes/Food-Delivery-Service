@@ -38,6 +38,9 @@ func dateFormatter() -> DateFormatter{
     
 }
 
+
+
+
 extension Double {
     /// Rounds the double to decimal places value
     func rounded(toPlaces places:Int) -> Double {

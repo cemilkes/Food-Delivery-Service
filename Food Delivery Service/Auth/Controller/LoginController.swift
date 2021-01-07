@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import JGProgressHUD
+import NVActivityIndicatorView
 
 class LoginController: UIViewController, UITextFieldDelegate {
 
@@ -24,6 +26,11 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var signUpLabel: UILabel!
     
+    let hud = JGProgressHUD(style: .dark)
+    var activityIndicator: NVActivityIndicatorView?
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +39,10 @@ class LoginController: UIViewController, UITextFieldDelegate {
         setupUI()
         setupLoginSubView()
     
+        let width = self.view.frame.width
+        let heigth = self.view.frame.height
+        
+        activityIndicator = NVActivityIndicatorView(frame: CGRect(x: width/2 - 30, y: heigth/2 - 30, width: 60.0, height: 60.0), type: .ballPulse, color: .brown, padding: nil)
         
         let signUpLabelGesture = UITapGestureRecognizer(target: self, action: #selector(signUpLabelClicked(_ :)))
         signUpLabel.addGestureRecognizer(signUpLabelGesture)
@@ -40,6 +51,9 @@ class LoginController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    
+    
     
     @objc func signUpLabelClicked(_ sender: UITapGestureRecognizer){
         let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
@@ -119,9 +133,16 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         
-       print("Login button pressed")
+        if textFieldHaveText() {
+            loginUser()
+            
+        }else{
+            hud.textLabel.text = "All fields are required"
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
+        }
     }
-    
     
     @IBAction func forgotPasswordButtonPressed(_ sender: UIButton) {
         let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
@@ -130,6 +151,38 @@ class LoginController: UIViewController, UITextFieldDelegate {
                 self.present(vc, animated: true, completion: nil)
         
     }
+    
+    private func loginUser(){
+        showLoadingIndicator()
+        
+        MUser.loginWithUser(email: emailTextField.text!, password: passwordTextField.text!) { (error, isEmailVerified) in
+            if error == nil{
+                
+                if isEmailVerified {
+                    self.dismissView()
+                    print("Email is verified")
+                }else{
+                    self.hud.textLabel.text = "All fields are required"
+                    self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                    self.hud.show(in: self.view)
+                    self.hud.dismiss(afterDelay: 2.0)
+                }
+                
+                
+            }else{
+                self.hud.textLabel.text = error?.localizedDescription
+                self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+                
+            }
+            self.hideLoadingIndicator()
+        }
+        
+        
+    }
+    
+    
     
     func setupSignUpLabel(){
         let signUpLabelText =  "Don't have an account? "
@@ -162,7 +215,31 @@ class LoginController: UIViewController, UITextFieldDelegate {
 //        attributedString.addAttribute(.foregroundColor, value: UIColor.themeColor, range: NSRange(location: 23, length: 7))
         
     }
+    //MARK: - Dismiss View
     
+    private func textFieldHaveText() -> Bool{
+        return (emailTextField.text != "" && passwordTextField.text != "")
+    }
     
+    private func dismissView(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    //MARK: - Activity Indicator
+    private func showLoadingIndicator(){
+        
+        if activityIndicator != nil{
+            self.view.addSubview(activityIndicator!)
+            activityIndicator?.startAnimating()
+        }
+    }
+    
+    private func hideLoadingIndicator(){
+        
+        if activityIndicator != nil{
+            activityIndicator!.removeFromSuperview()
+            activityIndicator!.stopAnimating()
+        }
+    }
     
 }

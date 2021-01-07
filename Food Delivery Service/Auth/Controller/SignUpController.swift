@@ -7,13 +7,26 @@
 //
 
 import UIKit
+import JGProgressHUD
+import NVActivityIndicatorView
 
 class SignUpController: UIViewController {
 
+    @IBOutlet weak var userNameTextField: BTTextfield!
+    @IBOutlet weak var emailTextField: BTTextfield!
+    @IBOutlet weak var dateOfBirthTextfield: BTTextfield!
+    @IBOutlet weak var passwordTextField: BTTextfield!
+    @IBOutlet weak var rePasswordTextField: BTTextfield!
+    @IBOutlet weak var termsLabel: UILabel!
+    
+    let hud = JGProgressHUD(style: .dark)
+    var activityIndicator: NVActivityIndicatorView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let width = self.view.frame.width
+        let heigth = self.view.frame.height
+        activityIndicator = NVActivityIndicatorView(frame: CGRect(x: width/2 - 30, y: heigth/2 - 30, width: 60.0, height: 60.0), type: .ballPulse, color: .brown, padding: nil)
         // Do any additional setup after loading the view.
     }
     
@@ -28,14 +41,86 @@ class SignUpController: UIViewController {
     }
     */
 
-    @IBAction func goToMain(_ sender: Any) {
-        performSegue(withIdentifier: "main", sender: self)
+    
+    @IBAction func signUpButtonPressed(_ sender: BTButton) {
+        
+        print("Pressed")
+        if textFieldHaveText() && checkPasswordsIdentical() {
+            registerUser()
+        }else{
+            hud.textLabel.text = "All fields are required"
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
+        }
+        
+        
     }
+    
+    
+    //performSegue(withIdentifier: "main", sender: self)
+    private func registerUser(){
+        showLoadingIndicator()
+        MUser.registerUserWith(email: emailTextField.text!, password: passwordTextField.text!) { (error) in
+            
+            if error == nil{
+                //since the func runs in background, it requires to put self
+                self.hud.textLabel.text = "Verification Email Has Sent"
+                self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 3.0)
+            }else{
+                self.hud.textLabel.text = "\(error?.localizedDescription)"
+                self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 3.0)
+            }
+            self.hideLoadingIndicator()
+            
+        }
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //            if segue.identifier == "goToAlternateStoryboard" {
 //                guard let vc = segue.destination as? AlternateViewController else { return }
 //                vc.segueText = segueTextField.text
 //            }
         }
+    
+    private func checkPasswordsIdentical() -> Bool{
+        
+        return (passwordTextField.text != rePasswordTextField.text)
+            
+        
+    }
+    
+    private func textFieldHaveText() -> Bool{
+        return (emailTextField.text != "" && passwordTextField.text != "")
+    }
+    
+    private func dismissView(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    //MARK: - Activity Indicator
+    private func showLoadingIndicator(){
+        
+        if activityIndicator != nil{
+            self.view.addSubview(activityIndicator!)
+            activityIndicator?.startAnimating()
+        }
+    }
+    
+    private func hideLoadingIndicator(){
+        
+        if activityIndicator != nil{
+            activityIndicator!.removeFromSuperview()
+            activityIndicator!.stopAnimating()
+        }
+    }
+    
+    
+    
     
 }
