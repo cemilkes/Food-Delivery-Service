@@ -72,7 +72,7 @@ class SettingsController: UIViewController {
     }
     
     @objc func rightBarButtonItemPressed(){
-        if editButtonItem.title ==  "Login"{
+        if editBarButtonOutlet.title ==  "Login"{
             //show login view
             showLoginView()
         }else{

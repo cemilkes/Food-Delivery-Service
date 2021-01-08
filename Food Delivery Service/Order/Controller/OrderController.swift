@@ -42,6 +42,12 @@ class OrderController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+//        if MUser.currentUser() != {
+//            loadBasketFromFirestore()
+//        }else{
+//            self.updateTotalLabels(true)
+//        }
+        
         loadBasketFromFirestore()
         checkoutButtonStatusUpdate()
         // Check if the user is logged in
@@ -51,6 +57,8 @@ class OrderController: UIViewController {
     //MARK: - Download Basket
     
     func loadBasketFromFirestore(){
+        
+        //1234 -> MUser.currentId()
         downloadBasketFromFirestore("1234"){ (basket) in
             self.basket = basket
             self.getBasketItems()
@@ -126,6 +134,50 @@ class OrderController: UIViewController {
             }
         }
     }
+    
+    @IBAction func ContinueButtonPressed(_ sender: UIButton) {
+//        if MUser.currentUser()?.onBoard {
+//            // proceed to purchase
+//        }else{
+//             // hud - complete registiration- error
+//        }
+//        temp()
+//        addItemsToPurchaseHistory(self.purchasedItemIds)
+//        emptyBasket()
+    }
+    
+    private func emptyBasket(){
+        purchasedItemIds.removeAll()
+        allItems.removeAll()
+        tableView.reloadData()
+        
+        basket!.orderItemIds = []
+        updateBasketInFirestore(basket!, withValues: [kORDERITEMIDs: basket!.orderItemIds]) { (error) in
+            if error != nil{
+                print("Error updating basket ", error!.localizedDescription)
+            }
+            self.getBasketItems()
+        }
+    }
+    
+    private func addItemsToPurchaseHistory(_ orderedItemIds: [String]){
+    
+        if MUser.currentUser() != nil {
+            let newOrderItemIds = MUser.currentUser()!.purchasedItemIds + orderedItemIds
+            updateUserInfoInFirebase(withValues: [kPURCHASEDITEMIDS: newOrderItemIds]) { (error) in
+                if error != nil{
+                    print("Error adding purchased items ", error.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    func temp(){
+        for orderItem in allItems{
+            purchasedItemIds.append(orderItem.id)
+        }
+    }
+    
     
     func showItemView(withItem: OrderItem) {
 //        let itemVC = UIStoryboard.init(name: Storyboard.menu, bundle: nil).instantiateViewController(identifier: ViewController.itemDetailController) as! ItemDetailController

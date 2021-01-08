@@ -13,7 +13,7 @@ extension UITableView{
     
     func setEmptyView(title: String, message: String) {
         let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
-        emptyView.backgroundColor = .orange
+        emptyView.backgroundColor = .clear
         let titleLabel = UILabel()
         let messageLabel = UILabel()
         

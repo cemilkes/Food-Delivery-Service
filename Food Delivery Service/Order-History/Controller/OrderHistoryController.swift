@@ -13,6 +13,8 @@ class OrderHistoryController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     //var profileArray = [ProfileModel]()
     var orderArray = [Any]()
+    var orderedItems: [OrderItem] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //print("Order History Controller Loaded")
@@ -37,6 +39,12 @@ class OrderHistoryController: UIViewController {
 //        tableView.dataSource = self
     }
     
+    private func loadOrder(){
+        downloadItems(MUser.currentUser()!.purchasedItemIds) { (allOrder) in
+            self.orderArray = allOrder
+            self.tableView.reloadData()
+        }
+    }
     
     
     /*

@@ -384,10 +384,12 @@
         <!--Main-->
         <scene sceneID="19J-UP-LTd">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="ibI-p2-yVk" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" id="ibI-p2-yVk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6lg-G5-vIc"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CpD-w3-12p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3898" y="494"/>
+            <point key="canvasLocation" x="3986" y="-168"/>
         </scene>
         <!--Forgot Password Controller-->
         <scene sceneID="O3x-DR-bBL">

@@ -30,7 +30,7 @@
         <!--Menu-->
         <scene sceneID="nsl-g7-YkR">
             <objects>
-                <viewControllerPlaceholder storyboardName="Menu" id="zlr-hV-ycS" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="MenuController" storyboardName="Menu" id="zlr-hV-ycS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="dEC-IL-zbY"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlj-wo-lLm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="-444" y="23"/>
         </scene>
-        <!--Profile-->
+        <!--Settings-->
         <scene sceneID="T2A-vD-WKI">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="hRc-j7-f3T" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Settings" id="hRc-j7-f3T" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="EHQ-J8-0Lp"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wdu-pU-qdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

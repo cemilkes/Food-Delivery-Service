@@ -132,9 +132,9 @@ class MUser {
             try Auth.auth().signOut()
             UserDefaults.standard.removeObject(forKey: kCURRENTUSER)
             UserDefaults.standard.synchronize()
-            completion(nil)
+            //completion(nil)
         } catch let error as NSError {
-            completion(error)
+            //completion(error)
         }
     }
 }

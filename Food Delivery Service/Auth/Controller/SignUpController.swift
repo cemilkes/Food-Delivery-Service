@@ -77,16 +77,21 @@ class SignUpController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func signUpButtonPressed(_ sender: BTButton) {
+       
+        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.main, bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.tabbarController) as! TabbarController
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
         
-        print("Pressed")
-        if textFieldHaveText() && checkPasswordsIdentical() {
-            registerUser()
-        }else{
-            hud.textLabel.text = "All fields are required"
-            hud.indicatorView = JGProgressHUDErrorIndicatorView()
-            hud.show(in: self.view)
-            hud.dismiss(afterDelay: 2.0)
-        }
+//        print("Pressed")
+//        if textFieldHaveText() && checkPasswordsIdentical() {
+//            registerUser()
+//        }else{
+//            hud.textLabel.text = "All fields are required"
+//            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+//            hud.show(in: self.view)
+//            hud.dismiss(afterDelay: 2.0)
+//        }
     }
     
     
@@ -117,10 +122,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
             print("error \(error?.localizedDescription)") as! Error
         }
     }
-    
-    
-    
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //            if segue.identifier == "goToAlternateStoryboard" {
 //                guard let vc = segue.destination as? AlternateViewController else { return }

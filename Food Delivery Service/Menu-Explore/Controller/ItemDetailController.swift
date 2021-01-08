@@ -109,8 +109,12 @@ class ItemDetailController: UIViewController {
     @objc func addToOrderLabelPressed(_ sender: UITapGestureRecognizer){
         
         //TODO: - check if the user is logged in, or show login view
-        //showLoginView()
-        
+//        
+//        if MUser.currentUser() != nil {
+//            //createOrderItem()
+//        }else{
+//            //showLoginView()
+//        }
         createOrderItem()
         self.dismiss(animated: true, completion: nil)
         //print("Order item total Amount", orderItemTotalAmount)
