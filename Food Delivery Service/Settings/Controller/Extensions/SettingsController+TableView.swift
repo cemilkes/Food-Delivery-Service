@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 
-private let reuseIdentifier = "ProfileCell"
-private let headerReuseIdentifier = "ProfileHeaderCell"
+private let reuseIdentifier = "SettingsCell"
+private let headerReuseIdentifier = "SettingsHeaderCell"
 
-extension ProfileController: UITableViewDataSource {
+extension SettingsController: UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 
@@ -27,11 +27,11 @@ extension ProfileController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: headerReuseIdentifier, for: indexPath) as! ProfileHeaderCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: headerReuseIdentifier, for: indexPath) as! SettingsHeaderCell
                cell.generateCell()
                return cell
         }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ProfileCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! SettingsCell
                cell.generateCell(profileArray[indexPath.row])
                return cell
         }
@@ -41,7 +41,7 @@ extension ProfileController: UITableViewDataSource {
     
 }
 
-extension ProfileController: UITableViewDelegate {
+extension SettingsController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileCell: UITableViewCell {
+class SettingsCell: UITableViewCell {
 
     @IBOutlet weak var titleImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

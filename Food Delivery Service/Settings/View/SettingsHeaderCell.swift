@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileHeaderCell: UITableViewCell {
+class SettingsHeaderCell: UITableViewCell {
 
     
     @IBOutlet weak var profileImage: UIImageView!

@@ -27,7 +27,6 @@ class ForgotPasswordController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
     @IBAction func sendButtonPressed(_ sender: UIButton) {
         
         if emailtextField.text != "" {
@@ -36,6 +35,7 @@ class ForgotPasswordController: UIViewController {
             print("error")
         }
     }
+    
     private func resetPassword(){
         MUser.resetPassword(email: emailtextField.text!) { (error) in
             if error == nil {
@@ -44,8 +44,6 @@ class ForgotPasswordController: UIViewController {
                 print("error \(error?.localizedDescription)")
             }
         }
-        
-        
     }
     
     /*

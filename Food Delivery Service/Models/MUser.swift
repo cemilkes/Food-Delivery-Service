@@ -112,8 +112,6 @@ class MUser {
                 }
             }
         }
-        
-        
     }
 
     class func resetPassword(email:String, completion: @escaping (_ error: Error?) -> Void){
@@ -128,13 +126,8 @@ class MUser {
                 completion(error)
             })
         })
-        
     }
 }
-
-
-
-
 
 func downloadUserFromFirestore(userId: String, email: String){
     
@@ -149,9 +142,6 @@ func downloadUserFromFirestore(userId: String, email: String){
             saveUserToFirebase(mUser: user)
         }
     }
-    
-    
-    
 }
 
 func saveUserToFirebase(mUser: MUser){
@@ -161,12 +151,12 @@ func saveUserToFirebase(mUser: MUser){
         }
     }
 }
+
 func saveUserLocally(mUserDicdionary: NSDictionary){
     UserDefaults.standard.set(mUserDicdionary, forKey: kCURRENTUSER)
     UserDefaults.standard.synchronize()
     
 }
-
 
 func userDictionaryFrom(user: MUser) -> NSDictionary {
     return NSDictionary(objects:
@@ -188,6 +178,24 @@ func userDictionaryFrom(user: MUser) -> NSDictionary {
                              kONBOARD as NSCopying
                             ])
 }
+
+func updateUserInfoInFirebase(withValues: [String:Any], completion: @escaping (_ error: Error) -> Void) {
+    if let dictionary = UserDefaults.standard.object(forKey: kCURRENTUSER){
+        let userObject = (dictionary as! NSDictionary).mutableCopy() as! NSMutableDictionary
+        userObject.setValuesForKeys(withValues)
+        
+        FirebaseReference(.User).document(MUser.currentId()).updateData(withValues) {
+            (error) in
+            completion(error as! Error)
+            
+            if error == nil {
+                saveUserLocally(mUserDicdionary: userObject)
+            }
+        }
+    }
+}
+
+
 
 
 /*

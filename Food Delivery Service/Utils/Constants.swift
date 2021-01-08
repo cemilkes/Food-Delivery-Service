@@ -31,17 +31,18 @@ public let kOWNERID = "ownerId"
 public let kITEMID = "itemId"
 public let kQUANTITY = "quantity"
 public let kSPECIALINSTRUCTIONS = "special_instruction"
-public let kORDERITEMIDs = "Order_Item_Ids"
+public let kORDERITEMIDs = "order_Item_Ids"
 public let kITEM = "item"
 public let kORDERITEMTOTALAMOUNT = "order_Item_total"
 
 public let kEMAIL = "email"
 public let kUSERNAME = "userName"
 public let kCURRENTUSER = "currentUser"
-public let kADDRESS = "Address"
+public let kADDRESS = "address"
+public let kPHONENUMBER = "phone_number"
 public let kONBOARD  = "onBoard"
 public let kPURCHASEDITEMIDS = "purchasedItemIds"
-public let kCREATEDAT = "Created At"
+public let kCREATEDAT = "created At"
 
 
 //StoryBoards
