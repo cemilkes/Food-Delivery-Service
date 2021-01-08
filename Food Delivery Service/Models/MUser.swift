@@ -127,6 +127,16 @@ class MUser {
             })
         })
     }
+    class func logOutCurrentUser(comletion: @escaping (_ error: Error?) -> Void){
+        do {
+            try Auth.auth().signOut()
+            UserDefaults.standard.removeObject(forKey: kCURRENTUSER)
+            UserDefaults.standard.synchronize()
+            completion(nil)
+        } catch let error as NSError {
+            completion(error)
+        }
+    }
 }
 
 func downloadUserFromFirestore(userId: String, email: String){

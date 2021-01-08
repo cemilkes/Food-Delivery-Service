@@ -155,117 +155,81 @@
             </objects>
             <point key="canvasLocation" x="864.79999999999995" y="124.8768472906404"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile Controller-->
         <scene sceneID="PrO-Bv-JkE">
             <objects>
-                <viewController id="cRz-o1-OOz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileController" id="cRz-o1-OOz" customClass="ProfileController" customModule="Food_Delivery_Service" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GUM-63-Ue0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qzt-TS-Meb">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="64" id="fpS-23-iJN">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="64"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fpS-23-iJN" id="WrF-7X-080">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LFl-XZ-29V" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="11" width="374" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                                </textField>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="64" id="UnH-78-XE3">
-                                        <rect key="frame" x="0.0" y="92" width="414" height="64"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UnH-78-XE3" id="EpD-7a-MWW">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tGZ-OY-QhL" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="9" width="374" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                                </textField>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="64" id="rPo-26-yCJ">
-                                        <rect key="frame" x="0.0" y="156" width="414" height="64"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rPo-26-yCJ" id="r9n-Yj-CTl">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bn-zd-W4p" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="11" width="374" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                                </textField>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="64" id="orl-cR-gJW">
-                                        <rect key="frame" x="0.0" y="220" width="414" height="64"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="orl-cR-gJW" id="86l-UK-iuU">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iyb-0i-Hhv" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="11" width="374" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                                </textField>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="64" id="0hF-Ly-3BG">
-                                        <rect key="frame" x="0.0" y="284" width="414" height="64"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0hF-Ly-3BG" id="Zef-Su-G1o">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BoP-UZ-I70" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="11" width="374" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                                </textField>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                            </tableView>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wlu-ib-GsK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="Ekh-Jl-NkA">
+                                        <barButtonItem key="rightBarButtonItem" title="Update" id="7Ov-qq-gBC">
+                                            <connections>
+                                                <action selector="updateBarButtonPressed:" destination="cRz-o1-OOz" id="kUc-Ae-GYe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wxt-NW-G5D">
+                                <rect key="frame" x="16" y="102" width="382" height="250"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LFl-XZ-29V" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="37"/>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tGZ-OY-QhL" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="53" width="382" height="37.5"/>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bn-zd-W4p" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="106.5" width="382" height="37"/>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iyb-0i-Hhv" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="159.5" width="382" height="37.5"/>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BoP-UZ-I70" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="213" width="382" height="37"/>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="GL3-2i-8fr"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eJU-fC-X0J"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qzt-TS-Meb" firstAttribute="bottom" secondItem="eJU-fC-X0J" secondAttribute="bottom" id="Apj-jD-oGv"/>
-                            <constraint firstItem="qzt-TS-Meb" firstAttribute="trailing" secondItem="eJU-fC-X0J" secondAttribute="trailing" id="dyP-wA-JoR"/>
-                            <constraint firstItem="qzt-TS-Meb" firstAttribute="leading" secondItem="eJU-fC-X0J" secondAttribute="leading" id="hZu-N7-gHa"/>
-                            <constraint firstItem="qzt-TS-Meb" firstAttribute="top" secondItem="eJU-fC-X0J" secondAttribute="top" id="wXU-NA-Meu"/>
+                            <constraint firstItem="wxt-NW-G5D" firstAttribute="top" secondItem="Wlu-ib-GsK" secondAttribute="bottom" constant="16" id="L7h-k7-hBR"/>
+                            <constraint firstItem="eJU-fC-X0J" firstAttribute="trailing" secondItem="wxt-NW-G5D" secondAttribute="trailing" constant="16" id="Mqk-N7-Cb4"/>
+                            <constraint firstItem="wxt-NW-G5D" firstAttribute="leading" secondItem="eJU-fC-X0J" secondAttribute="leading" constant="16" id="cDL-tS-p0e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ctI-dX-UoK"/>
+                    <connections>
+                        <outlet property="address" destination="Iyb-0i-Hhv" id="Jlw-d7-neA"/>
+                        <outlet property="birthOfDateTextField" destination="BoP-UZ-I70" id="WEC-go-SeE"/>
+                        <outlet property="emailTextField" destination="tGZ-OY-QhL" id="ewR-Lu-4Z7"/>
+                        <outlet property="phoneNumberTextField" destination="1bn-zd-W4p" id="are-j0-jWN"/>
+                        <outlet property="userNameTextField" destination="LFl-XZ-29V" id="l4n-KP-NFj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ze-jd-y8u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

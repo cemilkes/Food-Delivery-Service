@@ -62,7 +62,10 @@ extension SettingsController: UITableViewDelegate {
             print("Go to Help Center")
         }else if indexPath.row == 7{
             print("About Us")
-        }else{
+        }else if indexPath.row == 8{
+            print("Log Out")
+        }
+        else{
             print("Nothing")
         }
     }

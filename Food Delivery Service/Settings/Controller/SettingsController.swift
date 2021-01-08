@@ -95,6 +95,20 @@ class SettingsController: UIViewController {
         
     }
     
+    private func logOut(){
+        MUser.logOutCurrentUser { (error) in
+            if error == nil{
+                print("Log out")
+                //self.navigationController?.popViewController(animated: true)
+            }else{
+                print("Error occured \(error?.localizedDescription)")
+            }
+        }
+    }
+
+
+
+
 //    private func finishOnboarding(){
 //        let values = [kUSERNAME: nameTextField.text!, kEMAIL: emailTextField.text!, kONBOARD: true, kADDRESS: addressTextField.text!, kPHONENUMBER: phoneNumberTextField.text!] as [String:Any]
 //        updateUserInfoInFirebase(withValues: values) { (error) in
@@ -108,6 +122,5 @@ class SettingsController: UIViewController {
 //
 //        }
 //    }
-    /*
    
 }
