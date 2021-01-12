@@ -139,7 +139,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="z6H-Ft-haW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="done"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2uj-8u-fNv" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="54" width="317" height="44"/>
@@ -296,7 +296,7 @@
                                             <constraint firstAttribute="height" constant="44" id="iZU-GF-h1B"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date Of Birth (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="krO-aB-gqB" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="108" width="303" height="44"/>
@@ -432,7 +432,7 @@
                                     <constraint firstAttribute="height" constant="44" id="LCN-En-nJV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twQ-vl-hAd" customClass="BTButton" customModule="Food_Delivery_Service" customModuleProvider="target">
                                 <rect key="frame" x="39" y="379" width="303" height="44"/>

@@ -108,20 +108,21 @@ class ItemDetailController: UIViewController {
 
     @objc func addToOrderLabelPressed(_ sender: UITapGestureRecognizer){
         
+        showLoginView()
         //TODO: - check if the user is logged in, or show login view
-//        
+//
 //        if MUser.currentUser() != nil {
 //            //createOrderItem()
 //        }else{
 //            //showLoginView()
 //        }
-        createOrderItem()
-        self.dismiss(animated: true, completion: nil)
+        //createOrderItem()
+        //self.dismiss(animated: true, completion: nil)
         //print("Order item total Amount", orderItemTotalAmount)
     }
     
     private func showLoginView(){
-        let loginVew = UIStoryboard.init(name: Storyboard.authentication, bundle: .main).instantiateViewController(identifier: "LoginController")
+        let loginVew = UIStoryboard.init(name: Storyboard.authentication, bundle: .main).instantiateViewController(identifier: ViewController.loginController)
         self.present(loginVew, animated: true, completion: nil)
     }
     
