@@ -227,7 +227,13 @@
                             <constraint firstItem="aYy-b0-3SU" firstAttribute="trailing" secondItem="huu-QD-fQQ" secondAttribute="trailing" id="tUY-v1-elg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JoO-Xa-45p"/>
+                    <navigationItem key="navigationItem" id="JoO-Xa-45p">
+                        <barButtonItem key="rightBarButtonItem" title="Explore as a guess" id="gTs-kR-hgN">
+                            <connections>
+                                <action selector="exploreAsAGuessBarButtonPressed:" destination="LsP-ub-5aD" id="f5F-Dt-ufy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionLabel" destination="bH6-0S-VJ4" id="h1L-gI-qhr"/>
                         <outlet property="emailTextField" destination="GZf-z0-jlK" id="Fvk-pA-3BR"/>

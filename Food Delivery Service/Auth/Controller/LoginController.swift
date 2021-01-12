@@ -209,6 +209,16 @@ class LoginController: UIViewController, UITextFieldDelegate {
 //        attributedString.addAttribute(.foregroundColor, value: UIColor.themeColor, range: NSRange(location: 23, length: 7))
         
     }
+    
+    
+    @IBAction func exploreAsAGuessBarButtonPressed(_ sender: UIBarButtonItem) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.main, bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.tabbarController) as! TabbarController
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+    }
+    
+    
     //MARK: - Dismiss View
     
     private func textFieldHaveText() -> Bool{
