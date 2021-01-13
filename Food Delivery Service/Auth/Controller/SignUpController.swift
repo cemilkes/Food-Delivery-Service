@@ -12,7 +12,6 @@ import NVActivityIndicatorView
 
 class SignUpController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var userNameTextField: BTTextfield!
     @IBOutlet weak var emailTextField: BTTextfield!
     @IBOutlet weak var passwordTextField: BTTextfield!
     @IBOutlet weak var rePasswordTextField: BTTextfield!
@@ -37,7 +36,6 @@ class SignUpController: UIViewController, UITextFieldDelegate {
         
         passwordTextField.delegate = self
         rePasswordTextField.delegate = self
-        userNameTextField.delegate = self
         emailTextField.delegate = self
         
     }
@@ -68,7 +66,6 @@ class SignUpController: UIViewController, UITextFieldDelegate {
     func hideKeyboard(){
         passwordTextField.resignFirstResponder()
         rePasswordTextField.resignFirstResponder()
-        userNameTextField.resignFirstResponder()
         emailTextField.resignFirstResponder()
     }
     
@@ -133,7 +130,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
     }
     
     private func textFieldHaveText() -> Bool{
-        return (emailTextField.text != "" && passwordTextField.text != "" && userNameTextField.text != "")
+        return (emailTextField.text != "" && passwordTextField.text != "")
     }
     
     private func dismissView(){
