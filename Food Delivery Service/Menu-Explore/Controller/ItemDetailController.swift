@@ -122,7 +122,9 @@ class ItemDetailController: UIViewController {
     }
     
     private func showLoginView(){
+        
         let loginVew = UIStoryboard.init(name: Storyboard.authentication, bundle: .main).instantiateViewController(identifier: ViewController.loginController)
+        //loginVew.modalPresentationStyle = .fullScreen
         self.present(loginVew, animated: true, completion: nil)
     }
     

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import NVActivityIndicatorView
 import JGProgressHUD
 
 func convertToCurrency(_ number: Double) -> String {
@@ -38,9 +39,6 @@ func dateFormatter() -> DateFormatter{
     
 }
 
-
-
-
 extension Double {
     /// Rounds the double to decimal places value
     func rounded(toPlaces places:Int) -> Double {
@@ -49,3 +47,36 @@ extension Double {
     }
 }
 
+
+func showLoadingIndicator(activityIndicator: NVActivityIndicatorView, view: UIView){
+    
+    if activityIndicator != nil{
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+    }
+}
+
+func hideLoadingIndicator(activityIndicator: NVActivityIndicatorView){
+    
+    if activityIndicator != nil{
+        activityIndicator.removeFromSuperview()
+        activityIndicator.stopAnimating()
+    }
+}
+
+func showHUDSuccessMessage(text: String, hud: JGProgressHUD, view:UIView){
+    hud.textLabel.text = text
+    hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+    hud.show(in: view)
+    hud.dismiss(afterDelay: 3.0)
+    
+}
+
+func showHUDErrorMessage(text:String, hud: JGProgressHUD, view:UIView){
+    hud.textLabel.text = text
+    hud.indicatorView = JGProgressHUDErrorIndicatorView()
+    hud.show(in: view)
+    hud.dismiss(afterDelay: 2.0)
+    
+    
+}

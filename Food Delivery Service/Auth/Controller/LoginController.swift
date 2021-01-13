@@ -36,11 +36,6 @@ class LoginController: UIViewController, UITextFieldDelegate {
         setupUI()
         setupLoginSubView()
     
-        let width = self.view.frame.width
-        let heigth = self.view.frame.height
-        
-        activityIndicator = NVActivityIndicatorView(frame: CGRect(x: width/2 - 30, y: heigth/2 - 30, width: 60.0, height: 60.0), type: .ballPulse, color: .brown, padding: nil)
-        
         let signUpLabelGesture = UITapGestureRecognizer(target: self, action: #selector(signUpLabelClicked(_ :)))
         signUpLabel.addGestureRecognizer(signUpLabelGesture)
     
@@ -48,6 +43,43 @@ class LoginController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupActivityIndicator()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Make the navigation bar background clear
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+    }
+    
+    func setupNavigationUI(){
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "backButton")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "backButton")
+        self.navigationController?.navigationBar.topItem?.title = " "
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+    }
+   
+    
+    func setupUI(){
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+    }
+    func setupActivityIndicator(){
+        let width = self.view.frame.width
+        let heigth = self.view.frame.height
+        
+        activityIndicator = NVActivityIndicatorView(frame: CGRect(x: width/2 - 30, y: heigth/2 - 30, width: 60.0, height: 60.0), type: .ballPulse, color: .brown, padding: nil)
+        
+    }
+    
     
     @objc func signUpLabelClicked(_ sender: UITapGestureRecognizer){
         let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
@@ -99,51 +131,21 @@ class LoginController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        // Make the navigation bar background clear
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
-    }
-    
-    func setupNavigationUI(){
-        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "backButton")
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "backButton")
-        self.navigationController?.navigationBar.topItem?.title = " "
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
-    }
-   
-    
-    func setupUI(){
-        
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
-        
-    }
-    
-    
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         
         if textFieldHaveText() {
             loginUser()
             
         }else{
-            hud.textLabel.text = "All fields are required"
-            hud.indicatorView = JGProgressHUDErrorIndicatorView()
-            hud.show(in: self.view)
-            hud.dismiss(afterDelay: 2.0)
+            showHUDErrorMessage(text: "All fields are required", hud: hud, view: self.view)
         }
     }
+    
     
     @IBAction func forgotPasswordButtonPressed(_ sender: UIButton) {
         let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
                 let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.forgotPasswordController) as! ForgotPasswordController
-                //vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
-        
     }
     
     private func loginUser(){
@@ -153,29 +155,27 @@ class LoginController: UIViewController, UITextFieldDelegate {
             if error == nil{
                 
                 if isEmailVerified {
-                    self.dismissView()
+                    self.openMenuController()
                     print("Email is verified")
                 }else{
-                    self.hud.textLabel.text = "All fields are required"
-                    self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
-                    self.hud.show(in: self.view)
-                    self.hud.dismiss(afterDelay: 2.0)
+                    showHUDErrorMessage(text: "Please verify your email address", hud: self.hud, view: self.view)
                 }
                 
-                
             }else{
-                self.hud.textLabel.text = error?.localizedDescription
-                self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
-                self.hud.show(in: self.view)
-                self.hud.dismiss(afterDelay: 2.0)
-                
+                showHUDErrorMessage(text: error!.localizedDescription, hud: self.hud, view: self.view)
             }
+            
             self.hideLoadingIndicator()
         }
-        
-        
     }
+
     
+    private func openMenuController(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.main, bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.tabbarController) as! TabbarController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
     
     
     func setupSignUpLabel(){
@@ -188,7 +188,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         
         let signUpAttributedString = NSAttributedString(string: signUpLabelText, attributes: signUpLabelTextAttributes)
         
-        let signUpLabelSelectableText = "Sign Up"
+        let signUpLabelSelectableText = Strings.signUpText
         let signUpLabelSelectableTextAttributes: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.foregroundColor: Color.theme.value,
             NSAttributedString.Key.font: UIFont(name: "Avenir-Book", size: 17.0)!

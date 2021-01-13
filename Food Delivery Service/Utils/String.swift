@@ -7,7 +7,9 @@
 //
 
 import Foundation
-
+struct Strings {
+        static let signUpText = "Sign Up"
+}
 public let kWelcomeMessageTitle = "DELIVERED FAST FOOD TO YOUR DOOR"
 public let kWelcomeMessageDescription = ""
 

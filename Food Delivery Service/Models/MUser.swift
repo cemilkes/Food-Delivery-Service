@@ -87,6 +87,7 @@ class MUser {
         }
         return nil
     }
+    
                                                               //call back - check after login if there is an error
     class func loginWithUser(email: String, password: String, completion: @escaping (_ error: Error?, _ isEmailVerified: Bool) -> Void){
         
@@ -96,7 +97,7 @@ class MUser {
                     downloadUserFromFirestore(userId: (authDataResult?.user.uid)!, email: email)
                     completion(error,true)
                 }else{
-                    print("Email is not verified")
+                    print("Email is not verified\(error?.localizedDescription)")
                     completion(error, false)
                 }
             }else{
@@ -108,6 +109,7 @@ class MUser {
     class func registerUserWith(email:String, password:String, completion: @escaping (_ error: Error?) -> Void){
         
         Auth.auth().createUser(withEmail: email, password: password) { (authDataResult, error) in
+            
             completion(error)
             
             if error == nil{

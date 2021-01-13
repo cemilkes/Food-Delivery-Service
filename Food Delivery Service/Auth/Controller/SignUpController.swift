@@ -14,7 +14,6 @@ class SignUpController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userNameTextField: BTTextfield!
     @IBOutlet weak var emailTextField: BTTextfield!
-    @IBOutlet weak var dateOfBirthTextfield: BTTextfield!
     @IBOutlet weak var passwordTextField: BTTextfield!
     @IBOutlet weak var rePasswordTextField: BTTextfield!
     @IBOutlet weak var termsLabel: UILabel!
@@ -26,9 +25,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setupUI()
     }
-    
-    
-    
+
     private func setupUI(){
         let width = self.view.frame.width
         let heigth = self.view.frame.height
@@ -40,6 +37,8 @@ class SignUpController: UIViewController, UITextFieldDelegate {
         
         passwordTextField.delegate = self
         rePasswordTextField.delegate = self
+        userNameTextField.delegate = self
+        emailTextField.delegate = self
         
     }
 
@@ -55,7 +54,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
         guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
             return
         }
-        view.frame.origin.y = -keyboardRect.height
+        view.frame.origin.y = -30
     }
     
     
@@ -69,6 +68,8 @@ class SignUpController: UIViewController, UITextFieldDelegate {
     func hideKeyboard(){
         passwordTextField.resignFirstResponder()
         rePasswordTextField.resignFirstResponder()
+        userNameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -77,23 +78,20 @@ class SignUpController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func signUpButtonPressed(_ sender: BTButton) {
-       
-        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.main, bundle: nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.tabbarController) as! TabbarController
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion: nil)
-        
-//        print("Pressed")
-//        if textFieldHaveText() && checkPasswordsIdentical() {
-//            registerUser()
-//        }else{
-//            hud.textLabel.text = "All fields are required"
-//            hud.indicatorView = JGProgressHUDErrorIndicatorView()
-//            hud.show(in: self.view)
-//            hud.dismiss(afterDelay: 2.0)
-//        }
-    }
     
+        
+        
+        if !textFieldHaveText() {
+            showHUDErrorMessage(text: "All fields are required", hud: hud, view: view)
+        }
+        if  !checkPasswordsIdentical(){
+            showHUDErrorMessage(text: "Passwords didn't match", hud: hud, view: view)
+        }
+        if textFieldHaveText() && checkPasswordsIdentical() {
+            registerUser()
+            dismissView()
+        }
+    }
     
     //performSegue(withIdentifier: "main", sender: self)
     private func registerUser(){
@@ -102,15 +100,10 @@ class SignUpController: UIViewController, UITextFieldDelegate {
             
             if error == nil{
                 //since the func runs in background, it requires to put self
-                self.hud.textLabel.text = "Verification Email Has Sent"
-                self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
-                self.hud.show(in: self.view)
-                self.hud.dismiss(afterDelay: 3.0)
+                showHUDSuccessMessage(text: "Verification Email Has Sent", hud: self.hud, view: self.view)
+                //self.dismissView()
             }else{
-                self.hud.textLabel.text = "\(error?.localizedDescription)"
-                self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
-                self.hud.show(in: self.view)
-                self.hud.dismiss(afterDelay: 3.0)
+                showHUDErrorMessage(text: error!.localizedDescription, hud: self.hud, view: self.view)
             }
             self.hideLoadingIndicator()
         }
@@ -123,19 +116,24 @@ class SignUpController: UIViewController, UITextFieldDelegate {
         }
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            if segue.identifier == "goToAlternateStoryboard" {
-//                guard let vc = segue.destination as? AlternateViewController else { return }
-//                vc.segueText = segueTextField.text
-//            }
-        }
+    
+//    private func openMenuController(){
+//        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.main, bundle: nil)
+//        let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.tabbarController) as! TabbarController
+//                vc.modalPresentationStyle = .fullScreen
+//                self.present(vc, animated: true, completion: nil)
+//    }
     
     private func checkPasswordsIdentical() -> Bool{
-        return (passwordTextField.text != rePasswordTextField.text)
+        if passwordTextField.text != rePasswordTextField.text {
+            return false
+        }
+        return true
+        //return (passwordTextField.text == rePasswordTextField.text)
     }
     
     private func textFieldHaveText() -> Bool{
-        return (emailTextField.text != "" && passwordTextField.text != "")
+        return (emailTextField.text != "" && passwordTextField.text != "" && userNameTextField.text != "")
     }
     
     private func dismissView(){
