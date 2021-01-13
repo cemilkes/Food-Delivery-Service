@@ -89,7 +89,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
         }
         if textFieldHaveText() && checkPasswordsIdentical() {
             registerUser()
-            dismissView()
+            
         }
     }
     
@@ -101,7 +101,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
             if error == nil{
                 //since the func runs in background, it requires to put self
                 showHUDSuccessMessage(text: "Verification Email Has Sent", hud: self.hud, view: self.view)
-                //self.dismissView()
+                self.dismissView()
             }else{
                 showHUDErrorMessage(text: error!.localizedDescription, hud: self.hud, view: self.view)
             }

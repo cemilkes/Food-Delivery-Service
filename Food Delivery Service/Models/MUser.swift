@@ -22,10 +22,10 @@ class MUser {
     let onBoard: Bool
     
     // Initializer
-    init(_objectId: String, _email: String, _username: String) {
+    init(_objectId: String, _email: String) {
         objectId = _objectId
         email = _email
-        username = _username
+        username = ""
         createdAt = Date()
         address = ""
         onBoard = false
@@ -152,7 +152,7 @@ func downloadUserFromFirestore(userId: String, email: String){
         if snaphot.exists{
             saveUserLocally(mUserDicdionary: snaphot.data()! as NSDictionary)
         }else{
-            let user = MUser(_objectId: userId, _email: email, _username: "")
+            let user = MUser(_objectId: userId, _email: email)
             saveUserLocally(mUserDicdionary: userDictionaryFrom(user: user))
             saveUserToFirebase(mUser: user)
         }
@@ -179,7 +179,7 @@ func userDictionaryFrom(user: MUser) -> NSDictionary {
                              user.email,
                              user.username,
                              user.purchasedItemIds,
-                             user.createdAt,
+                             dateFormatter().string(from: user.createdAt),
                              user.address ?? "",
                              user.onBoard
                             ],
