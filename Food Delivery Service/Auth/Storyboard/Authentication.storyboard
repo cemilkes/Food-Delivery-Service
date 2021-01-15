@@ -314,6 +314,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7w-SO-gUk" customClass="BTButton" customModule="Food_Delivery_Service" customModuleProvider="target">
                                 <rect key="frame" x="36" y="425" width="303" height="44"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ody-8c-ScH"/>
+                                </constraints>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUpButtonPressed:" destination="AfL-eI-bdB" eventType="touchUpInside" id="4Aw-Lu-9pG"/>

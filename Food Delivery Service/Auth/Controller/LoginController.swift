@@ -110,7 +110,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
             return
         }
-        view.frame.origin.y = -keyboardRect.height
+        view.frame.origin.y =   -100.0 //-keyboardRect.height
     }
     
     

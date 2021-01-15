@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class ForgotPasswordController: UIViewController {
 
@@ -18,7 +19,7 @@ class ForgotPasswordController: UIViewController {
     @IBOutlet weak var emailtextField: BTTextfield!
     
     @IBOutlet weak var sendButton: BTButton!
-    
+    var hud:JGProgressHUD!
     
     
     override func viewDidLoad() {
@@ -32,21 +33,20 @@ class ForgotPasswordController: UIViewController {
         if emailtextField.text != "" {
             resetPassword()
         }else{
-            print("error")
+            showHUDErrorMessage(text: "Please put your email address", hud: hud, view: self.view)
         }
     }
     
     private func resetPassword(){
         MUser.resetPassword(email: emailtextField.text!) { (error) in
             if error == nil {
-                print("Sent!")
+                showHUDSuccessMessage(text: "The reset password has sent yo your email address!", hud: self.hud, view: self.view)
             }else{
-                print("error \(error?.localizedDescription)")
+                showHUDErrorMessage(text: error!.localizedDescription, hud: self.hud, view: self.view)
             }
         }
     }
-    
-    /*
+   /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
