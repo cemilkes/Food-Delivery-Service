@@ -35,8 +35,6 @@ extension SettingsController: UITableViewDataSource {
                cell.generateCell(profileArray[indexPath.row])
                return cell
         }
-        
-         
     }
     
 }
@@ -49,7 +47,7 @@ extension SettingsController: UITableViewDelegate {
         if indexPath.row == 0 {
             
             checkUserLoginStatus()
-            print("Go to Profile Page")
+            //print("Go to Profile Page")
         }else if indexPath.row == 1{
             print("Go to Notfications")
         }else if indexPath.row == 2{
@@ -66,7 +64,7 @@ extension SettingsController: UITableViewDelegate {
             print("About Us")
         }else if indexPath.row == 8{
             print("Terms & Conditions")
-        }else if indexPath.row == 8{
+        }else if indexPath.row == 9{
             print("Log Out")
         }
         else{
@@ -75,12 +73,13 @@ extension SettingsController: UITableViewDelegate {
     }
 
      func checkUserLoginStatus(){
-        if MUser.currentUser() == nil {
+        if (MUser.currentUser() == nil && MUser.currentId() == nil){
             showLoginView()
-            print("No user found")
+        }else if(MUser.currentUser() == nil && MUser.currentId() != nil){
+            print("Show alert")
+            print(MUser.currentId())
         }else{
             goToEditProfile()
-            print(MUser.currentId())
         }
     }
         

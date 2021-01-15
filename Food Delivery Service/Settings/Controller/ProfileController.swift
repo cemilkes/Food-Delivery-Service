@@ -23,7 +23,7 @@ class ProfileController: UIViewController {
         loadUserInfo()
         // Do any additional setup after loading the view.
     }
-    
+
     private func loadUserInfo(){
         if MUser.currentUser() != nil {
             let currentUser = MUser.currentUser()!
