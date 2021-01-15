@@ -15,21 +15,29 @@ class MUser {
     let objectId: String
     let email: String
     let username: String
-    let purchasedItemIds: [String]
+    let phoneNumber: String
     let createdAt: Date
-    
-    let address: String?
+    let address: String
+    let birthDate: String
     let onBoard: Bool
+    let purchasedItemIds: [String]
+    
+    
+    
+    
     
     // Initializer
     init(_objectId: String, _email: String) {
         objectId = _objectId
         email = _email
         username = ""
+        phoneNumber = ""
         createdAt = Date()
         address = ""
+        birthDate = ""
         onBoard = false
         purchasedItemIds = []
+        
     }
     
     // Initializer
@@ -48,8 +56,14 @@ class MUser {
             username = ""
         }
         
+        if let phoneNum = _dictionary[kPHONENUMBER] {
+            phoneNumber = phoneNum as! String
+        }else{
+            phoneNumber = ""
+        }
+        
         if let fAddress = _dictionary[kADDRESS] {
-            address = fAddress as? String
+            address = fAddress as! String
         }else{
             address = " "
         }
@@ -64,6 +78,12 @@ class MUser {
             purchasedItemIds = purchasedIds as! [String]
         }else{
             purchasedItemIds = []
+        }
+        
+        if let birthD = _dictionary[kBIRTHDATE] {
+            birthDate = birthD as! String
+        }else{
+            birthDate = " "
         }
         
         createdAt  =  dateFormatter().date(from: _dictionary[kCREATEDAT] as! String)!
@@ -178,17 +198,21 @@ func userDictionaryFrom(user: MUser) -> NSDictionary {
                             [user.objectId,
                              user.email,
                              user.username,
+                             user.phoneNumber,
                              user.purchasedItemIds,
                              dateFormatter().string(from: user.createdAt),
-                             user.address ?? "",
+                             user.birthDate,
+                             user.address,
                              user.onBoard
                             ],
                         forKeys:
                             [kOBJECTID as NSCopying,
                              kEMAIL as NSCopying,
                              kUSERNAME as NSCopying,
+                             kPHONENUMBER as NSCopying,
                              kPURCHASEDITEMIDS as NSCopying,
                              kCREATEDAT as NSCopying,
+                             kBIRTHDATE as NSCopying,
                              kADDRESS as NSCopying,
                              kONBOARD as NSCopying
                             ])

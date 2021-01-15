@@ -31,7 +31,7 @@ class SettingsHeaderCell: UITableViewCell {
     func generateCell(){
         profileImage.clipsToBounds = true
         profileImage.layer.cornerRadius = 46.5
-        userNameLabel.text = "Joseph"
+        userNameLabel.text = "Profile"
                         	
     }
     

@@ -13,8 +13,6 @@ class SettingsController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var profileArray = [ProfileModel]()
     
-    var editBarButtonOutlet: UIBarButtonItem!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -23,7 +21,6 @@ class SettingsController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        checkUserLoginStatus()
     }
     
     func configureTableView(){
@@ -42,7 +39,9 @@ class SettingsController: UIViewController {
             ProfileModel(imageName: "iconSettings", title: "Settings"),
             ProfileModel(imageName: "iconInviteFriends", title: "Invite Friends"),
             ProfileModel(imageName: "iconHelpCenter", title: "Help Center"),
-            ProfileModel(imageName: "iconAboutUs", title: "About Us")
+            ProfileModel(imageName: "iconAboutUs", title: "About Us"),
+            ProfileModel(imageName: " ", title: "Terms and Conditions"),
+            ProfileModel(imageName: " ", title: "Log Out")
         ]
     }
     
@@ -57,40 +56,7 @@ class SettingsController: UIViewController {
             print("Log out")
         }
     }
-    
-    private func checkUserLoginStatus(){
-        if MUser.currentUser() == nil {
-            createRightBarButton(title: "Login")
-        }else{
-            createRightBarButton(title: "Edit")
-        }
-    }
-    
-    private func createRightBarButton(title: String){
-        editBarButtonOutlet = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(rightBarButtonItemPressed))
-        self.navigationItem.rightBarButtonItem = editBarButtonOutlet
-    }
-    
-    @objc func rightBarButtonItemPressed(){
-        if editBarButtonOutlet.title ==  "Login"{
-            //show login view
-            showLoginView()
-        }else{
-            //go to profile
-            goToEditProfile()
-        }
-    }
-    
-    private func showLoginView(){
-        let loginView = UIStoryboard.init(name: Storyboard.authentication, bundle: nil).instantiateViewController(identifier: ViewController.loginController)
-        self.present(loginView, animated: true, completion: nil)
-    
-    }
-    
-    private func goToEditProfile(){
-        print("Edit Profile")
-    }
-    
+
     private func updateDoneButtonStatus(){
         
     }

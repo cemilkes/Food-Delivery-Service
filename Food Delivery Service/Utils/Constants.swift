@@ -43,6 +43,7 @@ public let kPHONENUMBER = "phone_number"
 public let kONBOARD  = "onBoard"
 public let kPURCHASEDITEMIDS = "purchasedItemIds"
 public let kCREATEDAT = "created At"
+public let kBIRTHDATE = "BirthDate"
 
 
 //StoryBoards
@@ -51,6 +52,7 @@ struct Storyboard {
     static let main = "Main"
     static let authentication = "Authentication"
     static let menu = "Menu"
+    static let settings = "Settings"
 }
 
 // Controllers
@@ -64,6 +66,7 @@ struct ViewController {
     static let menuController       = "MenuController"
     static let itemController       = "ItemsController"
     static let itemDetailController = "ItemDetailController"
+    static let profileController = "ProfileController"
 }
 
 struct PerformSegue {

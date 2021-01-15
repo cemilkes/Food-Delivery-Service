@@ -19,7 +19,7 @@ class ForgotPasswordController: UIViewController {
     @IBOutlet weak var emailtextField: BTTextfield!
     
     @IBOutlet weak var sendButton: BTButton!
-    var hud:JGProgressHUD!
+    let hud = JGProgressHUD(style: .dark)
     
     
     override func viewDidLoad() {
@@ -41,6 +41,7 @@ class ForgotPasswordController: UIViewController {
         MUser.resetPassword(email: emailtextField.text!) { (error) in
             if error == nil {
                 showHUDSuccessMessage(text: "The reset password has sent yo your email address!", hud: self.hud, view: self.view)
+                self.dismiss(animated: true, completion: nil)
             }else{
                 showHUDErrorMessage(text: error!.localizedDescription, hud: self.hud, view: self.view)
             }

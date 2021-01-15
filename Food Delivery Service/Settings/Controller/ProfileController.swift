@@ -13,8 +13,10 @@ class ProfileController: UIViewController {
     @IBOutlet weak var userNameTextField: BTTextfield!
     @IBOutlet weak var emailTextField: BTTextfield!
     @IBOutlet weak var phoneNumberTextField: BTTextfield!
-    @IBOutlet weak var address: BTTextfield!
+    @IBOutlet weak var addressTextField: BTTextfield!
     @IBOutlet weak var birthOfDateTextField: BTTextfield!
+    
+    var editBarButtonOutlet: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,10 @@ class ProfileController: UIViewController {
             let currentUser = MUser.currentUser()!
             userNameTextField.text = currentUser.username
             emailTextField.text = currentUser.email
+            phoneNumberTextField.text = currentUser.phoneNumber
+            addressTextField.text = currentUser.address
+            birthOfDateTextField.text = currentUser.birthDate
+            
         }
     }
     
@@ -62,6 +68,22 @@ class ProfileController: UIViewController {
     private func textFieldHaveText() -> Bool{
         return(userNameTextField.text != "" && emailTextField.text != "")
     }
+    
+    private func createRightBarButton(title: String){
+        editBarButtonOutlet = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(rightBarButtonItemPressed))
+        self.navigationItem.rightBarButtonItem = editBarButtonOutlet
+    }
+    
+    @objc func rightBarButtonItemPressed(){
+        if editBarButtonOutlet.title ==  "Login"{
+            //show login view
+            
+        }else{
+            //go to profile
+            
+        }
+    }
+    
     
     /*
     // MARK: - Navigation
