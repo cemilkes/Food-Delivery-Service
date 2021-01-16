@@ -18,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        if (MUser.currentUser() != nil){
+           
+        }else{
+            
+        }
+        print("App delegate")
         //print(MUser.currentId())
         return true
     }

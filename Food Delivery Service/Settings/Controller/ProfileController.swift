@@ -32,7 +32,6 @@ class ProfileController: UIViewController {
             phoneNumberTextField.text = currentUser.phoneNumber
             addressTextField.text = currentUser.address
             birthOfDateTextField.text = currentUser.birthDate
-            
         }
     }
     

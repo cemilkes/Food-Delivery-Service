@@ -217,7 +217,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ctI-dX-UoK"/>
                     <connections>
-                        <outlet property="address" destination="Iyb-0i-Hhv" id="Jlw-d7-neA"/>
+                        <outlet property="addressTextField" destination="Iyb-0i-Hhv" id="oDp-J2-4fY"/>
                         <outlet property="birthOfDateTextField" destination="BoP-UZ-I70" id="WEC-go-SeE"/>
                         <outlet property="emailTextField" destination="tGZ-OY-QhL" id="ewR-Lu-4Z7"/>
                         <outlet property="phoneNumberTextField" destination="1bn-zd-W4p" id="are-j0-jWN"/>

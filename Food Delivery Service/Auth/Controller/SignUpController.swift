@@ -98,7 +98,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
             if error == nil{
                 //since the func runs in background, it requires to put self
                 showHUDSuccessMessage(text: "Verification Email Has Sent", hud: self.hud, view: self.view)
-                self.dismissView()
+                self.openLoginPage()
             }else{
                 showHUDErrorMessage(text: error!.localizedDescription, hud: self.hud, view: self.view)
             }
@@ -113,13 +113,20 @@ class SignUpController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    func openLoginPage(){
+        let loginVew = UIStoryboard.init(name: Storyboard.authentication, bundle: .main).instantiateViewController(identifier: ViewController.loginController)
+        loginVew.modalPresentationStyle = .fullScreen
+        self.present(loginVew, animated: true, completion: nil)
+    }
     
-//    private func openMenuController(){
-//        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.main, bundle: nil)
-//        let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.tabbarController) as! TabbarController
-//                vc.modalPresentationStyle = .fullScreen
-//                self.present(vc, animated: true, completion: nil)
-//    }
+    
+    
+    func openMenuPage(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.main, bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.tabbarController) as! TabbarController
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+    }
     
     private func checkPasswordsIdentical() -> Bool{
         if passwordTextField.text != rePasswordTextField.text {
@@ -152,9 +159,5 @@ class SignUpController: UIViewController, UITextFieldDelegate {
             activityIndicator!.removeFromSuperview()
             activityIndicator!.stopAnimating()
         }
-    }
-    
-    
-    
-    
+    } 
 }

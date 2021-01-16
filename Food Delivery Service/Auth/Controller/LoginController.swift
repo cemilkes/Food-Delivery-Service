@@ -116,7 +116,6 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     @objc func keyboardWillHide(notification: NSNotification) {
         //print("Keyboard will show \(notification.name.rawValue)")
-
         view.frame.origin.y = 0
     }
     

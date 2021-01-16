@@ -73,12 +73,18 @@ extension SettingsController: UITableViewDelegate {
     }
 
      func checkUserLoginStatus(){
-        if (MUser.currentUser() == nil && MUser.currentId() == nil){
+        //if the user didn't login
+        if (MUser.currentUser() == nil && MUser.currentId().count == 0){
             showLoginView()
-        }else if(MUser.currentUser() == nil && MUser.currentId() != nil){
-            print("Show alert")
+        
+        //if the user login but haven't verified email address
+        }else if(MUser.currentUser() == nil && MUser.currentId().count != 0){
+            print("Show alert - verify your email address - resend link")
             print(MUser.currentId())
         }else{
+        
+        //user loginned and verified email address
+            print("GotoEditProfile")
             goToEditProfile()
         }
     }

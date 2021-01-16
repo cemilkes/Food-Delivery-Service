@@ -93,8 +93,8 @@ class MUser {
     // Check the user is locally saved or not
     class func currentId() -> String{
         
-        return Auth.auth().currentUser!.uid
-        
+        return Auth.auth().currentUser?.uid ?? ""
+    
     }
     
     // Return user object that currently logged in
