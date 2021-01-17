@@ -17,15 +17,32 @@ class ProfileController: UIViewController {
     @IBOutlet weak var addressTextField: BTTextfield!
     @IBOutlet weak var birthOfDateTextField: BTTextfield!
     
+    @IBOutlet weak var updateBarButtonItemOutlet: UIBarButtonItem!
     var editBarButtonOutlet: UIBarButtonItem!
     var hud = JGProgressHUD(style: .dark)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadUserInfo()
+        setupTextFieldDidChange()
         // Do any additional setup after loading the view.
     }
 
+    private func setupTextFieldDidChange(){
+        userNameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+        phoneNumberTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+        addressTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+        birthOfDateTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+    }
+    
+    @objc func textFieldDidChange(_ sender: Any){
+        print("Editing")
+    }
+    
+    privat func configUpdateBarButtonStatus(){
+        
+    }
+    
     private func loadUserInfo(){
         if MUser.currentUser() != nil {
             let currentUser = MUser.currentUser()!
@@ -69,22 +86,6 @@ class ProfileController: UIViewController {
     private func textFieldHaveText() -> Bool{
         return(userNameTextField.text != "" && emailTextField.text != "")
     }
-    
-    private func createRightBarButton(title: String){
-        editBarButtonOutlet = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(rightBarButtonItemPressed))
-        self.navigationItem.rightBarButtonItem = editBarButtonOutlet
-    }
-    
-    @objc func rightBarButtonItemPressed(){
-        if editBarButtonOutlet.title ==  "Login"{
-            //show login view
-            
-        }else{
-            //go to profile
-            
-        }
-    }
-    
     
     /*
     // MARK: - Navigation

@@ -221,6 +221,7 @@
                         <outlet property="birthOfDateTextField" destination="BoP-UZ-I70" id="WEC-go-SeE"/>
                         <outlet property="emailTextField" destination="tGZ-OY-QhL" id="ewR-Lu-4Z7"/>
                         <outlet property="phoneNumberTextField" destination="1bn-zd-W4p" id="are-j0-jWN"/>
+                        <outlet property="updateBarButtonItemOutlet" destination="7Ov-qq-gBC" id="I55-hw-wIK"/>
                         <outlet property="userNameTextField" destination="LFl-XZ-29V" id="l4n-KP-NFj"/>
                     </connections>
                 </viewController>
