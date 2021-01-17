@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class ProfileController: UIViewController {
 
@@ -17,6 +18,7 @@ class ProfileController: UIViewController {
     @IBOutlet weak var birthOfDateTextField: BTTextfield!
     
     var editBarButtonOutlet: UIBarButtonItem!
+    var hud = JGProgressHUD(style: .dark)
     
     override func viewDidLoad() {
         super.viewDidLoad()
