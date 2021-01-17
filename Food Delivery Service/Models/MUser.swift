@@ -19,7 +19,7 @@ class MUser {
     let createdAt: Date
     let address: String
     let birthDate: String
-    let onBoard: Bool
+    var onBoard: Bool
     let purchasedItemIds: [String]
     
     
@@ -115,6 +115,7 @@ class MUser {
             if error == nil{
                 if authDataResult!.user.isEmailVerified {
                     downloadUserFromFirestore(userId: (authDataResult?.user.uid)!, email: email)
+                    FirebaseReference(.User).document(MUser.currentId()).updateData([kONBOARD : true])
                     completion(error,true)
                 }else{
                     print("Email is not verified\(error?.localizedDescription)")
