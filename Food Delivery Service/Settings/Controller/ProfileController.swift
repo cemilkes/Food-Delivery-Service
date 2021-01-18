@@ -17,6 +17,7 @@ class ProfileController: UIViewController {
     @IBOutlet weak var addressTextField: BTTextfield!
     @IBOutlet weak var birthOfDateTextField: BTTextfield!
     
+    @IBOutlet weak var logOutButtonOutlet: UIButton!
     @IBOutlet weak var updateBarButtonItemOutlet: UIBarButtonItem!
     var editBarButtonOutlet: UIBarButtonItem!
     var hud = JGProgressHUD(style: .dark)
@@ -24,11 +25,21 @@ class ProfileController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadUserInfo()
+     
+        updateBarButtonItemOutlet.tintColor = #colorLiteral(red: 0.7707532048, green: 0.7820937037, blue: 0.8177983165, alpha: 1)
+        updateBarButtonItemOutlet.isEnabled = false
         setupTextFieldDidChange()
-        // Do any additional setup after loading the view.
+        
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+       // loadUserInfo()
+    }
+    
+    
     private func setupTextFieldDidChange(){
+        emailTextField.isUserInteractionEnabled = false
         userNameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
         phoneNumberTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
         addressTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
@@ -37,10 +48,18 @@ class ProfileController: UIViewController {
     
     @objc func textFieldDidChange(_ sender: Any){
         print("Editing")
+        configUpdateBarButtonStatus()
     }
     
-    privat func configUpdateBarButtonStatus(){
+    private func configUpdateBarButtonStatus(){
         
+        if userNameTextField.text != "" && phoneNumberTextField.text != ""  && addressTextField.text != "" && birthOfDateTextField.text != ""{
+            updateBarButtonItemOutlet.tintColor = #colorLiteral(red: 0.7707532048, green: 0.7820937037, blue: 0.8177983165, alpha: 1)
+            updateBarButtonItemOutlet.isEnabled = false
+        }else{
+            updateBarButtonItemOutlet.tintColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+            updateBarButtonItemOutlet.isEnabled = true
+        }
     }
     
     private func loadUserInfo(){
@@ -62,20 +81,22 @@ class ProfileController: UIViewController {
             
             let withValues = [
                 kUSERNAME: userNameTextField.text!,
-                kEMAIL:    emailTextField.text!
+                kEMAIL:    emailTextField.text!,
+                kADDRESS: addressTextField.text!,
+                kPHONENUMBER: phoneNumberTextField.text!,
+                kBIRTHDATE: birthOfDateTextField.text!
             ]
             
             updateUserInfoInFirebase(withValues: withValues) { (error) in
-                if error == nil {
-                    print("OK")
-                    // hud - Updated
+                if (error == nil) {
+                    showHUDSuccessMessage(text: "Informations are updated!", hud: self.hud, view: self.view)
+                    self.dismiss(animated: true, completion: nil)
                 }else {
-                    //hud - error
+                    showHUDErrorMessage(text: error.localizedDescription, hud: self.hud, view: self.view)
                 }
             }
-            
         }else{
-            //hud - all fields are required
+            showHUDErrorMessage(text: "All fields are required", hud: self.hud, view: self.view)
         }
     }
      
@@ -87,6 +108,23 @@ class ProfileController: UIViewController {
         return(userNameTextField.text != "" && emailTextField.text != "")
     }
     
+    
+    @IBAction func logOutButtonPressed(_ sender: UIButton) {
+        logOut()
+    }
+    
+    private func logOut(){
+        MUser.logOutCurrentUser { (error) in
+            if error == nil{
+                print("Log out")
+                self.navigationController?.popViewController(animated: true)
+                //openLoginView
+            }else{
+                print("Error occured \(String(describing: error?.localizedDescription))")
+            }
+        }
+    }
+
     /*
     // MARK: - Navigation
 

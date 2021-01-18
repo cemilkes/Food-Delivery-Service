@@ -61,6 +61,33 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t4b-ep-gdd" id="L3S-Rc-CUa">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday, Jul 7th  - $109.98" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="la1-ue-eQc">
+                                                    <rect key="frame" x="20" y="11" width="212.5" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="4hd-hC-H5E"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.2274509804" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item DescriptionItem DescriptionItem DescriptionItem Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XvK-oe-qnF">
+                                                    <rect key="frame" x="20" y="43" width="374" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="TXz-GT-jic"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
+                                                    <color key="textColor" red="0.72156862749999995" green="0.73333333329999995" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="la1-ue-eQc" firstAttribute="leading" secondItem="L3S-Rc-CUa" secondAttribute="leadingMargin" id="MvF-IJ-UaM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="XvK-oe-qnF" secondAttribute="bottom" constant="2" id="QS1-v3-QWd"/>
+                                                <constraint firstItem="la1-ue-eQc" firstAttribute="top" secondItem="L3S-Rc-CUa" secondAttribute="topMargin" id="Sgz-iP-si6"/>
+                                                <constraint firstItem="XvK-oe-qnF" firstAttribute="trailing" secondItem="L3S-Rc-CUa" secondAttribute="trailingMargin" id="nIA-WM-Bft"/>
+                                                <constraint firstItem="XvK-oe-qnF" firstAttribute="leading" secondItem="L3S-Rc-CUa" secondAttribute="leadingMargin" id="nRz-7B-gXs"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>

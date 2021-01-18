@@ -154,12 +154,14 @@ class MUser {
             })
         })
     }
-    class func logOutCurrentUser(comletion: @escaping (_ error: Error?) -> Void){
+    class func logOutCurrentUser(completion: @escaping (_ error: Error?) -> Void){
         do {
             try Auth.auth().signOut()
             UserDefaults.standard.removeObject(forKey: kCURRENTUSER)
             UserDefaults.standard.synchronize()
+            completion(nil)
         } catch let error as NSError {
+            //completion(error)
             print(error.localizedDescription)
         }
     }
@@ -226,7 +228,8 @@ func updateUserInfoInFirebase(withValues: [String:Any], completion: @escaping (_
         
         FirebaseReference(.User).document(MUser.currentId()).updateData(withValues) {
             (error) in
-            completion(error!)
+            
+            print(error?.localizedDescription as Any)
             
             if error == nil {
                 saveUserLocally(mUserDicdionary: userObject)

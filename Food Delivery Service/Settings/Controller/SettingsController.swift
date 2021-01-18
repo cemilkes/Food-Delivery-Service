@@ -41,8 +41,7 @@ class SettingsController: UIViewController {
             ProfileModel(imageName: "iconInviteFriends", title: "Invite Friends"),
             ProfileModel(imageName: "iconHelpCenter", title: "Help Center"),
             ProfileModel(imageName: "iconAboutUs", title: "About Us"),
-            ProfileModel(imageName: " ", title: "Terms and Conditions"),
-            ProfileModel(imageName: " ", title: "Log Out")
+            ProfileModel(imageName: " ", title: "Terms and Conditions")
         ]
     }
     
@@ -58,36 +57,5 @@ class SettingsController: UIViewController {
         }
     }
 
-    private func updateDoneButtonStatus(){
-        
-    }
-    
-    private func logOut(){
-        MUser.logOutCurrentUser { (error) in
-            if error == nil{
-                print("Log out")
-                //self.navigationController?.popViewController(animated: true)
-            }else{
-                print("Error occured \(error?.localizedDescription)")
-            }
-        }
-    }
-
-
-
-
-//    private func finishOnboarding(){
-//        let values = [kUSERNAME: nameTextField.text!, kEMAIL: emailTextField.text!, kONBOARD: true, kADDRESS: addressTextField.text!, kPHONENUMBER: phoneNumberTextField.text!] as [String:Any]
-//        updateUserInfoInFirebase(withValues: values) { (error) in
-//            if error == nil {
-//                //hud success
-//                self.dismiss(animated: true, completion: nil)
-//            }else{
-//                print("error updating user \(error.localizedDescription)")
-//                //hud error
-//            }
-//
-//        }
-//    }
    
 }

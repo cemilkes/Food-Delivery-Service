@@ -64,10 +64,7 @@ extension SettingsController: UITableViewDelegate {
             print("About Us")
         }else if indexPath.row == 8{
             print("Terms & Conditions")
-        }else if indexPath.row == 9{
-            print("Log Out")
-        }
-        else{
+        }else{
             print("Nothing")
         }
     }
@@ -92,12 +89,13 @@ extension SettingsController: UITableViewDelegate {
     private func showLoginView(){
         let loginView = UIStoryboard.init(name: Storyboard.authentication, bundle: nil).instantiateViewController(identifier: ViewController.loginController)
         self.present(loginView, animated: true, completion: nil)
-
     }
 
     private func goToEditProfile(){
-        let profileView = UIStoryboard.init(name: Storyboard.settings, bundle: nil).instantiateViewController(identifier: ViewController.profileController)
-        self.present(profileView, animated: true, completion: nil)
+//        let profileView = UIStoryboard.init(name: Storyboard.settings, bundle: nil).instantiateViewController(identifier: ViewController.profileController)
+//        self.present(profileView, animated: true, completion: nil)
+        performSegue(withIdentifier: "goEditProfile", sender: self)
+        
     }
     
     
