@@ -13,23 +13,21 @@ private let reuseIdentifier = "OrderHistoryCell"
 
 extension OrderHistoryController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if orderArray.count == 0 {
-            
+        if orderedItems.count == 0 {
             tableView.setEmptyView(title: "You don't have any purchased item yet.", message: "Your order-history will be in here.")
-
         }else{
             tableView.restore()
-
+            
         }
-        return orderArray.count
+        return orderedItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)
-        cell?.textLabel?.text = "Order"
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! OrderHistoryCell
         
-        return cell!
+        cell.generateCell(orderItem: orderedItems[indexPath.row])
+        return cell
     }
 
 }

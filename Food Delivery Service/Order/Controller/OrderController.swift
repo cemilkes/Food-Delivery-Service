@@ -17,6 +17,7 @@ class OrderController: UIViewController {
     @IBOutlet weak var continueView: UIView!
     @IBOutlet weak var taxAndFeesTotalLabel: UILabel!
     @IBOutlet weak var deliveryFeeLabel: UILabel!
+    @IBOutlet weak var basketTotalSummaryView: UIView!
     
     let hud = JGProgressHUD(style: .dark)
     var basket: Basket?
@@ -42,13 +43,13 @@ class OrderController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        if MUser.currentUser() != {
-//            loadBasketFromFirestore()
-//        }else{
-//            self.updateTotalLabels(true)
-//        }
+        if MUser.currentUser() != nil{
+            loadBasketFromFirestore()
+        }else{
+            self.updateTotalLabels(true)
+        }
         
-        loadBasketFromFirestore()
+        
         checkoutButtonStatusUpdate()
         // Check if the user is logged in
         
@@ -59,7 +60,7 @@ class OrderController: UIViewController {
     func loadBasketFromFirestore(){
         
         //1234 -> MUser.currentId()
-        downloadBasketFromFirestore("1234"){ (basket) in
+        downloadBasketFromFirestore(MUser.currentId()){ (basket) in
             self.basket = basket
             self.getBasketItems()
         }
@@ -136,14 +137,17 @@ class OrderController: UIViewController {
     }
     
     @IBAction func ContinueButtonPressed(_ sender: UIButton) {
-//        if MUser.currentUser()?.onBoard {
-//            // proceed to purchase
-//        }else{
-//             // hud - complete registiration- error
-//        }
-//        temp()
-//        addItemsToPurchaseHistory(self.purchasedItemIds)
-//        emptyBasket()
+        if MUser.currentUser()  != nil {
+            // proceed to purchase
+            temp()
+            addItemsToPurchaseHistory(self.purchasedItemIds)
+            emptyBasket()
+            basketTotalSummaryView.isHidden = true
+        }else{
+             // hud - complete registiration- error
+            print("Error")
+            showHUDErrorMessage(text: "Error occured, please try again later.", hud: self.hud, view: self.view)
+        }
     }
     
     private func emptyBasket(){
@@ -160,13 +164,14 @@ class OrderController: UIViewController {
         }
     }
     
-    private func addItemsToPurchaseHistory(_ orderedItemIds: [String]){
+    private func addItemsToPurchaseHistory(_ orderItemIds: [String]){
     
         if MUser.currentUser() != nil {
-            let newOrderItemIds = MUser.currentUser()!.purchasedItemIds + orderedItemIds
+            let newOrderItemIds = MUser.currentUser()!.purchasedItemIds + orderItemIds
             updateUserInfoInFirebase(withValues: [kPURCHASEDITEMIDS: newOrderItemIds]) { (error) in
                 if error != nil{
-                    print("Error adding purchased items ", error.localizedDescription)
+                    //print("Error adding purchased items ", error.localizedDescription)
+                    showHUDErrorMessage(text: error.localizedDescription, hud: self.hud, view: self.view)
                 }
             }
         }

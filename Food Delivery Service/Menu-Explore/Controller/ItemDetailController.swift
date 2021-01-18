@@ -108,17 +108,14 @@ class ItemDetailController: UIViewController {
 
     @objc func addToOrderLabelPressed(_ sender: UITapGestureRecognizer){
         
-        showLoginView()
         //TODO: - check if the user is logged in, or show login view
-//
-//        if MUser.currentUser() != nil {
-//            //createOrderItem()
-//        }else{
-//            //showLoginView()
-//        }
-        //createOrderItem()
-        //self.dismiss(animated: true, completion: nil)
-        //print("Order item total Amount", orderItemTotalAmount)
+        if MUser.currentUser() != nil {
+            createOrderItem()
+            self.dismiss(animated: true, completion: nil)
+            print("Order item total Amount", orderItemTotalAmount)
+        }else{
+            showLoginView()
+        }
     }
     
     private func showLoginView(){
@@ -132,7 +129,7 @@ class ItemDetailController: UIViewController {
         
         orderItem.id = UUID().uuidString
         orderItem.itemId = item.id
-        orderItem.ownerId = "1234"
+        orderItem.ownerId = MUser.currentId()
         orderItem.quantity = quantity
         orderItem.totalAmount = Double(item.price * Double(quantity)).rounded(toPlaces: 2)
         orderItemTotalAmount = orderItem.totalAmount
@@ -144,11 +141,11 @@ class ItemDetailController: UIViewController {
         saveItemToFirebase(orderItem)
         
         newBasket.id  = UUID().uuidString
-        newBasket.ownerId = "1234"
+        newBasket.ownerId = MUser.currentId()
         newBasket.orderItemIds = [orderItem.id]
         hudSuccessMessage("Added to Basket")
         
-        downloadBasketFromFirestore("1234") { (basket) in
+        downloadBasketFromFirestore(MUser.currentId()) { (basket) in
             if basket == nil{
                 saveBasketToFirestore(self.newBasket)
             }else{

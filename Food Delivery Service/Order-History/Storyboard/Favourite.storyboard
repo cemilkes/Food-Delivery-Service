@@ -55,7 +55,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderHistoryCell" rowHeight="96" id="t4b-ep-gdd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderHistoryCell" rowHeight="96" id="t4b-ep-gdd" customClass="OrderHistoryCell" customModule="Food_Delivery_Service" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t4b-ep-gdd" id="L3S-Rc-CUa">
@@ -89,6 +89,10 @@
                                                 <constraint firstItem="XvK-oe-qnF" firstAttribute="leading" secondItem="L3S-Rc-CUa" secondAttribute="leadingMargin" id="nRz-7B-gXs"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="orderDateAndTotalAmountLabel" destination="la1-ue-eQc" id="XB3-tT-TY8"/>
+                                            <outlet property="orderItemsDetailLabel" destination="XvK-oe-qnF" id="gpd-2z-34d"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

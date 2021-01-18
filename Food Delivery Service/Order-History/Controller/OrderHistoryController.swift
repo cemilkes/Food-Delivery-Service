@@ -12,13 +12,14 @@ class OrderHistoryController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     //var profileArray = [ProfileModel]()
-    var orderArray = [Any]()
+    //var orderArray = [Any]()
     var orderedItems: [OrderItem] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //print("Order History Controller Loaded")
         setupUI()
+        loadOrder()
         
     }
 
@@ -37,11 +38,12 @@ class OrderHistoryController: UIViewController {
     private func setupUI(){
 //        tableView.delegate = self
 //        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
     }
     
     private func loadOrder(){
-        downloadItems(MUser.currentUser()!.purchasedItemIds) { (allOrder) in
-            self.orderArray = allOrder
+        downloadOrderItems(MUser.currentUser()!.purchasedItemIds) { (allOrder) in
+            self.orderedItems = allOrder
             self.tableView.reloadData()
         }
     }

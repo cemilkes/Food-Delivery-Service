@@ -223,6 +223,7 @@
                     <navigationItem key="navigationItem" title="My Order" id="Tjd-OD-0Ud"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="basketTotalSummaryView" destination="qwh-fW-xGY" id="dNe-Kc-5dT"/>
                         <outlet property="continueButtonOutlet" destination="uJv-cb-MFu" id="pZ1-X5-DG7"/>
                         <outlet property="continueView" destination="el3-JO-rSd" id="VU3-O3-4dr"/>
                         <outlet property="deliveryFeeLabel" destination="eWL-hp-pNc" id="hIM-7c-HTs"/>

@@ -10,6 +10,9 @@ import UIKit
 
 class OrderHistoryCell: UITableViewCell {
 
+    @IBOutlet weak var orderDateAndTotalAmountLabel: UILabel!
+    @IBOutlet weak var orderItemsDetailLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +23,14 @@ class OrderHistoryCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func generateCell(orderItem: OrderItem){
+        
+        orderDateAndTotalAmountLabel.text = orderItem.id
+        orderItemsDetailLabel.text = orderItem.ownerId
+        
+        
+    }
+    
 
 }
