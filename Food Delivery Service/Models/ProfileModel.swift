@@ -15,5 +15,3 @@ struct ProfileModel {
     var title: String!
 
 }
-
-
