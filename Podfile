@@ -10,6 +10,7 @@ target 'Food Delivery Service' do
   pod 'NVActivityIndicatorView'
   pod 'Gallery'
   pod 'BulletinBoard'
+  pod 'AlgoliaSearchClient', '~> 8.0'
 
   # Firebase Authentication and Cloud Firestore
   pod 'Firebase/Auth'

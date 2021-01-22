@@ -10,7 +10,9 @@ import Foundation
 
 //IDs and Keys
 public let kFILEREFERENCE = "gs://banh-thai.appspot.com/"
-
+public let kALGOLIA_APP_ID = "DA74EERBUJ"
+public let KALGOLIA_SEARCH_KEY = "5f8f52310a798c8b0b868ca18d9d6030"
+public let kALGOLIA_ADMIN_KEY = "68ab998a41b0b7f366482f06f4badecb"
 //Firebase
 public let kUSER_PATH = "User"
 public let kCATEGORY_PATH = "Category"
