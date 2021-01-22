@@ -12,7 +12,7 @@ class OrderHistoryCell: UITableViewCell {
 
     @IBOutlet weak var orderDateAndTotalAmountLabel: UILabel!
     @IBOutlet weak var orderItemsDetailLabel: UILabel!
-    
+    var item: Item?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,11 +26,41 @@ class OrderHistoryCell: UITableViewCell {
     
     func generateCell(orderItem: OrderItem){
         
-        orderDateAndTotalAmountLabel.text = orderItem.id
-        orderItemsDetailLabel.text = orderItem.ownerId
+        var arr = [String:Any]()
+        FirebaseReference(.Items).whereField(kOBJECTID, isEqualTo: orderItem.itemId!).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    arr = document.data()
+                    self.orderDateAndTotalAmountLabel.text = arr["name"] as! String
+                    self.orderItemsDetailLabel.text = arr["description"] as! String
+                   print(arr)
+                }
+            }
+        }
+        
+        
+        
+        
         
         
     }
-    
+    private func loadItemFrom(orderItems: OrderItem){
+        
+        FirebaseReference(.Items).document(orderItems.itemId).getDocument { (snapshot, error) in
+            guard let snapshot = snapshot else {
+                return
+            }
+            if snapshot.exists {
+                
+                print(self.item?.name)
+                print(self.item?.price)
+            }else {
+                
+            }
+        }
+        
+    }
 
 }

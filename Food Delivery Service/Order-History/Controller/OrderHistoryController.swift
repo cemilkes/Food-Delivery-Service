@@ -14,7 +14,7 @@ class OrderHistoryController: UIViewController {
     //var profileArray = [ProfileModel]()
     //var orderArray = [Any]()
     var orderedItems: [OrderItem] = []
-
+    var item: Item?
     override func viewDidLoad() {
         super.viewDidLoad()
         //print("Order History Controller Loaded")
@@ -41,9 +41,27 @@ class OrderHistoryController: UIViewController {
         tableView.tableFooterView = UIView()
     }
     
+    private func loadItemFrom(orderItems: OrderItem){
+        
+        item?.id = orderItems.itemId
+        FirebaseReference(.Items).document((item?.id)!).getDocument { (snapshot, error) in
+            guard let snapshot = snapshot else {
+                return
+            }
+            if snapshot.exists {
+                print(self.item?.name)
+                print(self.item?.price)
+            }else {
+                
+            }
+        }
+        
+    }
+    
     private func loadOrder(){
         downloadOrderItems(MUser.currentUser()!.purchasedItemIds) { (allOrder) in
             self.orderedItems = allOrder
+            
             self.tableView.reloadData()
         }
     }
