@@ -7,17 +7,19 @@
 //
 
 import Foundation
-import InstantSearchClient
+import AlgoliaSearchClient
 
 class AlgoliaService{
     
     static let shared = AlgoliaService()
     
-    let client = SearchClient(
-    
+    let client = SearchClient(appID: "", apiKey: "")
+        
+    lazy var index = client.index(withName: "Item_Name")
+        
     private init(){}
     
     
-    
+
 }
 

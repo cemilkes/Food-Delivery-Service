@@ -87,3 +87,26 @@ func downloadItems(_ withIds: [String], completion: @escaping(_ itemArray: [Item
         completion(itemArray)
     }
 }
+
+func saveItemToAlgolia(item: Item){
+    
+    let index = AlgoliaService.shared.index
+    
+    let itemToSave = itemDictionaryFrom(item) as! [String:Any]
+    
+//    index.saveObject(itemToSave, withID: item.id, requestOptions: nil) { (error) in
+//        
+//        
+//        if error != nil {
+//            print("error saving to algolia", error!.localizedDescription)
+//        } else {
+//            print("added to algolia")
+//        }
+//    }
+}
+
+func searchAlgolia(searchString: String, completion: @escaping (_ itemArray: [String]) -> Void){
+    
+    
+    
+}
