@@ -19,36 +19,46 @@ class CardInfoController: UIViewController {
         super.viewDidLoad()
 
         
-        
+        paymentCardTextfield.delegate = self
         paymentCardTextfield.center = self.view.center
-//        let customView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
-//            customView.backgroundColor = UIColor.clear
-//        customView.addSubview(paymentCardTextfield)
-//        paymentCardTextfield.inputAccessoryView = customView
-//
+
         view.addSubview(paymentCardTextfield)
         paymentCardTextfield.becomeFirstResponder()
+              
+    }
+
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        processCard()
+    }
+    private func processCard(){
         
+        let cardParams = STPCardParams()
+        cardParams.number = paymentCardTextfield.cardNumber
+        cardParams.expMonth = UInt(paymentCardTextfield.expirationMonth)
+        cardParams.expYear = UInt(paymentCardTextfield.expirationYear)
+        cardParams.cvc = paymentCardTextfield.cvc
         
-        //paymentCardTextfield.translatesAutoresizingMaskIntoConstraints = true
+        STPAPIClient.shared.createToken(withCard: cardParams) { (token, error) in
+            if error == nil{
+                print("Token is: ", token!)
+            }else{
+                print("Error on processing card token", error!.localizedDescription)
+            }
+        }
         
-        //view.addConstraints([NSLayoutConstraint(item: paymentCardTextfield, attribute: .top, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 30)])
-        
-        //view.addConstraints([NSLayoutConstraint(item: paymentCardTextfield, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: -20)])
-        //view.addConstraints([NSLayoutConstraint(item: paymentCardTextfield, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 20)])
-        
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+}
+extension CardInfoController: STPPaymentCardTextFieldDelegate{
+    
+    func paymentCardTextFieldDidChange(_ textField: STPPaymentCardTextField) {
+        
+        if textField.isValid {
+            print("Valid info")
+        }
+        
     }
-    */
-
+    
+    
 }

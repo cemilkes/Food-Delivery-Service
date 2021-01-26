@@ -244,13 +244,31 @@
                     <view key="view" contentMode="scaleToFill" id="Mk1-rs-eUY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaR-L8-c9h">
+                                <rect key="frame" x="59" y="77" width="256" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="h1C-4L-hhj"/>
+                                    <constraint firstAttribute="height" constant="30" id="iij-Ye-6D5"/>
+                                </constraints>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="nYF-Eb-6h4" eventType="touchUpInside" id="mrd-FK-VhE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gcb-03-Gyw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gcb-03-Gyw" firstAttribute="trailing" secondItem="gaR-L8-c9h" secondAttribute="trailing" constant="60" id="RXs-OZ-exK"/>
+                            <constraint firstItem="gaR-L8-c9h" firstAttribute="leading" secondItem="gcb-03-Gyw" secondAttribute="leading" constant="59" id="hn5-kp-pAX"/>
+                            <constraint firstItem="gaR-L8-c9h" firstAttribute="top" secondItem="gcb-03-Gyw" secondAttribute="top" constant="33" id="tZw-9b-9aF"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IeG-Wf-cD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2110" y="375"/>
+            <point key="canvasLocation" x="2109.5999999999999" y="374.6305418719212"/>
         </scene>
         <!--Checkout-->
         <scene sceneID="OOg-vw-Iiy">
