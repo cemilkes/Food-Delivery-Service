@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseCore
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,8 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("open auth")
         }
 
+        initializeStripePayment()
+        
+        
         return true
     }
+    
     func NextViewController(storybordid:String, storyboardName: String)
     {
         
@@ -37,6 +42,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = exampleVC
         window?.makeKeyAndVisible()
     }
+    
+    func initializeStripePayment(){
+        STPPaymentConfiguration.shared.publishableKey = Constats.publishableKey
+
+    }
+    
+    
     // MARK: UISceneSession Lifecycle
 
 //    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

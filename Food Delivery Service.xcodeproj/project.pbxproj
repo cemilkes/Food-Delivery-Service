@@ -28,6 +28,7 @@
 		257AE13025310651007318B1 /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE12F25310651007318B1 /* OrderController.swift */; };
 		257AE13625316843007318B1 /* OrderController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE13525316843007318B1 /* OrderController+TableView.swift */; };
 		257AE1782531729B007318B1 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE1772531729B007318B1 /* OrderCell.swift */; };
+		257E8FF025BFC44100A981C3 /* StripeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257E8FEF25BFC44100A981C3 /* StripeClient.swift */; };
 		2581801B253BAA3C007AAE14 /* ItemDetail+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581801A253BAA3C007AAE14 /* ItemDetail+UITableView.swift */; };
 		25818023253DEE88007AAE14 /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25818022253DEE88007AAE14 /* MUser.swift */; };
 		25818028253F34A9007AAE14 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25818027253F34A9007AAE14 /* ForgotPasswordController.swift */; };
@@ -120,6 +121,7 @@
 		257AE12F25310651007318B1 /* OrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
 		257AE13525316843007318B1 /* OrderController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderController+TableView.swift"; sourceTree = "<group>"; };
 		257AE1772531729B007318B1 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		257E8FEF25BFC44100A981C3 /* StripeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeClient.swift; sourceTree = "<group>"; };
 		2581801A253BAA3C007AAE14 /* ItemDetail+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemDetail+UITableView.swift"; sourceTree = "<group>"; };
 		25818022253DEE88007AAE14 /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
 		25818027253F34A9007AAE14 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				25363EA825B668E5008B7C18 /* Order.swift */,
 				25363EB025B66920008B7C18 /* ProfileModel.swift */,
 				25C382DE25BAA55C004281D3 /* AlgoliaService.swift */,
+				257E8FEF25BFC44100A981C3 /* StripeClient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -866,6 +869,7 @@
 				2573ECC9259AEB5F000144CB /* FavouriteController.swift in Sources */,
 				2592815924F2283100D96B2D /* WelcomeController.swift in Sources */,
 				83C4CAB324E8AEAC000841D2 /* AppDelegate.swift in Sources */,
+				257E8FF025BFC44100A981C3 /* StripeClient.swift in Sources */,
 				25818023253DEE88007AAE14 /* MUser.swift in Sources */,
 				25A806E024EE1F32004E99C2 /* MenuCell.swift in Sources */,
 				2592815B24F2286100D96B2D /* BTLabel.swift in Sources */,
