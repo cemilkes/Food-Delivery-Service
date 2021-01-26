@@ -176,6 +176,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="ContinueButtonPressed:" destination="tSW-vB-fPl" eventType="touchUpInside" id="5Ar-sV-rX8"/>
+                                                    <segue destination="tqD-rI-krS" kind="show" identifier="checkoutSegue" id="gXM-Aj-IKy"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -235,6 +236,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5k5-D3-l0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="645.60000000000002" y="131.52709359605913"/>
+        </scene>
+        <!--Card Info Controller-->
+        <scene sceneID="wPJ-oy-zDA">
+            <objects>
+                <viewController storyboardIdentifier="CardInfoController" id="nYF-Eb-6h4" customClass="CardInfoController" customModule="Food_Delivery_Service" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mk1-rs-eUY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gcb-03-Gyw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IeG-Wf-cD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2110" y="375"/>
+        </scene>
+        <!--Checkout-->
+        <scene sceneID="OOg-vw-Iiy">
+            <objects>
+                <viewController storyboardIdentifier="CheckOutController" id="tqD-rI-krS" customClass="CheckOutController" customModule="Food_Delivery_Service" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bjl-K9-0fb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YyM-kf-YWq">
+                                <rect key="frame" x="8" y="685" width="359" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ie5-gk-FYz">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.54901960780000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <state key="normal" title="Complete Payment">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ContinueButtonPressed:" destination="tSW-vB-fPl" eventType="touchUpInside" id="9jS-os-Zd7"/>
+                                            <action selector="checkoutButtonPressed:" destination="tqD-rI-krS" eventType="touchUpInside" id="YwH-xf-i99"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.54901960780000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6nh-GJ-dDg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Checkout" id="Ode-Nj-SVN"/>
+                    <connections>
+                        <outlet property="checkoutButtonOutlet" destination="ie5-gk-FYz" id="uWt-gf-ZmF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qqu-Ba-l8O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1405.5999999999999" y="375.36945812807886"/>
         </scene>
         <!--Order Item Detail Controller-->
         <scene sceneID="8o1-c8-IZO">
@@ -320,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CbR-c6-Tyj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1388" y="131.52709359605913"/>
+            <point key="canvasLocation" x="1407" y="-284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Be-88-8mh">

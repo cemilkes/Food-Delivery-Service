@@ -67,6 +67,7 @@ struct Storyboard {
     static let authentication = "Authentication"
     static let menu = "Menu"
     static let settings = "Settings"
+    static let order = "MyOrder"
 }
 
 // Controllers

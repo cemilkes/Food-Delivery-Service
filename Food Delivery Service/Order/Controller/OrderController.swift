@@ -8,6 +8,7 @@
 
 import UIKit
 import JGProgressHUD
+import Stripe
 
 class OrderController: UIViewController {
 
@@ -25,6 +26,9 @@ class OrderController: UIViewController {
     var purchasedItemIds : [String] = []
     var tax: Double = 0
     var deliveryFee: Double = 0
+    
+    var totalPrice = 0.0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,17 +103,7 @@ class OrderController: UIViewController {
         return convertToCurrency(totalPrice)
         
     }
-    
-    /*
-     private func updateTotalItemLabel(_ isEmpty: Bool){
-     if isEmpty{
-     // totalItemLabel.text = "0"
-     }else{
-     //totalItemLabel.text = "\(allItems.count)"
-     }
-     }
-     */
-    
+
     private func checkoutButtonStatusUpdate(){
         
         continueButtonOutlet.isEnabled = allItems.count > 0
@@ -139,10 +133,11 @@ class OrderController: UIViewController {
     @IBAction func ContinueButtonPressed(_ sender: UIButton) {
         if MUser.currentUser()  != nil {
             // proceed to purchase
-            temp()
-            addItemsToPurchaseHistory(self.purchasedItemIds)
-            emptyBasket()
-            basketTotalSummaryView.isHidden = true
+//            temp()
+//            addItemsToPurchaseHistory(self.purchasedItemIds)
+//            emptyBasket()
+//            basketTotalSummaryView.isHidden = true
+            showPaymentOptions()
         }else{
              // hud - complete registiration- error
             print("Error")
@@ -182,6 +177,49 @@ class OrderController: UIViewController {
             purchasedItemIds.append(orderItem.id)
         }
     }
+    
+    private func completePayment(token: STPToken){
+        
+        self.totalPrice = 0.0
+        for orderItem in allItems {
+            purchasedItemIds.append(orderItem.id)
+            self.totalPrice = orderItem.totalAmount
+        }
+        self.totalPrice = totalPrice * 100.0
+        StripeClient.shared.createAndConfirmPayment(token, amount: totalPrice) { (error) in
+            if error == nil{
+                self.emptyBasket()
+                self.addItemsToPurchaseHistory(self.purchasedItemIds)
+                showHUDSuccessMessage(text: "Payment Successful", hud: self.hud, view: self.view)
+            }else{
+                print("Error", error!.localizedDescription)
+                showHUDErrorMessage(text: error!.localizedDescription, hud: self.hud, view: self.view)
+            }
+        }
+    }
+    
+    private func showPaymentOptions(){
+        
+        let alertController = UIAlertController(title: "Payment Options", message: "Choose Prefered Payment Option", preferredStyle: .actionSheet)
+        
+        let cardAction = UIAlertAction(title: "Pay with Card", style: .default) { (action) in
+            
+            //show card number view
+            let vc = UIStoryboard.init(name: Storyboard.order, bundle: nil).instantiateViewController(identifier: "CardInfoController") as! CardInfoController
+            self.present(vc, animated: true, completion: nil)
+            
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alertController.addAction(cardAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    
+    
     
     
     func showItemView(withItem: OrderItem) {
