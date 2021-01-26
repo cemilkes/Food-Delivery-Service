@@ -157,35 +157,35 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wlu-ib-GsK">
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wxt-NW-G5D">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wxt-NW-G5D">
                                 <rect key="frame" x="16" y="132" width="382" height="250"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LFl-XZ-29V" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="37"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="43.5"/>
                                         <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tGZ-OY-QhL" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="53" width="382" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="51.5" width="382" height="43.5"/>
                                         <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bn-zd-W4p" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="106.5" width="382" height="37"/>
+                                        <rect key="frame" x="0.0" y="103" width="382" height="44"/>
                                         <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iyb-0i-Hhv" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="159.5" width="382" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="155" width="382" height="43.5"/>
                                         <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BoP-UZ-I70" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="213" width="382" height="37"/>
+                                        <rect key="frame" x="0.0" y="206.5" width="382" height="43.5"/>
                                         <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>

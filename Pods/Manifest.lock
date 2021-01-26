@@ -212,6 +212,7 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - Alamofire (5.4.1)
   - AlgoliaSearchClient (8.5.0):
     - Logging
   - BoringSSL-GRPC (0.0.7):
@@ -345,8 +346,12 @@ PODS:
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
   - PromisesObjC (1.2.10)
+  - Stripe (21.2.0):
+    - Stripe/Stripe3DS2 (= 21.2.0)
+  - Stripe/Stripe3DS2 (21.2.0)
 
 DEPENDENCIES:
+  - Alamofire
   - AlgoliaSearchClient (~> 8.0)
   - BulletinBoard
   - Firebase/Analytics
@@ -356,10 +361,12 @@ DEPENDENCIES:
   - Gallery
   - JGProgressHUD
   - NVActivityIndicatorView
+  - Stripe
 
 SPEC REPOS:
   trunk:
     - abseil
+    - Alamofire
     - AlgoliaSearchClient
     - BoringSSL-GRPC
     - BulletinBoard
@@ -384,9 +391,11 @@ SPEC REPOS:
     - nanopb
     - NVActivityIndicatorView
     - PromisesObjC
+    - Stripe
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AlgoliaSearchClient: 4ab6f997ae3a902f7170411d7e385c6f36bbafc6
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   BulletinBoard: dba77053c2a7b64953f63073f7534165af2edd21
@@ -411,7 +420,8 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  Stripe: 37f742a4815882db4454188664a3aa61793a12b1
 
-PODFILE CHECKSUM: b59cd42f57b5a176cf11cf1747f8066d7ef8c279
+PODFILE CHECKSUM: 55d40dc077635b9430be680bc110970cea4d1a34
 
 COCOAPODS: 1.9.3
