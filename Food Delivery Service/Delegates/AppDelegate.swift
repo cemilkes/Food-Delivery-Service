@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func initializeStripePayment(){
         STPPaymentConfiguration.shared.publishableKey = Constats.publishableKey
-
+        StripeClient.shared.baseURLString = Constats.baseURLString
     }
     
     

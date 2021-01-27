@@ -30,27 +30,27 @@ class StripeClient{
         let url = self.baseURL.appendingPathComponent("charge")
         
         let params: [String: Any] = [
-            "stripeTokem": token.tokenId,
-            "amount": amount,
             "description": Constats.defaultDescription,
-            "currency": Constats.defaultCurrency
+            "amount": Int(amount),
+            "currency": Constats.defaultCurrency,
+            "stripeToken": token.tokenId
         ]
-    
+        
+        
+        
         AF.request(url, method: .post, parameters: params).validate(statusCode: 200..<300).responseData{
             (response) in
             switch response.result{
             case .success( _):
                 print("payment successfull")
+               // print(params)
                 completion(nil)
             case .failure(let error):
+                print("ERRRROOOOOOOOOOOOR")
                 print("Error occured", error.localizedDescription)
                 completion(error)
             }
         }
-        
-        
-        
-        
     }
     
     

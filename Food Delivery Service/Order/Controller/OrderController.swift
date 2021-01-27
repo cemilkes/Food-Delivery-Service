@@ -192,7 +192,7 @@ class OrderController: UIViewController {
                 self.addItemsToPurchaseHistory(self.purchasedItemIds)
                 showHUDSuccessMessage(text: "Payment Successful", hud: self.hud, view: self.view)
             }else{
-                print("Error", error!.localizedDescription)
+                //print("Error", error!.localizedDescription)
                 showHUDErrorMessage(text: error!.localizedDescription, hud: self.hud, view: self.view)
             }
         }
@@ -206,6 +206,7 @@ class OrderController: UIViewController {
             
             //show card number view
             let vc = UIStoryboard.init(name: Storyboard.order, bundle: nil).instantiateViewController(identifier: "CardInfoController") as! CardInfoController
+            vc.delegate = self
             self.present(vc, animated: true, completion: nil)
             
         }
@@ -217,18 +218,26 @@ class OrderController: UIViewController {
         
         present(alertController, animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
+
     func showItemView(withItem: OrderItem) {
 //        let itemVC = UIStoryboard.init(name: Storyboard.menu, bundle: nil).instantiateViewController(identifier: ViewController.itemDetailController) as! ItemDetailController
 //        itemVC.quantity = withItem.quantity
 //        present(itemVC, animated: true, completion: nil)
 //        itemVC.modalPresentationStyle = .formSheet
-        
     }
+}
+
+extension OrderController: CardInfoControllerDelegate {
+    func didClickDone(_ token: STPToken) {
+        completePayment(token: token)
+        print("TEST------------------------------------")
+    }
+    
+    func didClickCancel() {
+        showHUDErrorMessage(text: "Payment Canceled", hud: self.hud, view: self.view)
+    }
+    
+    
     
     
 }
