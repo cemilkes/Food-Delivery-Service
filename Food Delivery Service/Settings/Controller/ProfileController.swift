@@ -30,13 +30,22 @@ class ProfileController: UIViewController {
         updateBarButtonItemOutlet.isEnabled = false
         setupTextFieldDidChange()
         
+        addressTextField.addTarget(self, action: #selector(addressTextFieldPressed), for: .touchDown)
+        
     }
+    
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
        // loadUserInfo()
     }
     
+    @objc func addressTextFieldPressed() {
+        let itemVC = UIStoryboard.init(name: Storyboard.settings, bundle: nil).instantiateViewController(identifier: ViewController.addressController) as! AddressController
+        //itemVC.item = item
+        itemVC.modalPresentationStyle = .fullScreen
+        present(itemVC, animated: true, completion: nil)
+    }
     
     private func setupTextFieldDidChange(){
         emailTextField.isUserInteractionEnabled = false

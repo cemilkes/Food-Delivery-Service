@@ -82,6 +82,7 @@ struct ViewController {
     static let itemController       = "ItemsController"
     static let itemDetailController = "ItemDetailController"
     static let profileController = "ProfileController"
+    static let addressController = "AddressController"
 }
 
 struct PerformSegue {

@@ -19,6 +19,9 @@
 		253C4B98251EB10300135ADC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253C4B97251EB10300135ADC /* Item.swift */; };
 		253E27EA25A810DA009DB7AE /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E27E925A810DA009DB7AE /* ProfileController.swift */; };
 		254B463925C3C56F003B8070 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B463825C3C56F003B8070 /* LocationManager.swift */; };
+		254B464425C3CFCE003B8070 /* AddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B464325C3CFCE003B8070 /* AddressController.swift */; };
+		254B464D25C3D13E003B8070 /* AddressController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B464C25C3D13E003B8070 /* AddressController+TableView.swift */; };
+		254B465225C3D14E003B8070 /* AddressController+SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B465125C3D14E003B8070 /* AddressController+SearchView.swift */; };
 		25578BDD2596F55F0004D00D /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25578BDC2596F55F0004D00D /* OrderItem.swift */; };
 		2560AB2D24F710A000844F29 /* BTTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560AB2C24F710A000844F29 /* BTTextfield.swift */; };
 		2560AB2F24F7114C00844F29 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560AB2E24F7114C00844F29 /* LoginController.swift */; };
@@ -115,6 +118,9 @@
 		253C4B97251EB10300135ADC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		253E27E925A810DA009DB7AE /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		254B463825C3C56F003B8070 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		254B464325C3CFCE003B8070 /* AddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressController.swift; sourceTree = "<group>"; };
+		254B464C25C3D13E003B8070 /* AddressController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressController+TableView.swift"; sourceTree = "<group>"; };
+		254B465125C3D14E003B8070 /* AddressController+SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressController+SearchView.swift"; sourceTree = "<group>"; };
 		25578BDC2596F55F0004D00D /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		2560AB2C24F710A000844F29 /* BTTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTTextfield.swift; sourceTree = "<group>"; };
 		2560AB2E24F7114C00844F29 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -490,6 +496,7 @@
 			children = (
 				83B22EB02548D146005806DC /* SettingsController.swift */,
 				253E27E925A810DA009DB7AE /* ProfileController.swift */,
+				254B464325C3CFCE003B8070 /* AddressController.swift */,
 				83B22EB92548D173005806DC /* Extensions */,
 			);
 			path = Controller;
@@ -516,6 +523,8 @@
 			isa = PBXGroup;
 			children = (
 				83B22F102548E21C005806DC /* SettingsController+TableView.swift */,
+				254B464C25C3D13E003B8070 /* AddressController+TableView.swift */,
+				254B465125C3D14E003B8070 /* AddressController+SearchView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -863,6 +872,7 @@
 				25A806F224EF758E004E99C2 /* FirebaseCollectionReference.swift in Sources */,
 				8379BAEE24EB7E8400EE8EB9 /* Color.swift in Sources */,
 				83B22F472548E2E2005806DC /* SettingsCell.swift in Sources */,
+				254B464425C3CFCE003B8070 /* AddressController.swift in Sources */,
 				83FDDD1D2548EAEC00E134C2 /* TabbarController.swift in Sources */,
 				2581CACE259D86FD000EB7D9 /* ContainerController.swift in Sources */,
 				8379BAF024EB7E9000EE8EB9 /* Font.swift in Sources */,
@@ -879,9 +889,11 @@
 				25C382DF25BAA55C004281D3 /* AlgoliaService.swift in Sources */,
 				25EA529825073B7800A877EB /* SignUpController.swift in Sources */,
 				2573ECC9259AEB5F000144CB /* FavouriteController.swift in Sources */,
+				254B464D25C3D13E003B8070 /* AddressController+TableView.swift in Sources */,
 				2592815924F2283100D96B2D /* WelcomeController.swift in Sources */,
 				83C4CAB324E8AEAC000841D2 /* AppDelegate.swift in Sources */,
 				257E8FF025BFC44100A981C3 /* StripeClient.swift in Sources */,
+				254B465225C3D14E003B8070 /* AddressController+SearchView.swift in Sources */,
 				25818023253DEE88007AAE14 /* MUser.swift in Sources */,
 				25A806E024EE1F32004E99C2 /* MenuCell.swift in Sources */,
 				2592815B24F2286100D96B2D /* BTLabel.swift in Sources */,
