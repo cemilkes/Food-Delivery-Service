@@ -12,7 +12,7 @@ import Foundation
 enum Constats {
     
     static let publishableKey = "pk_test_51ICrbdL2PsSwsfWNpBYReAZR8AkkRQOIApydC6SqCR784MkOuzy4gA9InLP8fYBczocBvSzjpAzfDRjLPyl1bINY00TXMb9d32"
-    static let baseURLString = "http://localhost:3000/"
+    static let baseURLString = "https://banh-thai.herokuapp.com/" //"http://localhost:3000/"
     static let defaultCurrency = "usd"
     static let defaultDescription = "Purchase from Banh Thai"
     

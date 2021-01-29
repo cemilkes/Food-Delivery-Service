@@ -6,16 +6,21 @@ var stripe = require('stripe')('sk_test_51ICrbdL2PsSwsfWNWiODEnjIsY5JCp3Vn1WFsas
 
 const app = express()
 
+app.set('port', (process.env.PORT || 5000));
+app.use(express.static(__dirname + '/public'));
+
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
 	extended: true
 }))
 
-
 app.get('/', function(req, res) {
 	res.send('Hello iOSDevSchool')
 })
-
 
 app.post('/charge', (req, res) => {
 
@@ -26,23 +31,26 @@ app.post('/charge', (req, res) => {
 
   console.log(req.body)
 
-  // stripe.charges.create({
-  //   source: token,
-  //   amount: amount,
-  //   currency: currency,
-  //   description: description
+  stripe.charges.create({
+    source: token,
+    amount: amount,
+    currency: currency,
+    description: description
 
-  // }, function(err, charge) {
-  //   if(err) {
-  //     console.log(err, req.body)
-  //     res.status(500).end()
-  //   } else {
-  //     console.log('success')
-  //     res.status(200).send()
-  //   }
-  // })
+  }, function(err, charge) {
+    if(err) {
+      console.log(err, req.body)
+      res.status(500).end()
+    } else {
+      console.log('success')
+      res.status(200).send()
+    }
+  })
 
 });
 
-app.listen(3000, () => { console.log('Local host running on port 3000') })
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+})
+//app.listen(3000, () => { console.log('Local host running on port 3000') })
 
