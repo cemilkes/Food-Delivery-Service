@@ -7,28 +7,40 @@
 //
 
 import UIKit
+import MapKit
+
+protocol AddressControllerDelegate: class {
+    
+    func addressChanged(address:String?)
+    
+}
+
 
 class AddressController: UIViewController {
 
-    let searchController: UISearchController = {
-
-        let searchController = UISearchController(searchResultsController: nil)
-
-        searchController.searchBar.placeholder = "New Search"
-        searchController.searchBar.searchBarStyle = .minimal
-        //searchController.dismiss = false
-        searchController.definesPresentationContext = true
-
-       return searchController
-    }()
+    weak var addressDelegate: AddressControllerDelegate?
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
+    
+    // Create a seach completer object
+    var searchCompleter = MKLocalSearchCompleter()
+    
+    // These are the results that are returned from the searchCompleter & what we are displaying
+    // on the searchResultsTable
+    var searchResults = [MKLocalSearchCompletion]()
+    var userAddress: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.searchController = UISearchController(searchResultsController: nil)
-        searchController.hidesNavigationBarDuringPresentation = true
-        navigationController?.navigationBar.prefersLargeTitles = true
-        //navigationController!.navigationBar.sizeToFit()
-        // Do any additional setup after loading the view.
+        configUI()
+    }
+    
+    private func configUI(){
+        tableView.delegate = self
+        tableView.dataSource = self
+        searchCompleter.delegate = self
+        searchBar?.delegate = self
     }
     
 

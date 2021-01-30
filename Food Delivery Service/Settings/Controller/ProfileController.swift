@@ -9,8 +9,8 @@
 import UIKit
 import JGProgressHUD
 
-class ProfileController: UIViewController {
-
+class ProfileController: UIViewController, AddressControllerDelegate {
+    
     @IBOutlet weak var userNameTextField: BTTextfield!
     @IBOutlet weak var emailTextField: BTTextfield!
     @IBOutlet weak var phoneNumberTextField: BTTextfield!
@@ -33,11 +33,23 @@ class ProfileController: UIViewController {
         addressTextField.addTarget(self, action: #selector(addressTextFieldPressed), for: .touchDown)
         
     }
-    
+        
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
        // loadUserInfo()
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let addressController = segue.destination as? AddressController {
+                addressController.userAddress = addressTextField.text
+                addressController.delegate = self
+            }
+        }
+    
+    func addressChanged(address: String?) {
+        addressTextField.text = address
     }
     
     @objc func addressTextFieldPressed() {

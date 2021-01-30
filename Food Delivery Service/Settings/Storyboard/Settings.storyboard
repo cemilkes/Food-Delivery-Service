@@ -249,16 +249,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMJ-jX-Jk0">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="eBi-e2-C5X"/>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g8d-Fa-rNa">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c07-Ms-pO4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="93z-nQ-OPG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -266,17 +265,18 @@
                             <constraint firstItem="g8d-Fa-rNa" firstAttribute="leading" secondItem="93z-nQ-OPG" secondAttribute="leading" id="1qb-Kn-TGz"/>
                             <constraint firstItem="g8d-Fa-rNa" firstAttribute="top" secondItem="93z-nQ-OPG" secondAttribute="top" constant="44" id="5zZ-mA-2aq"/>
                             <constraint firstItem="g8d-Fa-rNa" firstAttribute="bottom" secondItem="93z-nQ-OPG" secondAttribute="bottom" id="6nO-5v-XkC"/>
-                            <constraint firstItem="kMJ-jX-Jk0" firstAttribute="trailing" secondItem="g8d-Fa-rNa" secondAttribute="trailing" id="9E2-Bx-6FM"/>
-                            <constraint firstItem="kMJ-jX-Jk0" firstAttribute="top" secondItem="93z-nQ-OPG" secondAttribute="top" id="CMv-Nd-K0t"/>
                             <constraint firstItem="g8d-Fa-rNa" firstAttribute="trailing" secondItem="93z-nQ-OPG" secondAttribute="trailing" id="TOR-u3-hqJ"/>
-                            <constraint firstItem="kMJ-jX-Jk0" firstAttribute="leading" secondItem="g8d-Fa-rNa" secondAttribute="leading" id="ct6-3R-lM7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Address" id="zoO-gU-Dl4"/>
+                    <connections>
+                        <outlet property="searchBar" destination="c07-Ms-pO4" id="uBy-iu-ubP"/>
+                        <outlet property="tableView" destination="g8d-Fa-rNa" id="A1z-CO-p6d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSf-f4-Rqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3047.826086956522" y="124.55357142857142"/>
+            <point key="canvasLocation" x="2339" y="126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sLb-Rj-qub">

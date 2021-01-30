@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DA754F5B991D29737382A6E /* Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9328759E54A6B88C8499A2 /* Pods_Food_Delivery_Service_Food_Delivery_ServiceUITests.framework */; };
+		252AD7A625C51294002689C0 /* AddressController+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252AD7A525C51294002689C0 /* AddressController+MapKit.swift */; };
 		25361BA425955934003EF914 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25361BA325955934003EF914 /* Reachability.swift */; };
 		25361BC625955A3B003EF914 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25361BC525955A3B003EF914 /* Downloader.swift */; };
 		25361BEA2596AACE003EF914 /* AddItemController+Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25361BE92596AACE003EF914 /* AddItemController+Gallery.swift */; };
@@ -107,6 +108,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		252AD7A525C51294002689C0 /* AddressController+MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressController+MapKit.swift"; sourceTree = "<group>"; };
 		25361BA325955934003EF914 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		25361BC525955A3B003EF914 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		25361BE92596AACE003EF914 /* AddItemController+Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddItemController+Gallery.swift"; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 				83B22F102548E21C005806DC /* SettingsController+TableView.swift */,
 				254B464C25C3D13E003B8070 /* AddressController+TableView.swift */,
 				254B465125C3D14E003B8070 /* AddressController+SearchView.swift */,
+				252AD7A525C51294002689C0 /* AddressController+MapKit.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -881,6 +884,7 @@
 				25A806DE24EE1F1A004E99C2 /* Constants.swift in Sources */,
 				2581CAC9259D86DB000EB7D9 /* OrderHistoryController.swift in Sources */,
 				25D9B84A252B778400B13C22 /* CurrencyTextField.swift in Sources */,
+				252AD7A625C51294002689C0 /* AddressController+MapKit.swift in Sources */,
 				257AE0EC252CCDC6007318B1 /* ItemDetailController.swift in Sources */,
 				2581CADA259D8DAF000EB7D9 /* OrderHistory+TableView.swift in Sources */,
 				25363EA925B668E5008B7C18 /* Order.swift in Sources */,

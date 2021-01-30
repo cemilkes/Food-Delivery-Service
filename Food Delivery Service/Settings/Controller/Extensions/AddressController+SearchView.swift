@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import UIKit
+
+extension AddressController: UISearchBarDelegate{
+    
+    // This method declares that whenever the text in the searchbar is change to also update
+    // the query that the searchCompleter will search based off of
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchCompleter.queryFragment = searchText
+    }
+    
+    
+    
+}
