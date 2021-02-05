@@ -44,7 +44,7 @@ class ProfileController: UIViewController, AddressControllerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let addressController = segue.destination as? AddressController {
                 addressController.userAddress = addressTextField.text
-                addressController.delegate = self
+               // addressController.delegate = self
             }
         }
     

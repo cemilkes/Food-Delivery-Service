@@ -32,7 +32,6 @@ class MenuController: UIViewController, CLLocationManagerDelegate {
         locationManager.allowsBackgroundLocationUpdates = true
         locationManager.pausesLocationUpdatesAutomatically = false
 
-                
     }
 
     override func viewDidAppear(_ animated: Bool) {
