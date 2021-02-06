@@ -38,6 +38,7 @@ func orderItemDictionaryFrom(_ orderItem: OrderItem) -> NSDictionary {
 }
 
 func downloadOrderItems(_ withIds: [String], completion: @escaping(_ orderItemArray: [OrderItem]) -> Void){
+    print("Download order items")
     var count = 0
     var orderItemArray: [OrderItem] = []
     if withIds.count > 0 {
@@ -50,6 +51,7 @@ func downloadOrderItems(_ withIds: [String], completion: @escaping(_ orderItemAr
                 if snapshot.exists {
                     orderItemArray.append(OrderItem(_dictionary: snapshot.data()! as NSDictionary))
                     count = count + 1
+                    print("Download order items append")
                 }else {
                     completion(orderItemArray)
                 }

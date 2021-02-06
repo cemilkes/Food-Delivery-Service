@@ -138,14 +138,21 @@ class ProfileController: UIViewController, AddressControllerDelegate {
         MUser.logOutCurrentUser { (error) in
             if error == nil{
                 print("Log out")
-                self.navigationController?.popViewController(animated: true)
-                //openLoginView
+                //self.navigationController?.popViewController(animated: true)
+                self.openWelcomeView()
             }else{
                 print("Error occured \(String(describing: error?.localizedDescription))")
             }
         }
     }
 
+    private func openWelcomeView(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.welcomeController) as! WelcomeController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

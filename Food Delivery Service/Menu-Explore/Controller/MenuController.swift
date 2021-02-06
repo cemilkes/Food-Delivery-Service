@@ -21,7 +21,7 @@ class MenuController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadCategories()
         collectionView.delegate = self
         collectionView.dataSource = self
         

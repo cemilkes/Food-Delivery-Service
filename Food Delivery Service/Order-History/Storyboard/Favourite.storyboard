@@ -20,7 +20,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="fFc-1z-pqk">
-                        <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="SU1-i9-voS">
                             <rect key="frame" x="102" y="5.5" width="210" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -50,9 +49,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PAZ-fR-6Rc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PAZ-fR-6Rc">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderHistoryCell" rowHeight="96" id="t4b-ep-gdd" customClass="OrderHistoryCell" customModule="Food_Delivery_Service" customModuleProvider="target">
@@ -103,6 +101,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bT4-el-Ydq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PAZ-fR-6Rc" firstAttribute="leading" secondItem="bT4-el-Ydq" secondAttribute="leading" id="0Bx-OR-BYP"/>
+                            <constraint firstItem="PAZ-fR-6Rc" firstAttribute="trailing" secondItem="bT4-el-Ydq" secondAttribute="trailing" id="Ngp-XE-hBp"/>
+                            <constraint firstItem="PAZ-fR-6Rc" firstAttribute="top" secondItem="bT4-el-Ydq" secondAttribute="top" constant="44" id="XLc-Mh-5tL"/>
+                            <constraint firstItem="PAZ-fR-6Rc" firstAttribute="bottom" secondItem="bT4-el-Ydq" secondAttribute="bottom" id="zVS-0V-NmI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zGA-SU-NPs"/>
                     <connections>
@@ -121,9 +125,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X3H-eq-9fd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X3H-eq-9fd">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavouriteCell" rowHeight="90" id="1e0-p2-CMS">
@@ -143,6 +146,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A0f-IR-jkp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="X3H-eq-9fd" firstAttribute="top" secondItem="A0f-IR-jkp" secondAttribute="top" constant="44" id="H5L-qi-vWW"/>
+                            <constraint firstItem="X3H-eq-9fd" firstAttribute="leading" secondItem="A0f-IR-jkp" secondAttribute="leading" id="HAn-jM-i4B"/>
+                            <constraint firstItem="X3H-eq-9fd" firstAttribute="trailing" secondItem="A0f-IR-jkp" secondAttribute="trailing" id="lBi-gy-4ZQ"/>
+                            <constraint firstItem="X3H-eq-9fd" firstAttribute="bottom" secondItem="A0f-IR-jkp" secondAttribute="bottom" id="v3Z-k8-ZjU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fNa-A1-OBu"/>
                     <connections>
@@ -159,8 +168,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jwz-Bq-lxk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tabBarFavourite" id="mpf-vi-7Ak"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cjc-jh-WYN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="cjc-jh-WYN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

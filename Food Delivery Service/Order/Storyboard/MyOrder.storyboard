@@ -57,6 +57,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="ysh-KH-lKk" secondAttribute="bottom" constant="9" id="xZN-rr-AtP"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                         <connections>
                                             <outlet property="itemNameLabel" destination="ysh-KH-lKk" id="HpG-JL-X4E"/>
                                             <outlet property="itemPriceLabel" destination="pQw-7w-jEt" id="7oV-JV-09g"/>
@@ -403,8 +404,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RHr-mr-DxZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tabBarOrder" id="DUo-Ku-wBr"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q2s-YZ-KMi">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Q2s-YZ-KMi">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

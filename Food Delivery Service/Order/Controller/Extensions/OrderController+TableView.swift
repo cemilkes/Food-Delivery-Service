@@ -15,6 +15,14 @@ extension OrderController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print("allItem counts: ",allItems.count)
+        if allItems.count == 0 {
+            tableView.setEmptyView(title: "Cart Empty.", message: "Good food is always cooking! Go ahead, order some yummy items from the menu.")
+            basketTotalSummaryView.isHidden = true
+        }else{
+            tableView.restore()
+            basketTotalSummaryView.isHidden = false
+        }
+        
         return allItems.count
     }
     

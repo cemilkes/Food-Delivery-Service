@@ -32,6 +32,7 @@ class OrderController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         loadBasketFromFirestore()
         setupUI()
     }
@@ -39,9 +40,10 @@ class OrderController: UIViewController {
     private func setupUI(){
         tableView.delegate = self
         tableView.dataSource = self
-
+        tableView.tableFooterView = UIView()
         continueView.layer.cornerRadius = 8
         continueButtonOutlet.layer.cornerRadius = 8
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,12 +51,12 @@ class OrderController: UIViewController {
         
         if MUser.currentUser() != nil{
             loadBasketFromFirestore()
+            
         }else{
             self.updateTotalLabels(true)
+            
         }
         
-        
-        checkoutButtonStatusUpdate()
         // Check if the user is logged in
         
     }
@@ -76,9 +78,11 @@ class OrderController: UIViewController {
             downloadOrderItems(basket!.orderItemIds){ (allItems) in
                 self.allItems = allItems
                 self.updateTotalLabels(false)
+                self.tableView.reloadData()
+                self.checkoutButtonStatusUpdate()
             }
+            
         }
-        self.tableView.reloadData()
     }
     
     private func updateTotalLabels(_ isEmpty: Bool) {
@@ -99,6 +103,7 @@ class OrderController: UIViewController {
             totalPrice = totalPrice + orderItem.totalAmount
         }
         tax = Double(totalPrice * 9.25 / 100).rounded(toPlaces: 2)
+        //totalPrice = totalPrice + tax
         print(totalPrice)
         return convertToCurrency(totalPrice)
         
@@ -109,7 +114,7 @@ class OrderController: UIViewController {
         continueButtonOutlet.isEnabled = allItems.count > 0
         
         if continueButtonOutlet.isEnabled {
-            continueButtonOutlet.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+            continueButtonOutlet.backgroundColor = UIColor.orange
         }else{
             disableContinueButton()
         }

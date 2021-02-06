@@ -14,7 +14,7 @@ private let reuseIdentifier = "FavouriteCell"
 extension FavouriteController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if favouritesArray.count == 0 {
-            tableView.setEmptyView(title: "You don't have any favourite item yet.", message: "Your favourite items will be in here.")
+            tableView.setEmptyView(title: "You don't have any favourite item yet.", message: "You can add item to Favourites by adding favourite icon!")
         }else{
             tableView.restore()
         }

@@ -155,10 +155,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wlu-ib-GsK">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="44"/>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wxt-NW-G5D">
-                                <rect key="frame" x="16" y="132" width="382" height="250"/>
+                                <rect key="frame" x="16" y="184" width="382" height="250"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LFl-XZ-29V" customClass="BTTextfield" customModule="Food_Delivery_Service" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="43.5"/>
@@ -196,7 +196,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FS6-KM-VHb" customClass="BTButton" customModule="Food_Delivery_Service" customModuleProvider="target">
-                                <rect key="frame" x="16" y="433" width="382" height="44"/>
+                                <rect key="frame" x="16" y="485" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="kv2-3S-RUV"/>
                                 </constraints>
@@ -284,8 +284,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Hs-Rh-7bJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tabBarProfile" id="dBe-y9-BBL"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QLX-8S-cKo">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="QLX-8S-cKo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
