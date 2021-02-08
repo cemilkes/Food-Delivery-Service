@@ -56,22 +56,25 @@ extension MenuController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return sectionInsets
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-            
-            switch kind {
-            case UICollectionView.elementKindSectionHeader:
-                guard
-                    let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "MenuHeader", for: indexPath) as? MenuHeaderCollectionReusableView else {
-                        fatalError("Invalid view type")
-                }
-                
-                return headerView
-            default:
-                assert(false, "Invalid element type")
+        
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard
+                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "MenuHeader", for: indexPath) as? MenuHeaderCollectionReusableView else {
+                fatalError("Invalid view type")
             }
+            
+            return headerView
+        default:
+            assert(false, "Invalid element type")
         }
+        return UICollectionReusableView()
+    }
+ 
 }
