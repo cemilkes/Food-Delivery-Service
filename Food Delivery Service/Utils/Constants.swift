@@ -70,6 +70,7 @@ struct Storyboard {
     static let menu = "Menu"
     static let settings = "Settings"
     static let order = "MyOrder"
+    static let alert = "Alert"
 }
 
 // Controllers
@@ -85,6 +86,7 @@ struct ViewController {
     static let itemDetailController = "ItemDetailController"
     static let profileController = "ProfileController"
     static let addressController = "AddressController"
+    static let alertController = "AlertController"
 }
 
 struct PerformSegue {

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VTy-rA-exb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alert Controller-->
+        <scene sceneID="1A6-TM-bYF">
+            <objects>
+                <viewController storyboardIdentifier="AlertController" id="VTy-rA-exb" customClass="AlertController" customModule="Food_Delivery_Service" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iAU-sR-BEi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAb-CW-yVM">
+                                <rect key="frame" x="49.5" y="210.5" width="315" height="475"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="plR-y4-81r">
+                                        <rect key="frame" x="9" y="54" width="297" height="270.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconCheck" translatesAutoresizingMaskIntoConstraints="NO" id="bjb-ee-m8J">
+                                                <rect key="frame" x="88" y="0.0" width="121" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="nry-wa-hNy"/>
+                                                    <constraint firstAttribute="width" constant="121" id="yXU-C4-kc6"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Chd-wp-Htr">
+                                                <rect key="frame" x="0.0" y="150" width="297" height="120.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your order is successfully created" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFH-yC-K22">
+                                                        <rect key="frame" x="0.0" y="0.0" width="297" height="66"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can track the delivery in the &quot;Orders&quot; section." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNm-Ac-7Xa">
+                                                        <rect key="frame" x="0.0" y="74" width="297" height="46.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Chd-wp-Htr" firstAttribute="leading" secondItem="plR-y4-81r" secondAttribute="leading" id="AH3-QM-7J1"/>
+                                            <constraint firstAttribute="trailing" secondItem="Chd-wp-Htr" secondAttribute="trailing" id="IFK-Vk-Dtw"/>
+                                            <constraint firstAttribute="bottom" secondItem="Chd-wp-Htr" secondAttribute="bottom" id="z0D-bE-pXG"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qpx-wu-l7O">
+                                        <rect key="frame" x="0.0" y="347" width="315" height="112"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYz-kY-6JB" customClass="BTButton" customModule="Food_Delivery_Service" customModuleProvider="target">
+                                                <rect key="frame" x="40" y="8" width="235" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="uUW-GK-wUa"/>
+                                                </constraints>
+                                                <state key="normal" title="Continue Shopping"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEP-dj-izO">
+                                                <rect key="frame" x="40" y="60" width="235" height="44"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Go to Orders">
+                                                    <color key="titleColor" red="0.72156862745098038" green="0.73333333333333328" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="40" bottom="8" right="40"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="plR-y4-81r" firstAttribute="leading" secondItem="UAb-CW-yVM" secondAttribute="leading" constant="9" id="7dh-jQ-cSc"/>
+                                    <constraint firstItem="plR-y4-81r" firstAttribute="top" secondItem="UAb-CW-yVM" secondAttribute="top" constant="54" id="B1J-dD-RAV"/>
+                                    <constraint firstAttribute="height" constant="475" id="G3o-L2-P5l"/>
+                                    <constraint firstAttribute="trailing" secondItem="plR-y4-81r" secondAttribute="trailing" constant="9" id="Vae-5C-oKs"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qpx-wu-l7O" secondAttribute="trailing" id="dON-kP-I7P"/>
+                                    <constraint firstAttribute="width" constant="315" id="hmg-Qn-ROc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qpx-wu-l7O" secondAttribute="bottom" constant="16" id="seB-wA-0fd"/>
+                                    <constraint firstItem="Qpx-wu-l7O" firstAttribute="leading" secondItem="UAb-CW-yVM" secondAttribute="leading" id="wUq-rB-v1N"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jsr-za-Qq6"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UAb-CW-yVM" firstAttribute="centerY" secondItem="iAU-sR-BEi" secondAttribute="centerY" id="d90-uL-t1y"/>
+                            <constraint firstItem="UAb-CW-yVM" firstAttribute="centerX" secondItem="iAU-sR-BEi" secondAttribute="centerX" id="rY0-Hy-L9o"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d5z-Ry-Fj4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-504.34782608695656" y="151.33928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iconCheck" width="121" height="120"/>
+    </resources>
+</document>
