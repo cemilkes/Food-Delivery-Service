@@ -11,7 +11,7 @@
         <!--Alert Controller-->
         <scene sceneID="1A6-TM-bYF">
             <objects>
-                <viewController storyboardIdentifier="AlertController" id="VTy-rA-exb" customClass="AlertController" customModule="Food_Delivery_Service" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlertController" modalTransitionStyle="crossDissolve" modalPresentationStyle="pageSheet" id="VTy-rA-exb" customClass="AlertController" customModule="Food_Delivery_Service" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iAU-sR-BEi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,6 +62,9 @@
                                                     <constraint firstAttribute="height" constant="44" id="uUW-GK-wUa"/>
                                                 </constraints>
                                                 <state key="normal" title="Continue Shopping"/>
+                                                <connections>
+                                                    <action selector="didTapActionButton:" destination="VTy-rA-exb" eventType="touchUpInside" id="fhB-pS-ODQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEP-dj-izO">
                                                 <rect key="frame" x="40" y="60" width="235" height="44"/>
@@ -74,6 +77,9 @@
                                                         <integer key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapCancelButton:" destination="VTy-rA-exb" eventType="touchUpInside" id="Puv-O3-mEO"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="8" left="40" bottom="8" right="40"/>
@@ -93,12 +99,19 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jsr-za-Qq6"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="UAb-CW-yVM" firstAttribute="centerY" secondItem="iAU-sR-BEi" secondAttribute="centerY" id="d90-uL-t1y"/>
                             <constraint firstItem="UAb-CW-yVM" firstAttribute="centerX" secondItem="iAU-sR-BEi" secondAttribute="centerX" id="rY0-Hy-L9o"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="actionButtonOutlet" destination="xYz-kY-6JB" id="0b8-v4-ovu"/>
+                        <outlet property="cancelButtonOutlet" destination="YEP-dj-izO" id="Ylm-wd-lo9"/>
+                        <outlet property="descriptionLabel" destination="fNm-Ac-7Xa" id="wm1-r9-YpV"/>
+                        <outlet property="imageView" destination="bjb-ee-m8J" id="ghz-0Q-JVe"/>
+                        <outlet property="titleLabel" destination="RFH-yC-K22" id="W7o-m2-Bol"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5z-Ry-Fj4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

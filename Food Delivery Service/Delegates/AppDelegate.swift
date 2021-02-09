@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NextViewController(storybordid: ViewController.tabbarController, storyboardName: Storyboard.main)
             print("open main")
         }else{
-            NextViewController(storybordid: ViewController.alertController, storyboardName: Storyboard.alert)
-            //NextViewController(storybordid: ViewController.welcomeController, storyboardName: Storyboard.authentication)
+           // NextViewController(storybordid: ViewController.alertController, storyboardName: Storyboard.alert)
+            NextViewController(storybordid: ViewController.welcomeController, storyboardName: Storyboard.authentication)
             print("open auth")
         }
 

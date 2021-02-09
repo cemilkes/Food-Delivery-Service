@@ -29,8 +29,11 @@ class LoginController: UIViewController, UITextFieldDelegate {
     let hud = JGProgressHUD(style: .dark)
     var activityIndicator: NVActivityIndicatorView?
 
+    let alertService = AlertService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupSignUpLabel()
         setupNavigationUI()
         setupUI()
@@ -42,6 +45,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         // Register Notification Center for Keyboard controller (Listen for keyboard's events)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,7 +69,6 @@ class LoginController: UIViewController, UITextFieldDelegate {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
     }
    
-    
     func setupUI(){
         
         emailTextField.delegate = self
@@ -80,12 +83,13 @@ class LoginController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
     @objc func signUpLabelClicked(_ sender: UITapGestureRecognizer){
-        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
-                let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.signUpController) as! SignUpController
-                //vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion: nil)
+//        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
+//                let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.signUpController) as! SignUpController
+//                //vc.modalPresentationStyle = .fullScreen
+//                self.present(vc, animated: true, completion: nil)
+        let alertControl = alertService.alert(title: "t", description: "d", actionButtonTitle: "a", cancelButtonTitle: "c")
+        present(alertControl, animated: true)
     }
     
     func setupLoginSubView(){
