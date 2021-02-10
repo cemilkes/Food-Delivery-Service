@@ -12,30 +12,51 @@ import CoreLocation
 
 class MenuController: UIViewController, CLLocationManagerDelegate {
     
-    
     // MARK: - Variables
     var categoryArray: [Category] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var locationManager = CLLocationManager()
+    var locationService = LocationService()
+    let alertService = AlertService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCategories()
         collectionView.delegate = self
         collectionView.dataSource = self
+        setupLocationAlert()
         
-        //locationManager.requestAlwaysAuthorization()
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingLocation()
-        locationManager.allowsBackgroundLocationUpdates = true
-        locationManager.pausesLocationUpdatesAutomatically = false
+        
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         loadCategories()
+    }
+
+    private func setupLocationAlert(){
+        let alertControl = alertService.alert(image: "iconMapMarker", title: "Enable Your Location.", description: "Please allow to use your location to show nearby restaurant on the map.", actionButtonTitle: "Enable Location", cancelButtonTitle: "No, another time."){
+            self.locationService.requestLocationAuthorization()
+            
+            print("Action added")
+        }
+        present(alertControl, animated: true)
+        
+        locationService.didChangeStatus = { [weak self] success in
+            if success {
+                self?.locationService.getLocation()
+            }
+        }
+        
+        locationService.newLocation = { [weak self] result in
+            switch result {
+            case .success(let location):
+                print(location)
+            case .failure(let error):
+                assertionFailure("Error while getting the user's location\(error)")
+                
+            }
+        }
     }
     
     // MARK: - Load Categories
@@ -45,24 +66,15 @@ class MenuController: UIViewController, CLLocationManagerDelegate {
             
             self.categoryArray = allCategories
             self.collectionView.reloadData()
-            
         }
     }
-    
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         //Make sure you are connecting to right segue in case of there are more than one segue from the viewcontroller to other one
         if segue.identifier == PerformSegue.menuIdentifier {
             let vc = segue.destination as! ItemsController
             vc.category = sender as? Category
-            
         }
-        
     }
-    
-    
-    
-    
-    
+
 }

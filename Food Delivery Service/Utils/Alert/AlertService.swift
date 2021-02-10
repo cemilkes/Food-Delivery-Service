@@ -13,7 +13,7 @@ class AlertService{
     
     static let shared = AlertService()
     
-    func alert(image: String, title: String, description: String, actionButtonTitle: String, cancelButtonTitle: String) -> AlertController{
+    func alert(image: String, title: String, description: String, actionButtonTitle: String, cancelButtonTitle: String, completion: @escaping () -> Void) -> AlertController{
         
         let storyboard = UIStoryboard(name: Storyboard.alert, bundle: .main)
         let alertVC = storyboard.instantiateViewController(withIdentifier: ViewController.alertController) as! AlertController
@@ -24,6 +24,8 @@ class AlertService{
         alertVC.actionButtonTitle = actionButtonTitle
         alertVC.cancelButtonTitle = cancelButtonTitle
         
+        alertVC.didTapActionButton = completion
+        //alertVC.didTapCancelButton = completion
         return alertVC
     }
 }

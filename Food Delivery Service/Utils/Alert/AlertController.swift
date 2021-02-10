@@ -23,6 +23,9 @@ class AlertController: UIViewController {
     var actionButtonTitle = String()
     var cancelButtonTitle = String()
     
+    var didTapActionButton: (() -> Void)?
+    var didTapCancelButton: (() -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,11 +42,13 @@ class AlertController: UIViewController {
 
     @IBAction func didTapActionButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        didTapActionButton?()
     }
     
     
     @IBAction func didTapCancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        didTapCancelButton?()
     }
     
 }

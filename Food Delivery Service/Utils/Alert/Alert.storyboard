@@ -11,7 +11,7 @@
         <!--Alert Controller-->
         <scene sceneID="1A6-TM-bYF">
             <objects>
-                <viewController storyboardIdentifier="AlertController" modalTransitionStyle="crossDissolve" modalPresentationStyle="pageSheet" id="VTy-rA-exb" customClass="AlertController" customModule="Food_Delivery_Service" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlertController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="VTy-rA-exb" customClass="AlertController" customModule="Food_Delivery_Service" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iAU-sR-BEi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

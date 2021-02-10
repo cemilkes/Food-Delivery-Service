@@ -28,9 +28,6 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     let hud = JGProgressHUD(style: .dark)
     var activityIndicator: NVActivityIndicatorView?
-
-    let alertService = AlertService()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -84,12 +81,10 @@ class LoginController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func signUpLabelClicked(_ sender: UITapGestureRecognizer){
-//        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
-//                let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.signUpController) as! SignUpController
-//                //vc.modalPresentationStyle = .fullScreen
-//                self.present(vc, animated: true, completion: nil)
-        let alertControl = alertService.alert(image: "iconCheck", title: "Your order is successfully.", description: "You can track the delivery in the Orders section.", actionButtonTitle: "Continue Shopping", cancelButtonTitle: "Go to orders")
-        present(alertControl, animated: true)
+        let storyBoard: UIStoryboard = UIStoryboard(name: Storyboard.authentication, bundle: nil)
+                let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.signUpController) as! SignUpController
+                //vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
     }
     
     func setupLoginSubView(){

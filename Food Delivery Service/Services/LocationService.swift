@@ -32,6 +32,7 @@ final class LocationService: NSObject{
     
     func requestLocationAuthorization() {
         manager.requestWhenInUseAuthorization()
+        print("Requested")
     }
     
     func getLocation(){
