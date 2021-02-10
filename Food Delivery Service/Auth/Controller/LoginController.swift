@@ -88,7 +88,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
 //                let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.signUpController) as! SignUpController
 //                //vc.modalPresentationStyle = .fullScreen
 //                self.present(vc, animated: true, completion: nil)
-        let alertControl = alertService.alert(title: "t", description: "d", actionButtonTitle: "a", cancelButtonTitle: "c")
+        let alertControl = alertService.alert(image: "iconCheck", title: "Your order is successfully.", description: "You can track the delivery in the Orders section.", actionButtonTitle: "Continue Shopping", cancelButtonTitle: "Go to orders")
         present(alertControl, animated: true)
     }
     

@@ -13,12 +13,12 @@ class AlertService{
     
     static let shared = AlertService()
     
-    func alert(title: String, description: String, actionButtonTitle: String, cancelButtonTitle: String) -> AlertController{
+    func alert(image: String, title: String, description: String, actionButtonTitle: String, cancelButtonTitle: String) -> AlertController{
         
         let storyboard = UIStoryboard(name: Storyboard.alert, bundle: .main)
         let alertVC = storyboard.instantiateViewController(withIdentifier: ViewController.alertController) as! AlertController
         
-        //alertVC.imageView.image = UIImage(named: image)
+        alertVC.image = image
         alertVC.alertTitle = title
         alertVC.alertDescription = description
         alertVC.actionButtonTitle = actionButtonTitle
