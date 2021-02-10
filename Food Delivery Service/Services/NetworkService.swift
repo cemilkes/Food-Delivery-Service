@@ -11,7 +11,6 @@ import Moya
 
 enum YelpService {
     enum BusinessProvider:TargetType {
-        case search
         case detail(name:String)
         case review
         
