@@ -69,6 +69,7 @@
 		25D9B84A252B778400B13C22 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D9B849252B778400B13C22 /* CurrencyTextField.swift */; };
 		25D9B851252B791400B13C22 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D9B850252B791400B13C22 /* Currency.swift */; };
 		25E0D07525D43B3E0098CF92 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0D07425D43B3E0098CF92 /* LocationService.swift */; };
+		25E0D0A425D45B270098CF92 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0D0A325D45B270098CF92 /* NetworkService.swift */; };
 		25EA529825073B7800A877EB /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EA529725073B7800A877EB /* SignUpController.swift */; };
 		25FC3B14259FFD85002F561A /* ItemDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC3B13259FFD85002F561A /* ItemDetailCell.swift */; };
 		25FC3B9325A04DF5002F561A /* Extension+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC3B9225A04DF5002F561A /* Extension+UITextView.swift */; };
@@ -174,6 +175,7 @@
 		25D9B849252B778400B13C22 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 		25D9B850252B791400B13C22 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		25E0D07425D43B3E0098CF92 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		25E0D0A325D45B270098CF92 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		25EA529725073B7800A877EB /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		25FC3B13259FFD85002F561A /* ItemDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailCell.swift; sourceTree = "<group>"; };
 		25FC3B9225A04DF5002F561A /* Extension+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITextView.swift"; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				25E0D07425D43B3E0098CF92 /* LocationService.swift */,
+				25E0D0A325D45B270098CF92 /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -955,6 +958,7 @@
 				25818023253DEE88007AAE14 /* MUser.swift in Sources */,
 				25A806E024EE1F32004E99C2 /* MenuCell.swift in Sources */,
 				2592815B24F2286100D96B2D /* BTLabel.swift in Sources */,
+				25E0D0A425D45B270098CF92 /* NetworkService.swift in Sources */,
 				25818028253F34A9007AAE14 /* ForgotPasswordController.swift in Sources */,
 				25D9B845252B6EF700B13C22 /* Helpers.swift in Sources */,
 				2560AB2F24F7114C00844F29 /* LoginController.swift in Sources */,

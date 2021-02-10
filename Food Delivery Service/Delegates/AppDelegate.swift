@@ -10,12 +10,24 @@ import UIKit
 import Firebase
 import FirebaseCore
 import Stripe
+import Moya
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-
+    let service = MoyaProvider<YelpService.BusinessProvider>()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //37.5493303553718, -121.98691658465768
+        service.request(.search(name: "Banh Thai Restaurant")) { (result) in
+            switch result{
+            
+            case .success(let response):
+                print(try? JSONSerialization.jsonObject(with: response.data, options: []))
+            case .failure(let error):
+                print("Error is \(error)")
+            }
+        }
+        
         // Override point for customization after application launch.
         FirebaseApp.configure()
         if (MUser.currentUser() != nil && MUser.currentUser()?.onBoard == true){
