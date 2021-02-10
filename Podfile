@@ -12,6 +12,8 @@ target 'Food Delivery Service' do
   pod 'BulletinBoard'
   pod 'AlgoliaSearchClient', '~> 8.0'
   pod 'Alamofire'
+  pod 'AlamofireImage'
+  pod 'Moya'
   pod 'Stripe'
   
   # Firebase Authentication and Cloud Firestore

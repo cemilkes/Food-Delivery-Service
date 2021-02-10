@@ -213,6 +213,8 @@ PODS:
     - abseil/base/config
     - abseil/meta/type_traits
   - Alamofire (5.4.1)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
   - AlgoliaSearchClient (8.5.0):
     - Logging
   - BoringSSL-GRPC (0.0.7):
@@ -346,6 +348,10 @@ PODS:
   - JGProgressHUD (2.1)
   - leveldb-library (1.22)
   - Logging (1.4.0)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
   - nanopb (1.30906.0):
     - nanopb/decode (= 1.30906.0)
     - nanopb/encode (= 1.30906.0)
@@ -361,6 +367,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireImage
   - AlgoliaSearchClient (~> 8.0)
   - BulletinBoard
   - Firebase/Analytics
@@ -370,6 +377,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - Gallery
   - JGProgressHUD
+  - Moya
   - NVActivityIndicatorView
   - Stripe
 
@@ -377,6 +385,7 @@ SPEC REPOS:
   trunk:
     - abseil
     - Alamofire
+    - AlamofireImage
     - AlgoliaSearchClient
     - BoringSSL-GRPC
     - BulletinBoard
@@ -399,6 +408,7 @@ SPEC REPOS:
     - JGProgressHUD
     - leveldb-library
     - Logging
+    - Moya
     - nanopb
     - NVActivityIndicatorView
     - PromisesObjC
@@ -407,6 +417,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   AlgoliaSearchClient: 4ab6f997ae3a902f7170411d7e385c6f36bbafc6
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   BulletinBoard: dba77053c2a7b64953f63073f7534165af2edd21
@@ -429,11 +440,12 @@ SPEC CHECKSUMS:
   JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   Logging: beeb016c9c80cf77042d62e83495816847ef108b
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   Stripe: 37f742a4815882db4454188664a3aa61793a12b1
 
-PODFILE CHECKSUM: dcc7eefc90405c86aa65f024ef3f0c310c069301
+PODFILE CHECKSUM: d9368820da45dd1d9eb9fdd556edcc5ee1b02e78
 
 COCOAPODS: 1.9.3
