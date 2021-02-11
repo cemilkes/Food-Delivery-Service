@@ -9,9 +9,14 @@
 import Foundation
 import Moya
 
+//https://www.youtube.com/watch?v=L2VtkqYhDes&list=PLgwcD-3WBz9lQ5NgVon61nEiFRoxs5kAT&index=9
+//https://www.yelp.com/developers/documentation/v3/business
+//https://www.yelp.com/biz_photos/banh-thai-restaurant-fremont
+//https://medium.com/@schulte.robert/testing-yelp-api-requests-with-postman-f51450bbac83
+
 enum YelpService {
     enum BusinessProvider:TargetType {
-        case detail(name:String)
+        case businessID
         case review
         
         var baseURL: URL{
@@ -20,10 +25,10 @@ enum YelpService {
         
         var path: String {
             switch self {
-            case .detail:
-                return "/detail"
+            case .businessID:
+                return "/\(YelpService.BusinessProvider.businessID)"
             case .review:
-                return "/id/reviews"
+                return "/\(Constats.businessID)/reviews"
             }
         }
         
@@ -37,10 +42,10 @@ enum YelpService {
         
         var task: Task {
             switch self {
-            case let .detail(name):
-                return .requestParameters(parameters: ["name": name], encoding: URLEncoding.queryString)
             case .review:
-                return .requestData(Data())
+                return .requestPlain
+            case .businessID:
+                return .requestPlain
             }
         }
         

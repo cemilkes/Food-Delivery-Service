@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let service = MoyaProvider<YelpService.BusinessProvider>()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //37.5493303553718, -121.98691658465768
-        service.request(.search(name: "Banh Thai Restaurant")) { (result) in
+        service.request(.review) { (result) in
+           
             switch result{
-            
             case .success(let response):
                 print(try? JSONSerialization.jsonObject(with: response.data, options: []))
             case .failure(let error):

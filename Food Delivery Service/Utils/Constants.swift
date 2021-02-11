@@ -17,7 +17,7 @@ enum Constats {
     static let defaultDescription = "Purchase from Banh Thai"
     static let yelpApiKey = "H6DwkC4tLyR4zl_38_BVchXi5l1iSf14gabfw3md_H5nY_a7Tj4urdvB8eozbRYELl5kNQz36x3yp_Gs-6sAX-6qMAmyqGxDseKGGXCxdo2F2g_qBRS1hqQwWOIcYHYx"
     static let clientID = "CaEN8TmVN4mChPau7JahXw"
-    
+    static let businessID = "XGprFc9iX7rlhXXU7g-ofQ"
 }
 
 
