@@ -52,7 +52,5 @@ enum YelpService {
         var headers: [String : String]? {
             return ["Authorization": "Bearer \(Constats.yelpApiKey)"]
         }
-        
-     
     }
 }

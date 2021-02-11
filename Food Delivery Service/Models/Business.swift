@@ -24,7 +24,7 @@ struct Business: Decodable {
 //    let transactions: [String]
 }
 
-struct Location: Codable {
+struct Location: Decodable {
     let address1: String
     let city: String
     let zipCode: String
@@ -32,17 +32,17 @@ struct Location: Codable {
     let state: String
 }
 
-struct Coordinates: Codable {
+struct Coordinates: Decodable {
     let latitude: Double
     let longitude: Double
 }
 
-struct Hours: Codable {
+struct Hours: Decodable {
     let isOpenNow: Bool
     let openHours: [OpenHours]
 }
 
-struct OpenHours: Codable {
+struct OpenHours: Decodable {
     let start: String
     let end: String
     let day: Int
@@ -64,7 +64,7 @@ extension BusinessViewModel {
         self.isClosed = business.isClosed
         self.phone = business.phone
         self.reviewCount = business.reviewCount
-       self.rating = business.rating
+        self.rating = business.rating
         self.photos = business.photos
         self.coordinates = business.coordinates
     }
