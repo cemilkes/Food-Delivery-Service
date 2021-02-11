@@ -22,18 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-        service.request(.businessID) { (result) in
-            switch result{
-            case .success(let response):
-                //print(try? JSONSerialization.jsonObject(with: response.data, options: []))
-                let businessData = try? self.jsonDecoder.decode(Business.self, from: response.data)
-                print(businessData)
-            case .failure(let error):
-                print("Error is \(error)")
-            }
-        }
         
         // Override point for customization after application launch.
+        loadBusiness()
         FirebaseApp.configure()
         if (MUser.currentUser() != nil && MUser.currentUser()?.onBoard == true){
             NextViewController(storybordid: ViewController.tabbarController, storyboardName: Storyboard.main)
@@ -49,6 +40,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    private func loadBusiness(){
+        service.request(.businessID) { (result) in
+            switch result{
+            case .success(let response):
+                //print(try? JSONSerialization.jsonObject(with: response.data, options: []))
+               let businessData = try? self.jsonDecoder.decode(Business.self, from: response.data)
+                print("*************************************")
+                print(businessData)
+            case .failure(let error):
+                print("Error is \(error)")
+            }
+        }
+    }
+    
     
     func NextViewController(storybordid:String, storyboardName: String)
     {

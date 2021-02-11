@@ -77,6 +77,12 @@ func showHUDErrorMessage(text:String, hud: JGProgressHUD, view:UIView){
     hud.indicatorView = JGProgressHUDErrorIndicatorView()
     hud.show(in: view)
     hud.dismiss(afterDelay: 2.0)
-    
-    
+}
+
+func numberFormatter() -> NumberFormatter{
+    let nf = NumberFormatter()
+    nf.numberStyle = .decimal
+    nf.maximumIntegerDigits = 2
+    nf.minimumFractionDigits = 2
+    return nf
 }

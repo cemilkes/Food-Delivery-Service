@@ -7,18 +7,20 @@
 //
 
 import Foundation
+import CoreLocation
 
-struct Business: Codable {
+struct Business: Decodable {
     
     let name: String
-    //let imageUrl: URL
+    let photos: [URL]
+    let imageUrl: URL
     let isClosed:  Bool
-//    let phone: String
-//    let reviewCount: Int
-//    let rating: Double
-//    let location: Location
-//    let coordinates: Coordinates
-//    let hours: Hours
+    let phone: String
+    let reviewCount: Int
+    let rating: Double
+    //let location: Location
+    let coordinates: CLLocationCoordinate2D
+    //let hours: Hours
 //    let transactions: [String]
 }
 
@@ -47,17 +49,44 @@ struct OpenHours: Codable {
 }
 struct BusinessViewModel {
     let name: String
-    //let imageUrl: URL
+    let imageUrl: URL
     let isClosed: Bool
-//    let phone: String
-//    let reviewCount: String
-//    let rating: Double
+    let phone: String
+    let reviewCount: Int
+    let rating: Double
+    let photos: [URL]
+    let coordinates:CLLocationCoordinate2D
 }
 extension BusinessViewModel {
     init(business: Business) {
         self.name = business.name
+        self.imageUrl = business.imageUrl
         self.isClosed = business.isClosed
+        self.phone = business.phone
+        self.reviewCount = business.reviewCount
+       self.rating = business.rating
+        self.photos = business.photos
+        self.coordinates = business.coordinates
     }
-    
-    
 }
+
+extension CLLocationCoordinate2D: Decodable{
+    enum CodingKeys: CodingKey{
+        case latitude
+        case longitude
+    }
+    public init(from decoder: Decoder) throws{
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let latitude = try container.decode(Double.self, forKey: CodingKeys.latitude)
+        let longitude = try container.decode(Double.self, forKey: CodingKeys.longitude)
+        self.init(latitude: latitude, longitude: longitude)
+    }
+}
+
+
+/*
+ var formattedDistance: String {
+    return BusinessViewModel.numberFormatter.string(from distance as NSNumber)
+ }
+ 
+ */
