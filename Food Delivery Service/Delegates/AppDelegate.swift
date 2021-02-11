@@ -16,13 +16,18 @@ import Moya
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let service = MoyaProvider<YelpService.BusinessProvider>()
+    let jsonDecoder = JSONDecoder()
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        //37.5493303553718, -121.98691658465768
-        service.request(.review) { (result) in
-           
+        
+        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+        service.request(.businessID) { (result) in
             switch result{
             case .success(let response):
-                print(try? JSONSerialization.jsonObject(with: response.data, options: []))
+                //print(try? JSONSerialization.jsonObject(with: response.data, options: []))
+                let businessData = try? self.jsonDecoder.decode(Business.self, from: response.data)
+                print(businessData)
             case .failure(let error):
                 print("Error is \(error)")
             }

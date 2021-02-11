@@ -26,7 +26,7 @@ enum YelpService {
         var path: String {
             switch self {
             case .businessID:
-                return "/\(YelpService.BusinessProvider.businessID)"
+                return "/\(Constats.businessID)"
             case .review:
                 return "/\(Constats.businessID)/reviews"
             }
