@@ -86,6 +86,7 @@ struct ViewController {
     static let itemDetailController = "ItemDetailController"
     static let profileController = "ProfileController"
     static let addressController = "AddressController"
+    static let phoneNumberController = "PhoneNumberController"
     static let alertController = "AlertController"
 }
 

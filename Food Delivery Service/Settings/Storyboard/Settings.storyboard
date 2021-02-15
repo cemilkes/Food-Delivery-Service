@@ -379,7 +379,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSf-f4-Rqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2339" y="126"/>
+            <point key="canvasLocation" x="2304" y="125"/>
+        </scene>
+        <!--Phone Number Controller-->
+        <scene sceneID="zPe-xm-oh9">
+            <objects>
+                <viewController storyboardIdentifier="PhoneNumberController" id="NGo-99-I8h" customClass="PhoneNumberController" customModule="Food_Delivery_Service" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8lT-XP-ifs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="w82-gr-LME"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c99-tp-umP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3019" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sLb-Rj-qub">

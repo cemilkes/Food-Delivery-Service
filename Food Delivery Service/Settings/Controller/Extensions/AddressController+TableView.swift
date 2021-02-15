@@ -74,6 +74,7 @@ extension AddressController: UITableViewDelegate{
             //print(userAddress)
             self.addressDelegate?.addressChanged(address: self.userAddress)
             self.dismiss(animated: true, completion: nil)
+            
             let lat = coordinate.latitude
             let lon = coordinate.longitude
             

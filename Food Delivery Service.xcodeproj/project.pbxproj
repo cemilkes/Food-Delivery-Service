@@ -72,6 +72,7 @@
 		25E0D0A425D45B270098CF92 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0D0A325D45B270098CF92 /* NetworkService.swift */; };
 		25E0D0AC25D4E6A10098CF92 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0D0AB25D4E6A10098CF92 /* Business.swift */; };
 		25EA529825073B7800A877EB /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EA529725073B7800A877EB /* SignUpController.swift */; };
+		25F932BB25DAF00800BECCEC /* PhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F932BA25DAF00800BECCEC /* PhoneNumberController.swift */; };
 		25FC3B14259FFD85002F561A /* ItemDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC3B13259FFD85002F561A /* ItemDetailCell.swift */; };
 		25FC3B9325A04DF5002F561A /* Extension+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC3B9225A04DF5002F561A /* Extension+UITextView.swift */; };
 		2DDEE8CA1894CEE67757684F /* Pods_Food_Delivery_ServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28E1A6702AD6EE540C2F227 /* Pods_Food_Delivery_ServiceTests.framework */; };
@@ -179,6 +180,7 @@
 		25E0D0A325D45B270098CF92 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		25E0D0AB25D4E6A10098CF92 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		25EA529725073B7800A877EB /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		25F932BA25DAF00800BECCEC /* PhoneNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberController.swift; sourceTree = "<group>"; };
 		25FC3B13259FFD85002F561A /* ItemDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailCell.swift; sourceTree = "<group>"; };
 		25FC3B9225A04DF5002F561A /* Extension+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITextView.swift"; sourceTree = "<group>"; };
 		5059F7465F2E945D9FB01AF4 /* Pods-Food Delivery ServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Delivery ServiceTests.release.xcconfig"; path = "Target Support Files/Pods-Food Delivery ServiceTests/Pods-Food Delivery ServiceTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -535,6 +537,7 @@
 				83B22EB02548D146005806DC /* SettingsController.swift */,
 				253E27E925A810DA009DB7AE /* ProfileController.swift */,
 				254B464325C3CFCE003B8070 /* AddressController.swift */,
+				25F932BA25DAF00800BECCEC /* PhoneNumberController.swift */,
 				83B22EB92548D173005806DC /* Extensions */,
 			);
 			path = Controller;
@@ -972,6 +975,7 @@
 				2596C99225A6AEC5005ED494 /* UITableViewEmptyCart-Extension.swift in Sources */,
 				253C4B90251EB0E900135ADC /* ItemController+UITableView.swift in Sources */,
 				257AE1782531729B007318B1 /* OrderCell.swift in Sources */,
+				25F932BB25DAF00800BECCEC /* PhoneNumberController.swift in Sources */,
 				257AE13025310651007318B1 /* OrderController.swift in Sources */,
 				257AE13625316843007318B1 /* OrderController+TableView.swift in Sources */,
 				25361BA425955934003EF914 /* Reachability.swift in Sources */,

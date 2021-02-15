@@ -31,6 +31,7 @@ class ProfileController: UIViewController, AddressControllerDelegate {
         setupTextFieldDidChange()
         
         addressTextField.addTarget(self, action: #selector(addressTextFieldPressed), for: .touchDown)
+        phoneNumberTextField.addTarget(self, action: #selector(phoneNumberTextFieldPressed), for: .touchDown)
         userNameTextField.delegate = self
         emailTextField.delegate = self
         birthOfDateTextField.delegate = self
@@ -61,6 +62,15 @@ class ProfileController: UIViewController, AddressControllerDelegate {
         itemVC.modalPresentationStyle = .fullScreen
         present(itemVC, animated: true, completion: nil)
     }
+    
+    @objc func phoneNumberTextFieldPressed(){
+        let phoneNumberController = UIStoryboard.init(name: Storyboard.settings, bundle: nil).instantiateViewController(identifier: ViewController.phoneNumberController) as! AddressController
+        //itemVC.item = item
+        phoneNumberController.modalPresentationStyle = .fullScreen
+        present(phoneNumberController, animated: true, completion: nil)
+        
+    }
+    
     
     private func setupTextFieldDidChange(){
         emailTextField.isUserInteractionEnabled = false
