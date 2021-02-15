@@ -478,6 +478,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bPU-A0-CEb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wBV-o5-n0R">
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="TT3-FY-IVT" kind="show" identifier="ItemToAddItemSegue" id="z3g-kD-0yk"/>
                             </connections>
@@ -585,13 +586,13 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwM-aH-ACB">
-                                                            <rect key="frame" x="8" y="12" width="84.666666666666671" height="20"/>
+                                                            <rect key="frame" x="8" y="12.000000000000002" width="84.666666666666671" height="22.666666666666671"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                                             <color key="textColor" red="0.20000000000000001" green="0.2274509804" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item DescriptionItem DescriptionItem DescriptionItem Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPd-gA-p09">
-                                                            <rect key="frame" x="8" y="37" width="398" height="20"/>
+                                                            <rect key="frame" x="8" y="39.666666666666664" width="398" height="17.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
                                                             <color key="textColor" red="0.72156862749999995" green="0.73333333329999995" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -601,7 +602,9 @@
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5p-Gs-7wT">
                                                                     <rect key="frame" x="0.0" y="0.0" width="18.333333333333332" height="30"/>
-                                                                    <state key="normal" title="-"/>
+                                                                    <state key="normal" title="-">
+                                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                                    </state>
                                                                     <connections>
                                                                         <action selector="decreaseItemQuantityButtonPressed:" destination="RoI-rM-OV4" eventType="touchUpInside" id="z09-Qc-L9A"/>
                                                                     </connections>
@@ -620,7 +623,9 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dh1-XB-bds">
                                                                     <rect key="frame" x="46.666666666666664" y="0.0" width="18.333333333333336" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <state key="normal" title="+"/>
+                                                                    <state key="normal" title="+">
+                                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                                    </state>
                                                                     <connections>
                                                                         <action selector="increaseItemQuantityButtonPressed:" destination="RoI-rM-OV4" eventType="touchUpInside" id="Ref-7N-LAb"/>
                                                                     </connections>
@@ -628,9 +633,9 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 1799.99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1L-cZ-Kld">
-                                                            <rect key="frame" x="344.33333333333331" y="13" width="61.666666666666686" height="18"/>
+                                                            <rect key="frame" x="334.66666666666669" y="13.000000000000002" width="71.333333333333314" height="20.666666666666671"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="13"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -812,6 +817,7 @@
             <point key="canvasLocation" x="-72.463768115942031" y="205.58035714285714"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="labelColor"/>
     <resources>
         <image name="BookmarkFilled" width="20" height="20"/>
         <image name="MapMarker" width="22" height="22"/>

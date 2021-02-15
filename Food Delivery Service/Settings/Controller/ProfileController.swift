@@ -31,7 +31,10 @@ class ProfileController: UIViewController, AddressControllerDelegate {
         setupTextFieldDidChange()
         
         addressTextField.addTarget(self, action: #selector(addressTextFieldPressed), for: .touchDown)
-        
+        userNameTextField.delegate = self
+        emailTextField.delegate = self
+        birthOfDateTextField.delegate = self
+    
     }
         
 
@@ -151,5 +154,20 @@ class ProfileController: UIViewController, AddressControllerDelegate {
         let vc = storyBoard.instantiateViewController(withIdentifier: ViewController.welcomeController) as! WelcomeController
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
+    }
+    
+    func hideKeyboard(){
+        userNameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        phoneNumberTextField.resignFirstResponder()
+        birthOfDateTextField.resignFirstResponder()
+    }
+    
+}
+
+extension ProfileController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        hideKeyboard()
+        return true
     }
 }

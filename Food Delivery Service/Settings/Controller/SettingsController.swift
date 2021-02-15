@@ -56,6 +56,5 @@ class SettingsController: UIViewController {
             print("Log out")
         }
     }
-
    
 }
