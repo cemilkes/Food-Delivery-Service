@@ -254,13 +254,7 @@
                             <constraint firstItem="0cC-RT-ZQ1" firstAttribute="bottom" secondItem="ceQ-7n-qiZ" secondAttribute="bottom" id="uDp-ul-rLf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="always" id="75Y-qq-5TX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="cpm-sh-Xdm">
-                            <connections>
-                                <segue destination="iyR-kd-ht7" kind="show" id="iWz-Sa-578"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="always" id="75Y-qq-5TX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="0cC-RT-ZQ1" id="pCZ-Gi-0iH"/>
@@ -280,7 +274,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="EIJ-sa-YPe">
-                                <rect key="frame" x="0.0" y="145" width="414" height="668"/>
+                                <rect key="frame" x="0.0" y="49" width="414" height="813"/>
                                 <subviews>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uu-yt-upj">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -315,7 +309,7 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S3e-rg-nXY">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="100" id="cWB-C3-GUS" customClass="ItemCell" customModule="Food_Delivery_Service" customModuleProvider="target">
