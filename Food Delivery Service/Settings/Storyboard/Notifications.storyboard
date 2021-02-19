@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kxQ-rg-61a">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notifications-->
+        <scene sceneID="Yih-Rr-w0L">
+            <objects>
+                <viewController storyboardIdentifier="NotificationsController" id="Ozc-ai-gAB" customClass="NotificationsController" customModule="Food_Delivery_Service" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ecq-Lm-mgb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="9oi-3c-woA">
+                                <rect key="frame" x="20" y="126" width="335.66666666666669" height="84"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Eqz-kg-WYB">
+                                        <rect key="frame" x="0.0" y="0.0" width="335.66666666666669" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPK-yC-me0">
+                                                <rect key="frame" x="0.0" y="0.0" width="236.66666666666666" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="PIZ-l8-d50"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2PV-np-GZv">
+                                                <rect key="frame" x="286.66666666666669" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="2PV-np-GZv" firstAttribute="top" secondItem="Eqz-kg-WYB" secondAttribute="top" id="HJp-0M-eEb"/>
+                                            <constraint firstAttribute="bottom" secondItem="2PV-np-GZv" secondAttribute="bottom" id="Rcg-mJ-AF5"/>
+                                            <constraint firstAttribute="trailing" secondItem="2PV-np-GZv" secondAttribute="trailing" id="fZt-5e-KFI"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="YbM-Yl-H0j">
+                                        <rect key="frame" x="0.0" y="53" width="335.66666666666669" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="SMS Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fb9-zv-7DB">
+                                                <rect key="frame" x="0.0" y="0.0" width="236.66666666666666" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="Npe-MU-1xT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yD8-sH-iSc">
+                                                <rect key="frame" x="286.66666666666669" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="yD8-sH-iSc" firstAttribute="top" secondItem="YbM-Yl-H0j" secondAttribute="top" id="RwB-Ca-K4y"/>
+                                            <constraint firstAttribute="bottom" secondItem="yD8-sH-iSc" secondAttribute="bottom" id="fVE-at-AjL"/>
+                                            <constraint firstAttribute="trailing" secondItem="yD8-sH-iSc" secondAttribute="trailing" id="oSJ-1L-aMh"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="YbM-Yl-H0j" secondAttribute="bottom" id="2uc-3S-2ec"/>
+                                    <constraint firstItem="YbM-Yl-H0j" firstAttribute="top" secondItem="Eqz-kg-WYB" secondAttribute="bottom" constant="22" id="3Gt-xW-dY7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eqz-kg-WYB" secondAttribute="trailing" id="73e-sR-Eta"/>
+                                    <constraint firstItem="YbM-Yl-H0j" firstAttribute="leading" secondItem="9oi-3c-woA" secondAttribute="leading" id="E95-aW-XTJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="YbM-Yl-H0j" secondAttribute="trailing" id="bpH-Me-fdo"/>
+                                    <constraint firstItem="Eqz-kg-WYB" firstAttribute="top" secondItem="9oi-3c-woA" secondAttribute="top" id="pF8-MN-UKT"/>
+                                    <constraint firstItem="Eqz-kg-WYB" firstAttribute="leading" secondItem="9oi-3c-woA" secondAttribute="leading" id="uAT-xW-3Md"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WJf-ma-tjQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WJf-ma-tjQ" firstAttribute="trailing" secondItem="9oi-3c-woA" secondAttribute="trailing" constant="19.5" id="FSp-1H-Hae"/>
+                            <constraint firstItem="9oi-3c-woA" firstAttribute="leading" secondItem="WJf-ma-tjQ" secondAttribute="leading" constant="20" id="I5G-cJ-2Qq"/>
+                            <constraint firstItem="9oi-3c-woA" firstAttribute="top" secondItem="WJf-ma-tjQ" secondAttribute="top" constant="38" id="vGs-IW-9il"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notifications" id="IHS-Tp-om6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FaT-cY-LCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431.8840579710145" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ml2-fb-hPE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kxQ-rg-61a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PHS-jL-V5C">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ozc-ai-gAB" kind="relationship" relationship="rootViewController" id="Kmd-Rf-BTB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUJ-tI-yNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-478.26086956521743" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

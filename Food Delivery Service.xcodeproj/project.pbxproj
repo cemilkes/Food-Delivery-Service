@@ -73,6 +73,9 @@
 		25E0D0AC25D4E6A10098CF92 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0D0AB25D4E6A10098CF92 /* Business.swift */; };
 		25EA529825073B7800A877EB /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EA529725073B7800A877EB /* SignUpController.swift */; };
 		25F932BB25DAF00800BECCEC /* PhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F932BA25DAF00800BECCEC /* PhoneNumberController.swift */; };
+		25F932E525DF3A0800BECCEC /* PhoneNumber.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25F932E425DF3A0800BECCEC /* PhoneNumber.storyboard */; };
+		25F932ED25DF3A4C00BECCEC /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25F932EC25DF3A4C00BECCEC /* Notifications.storyboard */; };
+		25F932F225DF3A5F00BECCEC /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F932F125DF3A5F00BECCEC /* NotificationsController.swift */; };
 		25FC3B14259FFD85002F561A /* ItemDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC3B13259FFD85002F561A /* ItemDetailCell.swift */; };
 		25FC3B9325A04DF5002F561A /* Extension+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC3B9225A04DF5002F561A /* Extension+UITextView.swift */; };
 		2DDEE8CA1894CEE67757684F /* Pods_Food_Delivery_ServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28E1A6702AD6EE540C2F227 /* Pods_Food_Delivery_ServiceTests.framework */; };
@@ -181,6 +184,9 @@
 		25E0D0AB25D4E6A10098CF92 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		25EA529725073B7800A877EB /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		25F932BA25DAF00800BECCEC /* PhoneNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberController.swift; sourceTree = "<group>"; };
+		25F932E425DF3A0800BECCEC /* PhoneNumber.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhoneNumber.storyboard; sourceTree = "<group>"; };
+		25F932EC25DF3A4C00BECCEC /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
+		25F932F125DF3A5F00BECCEC /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		25FC3B13259FFD85002F561A /* ItemDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailCell.swift; sourceTree = "<group>"; };
 		25FC3B9225A04DF5002F561A /* Extension+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITextView.swift"; sourceTree = "<group>"; };
 		5059F7465F2E945D9FB01AF4 /* Pods-Food Delivery ServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Delivery ServiceTests.release.xcconfig"; path = "Target Support Files/Pods-Food Delivery ServiceTests/Pods-Food Delivery ServiceTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -538,6 +544,7 @@
 				253E27E925A810DA009DB7AE /* ProfileController.swift */,
 				254B464325C3CFCE003B8070 /* AddressController.swift */,
 				25F932BA25DAF00800BECCEC /* PhoneNumberController.swift */,
+				25F932F125DF3A5F00BECCEC /* NotificationsController.swift */,
 				83B22EB92548D173005806DC /* Extensions */,
 			);
 			path = Controller;
@@ -547,6 +554,8 @@
 			isa = PBXGroup;
 			children = (
 				8379BAE924EB5F5700EE8EB9 /* Settings.storyboard */,
+				25F932E425DF3A0800BECCEC /* PhoneNumber.storyboard */,
+				25F932EC25DF3A4C00BECCEC /* Notifications.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -754,12 +763,14 @@
 			files = (
 				8379BAE424EB5F1700EE8EB9 /* Menu.storyboard in Resources */,
 				257A884425D2E369009EE584 /* Alert.storyboard in Resources */,
+				25F932E525DF3A0800BECCEC /* PhoneNumber.storyboard in Resources */,
 				8379BAE824EB5F3E00EE8EB9 /* Favourite.storyboard in Resources */,
 				8379BAEA24EB5F5700EE8EB9 /* Settings.storyboard in Resources */,
 				8379BAE624EB5F2D00EE8EB9 /* MyOrder.storyboard in Resources */,
 				83C4CABF24E8AEB1000841D2 /* LaunchScreen.storyboard in Resources */,
 				83C4CAE324E8B129000841D2 /* GoogleService-Info.plist in Resources */,
 				8379BAEC24EB76A000EE8EB9 /* Authentication.storyboard in Resources */,
+				25F932ED25DF3A4C00BECCEC /* Notifications.storyboard in Resources */,
 				83C4CABC24E8AEB1000841D2 /* Assets.xcassets in Resources */,
 				83C4CABA24E8AEAC000841D2 /* Main.storyboard in Resources */,
 			);
@@ -933,6 +944,7 @@
 				25361BEA2596AACE003EF914 /* AddItemController+Gallery.swift in Sources */,
 				2581CAE1259D8E30000EB7D9 /* FavouriteController+TableView.swift in Sources */,
 				25A806F224EF758E004E99C2 /* FirebaseCollectionReference.swift in Sources */,
+				25F932F225DF3A5F00BECCEC /* NotificationsController.swift in Sources */,
 				8379BAEE24EB7E8400EE8EB9 /* Color.swift in Sources */,
 				83B22F472548E2E2005806DC /* SettingsCell.swift in Sources */,
 				254B464425C3CFCE003B8070 /* AddressController.swift in Sources */,

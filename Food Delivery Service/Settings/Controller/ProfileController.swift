@@ -64,13 +64,12 @@ class ProfileController: UIViewController, AddressControllerDelegate {
     }
     
     @objc func phoneNumberTextFieldPressed(){
-        let phoneNumberController = UIStoryboard.init(name: Storyboard.settings, bundle: nil).instantiateViewController(identifier: ViewController.phoneNumberController) as! AddressController
+        let phoneNumberController = UIStoryboard.init(name: Storyboard.settings, bundle: nil).instantiateViewController(identifier: ViewController.phoneNumberController) as! PhoneNumberController
         //itemVC.item = item
         phoneNumberController.modalPresentationStyle = .fullScreen
         present(phoneNumberController, animated: true, completion: nil)
         
     }
-    
     
     private func setupTextFieldDidChange(){
         emailTextField.isUserInteractionEnabled = false

@@ -49,7 +49,8 @@ extension SettingsController: UITableViewDelegate {
             checkUserLoginStatus()
             //print("Go to Profile Page")
         }else if indexPath.row == 1{
-            print("Go to Notfications")
+            goToNotifications()
+            print("Go to Notifications")
         }else if indexPath.row == 2{
             print("Go to Payment Method")
         }else if indexPath.row == 3{
@@ -98,7 +99,10 @@ extension SettingsController: UITableViewDelegate {
         
     }
     
-    
+    private func goToNotifications(){
+        performSegue(withIdentifier: PerformSegue.showNotifications, sender: self)
+        
+    }
 }
 
 

@@ -140,11 +140,22 @@
                     <connections>
                         <outlet property="tableView" destination="KLQ-iw-9mi" id="7Le-A9-gi9"/>
                         <segue destination="cRz-o1-OOz" kind="show" identifier="goEditProfile" id="XVI-98-fcX"/>
+                        <segue destination="irG-Bh-qjO" kind="show" identifier="showNotifications" id="FuI-lM-I08"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hv3-yJ-qPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="863.768115942029" y="124.55357142857142"/>
+        </scene>
+        <!--NotificationsController-->
+        <scene sceneID="1uc-lr-mtd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Notifications" referencedIdentifier="NotificationsController" id="irG-Bh-qjO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4Ng-1O-xS8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RkX-QD-6iN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1493" y="125"/>
         </scene>
         <!--Profile-->
         <scene sceneID="PrO-Bv-JkE">
@@ -342,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ze-jd-y8u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1572.4637681159422" y="124.55357142857142"/>
+            <point key="canvasLocation" x="1604" y="-498"/>
         </scene>
         <!--Address-->
         <scene sceneID="BFe-wb-66z">
@@ -379,22 +390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSf-f4-Rqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2304" y="125"/>
-        </scene>
-        <!--Phone Number Controller-->
-        <scene sceneID="zPe-xm-oh9">
-            <objects>
-                <viewController storyboardIdentifier="PhoneNumberController" id="NGo-99-I8h" customClass="PhoneNumberController" customModule="Food_Delivery_Service" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8lT-XP-ifs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="w82-gr-LME"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c99-tp-umP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3019" y="125"/>
+            <point key="canvasLocation" x="2270" y="-498"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sLb-Rj-qub">
