@@ -49,9 +49,10 @@ extension SettingsController: UITableViewDelegate {
             checkUserLoginStatus()
             //print("Go to Profile Page")
         }else if indexPath.row == 1{
-            goToNotifications()
+            performSegue(withIdentifier: PerformSegue.showNotifications, sender: self)
             print("Go to Notifications")
         }else if indexPath.row == 2{
+            
             print("Go to Payment Method")
         }else if indexPath.row == 3{
             print("Go to Reward Credit")
@@ -93,16 +94,9 @@ extension SettingsController: UITableViewDelegate {
     }
 
     private func goToEditProfile(){
-//        let profileView = UIStoryboard.init(name: Storyboard.settings, bundle: nil).instantiateViewController(identifier: ViewController.profileController)
-//        self.present(profileView, animated: true, completion: nil)
         performSegue(withIdentifier: "goEditProfile", sender: self)
-        
     }
     
-    private func goToNotifications(){
-        performSegue(withIdentifier: PerformSegue.showNotifications, sender: self)
-        
-    }
 }
 
 
