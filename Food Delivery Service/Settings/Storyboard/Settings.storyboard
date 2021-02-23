@@ -140,22 +140,33 @@
                     <connections>
                         <outlet property="tableView" destination="KLQ-iw-9mi" id="7Le-A9-gi9"/>
                         <segue destination="cRz-o1-OOz" kind="show" identifier="goEditProfile" id="XVI-98-fcX"/>
-                        <segue destination="irG-Bh-qjO" kind="show" identifier="showNotifications" id="FuI-lM-I08"/>
+                        <segue destination="irG-Bh-qjO" kind="show" identifier="goToNotifications" id="FuI-lM-I08"/>
+                        <segue destination="hmm-ls-pgJ" kind="show" identifier="goToHelpCenter" id="rd4-VR-0Zn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hv3-yJ-qPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="863.768115942029" y="124.55357142857142"/>
         </scene>
-        <!--NotificationsController-->
+        <!--Notifications-->
         <scene sceneID="1uc-lr-mtd">
             <objects>
-                <viewControllerPlaceholder storyboardName="Notifications" referencedIdentifier="NotificationsController" id="irG-Bh-qjO" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Notifications" id="irG-Bh-qjO" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="4Ng-1O-xS8"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RkX-QD-6iN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1493" y="125"/>
+        </scene>
+        <!--HelpCenter-->
+        <scene sceneID="RL3-4D-8by">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="HelpCenter" storyboardName="HelpCenter" id="hmm-ls-pgJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="89X-mu-Syf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNi-K7-8fa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1441" y="180"/>
         </scene>
         <!--Profile-->
         <scene sceneID="PrO-Bv-JkE">

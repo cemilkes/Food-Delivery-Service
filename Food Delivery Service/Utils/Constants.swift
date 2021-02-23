@@ -95,5 +95,7 @@ struct ViewController {
 struct PerformSegue {
     static let menuIdentifier = "menuIdentifier"
     static let itemToAddItem  = "ItemToAddItemSegue"
-    static let showNotifications = "showNotifications"
+    static let editProfile = "goToEditProfile"
+    static let notifications = "goToNotifications"
+    static let helpCenter = "goToHelpCenter"
 }

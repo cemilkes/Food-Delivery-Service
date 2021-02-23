@@ -84,6 +84,7 @@
 		25F9331925DF756100BECCEC /* AboutUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25F9331825DF756100BECCEC /* AboutUs.storyboard */; };
 		25F9331E25DF757B00BECCEC /* TermsAndConditionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F9331D25DF757B00BECCEC /* TermsAndConditionsController.swift */; };
 		25F9332325DF758B00BECCEC /* TermsAndConditions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25F9332225DF758B00BECCEC /* TermsAndConditions.storyboard */; };
+		25F9337025E4D43100BECCEC /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F9336F25E4D43100BECCEC /* Feedback.swift */; };
 		25FC3B14259FFD85002F561A /* ItemDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC3B13259FFD85002F561A /* ItemDetailCell.swift */; };
 		25FC3B9325A04DF5002F561A /* Extension+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC3B9225A04DF5002F561A /* Extension+UITextView.swift */; };
 		2DDEE8CA1894CEE67757684F /* Pods_Food_Delivery_ServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28E1A6702AD6EE540C2F227 /* Pods_Food_Delivery_ServiceTests.framework */; };
@@ -203,6 +204,7 @@
 		25F9331825DF756100BECCEC /* AboutUs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutUs.storyboard; sourceTree = "<group>"; };
 		25F9331D25DF757B00BECCEC /* TermsAndConditionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsController.swift; sourceTree = "<group>"; };
 		25F9332225DF758B00BECCEC /* TermsAndConditions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsAndConditions.storyboard; sourceTree = "<group>"; };
+		25F9336F25E4D43100BECCEC /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		25FC3B13259FFD85002F561A /* ItemDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailCell.swift; sourceTree = "<group>"; };
 		25FC3B9225A04DF5002F561A /* Extension+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITextView.swift"; sourceTree = "<group>"; };
 		5059F7465F2E945D9FB01AF4 /* Pods-Food Delivery ServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Delivery ServiceTests.release.xcconfig"; path = "Target Support Files/Pods-Food Delivery ServiceTests/Pods-Food Delivery ServiceTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				25363EA825B668E5008B7C18 /* Order.swift */,
 				25363EB025B66920008B7C18 /* ProfileModel.swift */,
 				25E0D0AB25D4E6A10098CF92 /* Business.swift */,
+				25F9336F25E4D43100BECCEC /* Feedback.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1007,6 +1010,7 @@
 				257E8FF025BFC44100A981C3 /* StripeClient.swift in Sources */,
 				254B465225C3D14E003B8070 /* AddressController+SearchView.swift in Sources */,
 				25818023253DEE88007AAE14 /* MUser.swift in Sources */,
+				25F9337025E4D43100BECCEC /* Feedback.swift in Sources */,
 				25A806E024EE1F32004E99C2 /* MenuCell.swift in Sources */,
 				2592815B24F2286100D96B2D /* BTLabel.swift in Sources */,
 				25E0D0A425D45B270098CF92 /* NetworkService.swift in Sources */,

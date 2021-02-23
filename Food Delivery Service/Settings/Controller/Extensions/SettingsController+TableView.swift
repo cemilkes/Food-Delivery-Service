@@ -49,7 +49,7 @@ extension SettingsController: UITableViewDelegate {
             checkUserLoginStatus()
             //print("Go to Profile Page")
         }else if indexPath.row == 1{
-            performSegue(withIdentifier: PerformSegue.showNotifications, sender: self)
+            goToNotifications()
             print("Go to Notifications")
         }else if indexPath.row == 2{
             print("Go to Payment Method")
@@ -61,6 +61,7 @@ extension SettingsController: UITableViewDelegate {
             shareApplication()
             print("Go to Invite Friends")
         }else if indexPath.row == 6{
+            goToHelpCenter()
             print("Go to Help Center")
         }else if indexPath.row == 7{
             print("About Us")
@@ -93,10 +94,18 @@ extension SettingsController: UITableViewDelegate {
         self.present(loginView, animated: true, completion: nil)
     }
 
+    private func goToNotifications(){
+        performSegue(withIdentifier: PerformSegue.notifications, sender: self)
+    }
+    
     private func goToEditProfile(){
-        performSegue(withIdentifier: "goEditProfile", sender: self)
+        performSegue(withIdentifier: PerformSegue.editProfile, sender: self)
     }
  
+    private func goToHelpCenter(){
+        performSegue(withIdentifier: PerformSegue.helpCenter, sender: self)
+    }
+    
     private func shareApplication(){
         if let name = URL(string: "https://apps.apple.com/us/app/evercoin-bitcoin-ripple-eth/id1277924158"), !name.absoluteString.isEmpty {
             let textToShare = "This app is awesome!  Make the food delivery faster!"
