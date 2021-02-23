@@ -52,13 +52,13 @@ extension SettingsController: UITableViewDelegate {
             performSegue(withIdentifier: PerformSegue.showNotifications, sender: self)
             print("Go to Notifications")
         }else if indexPath.row == 2{
-            
             print("Go to Payment Method")
         }else if indexPath.row == 3{
             print("Go to Reward Credit")
         }else if indexPath.row == 4{
             print("Go to Settings")
         }else if indexPath.row == 5{
+            shareApplication()
             print("Go to Invite Friends")
         }else if indexPath.row == 6{
             print("Go to Help Center")
@@ -95,6 +95,18 @@ extension SettingsController: UITableViewDelegate {
 
     private func goToEditProfile(){
         performSegue(withIdentifier: "goEditProfile", sender: self)
+    }
+ 
+    private func shareApplication(){
+        if let name = URL(string: "https://apps.apple.com/us/app/evercoin-bitcoin-ripple-eth/id1277924158"), !name.absoluteString.isEmpty {
+            let textToShare = "This app is awesome!  Make the food delivery faster!"
+            let objectsToShare = [name, textToShare] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            self.present(activityVC, animated: true, completion: nil)
+        } else {
+            // show alert for not available
+            print("Not opened")
+        }
     }
     
 }
