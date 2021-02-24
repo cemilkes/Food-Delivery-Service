@@ -64,6 +64,7 @@ extension SettingsController: UITableViewDelegate {
             goToHelpCenter()
             print("Go to Help Center")
         }else if indexPath.row == 7{
+            goToAboutUs()
             print("About Us")
         }else if indexPath.row == 8{
             print("Terms & Conditions")
@@ -104,6 +105,10 @@ extension SettingsController: UITableViewDelegate {
  
     private func goToHelpCenter(){
         performSegue(withIdentifier: PerformSegue.helpCenter, sender: self)
+    }
+    
+    private func goToAboutUs(){
+        performSegue(withIdentifier: PerformSegue.aboutUs, sender: self)
     }
     
     private func shareApplication(){

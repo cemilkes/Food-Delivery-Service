@@ -142,6 +142,7 @@
                         <segue destination="cRz-o1-OOz" kind="show" identifier="goEditProfile" id="XVI-98-fcX"/>
                         <segue destination="irG-Bh-qjO" kind="show" identifier="goToNotifications" id="FuI-lM-I08"/>
                         <segue destination="hmm-ls-pgJ" kind="show" identifier="goToHelpCenter" id="rd4-VR-0Zn"/>
+                        <segue destination="8my-QZ-YOp" kind="show" identifier="goToAboutUs" id="3l0-eV-Imk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hv3-yJ-qPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -166,7 +167,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNi-K7-8fa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1441" y="180"/>
+            <point key="canvasLocation" x="1486" y="157"/>
+        </scene>
+        <!--AboutUs-->
+        <scene sceneID="KZa-23-DRX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AboutUs" id="8my-QZ-YOp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nzF-eV-P2n"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PTZ-Op-pXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1473" y="190"/>
         </scene>
         <!--Profile-->
         <scene sceneID="PrO-Bv-JkE">

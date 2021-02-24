@@ -1,7 +1,130 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WEB-JH-uau">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--About Us-->
+        <scene sceneID="kQE-dH-Ggr">
+            <objects>
+                <viewController storyboardIdentifier="AboutUsController" id="WEB-JH-uau" customClass="AboutUsController" customModule="Food_Delivery_Service" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b3i-Fd-rol">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banh Thai Restaurant offers delicious dining and takeout to Fremont, CA." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETy-ip-S4o">
+                                <rect key="frame" x="20" y="164" width="374" height="46.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8u5-GG-wDz">
+                                <rect key="frame" x="20" y="218.5" width="374" height="93"/>
+                                <string key="text">Banh Thai Restaurant is a cornerstone in the Fremont community and has been recognized for its outstanding Thai cuisine, excellent service and friendly staff.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkM-75-ZRL">
+                                <rect key="frame" x="20" y="319" width="374" height="70"/>
+                                <string key="text">Our Thai restaurant is known for its modern interpretation of classic dishes and its insistence on only using high quality fresh ingredients.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any question please call us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiw-5y-y3W">
+                                <rect key="frame" x="20" y="413" width="374" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banh Thai Restaurant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYH-3L-Qjv">
+                                <rect key="frame" x="20" y="452.5" width="374" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pro-kM-733">
+                                <rect key="frame" x="20" y="492" width="374" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="(510) 739-1138">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="callPhoneNumber:" destination="WEB-JH-uau" eventType="touchUpInside" id="kKt-UA-acA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLO-Nr-aTR">
+                                <rect key="frame" x="20" y="552" width="374" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="39060 Fremont Blvd, Fremont, CA 94538">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="callPhoneNumber:" destination="WEB-JH-uau" eventType="touchUpInside" id="qjx-0M-ael"/>
+                                    <action selector="openMap:" destination="WEB-JH-uau" eventType="touchUpInside" id="hM8-f6-emF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Znm-u1-kwX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hkM-75-ZRL" firstAttribute="top" secondItem="8u5-GG-wDz" secondAttribute="bottom" constant="7.5" id="BkT-C5-lbJ"/>
+                            <constraint firstItem="8u5-GG-wDz" firstAttribute="leading" secondItem="Znm-u1-kwX" secondAttribute="leading" constant="20" id="FOU-Jh-QbL"/>
+                            <constraint firstItem="pro-kM-733" firstAttribute="top" secondItem="aYH-3L-Qjv" secondAttribute="bottom" constant="16" id="HgV-wZ-eSI"/>
+                            <constraint firstItem="Znm-u1-kwX" firstAttribute="trailing" secondItem="eiw-5y-y3W" secondAttribute="trailing" constant="20" id="IEo-OI-uMu"/>
+                            <constraint firstItem="ETy-ip-S4o" firstAttribute="leading" secondItem="Znm-u1-kwX" secondAttribute="leading" constant="20" id="O3a-Sd-d3R"/>
+                            <constraint firstItem="CLO-Nr-aTR" firstAttribute="top" secondItem="pro-kM-733" secondAttribute="bottom" constant="24" id="TVv-3h-KR7"/>
+                            <constraint firstItem="Znm-u1-kwX" firstAttribute="trailing" secondItem="ETy-ip-S4o" secondAttribute="trailing" constant="20" id="Vgo-nF-vyF"/>
+                            <constraint firstItem="Znm-u1-kwX" firstAttribute="trailing" secondItem="CLO-Nr-aTR" secondAttribute="trailing" constant="20" id="aPc-v4-brh"/>
+                            <constraint firstItem="8u5-GG-wDz" firstAttribute="top" secondItem="ETy-ip-S4o" secondAttribute="bottom" constant="8" symbolic="YES" id="bel-AU-8G7"/>
+                            <constraint firstItem="hkM-75-ZRL" firstAttribute="leading" secondItem="Znm-u1-kwX" secondAttribute="leading" constant="20" id="c6W-wd-6sG"/>
+                            <constraint firstItem="Znm-u1-kwX" firstAttribute="trailing" secondItem="hkM-75-ZRL" secondAttribute="trailing" constant="20" id="feK-II-ZB3"/>
+                            <constraint firstItem="aYH-3L-Qjv" firstAttribute="top" secondItem="eiw-5y-y3W" secondAttribute="bottom" constant="16" id="g19-AW-iNo"/>
+                            <constraint firstItem="Znm-u1-kwX" firstAttribute="trailing" secondItem="pro-kM-733" secondAttribute="trailing" constant="20" id="gIZ-Tt-sw4"/>
+                            <constraint firstItem="pro-kM-733" firstAttribute="leading" secondItem="Znm-u1-kwX" secondAttribute="leading" constant="20" id="gow-6U-g4d"/>
+                            <constraint firstItem="Znm-u1-kwX" firstAttribute="trailing" secondItem="8u5-GG-wDz" secondAttribute="trailing" constant="20" id="hJs-et-Kfm"/>
+                            <constraint firstItem="Znm-u1-kwX" firstAttribute="trailing" secondItem="aYH-3L-Qjv" secondAttribute="trailing" constant="20" id="sPU-Yc-Ps2"/>
+                            <constraint firstItem="aYH-3L-Qjv" firstAttribute="leading" secondItem="Znm-u1-kwX" secondAttribute="leading" constant="20" id="svQ-LO-MlN"/>
+                            <constraint firstItem="eiw-5y-y3W" firstAttribute="leading" secondItem="Znm-u1-kwX" secondAttribute="leading" constant="20" id="tKw-HU-qSt"/>
+                            <constraint firstItem="ETy-ip-S4o" firstAttribute="top" secondItem="Znm-u1-kwX" secondAttribute="top" constant="24" id="uyP-8P-tvf"/>
+                            <constraint firstItem="eiw-5y-y3W" firstAttribute="top" secondItem="hkM-75-ZRL" secondAttribute="bottom" constant="24" id="w9g-aR-mlI"/>
+                            <constraint firstItem="CLO-Nr-aTR" firstAttribute="leading" secondItem="Znm-u1-kwX" secondAttribute="leading" constant="20" id="zer-cJ-0Wz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Us" id="P4v-J8-B6b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuf-Dw-Sia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982.60869565217399" y="146.65178571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Uzr-qF-2YV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WL6-Bb-PG4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="JWS-73-ZoA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WEB-JH-uau" kind="relationship" relationship="rootViewController" id="Q2v-ZZ-5Nn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lsQ-Mo-Lv6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="211.59420289855075" y="146.65178571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

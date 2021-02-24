@@ -98,4 +98,5 @@ struct PerformSegue {
     static let editProfile = "goToEditProfile"
     static let notifications = "goToNotifications"
     static let helpCenter = "goToHelpCenter"
+    static let aboutUs = "goToAboutUs"
 }

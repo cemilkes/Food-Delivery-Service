@@ -24,7 +24,6 @@ class HelpCenterController: UIViewController {
         
     }
     
-    
     func setSendButtonToolBar(){
         let bar = UIToolbar()
         let send = UIBarButtonItem(title: "Send", style: .plain, target: self, action: #selector(sendButtonPressed))
